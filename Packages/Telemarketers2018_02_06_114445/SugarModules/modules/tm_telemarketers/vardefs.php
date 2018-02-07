@@ -189,7 +189,7 @@ $dictionary['tm_telemarketers'] = array(
     array (
       'name' => 'password',
       'vname' => 'LBL_PASSWORD',
-      'type' => 'password',
+      'type' => 'varchar',
       'dbType' => 'varchar',
       'len' => '255',
       'reportable' => false,
