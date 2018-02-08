@@ -451,6 +451,66 @@ $installdefs = array (
       'to_module' => 'application',
       'language' => 'fr_FR',
     ),
+    68 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.suivi_mode_paiement_dom.php',
+      'to_module' => 'application',
+      'language' => 'en_us',
+    ),
+    69 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.suivi_mode_paiement_dom.php',
+      'to_module' => 'application',
+      'language' => 'fr_FR',
+    ),
+    70 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.suivi_coupon_dom.php',
+      'to_module' => 'application',
+      'language' => 'en_us',
+    ),
+    71 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.suivi_coupon_dom.php',
+      'to_module' => 'application',
+      'language' => 'fr_FR',
+    ),
+    72 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.info_manquante_suivi_dom.php',
+      'to_module' => 'application',
+      'language' => 'en_us',
+    ),
+    73 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.info_manquante_suivi_dom.php',
+      'to_module' => 'application',
+      'language' => 'fr_FR',
+    ),
+    74 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.statut_suivi_dom.php',
+      'to_module' => 'application',
+      'language' => 'en_us',
+    ),
+    75 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.statut_suivi_dom.php',
+      'to_module' => 'application',
+      'language' => 'fr_FR',
+    ),
+    76 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.user_secteur_rep_dom.php',
+      'to_module' => 'application',
+      'language' => 'en_us',
+    ),
+    77 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.user_secteur_rep_dom.php',
+      'to_module' => 'application',
+      'language' => 'fr_FR',
+    ),
   ),
   'copy' => 
   array (
@@ -1988,6 +2048,151 @@ $installdefs = array (
     array (
       'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_novendeur_rep.php',
       'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_novendeur_rep.php',
+    ),
+    340 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_adresse_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_adresse_rep.php',
+    ),
+    341 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_cellulaire_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_cellulaire_rep.php',
+    ),
+    342 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_courriel_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_courriel_rep.php',
+    ),
+    343 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_fax_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_fax_rep.php',
+    ),
+    344 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_nom_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_nom_rep.php',
+    ),
+    345 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_pager_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_pager_rep.php',
+    ),
+    346 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_prenom_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_prenom_rep.php',
+    ),
+    347 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_secteur_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_secteur_rep.php',
+    ),
+    348 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_telres_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_telres_rep.php',
+    ),
+    349 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_ville_rep.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_ville_rep.php',
+    ),
+    350 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_account_id.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_account_id.php',
+    ),
+    351 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_account_name.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_account_name.php',
+    ),
+    352 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_annulation_refus_banc_condit.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_annulation_refus_banc_condit.php',
+    ),
+    353 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_contact_id.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_contact_id.php',
+    ),
+    354 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_contact_name.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_contact_name.php',
+    ),
+    355 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_coupon.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_coupon.php',
+    ),
+    356 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_date_contrat_initial.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_date_contrat_initial.php',
+    ),
+    357 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_date_contrat_initial_recu.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_date_contrat_initial_recu.php',
+    ),
+    358 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_date_contrat_revise_recu.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_date_contrat_revise_recu.php',
+    ),
+    359 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_date_statut.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_date_statut.php',
+    ),
+    360 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_depot.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_depot.php',
+    ),
+    361 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_info_manquante_suivi.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_info_manquante_suivi.php',
+    ),
+    362 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_meeting_id.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_meeting_id.php',
+    ),
+    363 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_meeting_name.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_meeting_name.php',
+    ),
+    364 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_mode_paiement.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_mode_paiement.php',
+    ),
+    365 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_note.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_note.php',
+    ),
+    366 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_id.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_id.php',
+    ),
+    367 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_name.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_name.php',
+    ),
+    368 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_statut_suivi.php',
+      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_statut_suivi.php',
     ),
   ),
   'roles' => 
