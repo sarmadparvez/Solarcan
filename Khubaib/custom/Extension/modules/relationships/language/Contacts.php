@@ -1,0 +1,8 @@
+<?php
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_CONTACTS_DSM_DNC_HISTORIC_1_FROM_DSM_DNC_HISTORIC_TITLE'] = 'Do Not Call Historic';
+$mod_strings['LBL_CONTACTS_DSM_DNC_HISTORIC_1_FROM_CONTACTS_TITLE'] = 'Do Not Call Historic';
+$mod_strings['LBL_CONTACTS_DSM_DNC_1_FROM_DSM_DNC_TITLE'] = 'Do Not Call';
+$mod_strings['LBL_CONTACTS_DSM_DNC_1_FROM_CONTACTS_TITLE'] = 'Do Not Call';
+$mod_strings['LBL_DSM_DNC_CONTACTS_1_FROM_DSM_DNC_TITLE'] = 'Do Not Call';
+$mod_strings['LBL_DSM_DNC_CONTACTS_1_FROM_CONTACTS_TITLE'] = 'Do Not Call';

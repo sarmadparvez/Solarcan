@@ -1,0 +1,6 @@
+<?php
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_CONTACTS_DSM_DNC_1_FROM_CONTACTS_TITLE'] = 'Contacts';
+$mod_strings['LBL_CONTACTS_DSM_DNC_1_FROM_DSM_DNC_TITLE'] = 'Contacts';
+$mod_strings['LBL_DSM_DNC_CONTACTS_1_FROM_CONTACTS_TITLE'] = 'Contacts';
+$mod_strings['LBL_DSM_DNC_CONTACTS_1_FROM_DSM_DNC_TITLE'] = 'Contacts';
