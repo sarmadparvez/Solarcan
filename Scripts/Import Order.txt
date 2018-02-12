@@ -1,0 +1,8 @@
+-----------IMPORT ORDER-----------
+
+1- Import users
+2- Import rt_postal_codes
+3- Import rt_postal_codes_users_c
+4- Import teams
+5- Import team_memberships
+6- Import tm_telemarketers
