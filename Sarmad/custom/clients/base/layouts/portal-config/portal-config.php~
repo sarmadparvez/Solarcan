@@ -1,0 +1,9 @@
+<?php
+$viewdefs['base']['layout']['manage-master-data'] = array(
+    'type' => 'simple',
+    'components' => array(
+        array(
+            'view' => 'manage-master-data',
+        ),
+    ),
+);

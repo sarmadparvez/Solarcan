@@ -1,0 +1,49 @@
+<div class="row-fluid">
+    <div class="preview-headerbar">
+        <div class="headerpane">
+            <h1>
+                <span class="record-cell">
+                    <span class="detail">
+                        {{str 'LBL_APPOINTMENT_CONFIG'}}
+                    </span>
+                </span>
+                <div class="btn-toolbar pull-right">
+                    <span class="record-cell">
+                        <a class="rowaction btn btn-primary" href="javascript:void(0);" id="save_button" name="save_button">
+                            {{str 'LBL_SAVE_BUTTON_LABEL'}}</a>
+                    </span>  
+                    <span class="record-cell">
+                        <a class="rowaction btn" href="javascript:void(0);" id="cancel_button" name="cancel_button">
+                            {{str 'LBL_CANCEL_BUTTON_LABEL'}}</a>
+                    </span>
+                    </div>
+            </h1>
+        </div>
+    </div>
+    <div class="main-pane span12" style="width:98%;background:none">
+        {{#each meta.panels}}
+            <div class="row-fluid record-panel-content">
+                <fieldset style="border:0px !important;padding:10px;">
+                    {{#each fields}}
+
+                        <div class="row-fluid panel_body ">
+                            {{#each this}}
+                                    <div class="span2 record-cell">
+                                        <label data-name="{{name}}">{{str this.label}}</label>
+                                    </div>
+
+                                    <div class="span{{span}} record-cell">
+                                       <span class="normal index" data-fieldname="{{name}}" data-index="">
+                                           <span class="edit">
+                                               {{field ../../../this model=../../../this.model template="edit"}}</span>
+                                       </span>
+                                    </div>
+                                
+                            {{/each}}
+                        </div>
+                    {{/each}}
+                </fieldset>
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<?php
+// created: 2018-02-07 14:47:03
+$viewdefs['tm_telemarketers']['base']['filter']['default'] = array (
+  'default_filter' => 'all_records',
+  'fields' => 
+  array (
+    'team' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
+    'prenom' => 
+    array (
+    ),
+    'notp' => 
+    array (
+    ),
+    'nocallgen' => 
+    array (
+    ),
+    'noagent' => 
+    array (
+    ),
+    'name' => 
+    array (
+    ),
+    'tag' => 
+    array (
+    ),
+    'team_name' => 
+    array (
+    ),
+    'assigned_user_name' => 
+    array (
+    ),
+    '$owner' => 
+    array (
+      'predefined_filter' => true,
+      'vname' => 'LBL_CURRENT_USER_FILTER',
+    ),
+    '$favorite' => 
+    array (
+      'predefined_filter' => true,
+      'vname' => 'LBL_FAVORITES_FILTER',
+    ),
+  ),
+);

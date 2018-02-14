@@ -1,0 +1,789 @@
+<?php
+
+$viewdefs['base']['view']['portal-config'] = array(
+    'panels' => array(
+        array(
+            'label' => 'LBL_SUPPORTED_BROWSERS',
+            'panelNo' => 'first',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'browser_check',
+                        'label' => 'LBL_BROWSER_CHECK',
+                        'type' => 'bool',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'browser_google_chrome',
+                        'label' => 'LBL_BROWSER_GOOGLE_CHROME',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'browser_firefox',
+                        'label' => 'LBL_BROWSER_FIREFOX',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'browser_internet_explorer',
+                        'label' => 'LBL_BROWSER_INTERNET_EXPLORER',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+                2 => array(
+                    array(
+                        'name' => 'browser_safari',
+                        'label' => 'LBL_BROWSER_SAFARI',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_FIELDS_CONFIGURATION',
+            'panelNo' => 'second',
+            'fields' => array(
+                0 => array(
+                    array(
+                        'name' => 'dealer_terminates_after_days',
+                        'label' => 'LBL_DEALER_TERMINATES_AFTER_DAYS',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'aud_car_booking_refused_in_days',
+                        'label' => 'LBL_CAR_BOOKING_REFUSED_IN_DAYS',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'Delete_Archived_Actions_after_Month',
+                        'label' => 'LBL_DELETE_ARCHIVED_ACTION_AFTER_MONTH',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),array(
+                        'name' => 'aud_phonetic_search_encoder',
+                        'label' => 'LBL_AUD_PHONETIC_SEARCH_ENCODER',
+                        'type' => 'enum',
+                        'options' => array(
+                            'double_metaphone' => 'Double Metaphone',
+                            'beider_morse' => 'Beider–Morse',
+                            'koelnerphonetik' => 'Kölner Phonetik',
+                        ),
+                        'span' => 3,
+                    ),
+                ),
+                2 => array(
+                    array(
+                        'name' => 'aud_car_back_posting_deadline_in_days',
+                        'label' => 'LBL_AUD_CAR_BACK_POSTING_DEADLINE_IN_DAYS',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'aud_max_length_of_response_code',
+                        'label' => 'LBL_AUD_MAX_LENGTH_OF_RESPONSE_CODE',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),
+                ),
+                3 => array(
+                    array(
+                        'name' => 'aud_notification_lines_to_preview',
+                        'label' => 'LBL_AUD_NOTIFICATION_LINES_TO_PREVIEW',
+                        'type' => 'int',
+                        'span' => 3,
+                        'min' => 1,
+                        'max' => 9,
+                        'len' => 1,
+                        'default' => 2,
+                        'error_message' => 'LBL_AUD_NOTIFICATION_LINES_TO_PREVIEW_INVALID',
+                    ),
+                    array(
+                        'name' => 'aud_ending_registractions_in_days',
+                        'label' => 'LBL_ENDING_REGISTRACTIONS_IN_DAYS',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),
+                ),
+                4 => array(
+                    array(
+                        'name' => 'aud_max_working_in_fiscal_year',
+                        'label' => 'LBL_AUD_MAX_WORKING_IN_FISCAL_YEAR',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'aud_max_years_in_past_rule_1',
+                        'label' => 'LBL_AUD_MAX_YEARS_IN_PAST_RULE_1',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),
+                ),
+                5 => array(
+                    array(
+                        'name' => 'aud_max_years_in_past_rule_2',
+                        'label' => 'LBL_AUD_MAX_YEARS_IN_PAST_RULE_2',
+                        'type' => 'int',
+                        'span' => 3
+                    ),
+                    array(
+                        'name' => 'aud_max_years_in_future_AGIS_Buying_Window',
+                        'label' => 'LBL_MAX_YEARS_FUTURE_AGIS_BUYING_WINDOW',
+                        'type' => 'int',
+                        'span' => 3
+                    ),
+                ),
+                6 => array(
+                    array(
+                        'name' => 'aud_prefix_membership_number',
+                        'label' => 'LBL_AUD_PREFIX_MEM_NUM',
+                        'type' => 'text',
+                        'len' => '1',
+                        'span' => 3
+                    ),
+                ),
+                7 => array(
+                    array(
+                        'name' => 'aud_excel_library_reg_name',
+                        'label' => 'LBL_AUD_EXCEL_LIBRARY_REG_NAME',
+                        'type' => 'text',
+                        'span' => 3
+                    ),
+                    array(
+                        'name' => 'aud_excel_library_key',
+                        'label' => 'LBL_AUD_EXCEL_LIBRARY_KEY',
+                        'type' => 'text',
+                        'span' => 3
+                    ),
+                ),
+                8 => array(
+                    array(
+                        'name' => 'aud_conversion_month_in_days',
+                        'label' => 'LBL_AUD_CONVERSION_MONTH_IN_DAYS',
+                        'type' => 'int',
+                        'span' => 3,
+                        'min' => 28,
+                        'max' => 31,
+                        'len' => 2,
+                        'default' => 28,
+                        'error_message' => 'LBL_INVALID_DAYS',
+                    ),
+                    array(
+                        'name' => 'aud_ext_link_leadmanagement_url',
+                        'label' => 'LBL_EXTERNAL_LEAD_MANAGEMENT_LINK',
+                        'type' => 'text',
+                        'span' => 3,
+                        'len' => 1000,
+                    ),
+                ),
+                9 => array(
+                    array(
+                        'name' => 'aud_help_dashboard',
+                        'label' => 'LBL_AUD_HELP_DASHBOARD',
+                        'type' => 'bool',
+                        'span' => 3
+                    ),
+                    array(
+                        'name' => 'aud_max_rows_to_export',
+                        'label' => 'LBL_MAX_ROWS_TO_EXPORT',
+                        'type' => 'int',
+                        'span' => 3,
+                        'min' => 100,
+                        'max' => 10000,
+                    ),
+                ),
+                10 => array(
+                    array(
+                        'name' => 'aud_default_registration_balance',
+                        'label' => 'LBL_AUD_DEFAULT_REGISTRATION_BALANCE',
+                        'type' => 'int',
+                        'span' => 3,
+                        'min' => 1,
+                        'max' => 10000,
+                    ),
+                    array(
+                        'name' => 'aud_contact_attributes_to_validate',
+                        'label' => 'LBL_AUD_CONTACT_ATTRIBUTES_TO_VALIDATE',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+                11 => array(
+                    array(
+                        'name' => 'aud_car_maintenance_time_window_in_days',
+                        'label' => 'LBL_CAR_MAINTENANCE_TIME_WINDOW_IN_DAYS',
+                        'type' => 'int',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'idle_logout_time',
+                        'label' => 'LBL_IDLE_LOGOUT_TIME',
+                        'type' => 'int',
+                        'span' => 3,
+                        'min' => 120,
+                        'max' => 100000,
+                        'len' => 6,
+                        'default' => 1800,
+                        'error_message' => 'LBL_INVALID_IDLE_LOGOUTT_TIME',
+                    ),
+                ),
+                12 => array(
+                    array(
+                        'name' => 'aud_europe_countries_list',
+                        'label' => 'LBL_EUROPE_COUNTRIES_LIST',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'aud_contact_attributes_duplicate',
+                        'label' => 'LBL_CONTACT_ATTRIBUTES_DUPLICATE',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+                13 => array(
+                    array(
+                        'name' => 'aud_skip_dealer_linked_modules',
+                        'label' => 'LBL_AUD_SKIP_DEALER_LINKED_MODULES',
+                        'type' => 'linked-modules-enum',
+                        'options' => 'dummy_options',
+                        'module' => 'aud_Dealer',
+                        'isMultiSelect' => true,
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'aud_matrix_kd',
+                        'label' => 'LBL_AUD_MATRIX_KD',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_DROPDOWN_SETTINGS',
+            'fields' => array(
+                0 => array(
+                    array(
+                        'name' => 'aud_dealer_status_list',
+                        'label' => 'LBL_AUD_PRIMARY_DEALER_STATUS_DD',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'aud_dealer_status_ext_list',
+                        'label' => 'LBL_AUD_SECONDARY_DEALER_STATUS_MU',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                2 => array(
+                    array(
+                        'name' => 'aud_participation_status_list',
+                        'label' => 'LBL_AUD_PARTICIPATION_STATUS',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                3 => array(
+                    array(
+                        'name' => 'aud_keytools_manufacturer_list',
+                        'label' => 'LBL_AUD_KEYTOOLS_MANUFACTURER_LIST',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                4 => array(
+                    array(
+                        'name' => 'aud_keytools_model_list',
+                        'label' => 'LBL_AUD_KEYTOOLS_MODEL_LIST',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                5 => array(
+                    array(
+                        'name' => 'aud_keytools_specialmodel_list',
+                        'label' => 'LBL_AUD_KEYTOOLS_SPECIALMODEL_LIST',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                6 => array(
+                    array(
+                        'name' => 'aud_user_role_campaign_list',
+                        'label' => 'LBL_AUD_USER_ROLE_CAMPAIGN_LIST',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                7 => array(
+                    array(
+                        'name' => 'aud_language_iso639_1_list',
+                        'label' => 'LBL_AUD_LANGUAGE_ISO639_1_LIST',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                8 => array(
+                    array(
+                        'name' => 'aud_business_unit_list',
+                        'label' => 'LBL_AUD_BUSINESS_UNIT_LIST',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                9 => array(
+                    array(
+                        'name' => 'aud_partner_status_list',
+                        'label' => 'LBL_AUD_KVPS_DEALER_STATUS',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                10 => array(
+                    array(
+                        'name' => 'aud_reason_for_blocking_list',
+                        'label' => 'LBL_AUD_REASON_FOR_BLOCKING_LIST',
+                        'type' => 'custom-enum',
+                        'span' => 6,
+                    ),
+                ),
+                11 => array(
+                    array(
+                        'name' => 'aud_contact_type_dd_list',
+                        'label' => 'LBL_AUD_CONTACT_TYPE_DD_LIST',
+                        'type' => 'custom-enum',
+                        'readonly-enum' => true,
+                        'span' => 6,
+                    ),
+                ),
+                12 => array(
+                    array(
+                        'name' => 'aud_matrix_id_list',
+                        'label' => 'LBL_AUD_MATRIX_ID_DD',
+                        'type' => 'custom-enum',
+                        'readonly-enum' => true,
+                        'span' => 6,
+                    ),
+                ),
+                13 => array(
+                    array(
+                        'name' => 'aud_derivat_dd_list',
+                        'label' => 'LBL_AUD_DERIVAT_DD',
+                        'type' => 'custom-enum',
+                        'readonly-enum' => true,
+                        'span' => 6,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_FILE_INTERFACE_DEFAULT_PANEL',
+            'panelName' => 'default_file_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'path_inbox_default',
+                        'label' => 'LBL_PATH_INBOX',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_working_default',
+                        'label' => 'LBL_PATH_WORKING',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'path_archive_default',
+                        'label' => 'LBL_PATH_ARCHIVE',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+                2 => array(
+                    array(
+                        'name' => 'path_export_default',
+                        'label' => 'LBL_PATH_EXPORT',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'email_address_default',
+                        'label' => 'LBL_EMAIL_ADDRESS',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_KVPS_INTERFACE',
+            'panelName' => 'kvps_file_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'path_inbox_kvps',
+                        'label' => 'LBL_PATH_INBOX',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/KVPS/inbox',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_working_kvps',
+                        'label' => 'LBL_PATH_WORKING',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/KVPS/work',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'path_archive_kvps',
+                        'label' => 'LBL_PATH_ARCHIVE',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/KVPS/archive',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'email_address_kvps',
+                        'label' => 'LBL_EMAIL_ADDRESS',
+                        'type' => 'text',
+                        'placeholder' => 'sample@test.com',
+                        'span' => 3,
+                    ),
+                ),
+            ),            
+        ),
+        array(
+            'label' => 'LBL_AGIS_INTERFACE',
+            'panelName' => 'agis_file_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'path_inbox_agis',
+                        'label' => 'LBL_PATH_INBOX',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/AGIS/inbox',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_working_agis',
+                        'label' => 'LBL_PATH_WORKING',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/AGIS/work',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'path_archive_agis',
+                        'label' => 'LBL_PATH_ARCHIVE',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/AGIS/archive',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'email_address_agis',
+                        'label' => 'LBL_EMAIL_ADDRESS',
+                        'type' => 'text',
+                        'placeholder' => 'sample@test.com',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_KEYTOOLS_INTERFACE',
+            'panelName' => 'keytools_file_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'path_inbox_keytools',
+                        'label' => 'LBL_PATH_INBOX',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/KeyTools/inbox',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_working_keytools',
+                        'label' => 'LBL_PATH_WORKING',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/KeyTools/work',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'path_archive_keytools',
+                        'label' => 'LBL_PATH_ARCHIVE',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/KeyTools/archive',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'email_address_keytools',
+                        'label' => 'LBL_EMAIL_ADDRESS',
+                        'type' => 'text',
+                        'placeholder' => 'sample@test.com',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_VWFS_INTERFACE',
+            'panelName' => 'vwfs_file_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'path_inbox_vwfs',
+                        'label' => 'LBL_PATH_INBOX',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/VWFS/inbox',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_working_vwfs',
+                        'label' => 'LBL_PATH_WORKING',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/VWFS/work',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'path_archive_vwfs',
+                        'label' => 'LBL_PATH_ARCHIVE',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/VWFS/archive',
+                        'span' => 3,
+                    ),
+                ),
+                2 => array(
+                    array(
+                        'name' => 'email_address_vwfs',
+                        'label' => 'LBL_EMAIL_ADDRESS',
+                        'type' => 'text',
+                        'placeholder' => 'sample@test.com',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'dealer_bnr_vwfs',
+                        'label' => 'LBL_AUD_DEALER_BNR_VWFS',
+                        'type' => 'text',
+                        'len' => 5,
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_TTCALL_INTERFACE',
+            'panelName' => 'ttcallfile_file_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'path_inbox_ttcallfile',
+                        'label' => 'LBL_PATH_INBOX',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/ttCall/inbox',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_working_ttcallfile',
+                        'label' => 'LBL_PATH_WORKING',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/ttCall/work',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'path_archive_ttcallfile',
+                        'label' => 'LBL_PATH_ARCHIVE',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/ttCall/archive',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_export_ttcallfile',
+                        'label' => 'LBL_PATH_EXPORT',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/ttCall/export',
+                        'span' => 3,
+                    ),
+                ),
+                2 => array(
+                    array(
+                        'name' => 'email_address_ttcallfile',
+                        'label' => 'LBL_EMAIL_ADDRESS',
+                        'type' => 'text',
+                        'placeholder' => 'sample@test.com',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_PREMIUMADDRESS_INTERFACE',
+            'panelName' => 'premiumaddress_file_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'path_inbox_premiumaddress',
+                        'label' => 'LBL_PATH_INBOX',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/PremiumAddress/inbox',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_working_premiumaddress',
+                        'label' => 'LBL_PATH_WORKING',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/PremiumAddress/work',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'path_archive_premiumaddress',
+                        'label' => 'LBL_PATH_ARCHIVE',
+                        'placeholder' => 'custom/xfer/PremiumAddress/archive',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'email_address_premiumaddress',
+                        'label' => 'LBL_EMAIL_ADDRESS',
+                        'type' => 'text',
+                        'placeholder' => 'sample@test.com',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_LDB_INTERFACE',
+            'panelName' => 'ldb_file_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'path_inbox_ldb',
+                        'label' => 'LBL_PATH_INBOX',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/LDB/inbox',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'path_working_ldb',
+                        'label' => 'LBL_PATH_WORKING',
+                        'type' => 'text',
+                        'placeholder' => 'custom/xfer/LDB/work',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'path_archive_ldb',
+                        'label' => 'LBL_PATH_ARCHIVE',
+                        'placeholder' => 'custom/xfer/LDB/archive',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'email_address_ldb',
+                        'label' => 'LBL_EMAIL_ADDRESS',
+                        'type' => 'text',
+                        'placeholder' => 'sample@test.com',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+        array(
+            'label' => 'LBL_WBK_INTERFACE',
+            'panelName' => 'wbk_interface',
+            'fields' => array (
+                0 => array(
+                    array(
+                        'name' => 'url_profiler',
+                        'label' => 'LBL_URL_PROFILER',
+                        'type' => 'url',
+                        'placeholder' => 'URL wie: https://audi-wbk-preprod.brandad-systems.de/services2/CrmWebservice?wsdl',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'url_newsletter',
+                        'label' => 'LBL_URL_NEWSLETTER',
+                        'type' => 'url',
+                        'placeholder' => 'URL wie: https://audi-wbk-preprod.brandad-systems.de/services2/CrmNewsletterWebservice?wsdl',
+                        'span' => 3,
+                    ),
+                ),
+                1 => array(
+                    array(
+                        'name' => 'user_wbk',
+                        'label' => 'LBL_USER',
+                        'type' => 'text',
+                        'placeholder' => '-Falls erforderlich-',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'password_wbk',
+                        'label' => 'LBL_PASSWORD',
+                        'type' => 'password',
+                        'placeholder' => '-Falls erforderlich-',
+                        'span' => 3,
+                    ),
+                ),
+                2 => array(
+                    array(
+                        'name' => 'wssecurity_enabled',
+                        'label' => 'LBL_WSSECURITY_ENABLED',
+                        'type' => 'bool',
+                        'placeholder' => '',
+                        'span' => 6,
+                    ),
+                ),
+                3 => array(
+                    array(
+                        'name' => 'keystore_path_wbk',
+                        'label' => 'LBL_KEYSTORE_PATH',
+                        'type' => 'text',
+                        'placeholder' => 'Keystore-Pfad e.g., custom/include/WSSecurity/wbk_keystore.p12',
+                        'span' => 3,
+                    ),
+                    array(
+                        'name' => 'keystore_password_wbk',
+                        'label' => 'LBL_KEYSTORE_PASSWORD',
+                        'type' => 'text',
+                        'placeholder' => 'Keystore-Passwort',
+                        'span' => 3,
+                    ),
+                ),
+                4 => array(
+                    array(
+                        'name' => 'wbk_newsletter_template_id',
+                        'label' => 'LBL_WBK_NEWSLETTER_TEMPLATE_ID',
+                        'type' => 'text',
+                        'span' => 3,
+                    ),
+                ),
+            ),
+        ),
+    )
+);
