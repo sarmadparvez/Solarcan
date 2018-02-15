@@ -2194,6 +2194,16 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_statut_suivi.php',
       'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_statut_suivi.php',
     ),
+    369 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_datetime.php',
+      'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_datetime.php',
+    ),
+    370 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_name.php',
+      'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_name.php',
+    ),
   ),
   'roles' => 
   array (
