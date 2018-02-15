@@ -1,0 +1,60 @@
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        bootstrap="bootstrap.php">
+        cacheTokens="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        mapTestClassNameToCoveredClassName="false"
+        processIsolation="false"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        stopOnRisky="false"
+        testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+        timeoutForSmallTests="100"
+        timeoutForMediumTests="145"
+        timeoutForLargeTests="165"
+        verbose="false">
+
+    <testsuites>
+
+        <testsuite name="RT customization test suite">
+            <directory>./custom/</directory>
+        </testsuite>
+
+    </testsuites>
+     <filter>
+            <whitelist>
+                <directory suffix=".php">../clients/base/api/</directory>
+                <directory suffix=".php">../data/</directory>
+                <directory suffix=".php">../Extension/modules/Schedulers/Ext/ScheduledTasks/</directory>
+                <directory suffix=".php">../include/</directory>
+                <directory suffix=".php">../modules/</directory>
+                <exclude>
+                    <directory>../include/language/</directory>
+                    <directory>../modules/*/clients/base/fields/</directory>
+                    <directory>../modules/*/clients/base/filters/</directory>
+                    <directory>../modules/*/clients/base/layouts/</directory>
+                    <directory>../modules/*/clients/base/menus/</directory>
+                    <directory>../modules/*/clients/base/views/</directory>
+                    <directory>../modules/*/clients/mobile/</directory>
+                    <directory>../modules/*/clients/portal/</directory>
+                    <directory>../modules/*/Activities/</directory>
+                    <directory>../modules/*/Ext/</directory>
+                    <directory>../modules/*/*/Ext/</directory> <!-- for pmse_Project -->
+                    <directory>../modules/*/menus/</directory>
+                    <directory>../modules/*/metadata/</directory>
+                    <directory>../modules/*/authentication/</directory>
+                    <directory>../modules/*/tpls/</directory>
+                    <directory>../modules/*/views/</directory>
+                    <file>../modules/unified_search_modules_display.php</file>
+                </exclude>
+            </whitelist>
+        </filter>
+</phpunit>

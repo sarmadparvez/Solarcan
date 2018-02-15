@@ -1,5 +1,6 @@
 ({
     availableMeetings: null,
+    selectedSlots: null,
     timeSlots: null,
     className: 'full-calendar tcenter',
     render: function () {
@@ -10,6 +11,7 @@
         var slotEvents = this.prepareEvents();
 
         this.availableMeetings = app.data.createBeanCollection('Meetings');
+        this.selectedSlots = [];
 
         this.$('#calendar').fullCalendar({
             customButtons: {
@@ -22,27 +24,10 @@
                             messages: 'This action will create new Available meetings of selected time slots in SugarCRM.',
                             autoClose: false,
                             onConfirm: function () {
-                                var createMeetings = [];
-                                $("#calendar").find('input[type=checkbox]').each(function () {
-                                    if (this.checked && (this.id).substr(0, 4) == 'new_') {
-
-                                        var datetime = (this.id).substr(4);
-                                        datetime = datetime.replace("T", " ");
-                                        datetime = App.date(datetime, App.date.convertFormat("Y-m-d h:i:s"), false);
-                                        var meeting = {
-                                            name: 'Available Meetings',
-                                            date_start: datetime.format(),
-                                            status: 'disponible',
-                                            assigned_user_id: app.user.attributes.id,
-                                            timeslot_name: this.name
-                                        };
-                                        createMeetings.push(meeting);
-                                    }
-                                });
-                                if (!_.isEmpty(createMeetings)) {
+                                if (!_.isEmpty(self.selectedSlots)) {
                                     App.api.call('create', App.api.buildURL('Meetings/mass_create'),
                                             {
-                                                newMeetings: createMeetings,
+                                                newMeetings: self.selectedSlots,
                                             },
                                             {
                                                 success: _.bind(function (data) {
@@ -87,7 +72,7 @@
                 right: 'refreshButton, confirmButton, agendaWeek'
             },
             hiddenDays: [0],
-            height: 350,
+            height: 340,
             navLinks: true, // can click day/week names to navigate views
             editable: false,
             eventLimit: true, // allow "more" link when too many events
@@ -95,7 +80,7 @@
             slotLabelFormat: 'H:mm', // uppercase H for 24-hour clock
             timeFormat: 'H:mm',
             allDaySlot: false,
-            agendaEventMinHeight: 20,
+            agendaEventMinHeight: 5,
             defaultView: 'agendaWeek',
             snapOnSlots: false, // When dragging/resizing a event it doesn't snaps on the timeslot
             snapDuration: '00:05:00', // instead it does steps of 5 minutes
@@ -183,6 +168,54 @@
                     $(slot_elem[i]).html(timeSlotsLabels[i]);
                 }
             },
+            viewRender: function (view, element) {
+                self.recheckSlotsOnNavigation(view);
+            },
+            eventClick: function (event, jsEvent, view) {
+                var startDate = self.formatForDate(event.start.date());
+                var startMonth = self.formatForDate((Number(event.start.month()) + 1).toString());
+                var startYear = self.formatForDate(event.start.year());
+                var fullDate = startYear + "-" + startMonth + "-" + startDate;
+
+                var time = '';
+                time += self.formatForDate(event.start.time()._data.hours);
+                time += ":" + self.formatForDate(event.start.time()._data.minutes);
+                time += ":" + self.formatForDate(event.start.time()._data.seconds);
+
+                var meetingSlots = App.config.appointment_timeslots;
+                if (event.start.day() == 6) {   // if saturday
+                    if (time == meetingSlots.regular_case.AM2.start_time) {
+                        time = meetingSlots.special_case.AM2.start_time;
+                    } else if (time == meetingSlots.regular_case.PM1.start_time) {
+                        time = meetingSlots.special_case.PM1.start_time;
+                    } else if (time == meetingSlots.regular_case.PM2.start_time) {
+                        time = meetingSlots.special_case.PM2.start_time;
+                    }
+                }
+
+                var checkBox = document.getElementById("new_" + fullDate + "T" + time);
+                var datetime = App.date(fullDate + " " + time, App.date.convertFormat("Y-m-d h:i:s"), false);
+                var slot = {
+                    name: 'Available Meetings',
+                    status: 'disponible',
+                    date_start: datetime.format(),
+                    assigned_user_id: app.user.attributes.id,
+                    start_date: fullDate,
+                    time: time
+                };
+                if (checkBox) {
+                    if (checkBox.checked) {
+                        if (!self.slotExists(slot)) {
+                            slot.timeslot_name = checkBox.name;
+                            self.selectedSlots.push(slot);
+                        }
+                    } else {
+                        self.selectedSlots = _.reject(self.selectedSlots, function (el) {
+                            return (el.start_date == slot.start_date && el.time == slot.time);
+                        });
+                    }
+                }
+            },
         });
     },
     formatForDate: function (string) {
@@ -192,16 +225,23 @@
         return string;
     },
     prepopulateCalendar: function () {
-        var self = this;
-        console.log("Meetings Fetched: ", self.availableMeetings.models.length);
-        for (var i in self.availableMeetings.models) {
-            dateStart = self.availableMeetings.models[i].attributes.date_start;
+        for (var i in this.availableMeetings.models) {
+            dateStart = this.availableMeetings.models[i].attributes.date_start;
 
             var checkID = dateStart.slice(0, -6);   // remove time zone from end
 
             var checkBox = document.getElementById('new_' + checkID);
             if (checkBox) {
                 checkBox.id = "old_" + checkID;
+                checkBox.checked = true;
+            }
+        }
+    },
+    recheckSlotsOnNavigation: function (view) {
+        for (var i in this.selectedSlots) {
+            var slot = this.selectedSlots[i];
+            var checkBox = document.getElementById("new_" + slot.start_date + "T" + slot.time);
+            if (checkBox) {
                 checkBox.checked = true;
             }
         }
@@ -260,10 +300,10 @@
             if (Number(broken_event_date[1]) > Number(broken_current_date[1])) {    // month greater
                 return true;
             } else if (Number(broken_event_date[1]) == Number(broken_current_date[1])) {    // month equal
-                if (Number(broken_event_date[2]) > Number(broken_current_date[2])) {   // day
+                if (Number(broken_event_date[2]) > Number(broken_current_date[2])) {   // day greater
                     return true;
-                } else if (Number(broken_event_date[2]) == Number(broken_current_date[2])) {    // if same day then check time
-                    if (Number(broken_event_time[0]) > ((Number(broken_current_time[0]) - timeZoneOffset) % 24)) {
+                } else if (Number(broken_event_date[2]) == Number(broken_current_date[2])) {    // day equal
+                    if (Number(broken_event_time[0]) > ((Number(broken_current_time[0]) - timeZoneOffset) % 24)) {  // hour greater
                         return true;
                     } else {
                         return false;
@@ -277,6 +317,12 @@
         } else {
             return false;
         }
+    },
+    slotExists: function (slot) {
+        return this.selectedSlots.some(function (el) {
+            return (el.start_date == slot.start_date && el.time == slot.time);
+        });
     }
+
 
 })
