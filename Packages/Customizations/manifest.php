@@ -15,7 +15,7 @@ $manifest = array (
   'built_in_version' => '7.10.2.0',
   'acceptable_sugar_versions' => 
   array (
-    0 => '',
+    0 => '7.10.*',
   ),
   'acceptable_sugar_flavors' => 
   array (
@@ -23,84 +23,108 @@ $manifest = array (
     1 => 'ULT',
   ),
   'readme' => '',
-  'key' => 'dsm',
-  'author' => '',
-  'description' => '',
+  'key' => 'rt',
+  'author' => 'rolustech',
+  'description' => 'Customizations for Solarcan',
   'icon' => '',
   'is_uninstallable' => true,
-  'name' => 'Customizations',
+  'name' => 'Solarcan Customization 1.0.0',
   'published_date' => '2018-02-15 11:00:00',
   'type' => 'module',
-  'version' => 1517385647,
+  'version' => '1.0.0',
   'remove_tables' => 'prompt',
 );
 
 
 $installdefs = array (
-  'id' => 'Customizations',
+  'id' => 'solarcan_customization_1.0.0',
+    'platforms' => array(
+        array(
+            'from' => '<basepath>/custom/Extension/application/Ext/Platforms/portal-integration.php',
+        )
+    ),
   'copy' => 
   array (
-    0 => 
     array (
       'from' => '<basepath>/custom/Extension/application/Ext/JSGroupings/addFullCalenderPlugin.php',
       'to' => 'custom/Extension/application/Ext/JSGroupings/addFullCalenderPlugin.php',
     ),
-    1 => 
     array (
       'from' => '<basepath>/custom/javascript/calendar/fullcalendar.min.js',
       'to' => 'custom/javascript/calendar/fullcalendar.min.js',
     ),
-    2 => 
     array (
       'from' => '<basepath>/custom/themes/css/fullcalendar.min.css',
       'to' => 'custom/themes/css/fullcalendar.min.css',
     ),
-    3 => 
     array (
       'from' => '<basepath>/custom/themes/css/fullcalendar.print.min.css',
       'to' => 'custom/themes/css/fullcalendar.print.min.css',
     ),
-    4 => 
     array (
       'from' => '<basepath>/custom/modules/Meetings/clients/base/api/CreateMeetingsApi.php',
       'to' => 'custom/modules/Meetings/clients/base/api/CreateMeetingsApi.php',
     ),
-    5 => 
     array (
       'from' => '<basepath>/custom/modules/Meetings/clients/base/layouts/full-calendar/full-calendar.php',
       'to' => 'custom/modules/Meetings/clients/base/layouts/full-calendar/full-calendar.php',
     ),
-    6 => 
     array (
       'from' => '<basepath>/custom/modules/Meetings/clients/base/views/full-calendar/full-calendar.js',
       'to' => 'custom/modules/Meetings/clients/base/views/full-calendar/full-calendar.js',
     ),
-    7 => 
     array (
       'from' => '<basepath>/custom/modules/Meetings/clients/base/views/full-calendar/full-calendar.hbs',
       'to' => 'custom/modules/Meetings/clients/base/views/full-calendar/full-calendar.hbs',
     ),
-    8 => 
     array (
       'from' => '<basepath>/custom/Extension/modules/Meetings/Ext/clients/base/menus/header/salesRepSchedule.php',
       'to' => 'custom/Extension/modules/Meetings/Ext/clients/base/menus/header/salesRepSchedule.php',
     ),
-    9 => 
     array (
       'from' => '<basepath>/custom/Extension/application/Ext/Language/en_us.salesRepSchedule.php',
       'to' => 'custom/Extension/application/Ext/Language/en_us.salesRepSchedule.php',
     ),
-    10 => 
     array (
       'from' => '<basepath>/custom/Extension/application/Ext/Language/fr_FR.salesRepSchedule.php',
       'to' => 'custom/Extension/application/Ext/Language/fr_FR.salesRepSchedule.php',
     ),
+    //////////
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Administration/Ext/Administration/PortalConfig.php',
+      'to' => 'custom/Extension/modules/Administration/Ext/Administration/PortalConfig.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/clients/base/api/AppointmentApi.php',
+      'to' => 'custom/clients/base/api/AppointmentApi.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/clients/base/views/portal-config/',
+      'to' => 'custom/clients/base/views/portal-config/',
+    ),
+    array (
+      'from' => '<basepath>/custom/include/helpers/UtHelper.php',
+      'to' => 'custom/include/helpers/UtHelper.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/clients/base/layouts/portal-config/portal-config.php',
+      'to' => 'custom/clients/base/layouts/portal-config/portal-config.php',
+    )
   ),
   'language' => 
   array (
-    0 => 
-    array (
-
+    array(
+        'from' => '<basepath>/custom/Extension/application/Ext/Language/en_us.lang.php',
+        'to_module' => 'application',
+        'language' => 'en_us',
+    ),
+    array(
+        'from' => '<basepath>/custom/Extension/application/Ext/Language/fr_FR.lang.php',
+        'to_module' => 'application',
+        'language' => 'fr_FR',
     ),
   ),
+    'post_install' => array(
+        '<basepath>/scripts/post_install.php',
+    )
 );
