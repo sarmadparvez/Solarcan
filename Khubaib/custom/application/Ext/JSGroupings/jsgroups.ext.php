@@ -13,7 +13,7 @@ foreach ($js_groupings as $key => $groupings)
         if ($target == 'include/javascript/sugar_grp7.min.js')
         {
             //append the custom JavaScript file
-            $js_groupings[$key]['custom/javascript/calendar/fullcalendar.min.js'] = 'include/javascript/sugar_grp7.min.js';
+            $js_groupings[$key]['custom/javascript/calendar/fullcalendar.js'] = 'include/javascript/sugar_grp7.min.js';
         }
         break;
     }
