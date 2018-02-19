@@ -1,7 +1,7 @@
 <?php
 $viewdefs['Users'] = 
 array (
-  'EditView' => 
+  'DetailView' => 
   array (
     'templateMeta' => 
     array (
@@ -21,8 +21,8 @@ array (
       ),
       'form' => 
       array (
-        'headerTpl' => 'modules/Users/tpls/EditViewHeader.tpl',
-        'footerTpl' => 'modules/Users/tpls/EditViewFooter.tpl',
+        'headerTpl' => 'modules/Users/tpls/DetailViewHeader.tpl',
+        'footerTpl' => 'modules/Users/tpls/DetailViewFooter.tpl',
       ),
       'useTabs' => false,
       'tabDefs' => 
@@ -45,48 +45,21 @@ array (
       array (
         0 => 
         array (
-          0 => 
-          array (
-            'name' => 'user_name',
-            'displayParams' => 
-            array (
-              'required' => true,
-            ),
-          ),
-          1 => 'first_name',
+          0 => 'full_name',
+          1 => 'user_name',
         ),
         1 => 
         array (
-          0 => 
+          0 => 'status',
+          1 => 
           array (
-            'name' => 'status',
-            'displayParams' => 
-            array (
-              'required' => true,
-            ),
+            'name' => 'UserType',
+            'customCode' => '{$USER_TYPE_READONLY}',
           ),
-          1 => 'last_name',
         ),
         2 => 
         array (
-          0 => 
-          array (
-            'name' => 'UserType',
-            'customCode' => '{if $IS_ADMIN}{$USER_TYPE_DROPDOWN}{else}{$USER_TYPE_READONLY}{/if}',
-          ),
-        ),
-        3 => 
-        array (
           0 => 'picture',
-        ),
-        4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'codelangue_rep',
-            'label' => 'LBL_CODELANGUE_REP',
-          ),
-          1 => '',
         ),
       ),
       'LBL_EMPLOYEE_INFORMATION' => 

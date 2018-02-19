@@ -13,7 +13,6 @@
     initialize: function(options)
     {
         this._super('initialize', [options]);
-        pcself = this;
     },
 
     /**
@@ -110,16 +109,12 @@
         _.each(this.fields, function (field) {
             var fieldValue = this.model.get(field.name);
             //all values are required
-            console.log('field: ', field.name, 'field value: ', fieldValue);
             if (field.def.required && !fieldValue) {
-                console.log('in if 1');
                 isValidated = false;
             } else if (field.def.type == 'int' && !(/^\d+$/.test(fieldValue))) {
                 // If field value is not a number
-                console.log('in else');
                isValidated = false;
             }
-            console.log('field def: ', field.def);
             if (!isValidated) {
                 app.alert.show('invalid_data_error', {
                     level: 'error',

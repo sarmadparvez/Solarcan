@@ -61,6 +61,15 @@ array (
         array (
           0 => 'picture',
         ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'codelangue_rep',
+            'label' => 'LBL_CODELANGUE_REP',
+          ),
+          1 => '',
+        ),
       ),
       'LBL_EMPLOYEE_INFORMATION' => 
       array (
