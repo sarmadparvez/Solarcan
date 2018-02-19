@@ -3,9 +3,11 @@
     selectedSlots: null,
     timeSlots: null,
     className: 'full-calendar tcenter',
+    initialize: function (options) {
+        this._super('initialize', [options]);
+    },
     render: function () {
         this._super('render');
-
         var self = this;
         this.prepareTimeSlots();
         var slotEvents = this.prepareEvents();
@@ -18,14 +20,14 @@
                 confirmButton: {
                     text: 'Confirm',
                     click: function () {
-                        app.alert.show('meeting_confirm', {
-                            level: 'confirmation',
-                            title: 'Create New Meetings',
-                            messages: 'This action will create new Available meetings of selected time slots in SugarCRM.',
-                            autoClose: false,
-                            onConfirm: function () {
-                                if (!_.isEmpty(self.selectedSlots)) {
-                                    App.api.call('create', App.api.buildURL('Meetings/mass_create'),
+                        if (!_.isEmpty(self.selectedSlots)) {
+                            app.alert.show('meeting_confirm', {
+                                level: 'confirmation',
+                                title: 'Create New Meetings',
+                                messages: 'This action will create new Available meetings of selected time slots in SugarCRM.',
+                                autoClose: false,
+                                onConfirm: function () {
+                                    App.api.call('create', App.api.buildURL('Meetings/mass_create', null, null, {"max_num": -1}),
                                             {
                                                 newMeetings: self.selectedSlots,
                                             },
@@ -36,6 +38,7 @@
                                                         messages: 'Meetings created successfully',
                                                         autoClose: true
                                                     });
+                                                    self.selectedSlots = [];
                                                     self.$('#calendar').fullCalendar('rerenderEvents');
                                                 }, self),
                                                 error: _.bind(function (data) {
@@ -46,23 +49,24 @@
                                                     });
                                                 }, self),
                                             });
-                                } else {
-                                    app.alert.show('1', {
-                                        level: 'error',
-                                        messages: 'Please select New Meeting slots',
-                                        autoClose: true
-                                    });
+                                },
+                                onCancel: function () {
                                 }
-                            },
-                            onCancel: function () {
-                            }
-                        });
+                            });
+                        } else {
+                            app.alert.show('1', {
+                                level: 'error',
+                                messages: 'Please select New Meeting slots',
+                                autoClose: true
+                            });
+                        }
                     }
                 },
                 refreshButton: {
                     text: 'Refresh Events',
                     click: function () {
-                        $('#calendar').fullCalendar('rerenderEvents');
+                        self.$('#calendar').fullCalendar('rerenderEvents');
+                        self.recheckSlotsOnNavigation();
                     }
                 }
             },
@@ -80,7 +84,7 @@
             slotLabelFormat: 'H:mm', // uppercase H for 24-hour clock
             timeFormat: 'H:mm',
             allDaySlot: false,
-            agendaEventMinHeight: 20,
+            agendaEventMinHeight: 5,
             defaultView: 'agendaWeek',
             snapOnSlots: false, // When dragging/resizing a event it doesn't snaps on the timeslot
             snapDuration: '00:05:00', // instead it does steps of 5 minutes
@@ -153,13 +157,16 @@
                 var filters = [
                     {
                         status: 'disponible',
-                        assigned_user_id: app.user.attributes.id,
+                        created_by: app.user.attributes.id,
                         date_start: {$dateBetween: [filterStart, filterEnd]}
                     }
                 ];
-                var request = self.availableMeetings.fetch({
-                    filter: filters
-                });
+                var request = self.availableMeetings.fetch(
+                        {
+                            limit: 30,
+                            filter: filters
+                        }
+                );
                 request.xhr.done(function () {
                     self.prepopulateCalendar();
                 });
@@ -169,7 +176,7 @@
                 }
             },
             viewRender: function (view, element) {
-                self.recheckSlotsOnNavigation(view);
+                self.recheckSlotsOnNavigation();
             },
             eventClick: function (event, jsEvent, view) {
                 var startDate = self.formatForDate(event.start.date());
@@ -199,7 +206,6 @@
                     name: 'Available Meetings',
                     status: 'disponible',
                     date_start: datetime.format(),
-                    assigned_user_id: app.user.attributes.id,
                     start_date: fullDate,
                     time: time
                 };
@@ -237,7 +243,7 @@
             }
         }
     },
-    recheckSlotsOnNavigation: function (view) {
+    recheckSlotsOnNavigation: function () {
         for (var i in this.selectedSlots) {
             var slot = this.selectedSlots[i];
             var checkBox = document.getElementById("new_" + slot.start_date + "T" + slot.time);
@@ -323,6 +329,5 @@
             return (el.start_date == slot.start_date && el.time == slot.time);
         });
     }
-
 
 })
