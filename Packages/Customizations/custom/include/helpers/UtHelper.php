@@ -40,4 +40,22 @@ trait UtHelper
 	{
 		return new SugarQuery();
 	}
+
+	/**
+	* @codeCoverageIgnore
+	* @return Timedate
+	*/
+	protected function getNewBean($module, $options = array() )
+	{
+		return BeanFactory::newBean($module);
+	}
+
+	/**
+	* @codeCoverageIgnore
+	* @return Timedate
+	*/
+	protected function retrieveBean($module, $id = null, $options = array(), $deleted = true)
+	{
+		return BeanFactory::retrieveBean($module, $id, $options, $deleted);
+	}
 }
