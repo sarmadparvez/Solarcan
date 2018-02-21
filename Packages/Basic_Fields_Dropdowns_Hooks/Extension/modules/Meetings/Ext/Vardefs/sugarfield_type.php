@@ -9,5 +9,6 @@ $dictionary['Meeting']['fields']['type']['merge_filter']='disabled';
 $dictionary['Meeting']['fields']['type']['calculated']=false;
 $dictionary['Meeting']['fields']['type']['dependency']=false;
 $dictionary['Meeting']['fields']['type']['options']='meeting_type';
+$dictionary['Meeting']['fields']['type']['default']='1ere_rencontre';
 
  ?>

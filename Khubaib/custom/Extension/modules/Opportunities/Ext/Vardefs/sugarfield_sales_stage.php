@@ -11,6 +11,6 @@ $dictionary['Opportunity']['fields']['sales_stage']['merge_filter']='disabled';
 $dictionary['Opportunity']['fields']['sales_stage']['reportable']=false;
 $dictionary['Opportunity']['fields']['sales_stage']['calculated']=false;
 $dictionary['Opportunity']['fields']['sales_stage']['dependency']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['studio']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['studio']=true;
 
  ?>

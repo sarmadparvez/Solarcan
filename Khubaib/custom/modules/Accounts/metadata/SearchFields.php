@@ -191,4 +191,20 @@ $searchFields['Accounts'] = array (
   array (
     'query_type' => 'default',
   ),
+  'billing_address_street' => 
+  array (
+    'query_type' => 'default',
+  ),
+  'billing_address_city' => 
+  array (
+    'query_type' => 'default',
+  ),
+  'billing_address_state' => 
+  array (
+    'query_type' => 'default',
+  ),
+  'billing_address_postalcode' => 
+  array (
+    'query_type' => 'default',
+  ),
 );

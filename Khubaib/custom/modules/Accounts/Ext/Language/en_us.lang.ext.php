@@ -2,7 +2,7 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
-// Merged from custom/Extension/modules/Accounts/Ext/Language/en_us.lang.php
+// Merged from custom/Extension/modules/Accounts/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.lang.php
 
 // WARNING: The contents of this file are auto-generated.
 $mod_strings['LNK_NEW_ACCOUNT'] = 'Create Bâtiment';
@@ -41,7 +41,7 @@ $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'New Panel 1';
 
 ?>
 <?php
-// Merged from custom/Extension/modules/Accounts/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.lang.php
+// Merged from custom/Extension/modules/Accounts/Ext/Language/en_us.lang.php
 
 // WARNING: The contents of this file are auto-generated.
 $mod_strings['LNK_NEW_ACCOUNT'] = 'Create Bâtiment';
@@ -76,6 +76,12 @@ $mod_strings['LBL_NOMBRE_GARAGE_ACHANGER'] = 'Nombre garage achanger';
 $mod_strings['LBL_NOMBRE_GARAGE_TOTAL'] = 'Nombre garage total';
 $mod_strings['LBL_NOMBRE_PORTES_ACHANGER'] = 'Nombre portes achanger';
 $mod_strings['LBL_NOMBRE_PORTES_TOTAL'] = 'Nombre portes total';
-$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'New Panel 1';
+$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Basic';
+$mod_strings['LBL_RECORD_SHOWMORE'] = 'Show More';
+$mod_strings['LBL_BILLING_ADDRESS_STREET'] = 'Street:';
+$mod_strings['LBL_BILLING_ADDRESS_CITY'] = 'City:';
+$mod_strings['LBL_BILLING_ADDRESS_STATE'] = 'State:';
+$mod_strings['LBL_BILLING_ADDRESS_POSTALCODE'] = 'Postal Code:';
+$mod_strings['LBL_BILLING_ADDRESS_COUNTRY'] = 'Country:';
 
 ?>

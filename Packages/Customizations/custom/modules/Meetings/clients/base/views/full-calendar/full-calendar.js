@@ -66,7 +66,7 @@
                     text: 'Refresh Events',
                     click: function () {
                         self.$('#calendar').fullCalendar('rerenderEvents');
-                        self.recheckSlotsOnNavigation();
+                        self.selectedSlots = [];
                     }
                 }
             },

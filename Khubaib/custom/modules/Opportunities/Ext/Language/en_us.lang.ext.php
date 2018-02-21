@@ -2,7 +2,7 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
-// Merged from custom/Extension/modules/Opportunities/Ext/Language/en_us.lang.php
+// Merged from custom/Extension/modules/Opportunities/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.lang.php
 
 // WARNING: The contents of this file are auto-generated.
 $mod_strings['LBL_ACCOUNT_NAME'] = 'Bâtiment Name:';
@@ -30,7 +30,7 @@ $mod_strings['LBL_RECORDVIEW_PANEL3'] = 'Suivi de Vente';
 
 ?>
 <?php
-// Merged from custom/Extension/modules/Opportunities/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.lang.php
+// Merged from custom/Extension/modules/Opportunities/Ext/Language/en_us.lang.php
 
 // WARNING: The contents of this file are auto-generated.
 $mod_strings['LBL_ACCOUNT_NAME'] = 'Bâtiment Name:';
@@ -51,7 +51,7 @@ $mod_strings['LBL_STATUT_APRES_VENTE'] = 'Statut après vente';
 $mod_strings['LBL_MONTANT'] = 'Montant';
 $mod_strings['LBL_TYPE'] = 'Type:';
 $mod_strings['LBL_CLOSED_LOST_REASON'] = 'Closed Lost reason';
-$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'New Panel 1';
+$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Additional Info';
 $mod_strings['LBL_LEAD_SOURCE'] = 'Lead Source';
 $mod_strings['LBL_RECORDVIEW_PANEL2'] = 'Suivi de Vente';
 $mod_strings['LBL_RECORDVIEW_PANEL3'] = 'Suivi de Vente';

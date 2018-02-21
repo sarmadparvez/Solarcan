@@ -1,5 +1,5 @@
 <?php
- // created: 2018-01-23 15:42:33
+ // created: 2018-02-20 15:05:46
 $dictionary['Account']['fields']['billing_address_postalcode']['audited']=false;
 $dictionary['Account']['fields']['billing_address_postalcode']['massupdate']=false;
 $dictionary['Account']['fields']['billing_address_postalcode']['comments']='The postal code used for billing address';

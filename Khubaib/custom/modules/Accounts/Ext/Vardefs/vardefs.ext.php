@@ -131,25 +131,6 @@ $dictionary['Account']['fields']['sic_code']['calculated']=false;
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_postalcode.php
-
- // created: 2018-01-23 15:42:33
-$dictionary['Account']['fields']['billing_address_postalcode']['audited']=false;
-$dictionary['Account']['fields']['billing_address_postalcode']['massupdate']=false;
-$dictionary['Account']['fields']['billing_address_postalcode']['comments']='The postal code used for billing address';
-$dictionary['Account']['fields']['billing_address_postalcode']['duplicate_merge']='enabled';
-$dictionary['Account']['fields']['billing_address_postalcode']['duplicate_merge_dom_value']='1';
-$dictionary['Account']['fields']['billing_address_postalcode']['merge_filter']='disabled';
-$dictionary['Account']['fields']['billing_address_postalcode']['full_text_search']=array (
-  'enabled' => '0',
-  'boost' => '1',
-  'searchable' => false,
-);
-$dictionary['Account']['fields']['billing_address_postalcode']['calculated']=false;
-
- 
-?>
-<?php
 // Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_deleted.php
 
  // created: 2018-01-23 15:41:25
@@ -390,27 +371,6 @@ $dictionary['Account']['fields']['date_entered']['enable_range_search']='1';
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_street.php
-
- // created: 2018-01-23 15:42:11
-$dictionary['Account']['fields']['billing_address_street']['audited']=false;
-$dictionary['Account']['fields']['billing_address_street']['massupdate']=false;
-$dictionary['Account']['fields']['billing_address_street']['comments']='The street address used for billing address';
-$dictionary['Account']['fields']['billing_address_street']['duplicate_merge']='enabled';
-$dictionary['Account']['fields']['billing_address_street']['duplicate_merge_dom_value']='1';
-$dictionary['Account']['fields']['billing_address_street']['merge_filter']='disabled';
-$dictionary['Account']['fields']['billing_address_street']['full_text_search']=array (
-  'enabled' => true,
-  'boost' => '0.35',
-  'searchable' => true,
-);
-$dictionary['Account']['fields']['billing_address_street']['calculated']=false;
-$dictionary['Account']['fields']['billing_address_street']['rows']='4';
-$dictionary['Account']['fields']['billing_address_street']['cols']='20';
-
- 
-?>
-<?php
 // Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_shipping_address_street.php
 
  // created: 2018-01-23 15:43:33
@@ -432,25 +392,6 @@ $dictionary['Account']['fields']['shipping_address_street']['cols']='20';
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_city.php
-
- // created: 2018-01-23 15:42:15
-$dictionary['Account']['fields']['billing_address_city']['audited']=false;
-$dictionary['Account']['fields']['billing_address_city']['massupdate']=false;
-$dictionary['Account']['fields']['billing_address_city']['comments']='The city used for billing address';
-$dictionary['Account']['fields']['billing_address_city']['duplicate_merge']='enabled';
-$dictionary['Account']['fields']['billing_address_city']['duplicate_merge_dom_value']='1';
-$dictionary['Account']['fields']['billing_address_city']['merge_filter']='disabled';
-$dictionary['Account']['fields']['billing_address_city']['full_text_search']=array (
-  'enabled' => '0',
-  'boost' => '1',
-  'searchable' => false,
-);
-$dictionary['Account']['fields']['billing_address_city']['calculated']=false;
-
- 
-?>
-<?php
 // Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_date_modified.php
 
  // created: 2018-01-23 15:41:15
@@ -461,25 +402,6 @@ $dictionary['Account']['fields']['date_modified']['duplicate_merge_dom_value']=1
 $dictionary['Account']['fields']['date_modified']['merge_filter']='disabled';
 $dictionary['Account']['fields']['date_modified']['calculated']=false;
 $dictionary['Account']['fields']['date_modified']['enable_range_search']='1';
-
- 
-?>
-<?php
-// Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_state.php
-
- // created: 2018-01-23 15:42:20
-$dictionary['Account']['fields']['billing_address_state']['audited']=false;
-$dictionary['Account']['fields']['billing_address_state']['massupdate']=false;
-$dictionary['Account']['fields']['billing_address_state']['comments']='The state used for billing address';
-$dictionary['Account']['fields']['billing_address_state']['duplicate_merge']='enabled';
-$dictionary['Account']['fields']['billing_address_state']['duplicate_merge_dom_value']='1';
-$dictionary['Account']['fields']['billing_address_state']['merge_filter']='disabled';
-$dictionary['Account']['fields']['billing_address_state']['full_text_search']=array (
-  'enabled' => '0',
-  'boost' => '1',
-  'searchable' => false,
-);
-$dictionary['Account']['fields']['billing_address_state']['calculated']=false;
 
  
 ?>
@@ -752,9 +674,87 @@ $dictionary['Account']['fields']['industry']['dependency']=false;
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_street.php
+
+ // created: 2018-02-20 15:05:16
+$dictionary['Account']['fields']['billing_address_street']['audited']=false;
+$dictionary['Account']['fields']['billing_address_street']['massupdate']=false;
+$dictionary['Account']['fields']['billing_address_street']['comments']='The street address used for billing address';
+$dictionary['Account']['fields']['billing_address_street']['duplicate_merge']='enabled';
+$dictionary['Account']['fields']['billing_address_street']['duplicate_merge_dom_value']='1';
+$dictionary['Account']['fields']['billing_address_street']['merge_filter']='disabled';
+$dictionary['Account']['fields']['billing_address_street']['full_text_search']=array (
+  'enabled' => true,
+  'boost' => '0.35',
+  'searchable' => true,
+);
+$dictionary['Account']['fields']['billing_address_street']['calculated']=false;
+$dictionary['Account']['fields']['billing_address_street']['rows']='4';
+$dictionary['Account']['fields']['billing_address_street']['cols']='20';
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_city.php
+
+ // created: 2018-02-20 15:05:26
+$dictionary['Account']['fields']['billing_address_city']['audited']=false;
+$dictionary['Account']['fields']['billing_address_city']['massupdate']=false;
+$dictionary['Account']['fields']['billing_address_city']['comments']='The city used for billing address';
+$dictionary['Account']['fields']['billing_address_city']['duplicate_merge']='enabled';
+$dictionary['Account']['fields']['billing_address_city']['duplicate_merge_dom_value']='1';
+$dictionary['Account']['fields']['billing_address_city']['merge_filter']='disabled';
+$dictionary['Account']['fields']['billing_address_city']['full_text_search']=array (
+  'enabled' => '0',
+  'boost' => '1',
+  'searchable' => false,
+);
+$dictionary['Account']['fields']['billing_address_city']['calculated']=false;
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_state.php
+
+ // created: 2018-02-20 15:05:35
+$dictionary['Account']['fields']['billing_address_state']['audited']=false;
+$dictionary['Account']['fields']['billing_address_state']['massupdate']=false;
+$dictionary['Account']['fields']['billing_address_state']['comments']='The state used for billing address';
+$dictionary['Account']['fields']['billing_address_state']['duplicate_merge']='enabled';
+$dictionary['Account']['fields']['billing_address_state']['duplicate_merge_dom_value']='1';
+$dictionary['Account']['fields']['billing_address_state']['merge_filter']='disabled';
+$dictionary['Account']['fields']['billing_address_state']['full_text_search']=array (
+  'enabled' => '0',
+  'boost' => '1',
+  'searchable' => false,
+);
+$dictionary['Account']['fields']['billing_address_state']['calculated']=false;
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_postalcode.php
+
+ // created: 2018-02-20 15:05:46
+$dictionary['Account']['fields']['billing_address_postalcode']['audited']=false;
+$dictionary['Account']['fields']['billing_address_postalcode']['massupdate']=false;
+$dictionary['Account']['fields']['billing_address_postalcode']['comments']='The postal code used for billing address';
+$dictionary['Account']['fields']['billing_address_postalcode']['duplicate_merge']='enabled';
+$dictionary['Account']['fields']['billing_address_postalcode']['duplicate_merge_dom_value']='1';
+$dictionary['Account']['fields']['billing_address_postalcode']['merge_filter']='disabled';
+$dictionary['Account']['fields']['billing_address_postalcode']['full_text_search']=array (
+  'enabled' => '0',
+  'boost' => '1',
+  'searchable' => false,
+);
+$dictionary['Account']['fields']['billing_address_postalcode']['calculated']=false;
+
+ 
+?>
+<?php
 // Merged from custom/Extension/modules/Accounts/Ext/Vardefs/sugarfield_billing_address_country.php
 
- // created: 2018-02-02 17:42:36
+ // created: 2018-02-20 15:05:57
 $dictionary['Account']['fields']['billing_address_country']['audited']=false;
 $dictionary['Account']['fields']['billing_address_country']['massupdate']=false;
 $dictionary['Account']['fields']['billing_address_country']['comments']='The country used for the billing address';

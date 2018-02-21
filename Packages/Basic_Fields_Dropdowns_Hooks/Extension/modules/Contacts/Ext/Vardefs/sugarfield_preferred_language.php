@@ -11,6 +11,7 @@ $dictionary['Contact']['fields']['preferred_language']['calculated']=false;
 $dictionary['Contact']['fields']['preferred_language']['required']=true;
 $dictionary['Contact']['fields']['preferred_language']['audited']=true;
 $dictionary['Contact']['fields']['preferred_language']['importable']='true';
+$dictionary['Contact']['fields']['preferred_language']['default']='francais';
 $dictionary['Contact']['fields']['preferred_language']['duplicate_merge_dom_value']='2';
 
  ?>

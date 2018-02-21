@@ -115,16 +115,6 @@ $app_list_strings['statut_apres_rencontre_dom'] = array(
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.meeting_type.php
-
-
-$app_list_strings['meeting_type'] = array(
-	'1ere_rencontre' => '1ere Rencontre',
-	'2e_rencontre' => '2e rencontre',
-	'autre' => 'Autre',
-);
-?>
-<?php
 // Merged from custom/Extension/application/Ext/Language/en_us.disposition_dom.php
 
 
@@ -755,4 +745,14 @@ $app_list_strings['user_secteur_rep_dom'] = array(
 //create the links label
 $app_strings['LNK_SALES_REP_SCHEDULE'] = 'Sales Rep Schedule';
 
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.meeting_type_list.php
+
+
+$app_list_strings['meeting_type_list'] = array(
+	'1ere_rencontre' => '1ere Rencontre',
+	'2e_rencontre' => '2e rencontre',
+	'autre' => 'Autre',
+);
 ?>

@@ -2204,6 +2204,71 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_name.php',
       'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_name.php',
     ),
+    371 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_location.php',
+      'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_location.php',
+    ),
+    372 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_campaign_type.php',
+      'to' => 'custom/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_campaign_type.php',
+    ),
+    373 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_status.php',
+      'to' => 'custom/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_status.php',
+    ),
+    374 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Tasks/Ext/Vardefs/sugarfield_date_due.php',
+      'to' => 'custom/Extension/modules/Tasks/Ext/Vardefs/sugarfield_date_due.php',
+    ),
+    375 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Tasks/Ext/Vardefs/sugarfield_date_start.php',
+      'to' => 'custom/Extension/modules/Tasks/Ext/Vardefs/sugarfield_date_start.php',
+    ),
+    376 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Tasks/Ext/Vardefs/sugarfield_description.php',
+      'to' => 'custom/Extension/modules/Tasks/Ext/Vardefs/sugarfield_description.php',
+    ),
+    377 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/Accounts/clients/base/views/record/record.php',
+      'to' => 'custom/modules/Accounts/clients/base/views/record/record.php',
+    ),
+    378 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/Contacts/clients/base/views/record/record.php',
+      'to' => 'custom/modules/Contacts/clients/base/views/record/record.php',
+    ),
+    379 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/Opportunities/clients/base/views/record/record.php',
+      'to' => 'custom/modules/Opportunities/clients/base/views/record/record.php',
+    ),
+    380 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/dsm_suivi_de_vente/clients/base/views/record/record.php',
+      'to' => 'custom/modules/dsm_suivi_de_vente/clients/base/views/record/record.php',
+    ),
+    381 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/tm_telemarketers/clients/base/views/record/record.php',
+      'to' => 'custom/modules/tm_telemarketers/clients/base/views/record/record.php',
+    ),
+    382 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/dsm_dnc/clients/base/views/record/record.php',
+      'to' => 'custom/modules/dsm_dnc/clients/base/views/record/record.php',
+    ),
+    383 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/dsm_dnc_historic/clients/base/views/record/record.php',
+      'to' => 'custom/modules/dsm_dnc_historic/clients/base/views/record/record.php',
+    ),
   ),
   'roles' => 
   array (

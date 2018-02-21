@@ -1,5 +1,5 @@
 <?php
- // created: 2018-01-23 15:42:15
+ // created: 2018-02-20 15:05:26
 $dictionary['Account']['fields']['billing_address_city']['audited']=false;
 $dictionary['Account']['fields']['billing_address_city']['massupdate']=false;
 $dictionary['Account']['fields']['billing_address_city']['comments']='The city used for billing address';

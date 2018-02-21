@@ -221,4 +221,8 @@ $searchFields['Contacts'] = array (
   array (
     'query_type' => 'default',
   ),
+  'preferred_language' => 
+  array (
+    'query_type' => 'default',
+  ),
 );

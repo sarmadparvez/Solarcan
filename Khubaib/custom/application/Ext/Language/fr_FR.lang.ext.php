@@ -167,16 +167,6 @@ $app_list_strings['statut_apres_rencontre_dom'] = array(
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/fr_FR.meeting_type.php
-
-
-$app_list_strings['meeting_type'] = array(
-	'1ere_rencontre' => '1ere Rencontre',
-	'2e_rencontre' => '2e rencontre',
-	'autre' => 'Autre',
-);
-?>
-<?php
 // Merged from custom/Extension/application/Ext/Language/fr_FR.disposition_dom.php
 
 
@@ -578,5 +568,15 @@ $app_list_strings['user_secteur_rep_dom'] = array(
 	'saskatchewan' => 'Saskatchewan',
 	'colombie-britannique' => 'Colombie-Britannique',
 	'maritimes' => 'Maritimes',
+);
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/fr_FR.meeting_type_list.php
+
+
+$app_list_strings['meeting_type_list'] = array(
+	'1ere_rencontre' => '1ere Rencontre',
+	'2e_rencontre' => '2e rencontre',
+	'autre' => 'Autre',
 );
 ?>

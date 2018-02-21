@@ -33,6 +33,6 @@ $mod_strings['LBL_COUPON'] = 'Coupon';
 $mod_strings['LBL_STATUT_SUIVI'] = 'Statut suivi';
 $mod_strings['LBL_DATE_STATUT'] = 'Date statut';
 $mod_strings['LBL_NOTE'] = 'Note';
-$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'New Panel 1';
+$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Additional Info';
 
 ?>
