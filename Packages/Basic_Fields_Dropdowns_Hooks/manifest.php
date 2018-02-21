@@ -2269,6 +2269,11 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/modules/dsm_dnc_historic/clients/base/views/record/record.php',
       'to' => 'custom/modules/dsm_dnc_historic/clients/base/views/record/record.php',
     ),
+    384 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_partenaire_info.php',
+      'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_partenaire_info.php',
+    ),
   ),
   'roles' => 
   array (
