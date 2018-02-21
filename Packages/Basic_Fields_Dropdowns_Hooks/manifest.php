@@ -511,6 +511,18 @@ $installdefs = array (
       'to_module' => 'application',
       'language' => 'fr_FR',
     ),
+    78 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.custom_dropdowns.php',
+      'to_module' => 'application',
+      'language' => 'en_us',
+    ),
+    79 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.custom_dropdowns.php',
+      'to_module' => 'application',
+      'language' => 'fr_FR',
+    )
   ),
   'copy' => 
   array (
