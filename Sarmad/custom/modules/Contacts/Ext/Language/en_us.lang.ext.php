@@ -64,3 +64,10 @@ $mod_strings['LBL_CONTACTS_DSM_DNC_HISTORIC_FROM_DSM_DNC_HISTORIC_TITLE'] = 'Do 
 $mod_strings['LBL_DSM_DNC_NAME'] = 'DNC';
 
 ?>
+<?php
+// Merged from custom/Extension/modules/Contacts/Ext/Language/en_us.custom_language.php
+
+
+$mod_strings['LBL_CODECIE_C'] = 'CodeCie';
+
+?>

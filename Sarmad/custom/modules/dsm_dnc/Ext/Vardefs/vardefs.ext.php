@@ -2,6 +2,41 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
+// Merged from custom/Extension/modules/dsm_dnc/Ext/Vardefs/duplicate_check.php
+
+
+$dictionary['dsm_dnc']['duplicate_check']['FilterDuplicateCheck'] = array(
+    'filter_template' => 
+    array (
+    0 => 
+        array (
+          'telephone' => 
+          array (
+            '$equals' => '$telephone',
+          ),
+        ),
+    ),
+    'ranking_fields' => 
+    array (
+        0 => 
+        array (
+          'in_field_name' => 'telephone',
+          'dupe_field_name' => 'telephone',
+        ),
+    ),
+);
+
+$dictionary['dsm_dnc']['indices'][] = array(
+    'name' => 'idx_telephone',
+    'type' => 'index',
+    'fields' => array(
+        0 => 'telephone',
+    ),
+    'source' => 'non-db',
+);
+
+?>
+<?php
 // Merged from custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_source.php
 
  // created: 2018-01-24 19:33:37

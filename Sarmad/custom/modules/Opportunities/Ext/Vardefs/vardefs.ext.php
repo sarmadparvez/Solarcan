@@ -396,7 +396,7 @@ $dictionary['Opportunity']['fields']['nombre_garage_achanger']['massupdate']=fal
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['duplicate_merge']='disabled';
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['merge_filter']='disabled';
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['calculated']='true';
-$dictionary['Opportunity']['fields']['nombre_garage_achanger']['required']=true;
+$dictionary['Opportunity']['fields']['nombre_garage_achanger']['required']=false;
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['audited']=true;
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['importable']='false';
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['duplicate_merge_dom_value']=0;
@@ -440,7 +440,7 @@ $dictionary['Opportunity']['fields']['sales_stage']['merge_filter']='disabled';
 $dictionary['Opportunity']['fields']['sales_stage']['reportable']=false;
 $dictionary['Opportunity']['fields']['sales_stage']['calculated']=false;
 $dictionary['Opportunity']['fields']['sales_stage']['dependency']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['studio']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['studio']=true;
 
  
 ?>

@@ -11,7 +11,7 @@ $dictionary['Contact']['fields']['etat_de_proprietaire']['required']=true;
 $dictionary['Contact']['fields']['etat_de_proprietaire']['len']=100;
 $dictionary['Contact']['fields']['etat_de_proprietaire']['audited']=true;
 $dictionary['Contact']['fields']['etat_de_proprietaire']['importable']='true';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['options']='yes_no_dom';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['options']='owner_state_dom';
 $dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge_dom_value']='2';
 $dictionary['Contact']['fields']['etat_de_proprietaire']['dependency']=false;
 

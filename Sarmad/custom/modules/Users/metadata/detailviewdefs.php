@@ -65,8 +65,34 @@ array (
         array (
           0 => 
           array (
+            'name' => 'codecie_rep_c',
+            'label' => 'LBL_CODECIE_REP_C',
+          ),
+          1 => 
+          array (
             'name' => 'codelangue_rep',
             'label' => 'LBL_CODELANGUE_REP',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'qualified_doors_rep_c',
+            'label' => 'LBL_QUALIFIED_DOORS_REP_C',
+          ),
+          1 => 
+          array (
+            'name' => 'qualified_garage_rep_c',
+            'label' => 'LBL_QUALIFIED_GARAGE_REP_C',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'qualified_windows_rep_c',
+            'label' => 'LBL_QUALIFIED_WINDOWS_REP_C',
           ),
           1 => '',
         ),

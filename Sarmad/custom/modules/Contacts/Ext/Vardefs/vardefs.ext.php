@@ -830,6 +830,7 @@ $dictionary['Contact']['fields']['preferred_language']['calculated']=false;
 $dictionary['Contact']['fields']['preferred_language']['required']=true;
 $dictionary['Contact']['fields']['preferred_language']['audited']=true;
 $dictionary['Contact']['fields']['preferred_language']['importable']='true';
+$dictionary['Contact']['fields']['preferred_language']['default']='francais';
 $dictionary['Contact']['fields']['preferred_language']['duplicate_merge_dom_value']='2';
 
  
@@ -917,6 +918,20 @@ $dictionary['Contact']['fields']['source_details']['dependency']=false;
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_date_modified.php
+
+ // created: 2018-01-23 15:27:34
+$dictionary['Contact']['fields']['date_modified']['audited']=false;
+$dictionary['Contact']['fields']['date_modified']['comments']='Date record last modified';
+$dictionary['Contact']['fields']['date_modified']['duplicate_merge']='enabled';
+$dictionary['Contact']['fields']['date_modified']['duplicate_merge_dom_value']=1;
+$dictionary['Contact']['fields']['date_modified']['merge_filter']='disabled';
+$dictionary['Contact']['fields']['date_modified']['calculated']=false;
+$dictionary['Contact']['fields']['date_modified']['enable_range_search']='1';
+
+ 
+?>
+<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_etat_de_proprietaire.php
 
  // created: 2018-01-23 15:39:21
@@ -931,23 +946,32 @@ $dictionary['Contact']['fields']['etat_de_proprietaire']['required']=true;
 $dictionary['Contact']['fields']['etat_de_proprietaire']['len']=100;
 $dictionary['Contact']['fields']['etat_de_proprietaire']['audited']=true;
 $dictionary['Contact']['fields']['etat_de_proprietaire']['importable']='true';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['options']='yes_no_dom';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['options']='owner_state_dom';
 $dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge_dom_value']='2';
 $dictionary['Contact']['fields']['etat_de_proprietaire']['dependency']=false;
 
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_date_modified.php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php
 
- // created: 2018-01-23 15:27:34
-$dictionary['Contact']['fields']['date_modified']['audited']=false;
-$dictionary['Contact']['fields']['date_modified']['comments']='Date record last modified';
-$dictionary['Contact']['fields']['date_modified']['duplicate_merge']='enabled';
-$dictionary['Contact']['fields']['date_modified']['duplicate_merge_dom_value']=1;
-$dictionary['Contact']['fields']['date_modified']['merge_filter']='disabled';
-$dictionary['Contact']['fields']['date_modified']['calculated']=false;
-$dictionary['Contact']['fields']['date_modified']['enable_range_search']='1';
 
- 
+$dictionary['Contact']['fields']['codecie_c'] = array (
+	'name' => 'codecie_c',
+	'vname' => 'LBL_CODECIE_C',
+	'type' => 'enum',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'required' => true,
+	'len' => 50,
+	'size' => 50,
+	'importable' => true,
+	'options' => 'codecie_dom',
+	'audited' => true,
+	'reportable' => true,
+	'default' => 'Solarcan'
+);
+
 ?>

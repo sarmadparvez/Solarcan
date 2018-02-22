@@ -118,6 +118,100 @@ $app_list_strings['moduleListSingular']['rt_Classification'] = 'Classification';
 
 ?>
 <?php
+// Merged from custom/Extension/application/Ext/Language/en_us.DNC_Suivi_Modules.php
+
+/*
+ * Your installation or use of this SugarCRM file is subject to the applicable
+ * terms available at
+ * http://support.sugarcrm.com/Resources/Master_Subscription_Agreements/.
+ * If you do not agree to all of the applicable terms or do not have the
+ * authority to bind the entity as an authorized representative, then do not
+ * install or use this SugarCRM file.
+ *
+ * Copyright (C) SugarCRM Inc. All rights reserved.
+ */
+
+$app_list_strings['moduleList']['dsm_dnc'] = 'Do Not Call';
+$app_list_strings['moduleList']['dsm_dnc_historic'] = 'Do Not Call Historic';
+$app_list_strings['moduleList']['dsm_suivi_de_vente'] = 'Suivi de Vente';
+$app_list_strings['moduleListSingular']['dsm_dnc'] = 'Do Not Call';
+$app_list_strings['moduleListSingular']['dsm_dnc_historic'] = 'Do Not Call Historic';
+$app_list_strings['moduleListSingular']['dsm_suivi_de_vente'] = 'Suivi de Vente';
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Postal_Codes.php
+
+/*
+ * Your installation or use of this SugarCRM file is subject to the applicable
+ * terms available at
+ * http://support.sugarcrm.com/Resources/Master_Subscription_Agreements/.
+ * If you do not agree to all of the applicable terms or do not have the
+ * authority to bind the entity as an authorized representative, then do not
+ * install or use this SugarCRM file.
+ *
+ * Copyright (C) SugarCRM Inc. All rights reserved.
+ */
+
+$app_list_strings['moduleList']['rt_postal_codes'] = 'Postal Codes';
+$app_list_strings['moduleListSingular']['rt_postal_codes'] = 'Postal Code';
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Telemarketers.php
+
+/*
+ * Your installation or use of this SugarCRM file is subject to the applicable
+ * terms available at
+ * http://support.sugarcrm.com/Resources/Master_Subscription_Agreements/.
+ * If you do not agree to all of the applicable terms or do not have the
+ * authority to bind the entity as an authorized representative, then do not
+ * install or use this SugarCRM file.
+ *
+ * Copyright (C) SugarCRM Inc. All rights reserved.
+ */
+
+$app_list_strings['moduleList']['tm_telemarketers'] = 'Telemarketer';
+$app_list_strings['moduleListSingular']['tm_telemarketers'] = 'Telemarketers';
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.lang.php
+
+
+$app_strings['LBL_APPOINTMENT_IN_X_HOURS'] = 'Defines the appointment available as of today, in X hours';
+$app_strings['LBL_APPOINTMENT_FILTER'] =  'Date and time from which the appointments are no longer available to select in Portal';
+$app_strings['LBL_APPOINTMENT_CONFIG'] =  'Appointment Configuration';
+$app_strings['LBL_APPOINTMENT_CONFIG_ATTR'] = 'Configure attributes related to available appointments in Portal';
+$app_strings['ERR_INVALID_X_HOURS'] = 'Please input valid Number of X hours';
+$app_strings['ERR_APPOINTMENT_FILTER'] = 'Please input a valid date and time for appointments';
+$app_strings['LBL_PORTAL_CONFIG_SAVING'] = 'Saving data ...';
+
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.salesRepSchedule.php
+
+
+//create the links label
+$app_strings['LNK_SALES_REP_SCHEDULE'] = 'Sales Rep Schedule';
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.solarcan_customization_1.0.0.php
+
+
+$app_strings['LBL_APPOINTMENT_IN_X_HOURS'] = 'Defines the appointment available as of today, in X hours';
+$app_strings['LBL_APPOINTMENT_FILTER'] =  'Date and time from which the appointments are no longer available to select in Portal';
+$app_strings['LBL_APPOINTMENT_CONFIG'] =  'Appointment Configuration';
+$app_strings['LBL_APPOINTMENT_CONFIG_ATTR'] = 'Configure attributes related to available appointments in Portal';
+$app_strings['ERR_INVALID_X_HOURS'] = 'Please input valid Number of X hours';
+$app_strings['ERR_APPOINTMENT_FILTER'] = 'Please input a valid date and time for appointments';
+$app_strings['LBL_PORTAL_CONFIG_SAVING'] = 'Saving data ...';
+
+
+?>
+<?php
 // Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
 
 // WARNING: The contents of this file are auto-generated.
@@ -225,6 +319,13 @@ $app_list_strings['yes_no_dom'] = array (
   'yes' => 'Yes',
   'no' => 'No',
 );
+
+$app_list_strings['owner_state_dom'] = array (
+  '' => '',
+  'proprietaire' => 'Propriétaire',
+  'locataire' => 'Locataire',
+);
+
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
@@ -263,13 +364,16 @@ $app_list_strings['statut_apres_vente_dom'] = array (
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
- 
-$app_list_strings['lead_source_dom'] = array (
-  'site_web' => 'Site Web',
-  'hit' => 'HIT',
-  'reno_depot' => 'Reno Depot',
-  'autre' => 'Autre',
+
+  
+$app_list_strings['lead_source_dom'] = array(
+    'site_web' => 'Site Web',
+    'hit' => 'HIT',
+    'reno_depot' => 'Reno Depot',
+    'autre' => 'Autre',
+    'solarcan' => 'Solarcan',
 );
+
 
 ?>
 <?php
@@ -298,12 +402,14 @@ $app_list_strings['statut_apres_rencontre_dom'] = array (
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
  
+
 $app_list_strings['meeting_status_dom'] = array (
-  'disponible' => 'Disponible',	
-  'planifie' => 'Planifié',
-  'confirme_au_client' => 'Confirmé au client',
-  'complete' => 'Complété',
-  'annule' => 'Annulé',
+ 'disponible' => 'Disponible',	
+ 'en_attente_dassignation' => 'En attente d\'assignation',
+ 'assigne' => 'ASSIGNÉ',
+ 'confirme_au_client' => 'Confirmé au client',
+ 'complete' => 'Complété',
+ 'annule' => 'Annulé',
 );
 
 ?>
@@ -470,96 +576,12 @@ $app_list_strings['user_secteur_rep_dom'] = array(
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.DNC_Suivi_Modules.php
-
-/*
- * Your installation or use of this SugarCRM file is subject to the applicable
- * terms available at
- * http://support.sugarcrm.com/Resources/Master_Subscription_Agreements/.
- * If you do not agree to all of the applicable terms or do not have the
- * authority to bind the entity as an authorized representative, then do not
- * install or use this SugarCRM file.
- *
- * Copyright (C) SugarCRM Inc. All rights reserved.
- */
-
-$app_list_strings['moduleList']['dsm_dnc'] = 'Do Not Call';
-$app_list_strings['moduleList']['dsm_dnc_historic'] = 'Do Not Call Historic';
-$app_list_strings['moduleList']['dsm_suivi_de_vente'] = 'Suivi de Vente';
-$app_list_strings['moduleListSingular']['dsm_dnc'] = 'Do Not Call';
-$app_list_strings['moduleListSingular']['dsm_dnc_historic'] = 'Do Not Call Historic';
-$app_list_strings['moduleListSingular']['dsm_suivi_de_vente'] = 'Suivi de Vente';
-
-?>
-<?php
-// Merged from custom/Extension/application/Ext/Language/en_us.Postal_Codes.php
-
-/*
- * Your installation or use of this SugarCRM file is subject to the applicable
- * terms available at
- * http://support.sugarcrm.com/Resources/Master_Subscription_Agreements/.
- * If you do not agree to all of the applicable terms or do not have the
- * authority to bind the entity as an authorized representative, then do not
- * install or use this SugarCRM file.
- *
- * Copyright (C) SugarCRM Inc. All rights reserved.
- */
-
-$app_list_strings['moduleList']['rt_postal_codes'] = 'Postal Codes';
-$app_list_strings['moduleListSingular']['rt_postal_codes'] = 'Postal Code';
-
-?>
-<?php
-// Merged from custom/Extension/application/Ext/Language/en_us.Telemarketers.php
-
-/*
- * Your installation or use of this SugarCRM file is subject to the applicable
- * terms available at
- * http://support.sugarcrm.com/Resources/Master_Subscription_Agreements/.
- * If you do not agree to all of the applicable terms or do not have the
- * authority to bind the entity as an authorized representative, then do not
- * install or use this SugarCRM file.
- *
- * Copyright (C) SugarCRM Inc. All rights reserved.
- */
-
-$app_list_strings['moduleList']['tm_telemarketers'] = 'Telemarketer';
-$app_list_strings['moduleListSingular']['tm_telemarketers'] = 'Telemarketers';
-
-?>
-<?php
-// Merged from custom/Extension/application/Ext/Language/en_us.lang.php
+// Merged from custom/Extension/application/Ext/Language/en_us.custom_dropdowns.php
 
 
-$app_strings['LBL_APPOINTMENT_IN_X_HOURS'] = 'Defines the appointment available as of today, in X hours';
-$app_strings['LBL_APPOINTMENT_FILTER'] =  'Date and time from which the appointments are no longer available to select in Portal';
-$app_strings['LBL_APPOINTMENT_CONFIG'] =  'Appointment Configuration';
-$app_strings['LBL_APPOINTMENT_CONFIG_ATTR'] = 'Configure attributes related to available appointments in Portal';
-$app_strings['ERR_INVALID_X_HOURS'] = 'Please input valid Number of X hours';
-$app_strings['ERR_APPOINTMENT_FILTER'] = 'Please input a valid date and time for appointments';
-$app_strings['LBL_PORTAL_CONFIG_SAVING'] = 'Saving data ...';
-
-
-?>
-<?php
-// Merged from custom/Extension/application/Ext/Language/en_us.salesRepSchedule.php
-
-
-//create the links label
-$app_strings['LNK_SALES_REP_SCHEDULE'] = 'Sales Rep Schedule';
-
-?>
-<?php
-// Merged from custom/Extension/application/Ext/Language/en_us.solarcan_customization_1.0.0.php
-
-
-$app_strings['LBL_APPOINTMENT_IN_X_HOURS'] = 'Defines the appointment available as of today, in X hours';
-$app_strings['LBL_APPOINTMENT_FILTER'] =  'Date and time from which the appointments are no longer available to select in Portal';
-$app_strings['LBL_APPOINTMENT_CONFIG'] =  'Appointment Configuration';
-$app_strings['LBL_APPOINTMENT_CONFIG_ATTR'] = 'Configure attributes related to available appointments in Portal';
-$app_strings['ERR_INVALID_X_HOURS'] = 'Please input valid Number of X hours';
-$app_strings['ERR_APPOINTMENT_FILTER'] = 'Please input a valid date and time for appointments';
-$app_strings['LBL_PORTAL_CONFIG_SAVING'] = 'Saving data ...';
-
+$app_list_strings['codecie_dom'] = array (
+  'Solarcan' => 'Solarcan',
+  'Autre' => 'Autre',
+);
 
 ?>

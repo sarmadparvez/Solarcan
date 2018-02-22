@@ -13,4 +13,4 @@ $dictionary['Meeting']['fields']['timeslot_datetime']['audited']=true;
 $dictionary['Meeting']['fields']['timeslot_datetime']['importable']='true';
 $dictionary['Meeting']['fields']['timeslot_datetime']['duplicate_merge_dom_value']='2';
 $dictionary['Meeting']['fields']['timeslot_datetime']['dependency']=false;
-//$dictionary['Meeting']['fields']['timeslot_datetime']['studio']=false;
+$dictionary['Meeting']['fields']['timeslot_datetime']['studio']=false;

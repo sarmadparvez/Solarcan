@@ -178,6 +178,8 @@ array (
             'labels' => true,
             'labelsOnTop' => true,
             'placeholders' => true,
+            'newTab' => true,
+            'panelDefault' => 'expanded',
             'fields' => 
             array (
               0 => 
@@ -187,64 +189,14 @@ array (
                 array (
                   0 => 'account_id',
                 ),
-              ),
-              1 => 
-              array (
-                'name' => 'date_closed',
-                'related_fields' => 
-                array (
-                  0 => 'date_closed_timestamp',
-                ),
-              ),
-              2 => 
-              array (
-                'name' => 'amount',
-                'type' => 'currency',
-                'label' => 'LBL_LIKELY',
-                'related_fields' => 
-                array (
-                  0 => 'amount',
-                  1 => 'currency_id',
-                  2 => 'base_rate',
-                ),
-                'currency_field' => 'currency_id',
-                'base_rate_field' => 'base_rate',
                 'span' => 12,
               ),
-              3 => 
-              array (
-                'name' => 'best_case',
-                'type' => 'currency',
-                'label' => 'LBL_BEST',
-                'related_fields' => 
-                array (
-                  0 => 'best_case',
-                  1 => 'currency_id',
-                  2 => 'base_rate',
-                ),
-                'currency_field' => 'currency_id',
-                'base_rate_field' => 'base_rate',
-              ),
-              4 => 
-              array (
-                'name' => 'worst_case',
-                'type' => 'currency',
-                'label' => 'LBL_WORST',
-                'related_fields' => 
-                array (
-                  0 => 'worst_case',
-                  1 => 'currency_id',
-                  2 => 'base_rate',
-                ),
-                'currency_field' => 'currency_id',
-                'base_rate_field' => 'base_rate',
-              ),
-              5 => 
+              1 => 
               array (
                 'name' => 'tag',
                 'span' => 6,
               ),
-              6 => 
+              2 => 
               array (
                 'name' => 'sales_status',
                 'readonly' => true,
@@ -262,20 +214,33 @@ array (
             'labelsOnTop' => true,
             'placeholders' => true,
             'columns' => 2,
+            'newTab' => false,
+            'panelDefault' => 'expanded',
             'fields' => 
             array (
-              0 => 'next_step',
-              1 => 'opportunity_type',
-              2 => 'lead_source',
-              3 => 'campaign_name',
-              4 => 
+              0 => 
               array (
-                'name' => 'description',
+                'name' => 'sales_stage',
                 'span' => 12,
               ),
-              5 => 'assigned_user_name',
-              6 => 'team_name',
-              7 => 
+              1 => 'next_step',
+              2 => 'opportunity_type',
+              3 => 'lead_source',
+              4 => 'campaign_name',
+              5 => 
+              array (
+                'name' => 'description',
+                'span' => 6,
+              ),
+              6 => 
+              array (
+                'name' => 'status',
+                'label' => 'LBL_STATUS',
+                'span' => 6,
+              ),
+              7 => 'assigned_user_name',
+              8 => 'team_name',
+              9 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -298,7 +263,7 @@ array (
                   ),
                 ),
               ),
-              8 => 
+              10 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -323,6 +288,73 @@ array (
               ),
             ),
           ),
+          3 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL1',
+            'label' => 'LBL_RECORDVIEW_PANEL1',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'annee_construction',
+                'label' => 'LBL_ANNEE_CONSTRUCTION',
+              ),
+              1 => 
+              array (
+                'name' => 'statut_apres_vente',
+                'label' => 'LBL_STATUT_APRES_VENTE',
+              ),
+              2 => 
+              array (
+                'name' => 'nombre_fenetres_achanger',
+                'label' => 'LBL_NOMBRE_FENETRES_ACHANGER',
+              ),
+              3 => 
+              array (
+                'name' => 'nombre_fenetres_total',
+                'label' => 'LBL_NOMBRE_FENETRES_TOTAL',
+              ),
+              4 => 
+              array (
+                'name' => 'nombre_garage_achanger',
+                'label' => 'LBL_NOMBRE_GARAGE_ACHANGER',
+              ),
+              5 => 
+              array (
+                'name' => 'nombre_garage_total',
+                'label' => 'LBL_NOMBRE_GARAGE_TOTAL',
+              ),
+              6 => 
+              array (
+                'name' => 'nombre_portes_achanger',
+                'label' => 'LBL_NOMBRE_PORTES_ACHANGER',
+              ),
+              7 => 
+              array (
+                'name' => 'nombre_portes_total',
+                'label' => 'LBL_NOMBRE_PORTES_TOTAL',
+              ),
+              8 => 
+              array (
+                'name' => 'montant',
+                'label' => 'LBL_MONTANT',
+              ),
+              9 => 
+              array (
+                'name' => 'closed_lost_reason',
+                'label' => 'LBL_CLOSED_LOST_REASON',
+              ),
+            ),
+          ),
+        ),
+        'templateMeta' => 
+        array (
+          'useTabs' => true,
         ),
       ),
     ),

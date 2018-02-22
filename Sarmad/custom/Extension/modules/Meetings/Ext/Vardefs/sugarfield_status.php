@@ -8,6 +8,7 @@ $dictionary['Meeting']['fields']['status']['duplicate_merge_dom_value']='1';
 $dictionary['Meeting']['fields']['status']['merge_filter']='disabled';
 $dictionary['Meeting']['fields']['status']['calculated']=false;
 $dictionary['Meeting']['fields']['status']['dependency']=false;
+$dictionary['Meeting']['fields']['status']['default']='disponible';
 $dictionary['Meeting']['fields']['status']['full_text_search']=array (
 );
 

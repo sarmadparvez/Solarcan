@@ -243,6 +243,22 @@ $dictionary['User']['fields']['pager_rep']['full_text_search']=array (
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/rt_postal_codes_users_Users.php
+
+// created: 2018-01-31 12:37:05
+$dictionary["User"]["fields"]["rt_postal_codes_users"] = array (
+  'name' => 'rt_postal_codes_users',
+  'type' => 'link',
+  'relationship' => 'rt_postal_codes_users',
+  'source' => 'non-db',
+  'module' => 'rt_postal_codes',
+  'bean_name' => false,
+  'vname' => 'LBL_RT_POSTAL_CODES_USERS_FROM_RT_POSTAL_CODES_TITLE',
+  'id_name' => 'rt_postal_codes_usersrt_postal_codes_ida',
+);
+
+?>
+<?php
 // Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_fax_rep.php
 
  // created: 2018-02-08 16:12:06
@@ -407,18 +423,85 @@ $dictionary['User']['fields']['adresse_rep']['full_text_search']=array (
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/rt_postal_codes_users_Users.php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_codecie_c.php
 
-// created: 2018-01-31 12:37:05
-$dictionary["User"]["fields"]["rt_postal_codes_users"] = array (
-  'name' => 'rt_postal_codes_users',
-  'type' => 'link',
-  'relationship' => 'rt_postal_codes_users',
-  'source' => 'non-db',
-  'module' => 'rt_postal_codes',
-  'bean_name' => false,
-  'vname' => 'LBL_RT_POSTAL_CODES_USERS_FROM_RT_POSTAL_CODES_TITLE',
-  'id_name' => 'rt_postal_codes_usersrt_postal_codes_ida',
+
+$dictionary['User']['fields']['codecie_rep_c'] = array (
+	'name' => 'codecie_rep_c',
+	'vname' => 'LBL_CODECIE_REP_C',
+	'type' => 'enum',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'required' => true,
+	'len' => 50,
+	'size' => 50,
+	'importable' => true,
+	'options' => 'codecie_dom',
+	'audited' => true,
+	'reportable' => true,
+	'default' => 'Solarcan'
+);
+
+?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_doors_rep_c.php
+
+
+$dictionary['User']['fields']['qualified_doors_rep_c'] = array (
+	'name' => 'qualified_doors_rep_c',
+	'vname' => 'LBL_QUALIFIED_DOORS_REP_C',
+	'type' => 'bool',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'importable' => true,
+	'audited' => true,
+	'reportable' => true,
+	'isnull' => 'true',
+	'default' => false
+);
+
+?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_garage_rep_c.php
+
+
+$dictionary['User']['fields']['qualified_garage_rep_c'] = array (
+	'name' => 'qualified_garage_rep_c',
+	'vname' => 'LBL_QUALIFIED_GARAGE_REP_C',
+	'type' => 'bool',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'importable' => true,
+	'audited' => true,
+	'reportable' => true,
+	'isnull' => 'true',
+	'default' => false
+);
+
+?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_windows_rep_c.php
+
+
+$dictionary['User']['fields']['qualified_windows_rep_c'] = array (
+	'name' => 'qualified_windows_rep_c',
+	'vname' => 'LBL_QUALIFIED_WINDOWS_REP_C',
+	'type' => 'bool',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'importable' => true,
+	'audited' => true,
+	'reportable' => true,
+	'isnull' => 'true',
+	'default' => false
 );
 
 ?>

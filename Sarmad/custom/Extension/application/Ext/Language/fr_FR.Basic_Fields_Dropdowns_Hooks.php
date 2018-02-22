@@ -136,13 +136,16 @@ $app_list_strings['statut_apres_vente_dom'] = array (
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
- 
-$app_list_strings['lead_source_dom'] = array (
-  'site_web' => 'Site Web',
-  'hit' => 'HIT',
-  'reno_depot' => 'Reno Depot',
-  'autre' => 'Autre',
+
+  
+$app_list_strings['lead_source_dom'] = array(
+    'site_web' => 'Site Web',
+    'hit' => 'HIT',
+    'reno_depot' => 'Reno Depot',
+    'autre' => 'Autre',
+    'solarcan' => 'Solarcan',
 );
+
 
 ?>
 <?php
@@ -206,6 +209,12 @@ $app_list_strings['yes_no_dom'] = array (
   'no' => 'Non',
 );
 
+$app_list_strings['owner_state_dom'] = array (
+  '' => '',
+  'proprietaire' => 'Propriétaire',
+  'locataire' => 'Locataire',
+);
+
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
@@ -234,12 +243,14 @@ $app_list_strings['disposition_dom'] = array (
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
  
+
 $app_list_strings['meeting_status_dom'] = array (
-  'disponible' => 'Disponible',
-  'planifie' => 'Planifié',
-  'confirme_au_client' => 'Confirmé au client',
-  'complete' => 'Complété',
-  'annule' => 'Annulé',
+ 'disponible' => 'Disponible',	
+ 'en_attente_dassignation' => 'En attente d\'assignation',
+ 'assigne' => 'ASSIGNÉ',
+ 'confirme_au_client' => 'Confirmé au client',
+ 'complete' => 'Complété',
+ 'annule' => 'Annulé',
 );
 
 ?>

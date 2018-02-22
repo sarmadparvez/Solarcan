@@ -39,7 +39,6 @@ class CreateMeetingsApi extends SugarApi
             $meeting->duration_hours = 2;
             $meeting->duration_minutes = 0;
             $meeting->status = $newMeeting['status'];
-            $meeting->assigned_user_id = $newMeeting['assigned_user_id'];
 
             $sugarField = SugarFieldHandler::getSugarField('datetime');
             $date_start = $sugarField->apiUnformatField($newMeeting['date_start']);

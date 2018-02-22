@@ -49,6 +49,25 @@ $dictionary['Meeting']['fields']['annee_construction']['enforced']=true;
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_datetime.php
+
+ // created: 2018-01-25 12:40:23
+$dictionary['Meeting']['fields']['timeslot_datetime']['name']='timeslot_datetime';
+$dictionary['Meeting']['fields']['timeslot_datetime']['vname']='LBL_TIMESLOT_DATETIME';
+$dictionary['Meeting']['fields']['timeslot_datetime']['type']='varchar';
+$dictionary['Meeting']['fields']['timeslot_datetime']['massupdate']=true;
+$dictionary['Meeting']['fields']['timeslot_datetime']['duplicate_merge']='enabled';
+$dictionary['Meeting']['fields']['timeslot_datetime']['merge_filter']='enabled';
+$dictionary['Meeting']['fields']['timeslot_datetime']['calculated']=false;
+$dictionary['Meeting']['fields']['timeslot_datetime']['required']=false;
+$dictionary['Meeting']['fields']['timeslot_datetime']['len']=100;
+$dictionary['Meeting']['fields']['timeslot_datetime']['audited']=true;
+$dictionary['Meeting']['fields']['timeslot_datetime']['importable']='true';
+$dictionary['Meeting']['fields']['timeslot_datetime']['duplicate_merge_dom_value']='2';
+$dictionary['Meeting']['fields']['timeslot_datetime']['dependency']=false;
+$dictionary['Meeting']['fields']['timeslot_datetime']['studio']=false;
+?>
+<?php
 // Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_phone_home.php
 
  // created: 2018-01-25 12:18:46
@@ -71,6 +90,28 @@ $dictionary['Meeting']['fields']['phone_home']['full_text_search']=array (
 );
 $dictionary['Meeting']['fields']['phone_home']['formula']='related($contacts,"phone_home")';
 $dictionary['Meeting']['fields']['phone_home']['enforced']=true;
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_location.php
+
+ // created: 2018-02-20 16:37:30
+$dictionary['Meeting']['fields']['location']['audited']=false;
+$dictionary['Meeting']['fields']['location']['massupdate']=false;
+$dictionary['Meeting']['fields']['location']['comments']='Meeting location';
+$dictionary['Meeting']['fields']['location']['importable']='false';
+$dictionary['Meeting']['fields']['location']['duplicate_merge']='disabled';
+$dictionary['Meeting']['fields']['location']['duplicate_merge_dom_value']=0;
+$dictionary['Meeting']['fields']['location']['merge_filter']='disabled';
+$dictionary['Meeting']['fields']['location']['full_text_search']=array (
+  'enabled' => true,
+  'boost' => '0.36',
+  'searchable' => true,
+);
+$dictionary['Meeting']['fields']['location']['calculated']='1';
+$dictionary['Meeting']['fields']['location']['formula']='concat(related($accounts,"billing_address_street")," ",related($accounts,"billing_address_city")," ",related($accounts,"billing_address_state")," ",related($accounts,"billing_address_postalcode"))';
+$dictionary['Meeting']['fields']['location']['enforced']=true;
 
  
 ?>
@@ -221,6 +262,7 @@ $dictionary['Meeting']['fields']['status']['duplicate_merge_dom_value']='1';
 $dictionary['Meeting']['fields']['status']['merge_filter']='disabled';
 $dictionary['Meeting']['fields']['status']['calculated']=false;
 $dictionary['Meeting']['fields']['status']['dependency']=false;
+$dictionary['Meeting']['fields']['status']['default']='disponible';
 $dictionary['Meeting']['fields']['status']['full_text_search']=array (
 );
 
@@ -243,6 +285,25 @@ $dictionary['Meeting']['fields']['duration_hours'] = array(
     'importable' => 'false',
 );
 
+?>
+<?php
+// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_name.php
+
+ // created: 2018-01-25 12:40:23
+$dictionary['Meeting']['fields']['timeslot_name']['name']='timeslot_name';
+$dictionary['Meeting']['fields']['timeslot_name']['vname']='LBL_TIMESLOT_NAME';
+$dictionary['Meeting']['fields']['timeslot_name']['type']='varchar';
+$dictionary['Meeting']['fields']['timeslot_name']['massupdate']=true;
+$dictionary['Meeting']['fields']['timeslot_name']['duplicate_merge']='enabled';
+$dictionary['Meeting']['fields']['timeslot_name']['merge_filter']='enabled';
+$dictionary['Meeting']['fields']['timeslot_name']['calculated']=false;
+$dictionary['Meeting']['fields']['timeslot_name']['required']=false;
+$dictionary['Meeting']['fields']['timeslot_name']['len']=100;
+$dictionary['Meeting']['fields']['timeslot_name']['audited']=true;
+$dictionary['Meeting']['fields']['timeslot_name']['importable']='true';
+$dictionary['Meeting']['fields']['timeslot_name']['duplicate_merge_dom_value']='2';
+$dictionary['Meeting']['fields']['timeslot_name']['dependency']=false;
+$dictionary['Meeting']['fields']['timeslot_name']['studio']=false;
 ?>
 <?php
 // Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_nombre_garage_achanger.php
@@ -423,46 +484,25 @@ $dictionary['Meeting']['fields']['type']['merge_filter']='disabled';
 $dictionary['Meeting']['fields']['type']['calculated']=false;
 $dictionary['Meeting']['fields']['type']['dependency']=false;
 $dictionary['Meeting']['fields']['type']['options']='meeting_type';
+$dictionary['Meeting']['fields']['type']['default']='1ere_rencontre';
 
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_name.php
+// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_partenaire_info.php
 
  // created: 2018-01-25 12:40:23
-$dictionary['Meeting']['fields']['timeslot_name']['name']='timeslot_name';
-$dictionary['Meeting']['fields']['timeslot_name']['vname']='LBL_TIMESLOT_NAME';
-$dictionary['Meeting']['fields']['timeslot_name']['type']='varchar';
-$dictionary['Meeting']['fields']['timeslot_name']['massupdate']=true;
-$dictionary['Meeting']['fields']['timeslot_name']['duplicate_merge']='enabled';
-$dictionary['Meeting']['fields']['timeslot_name']['merge_filter']='enabled';
-$dictionary['Meeting']['fields']['timeslot_name']['calculated']=false;
-$dictionary['Meeting']['fields']['timeslot_name']['required']=false;
-$dictionary['Meeting']['fields']['timeslot_name']['len']=100;
-$dictionary['Meeting']['fields']['timeslot_name']['audited']=true;
-$dictionary['Meeting']['fields']['timeslot_name']['importable']='true';
-$dictionary['Meeting']['fields']['timeslot_name']['duplicate_merge_dom_value']='2';
-$dictionary['Meeting']['fields']['timeslot_name']['dependency']=false;
-//$dictionary['Meeting']['fields']['timeslot_name']['studio']=false;
-
-?>
-<?php
-// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_timeslot_datetime.php
-
- // created: 2018-01-25 12:40:23
-$dictionary['Meeting']['fields']['timeslot_datetime']['name']='timeslot_datetime';
-$dictionary['Meeting']['fields']['timeslot_datetime']['vname']='LBL_TIMESLOT_DATETIME';
-$dictionary['Meeting']['fields']['timeslot_datetime']['type']='varchar';
-$dictionary['Meeting']['fields']['timeslot_datetime']['massupdate']=true;
-$dictionary['Meeting']['fields']['timeslot_datetime']['duplicate_merge']='enabled';
-$dictionary['Meeting']['fields']['timeslot_datetime']['merge_filter']='enabled';
-$dictionary['Meeting']['fields']['timeslot_datetime']['calculated']=false;
-$dictionary['Meeting']['fields']['timeslot_datetime']['required']=false;
-$dictionary['Meeting']['fields']['timeslot_datetime']['len']=100;
-$dictionary['Meeting']['fields']['timeslot_datetime']['audited']=true;
-$dictionary['Meeting']['fields']['timeslot_datetime']['importable']='true';
-$dictionary['Meeting']['fields']['timeslot_datetime']['duplicate_merge_dom_value']='2';
-$dictionary['Meeting']['fields']['timeslot_datetime']['dependency']=false;
-//$dictionary['Meeting']['fields']['timeslot_datetime']['studio']=false;
-
+$dictionary['Meeting']['fields']['partenaire_info']['name']='partenaire_info';
+$dictionary['Meeting']['fields']['partenaire_info']['vname']='LBL_PARTENAIRE_INFO';
+$dictionary['Meeting']['fields']['partenaire_info']['type']='varchar';
+$dictionary['Meeting']['fields']['partenaire_info']['massupdate']=true;
+$dictionary['Meeting']['fields']['partenaire_info']['duplicate_merge']='enabled';
+$dictionary['Meeting']['fields']['partenaire_info']['merge_filter']='enabled';
+$dictionary['Meeting']['fields']['partenaire_info']['calculated']=false;
+$dictionary['Meeting']['fields']['partenaire_info']['required']=false;
+$dictionary['Meeting']['fields']['partenaire_info']['len']=100;
+$dictionary['Meeting']['fields']['partenaire_info']['audited']=true;
+$dictionary['Meeting']['fields']['partenaire_info']['importable']='true';
+$dictionary['Meeting']['fields']['partenaire_info']['duplicate_merge_dom_value']='2';
+$dictionary['Meeting']['fields']['partenaire_info']['dependency']=false;
 ?>

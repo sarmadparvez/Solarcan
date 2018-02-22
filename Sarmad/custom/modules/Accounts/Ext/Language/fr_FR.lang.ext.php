@@ -37,4 +37,11 @@ $mod_strings['LBL_NOMBRE_GARAGE_ACHANGER'] = 'Nombre garage achanger';
 $mod_strings['LBL_NOMBRE_GARAGE_TOTAL'] = 'Nombre garage total';
 $mod_strings['LBL_NOMBRE_PORTES_ACHANGER'] = 'Nombre portes achanger';
 $mod_strings['LBL_NOMBRE_PORTES_TOTAL'] = 'Nombre portes total';
+$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Basic';
+$mod_strings['LBL_RECORD_SHOWMORE'] = 'Show More';
+$mod_strings['LBL_BILLING_ADDRESS_STREET'] = 'Street:';
+$mod_strings['LBL_BILLING_ADDRESS_CITY'] = 'City:';
+$mod_strings['LBL_BILLING_ADDRESS_STATE'] = 'State:';
+$mod_strings['LBL_BILLING_ADDRESS_POSTALCODE'] = 'Postal Code:';
+$mod_strings['LBL_BILLING_ADDRESS_COUNTRY'] = 'Country:';
 ?>
