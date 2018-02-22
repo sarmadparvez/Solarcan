@@ -213,13 +213,9 @@ array (
                   'visible' => true,
                 ),
                 'label' => 'LBL_PASSWORD',
+                'span' => 12,
               ),
               7 => 
-              array (
-                'name' => 'team',
-                'label' => 'LBL_TEAM',
-              ),
-              8 => 
               array (
                 'name' => 'assigned_user_name',
                 'span' => 12,

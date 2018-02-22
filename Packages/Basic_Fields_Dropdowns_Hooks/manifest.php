@@ -2286,6 +2286,11 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_partenaire_info.php',
       'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_partenaire_info.php',
     ),
+    385 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/Meetings/clients/base/views/record/record.php',
+      'to' => 'custom/modules/Meetings/clients/base/views/record/record.php',
+    ),
   ),
   'roles' => 
   array (

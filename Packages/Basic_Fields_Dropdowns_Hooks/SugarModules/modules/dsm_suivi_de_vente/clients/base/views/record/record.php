@@ -170,11 +170,6 @@ array (
             array (
               0 => 'assigned_user_name',
               1 => 'team_name',
-              2 => 
-              array (
-                'name' => 'tag',
-                'span' => 12,
-              ),
             ),
           ),
           2 => 

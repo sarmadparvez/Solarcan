@@ -168,18 +168,22 @@ array (
             'panelDefault' => 'expanded',
             'fields' => 
             array (
-              0 => 'assigned_user_name',
-              1 => 'team_name',
-              2 => 
+              0 => 
               array (
-                'name' => 'tag',
-                'span' => 6,
+                'name' => 'assigned_user_name',
+                'span' => 12,
               ),
-              3 => 
+              1 => 
+              array (
+                'name' => 'telephone',
+                'label' => 'LBL_TELEPHONE',
+                'span' => 12,
+              ),
+              2 => 
               array (
                 'name' => 'date_enregistrement',
                 'label' => 'LBL_DATE_ENREGISTREMENT',
-                'span' => 6,
+                'span' => 12,
               ),
             ),
           ),
