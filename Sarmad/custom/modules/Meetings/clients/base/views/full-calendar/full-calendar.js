@@ -292,7 +292,7 @@
     },
     isEventAhead: function (eventDate, eventTime) {
         // get time difference between current date and event date that is being rendered
-        var timeDiff = App.date().diff(eventDate + " " + eventTime, 'hours', false);
+        var timeDiff = App.date().diff(eventDate + " " + eventTime, 'hours', true);
         if (timeDiff < 0) {
             // if current date/time is behind event date/time
             return true;

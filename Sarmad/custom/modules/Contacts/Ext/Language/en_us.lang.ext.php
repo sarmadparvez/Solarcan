@@ -2,6 +2,13 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
+// Merged from custom/Extension/modules/Contacts/Ext/Language/en_us.custom_language.php
+
+
+$mod_strings['LBL_CODECIE_C'] = 'CodeCie';
+
+?>
+<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.lang.php
 
 // WARNING: The contents of this file are auto-generated.
@@ -62,12 +69,6 @@ $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'New Panel 1';
 $mod_strings['LBL_DSM_DNC_HISTORIC'] = 'dsm_dnc_historic';
 $mod_strings['LBL_CONTACTS_DSM_DNC_HISTORIC_FROM_DSM_DNC_HISTORIC_TITLE'] = 'Do Not Call Historic';
 $mod_strings['LBL_DSM_DNC_NAME'] = 'DNC';
-
-?>
-<?php
-// Merged from custom/Extension/modules/Contacts/Ext/Language/en_us.custom_language.php
-
-
 $mod_strings['LBL_CODECIE_C'] = 'CodeCie';
 
 ?>

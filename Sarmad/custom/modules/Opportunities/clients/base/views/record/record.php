@@ -189,12 +189,11 @@ array (
                 array (
                   0 => 'account_id',
                 ),
-                'span' => 12,
               ),
               1 => 
               array (
-                'name' => 'tag',
-                'span' => 6,
+                'name' => 'numero_contrat',
+                'label' => 'LBL_NUMERO_CONTRAT',
               ),
               2 => 
               array (
@@ -202,7 +201,7 @@ array (
                 'readonly' => true,
                 'studio' => true,
                 'label' => 'LBL_SALES_STATUS',
-                'span' => 6,
+                'span' => 12,
               ),
             ),
           ),

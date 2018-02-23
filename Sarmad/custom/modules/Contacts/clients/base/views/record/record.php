@@ -154,13 +154,12 @@ array (
             'header' => true,
             'fields' => 
             array (
-              0 => 
-              array (
-                'name' => 'picture',
-                'type' => 'avatar',
-                'size' => 'large',
-                'dismiss_label' => true,
-              ),
+              0 => array(
+                    'name' => 'picture',
+                    'type' => 'avatar',
+                    'size' => 'large',
+                    'dismiss_label' => true,
+                ),
               1 => 
               array (
                 'name' => 'full_name',
@@ -233,14 +232,6 @@ array (
                 'name' => 'phone_other',
                 'comment' => 'Other phone number for the contact',
                 'label' => 'LBL_OTHER_PHONE',
-              ),
-              7 => 
-              array (
-                'name' => 'codecie_c',
-                'label' => 'LBL_CODECIE_C',
-              ),
-              8 => 
-              array (
               ),
             ),
           ),
@@ -414,6 +405,7 @@ array (
               5 => 
               array (
                 'name' => 'date_de_consentement_datestamp',
+                'readonly' => true,
                 'label' => 'LBL_DATE_DE_CONSENTEMENT_DATESTAMP',
               ),
               6 => 

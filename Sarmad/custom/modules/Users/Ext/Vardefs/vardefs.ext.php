@@ -73,6 +73,26 @@ $dictionary['User']['fields']['telres_rep']['full_text_search']=array (
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_doors_rep_c.php
+
+
+$dictionary['User']['fields']['qualified_doors_rep_c'] = array (
+	'name' => 'qualified_doors_rep_c',
+	'vname' => 'LBL_QUALIFIED_DOORS_REP_C',
+	'type' => 'bool',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'importable' => true,
+	'audited' => true,
+	'reportable' => true,
+	'isnull' => 'true',
+	'default' => false
+);
+
+?>
+<?php
 // Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_cellulaire_rep.php
 
  // created: 2018-02-08 16:11:51
@@ -284,6 +304,49 @@ $dictionary['User']['fields']['fax_rep']['full_text_search']=array (
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_codecie_c.php
+
+
+$dictionary['User']['fields']['codecie_rep_c'] = array (
+	'name' => 'codecie_rep_c',
+	'vname' => 'LBL_CODECIE_REP_C',
+	'type' => 'enum',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'required' => true,
+	'len' => 50,
+	'size' => 50,
+	'importable' => true,
+	'options' => 'codecie_dom',
+	'audited' => true,
+	'reportable' => true,
+	'default' => 'Solarcan'
+);
+
+?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_garage_rep_c.php
+
+
+$dictionary['User']['fields']['qualified_garage_rep_c'] = array (
+	'name' => 'qualified_garage_rep_c',
+	'vname' => 'LBL_QUALIFIED_GARAGE_REP_C',
+	'type' => 'bool',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'importable' => true,
+	'audited' => true,
+	'reportable' => true,
+	'isnull' => 'true',
+	'default' => false
+);
+
+?>
+<?php
 // Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_courriel_rep.php
 
  // created: 2018-02-08 16:12:44
@@ -376,6 +439,26 @@ $dictionary['User']['fields']['preferred_language']['dependency']=false;
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_windows_rep_c.php
+
+
+$dictionary['User']['fields']['qualified_windows_rep_c'] = array (
+	'name' => 'qualified_windows_rep_c',
+	'vname' => 'LBL_QUALIFIED_WINDOWS_REP_C',
+	'type' => 'bool',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'importable' => true,
+	'audited' => true,
+	'reportable' => true,
+	'isnull' => 'true',
+	'default' => false
+);
+
+?>
+<?php
 // Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_secteur_rep.php
 
  // created: 2018-02-08 16:13:44
@@ -421,87 +504,4 @@ $dictionary['User']['fields']['adresse_rep']['full_text_search']=array (
 );
 
  
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_codecie_c.php
-
-
-$dictionary['User']['fields']['codecie_rep_c'] = array (
-	'name' => 'codecie_rep_c',
-	'vname' => 'LBL_CODECIE_REP_C',
-	'type' => 'enum',
-	'massupdate' => true,
-	'duplicate_merge' => 'enabled',
-	'merge_filter' => 'enabled',
-	'calculated' => false,
-	'required' => true,
-	'len' => 50,
-	'size' => 50,
-	'importable' => true,
-	'options' => 'codecie_dom',
-	'audited' => true,
-	'reportable' => true,
-	'default' => 'Solarcan'
-);
-
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_doors_rep_c.php
-
-
-$dictionary['User']['fields']['qualified_doors_rep_c'] = array (
-	'name' => 'qualified_doors_rep_c',
-	'vname' => 'LBL_QUALIFIED_DOORS_REP_C',
-	'type' => 'bool',
-	'massupdate' => true,
-	'duplicate_merge' => 'enabled',
-	'merge_filter' => 'enabled',
-	'calculated' => false,
-	'importable' => true,
-	'audited' => true,
-	'reportable' => true,
-	'isnull' => 'true',
-	'default' => false
-);
-
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_garage_rep_c.php
-
-
-$dictionary['User']['fields']['qualified_garage_rep_c'] = array (
-	'name' => 'qualified_garage_rep_c',
-	'vname' => 'LBL_QUALIFIED_GARAGE_REP_C',
-	'type' => 'bool',
-	'massupdate' => true,
-	'duplicate_merge' => 'enabled',
-	'merge_filter' => 'enabled',
-	'calculated' => false,
-	'importable' => true,
-	'audited' => true,
-	'reportable' => true,
-	'isnull' => 'true',
-	'default' => false
-);
-
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_windows_rep_c.php
-
-
-$dictionary['User']['fields']['qualified_windows_rep_c'] = array (
-	'name' => 'qualified_windows_rep_c',
-	'vname' => 'LBL_QUALIFIED_WINDOWS_REP_C',
-	'type' => 'bool',
-	'massupdate' => true,
-	'duplicate_merge' => 'enabled',
-	'merge_filter' => 'enabled',
-	'calculated' => false,
-	'importable' => true,
-	'audited' => true,
-	'reportable' => true,
-	'isnull' => 'true',
-	'default' => false
-);
-
 ?>

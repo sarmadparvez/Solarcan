@@ -18,6 +18,16 @@ $mod_strings['LBL_RT_POSTAL_CODES_USERS_FROM_USERS_TITLE'] = 'Postal Codes';
 
 ?>
 <?php
+// Merged from custom/Extension/modules/Users/Ext/Language/en_us.custom_language.php
+
+
+$mod_strings['LBL_CODECIE_REP_C'] = 'CodeCie';
+$mod_strings['LBL_QUALIFIED_GARAGE_REP_C'] = 'Qualified Garage';
+$mod_strings['LBL_QUALIFIED_WINDOWS_REP_C'] = 'Qualified Windows';
+$mod_strings['LBL_QUALIFIED_DOORS_REP_C'] = 'Qualified Doors';
+
+?>
+<?php
 // Merged from custom/Extension/modules/Users/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.lang.php
 
 // WARNING: The contents of this file are auto-generated.
@@ -36,6 +46,11 @@ $mod_strings['LBL_FAX_REP'] = 'FAX';
 $mod_strings['LBL_PAGER_REP'] = 'PAGER';
 $mod_strings['LBL_COURRIEL_REP'] = 'COURRIEL';
 $mod_strings['LBL_SECTEUR_REP'] = 'SECTEUR';
+$mod_strings['LBL_CODECIE_REP_C'] = 'CodeCie';
+$mod_strings['LBL_QUALIFIED_GARAGE_REP_C'] = 'Qualified Garage';
+$mod_strings['LBL_QUALIFIED_WINDOWS_REP_C'] = 'Qualified Windows';
+$mod_strings['LBL_QUALIFIED_DOORS_REP_C'] = 'Qualified Doors';
+
 ?>
 <?php
 // Merged from custom/Extension/modules/Users/Ext/Language/en_us.Postal_Codes.php.Basic_Fields_Dropdowns_Hooks.lang.php
@@ -43,15 +58,5 @@ $mod_strings['LBL_SECTEUR_REP'] = 'SECTEUR';
 //THIS FILE IS AUTO GENERATED, DO NOT MODIFY
 $mod_strings['LBL_RT_POSTAL_CODES_USERS_FROM_RT_POSTAL_CODES_TITLE'] = 'Postal Codes';
 $mod_strings['LBL_RT_POSTAL_CODES_USERS_FROM_USERS_TITLE'] = 'Postal Codes';
-
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Language/en_us.custom_language.php
-
-
-$mod_strings['LBL_CODECIE_REP_C'] = 'CodeCie';
-$mod_strings['LBL_QUALIFIED_GARAGE_REP_C'] = 'Qualified Garage';
-$mod_strings['LBL_QUALIFIED_WINDOWS_REP_C'] = 'Qualified Windows';
-$mod_strings['LBL_QUALIFIED_DOORS_REP_C'] = 'Qualified Doors';
 
 ?>

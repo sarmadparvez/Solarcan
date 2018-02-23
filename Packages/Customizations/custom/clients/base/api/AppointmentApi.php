@@ -141,25 +141,26 @@ class AppointmentApi extends SugarApi {
      */
     public function bookAppointment(ServiceBase $api, array $args)
     {
-        //$GLOBALS['log']->fatal('in book appointment');
-        $this->requireArgs($args, array('meeting_id'));
+        //$GLOBALS['log']->fatal('in book appointment args: '.print_r($args,1));
+        $this->requireArgs($args, array('meeting_id', 'contact_model', 'account_model'));
         if (!empty($args['contact_id'])) {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_id']);
             //$GLOBALS['log']->fatal('contact last_name: '.$contact->last_name);
         } else if (!empty($args['postalcode']) && 
-            (!empty($args['phone_home']) || !empty($args['phone_mobile']) ||
-             !empty($args['phone_work']) || !empty($args['phone_other']))
+            (!empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
+             !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other']))
         ) {
             $contact = $this->searchContact($args);
         } else {
-            throw new SugarApiExceptionMissingParameter(
+            throw new SugarApiExceptionInvalidParameter(
                 'Please either provide contact_id or postalcode and one of the phone numbers'
             );
         }
 
-        if (is_array($contact) && count($contact > 0))
+        if (is_array($contact) && count($contact) > 0 )
         {
+            $GLOBALS['log']->fatal('contact id: '.$contact[0]['id']);
             $contact = $this->retrieveBean('Contacts', $contact[0]['id']);
             if (count($contact) > 1 ) {
                 $GLOBALS['log']->fatal(
@@ -167,19 +168,78 @@ class AppointmentApi extends SugarApi {
                 );
             }
         }
-        $this->updateMeeting($args['meeting_id'], $contact);
+        if (empty($contact)) {
+            throw new SugarApiExceptionInvalidParameter("Contact not found in CRM");
+            
+        }
+        //populate contact fields and update it
+        $this->updateContact($args, $contact);
+        $this->updateMeeting($args, $args['meeting_id'], $contact);
         return true;
+    }
+
+    /**
+    * Populate contact fields from arguments and update contact
+    */
+    protected function updateContact($args, Contact $contact)
+    {
+        if (empty($args['contact_model'])) {
+            return false;
+        }
+        $contact_args = $args['contact_model'];
+
+        if (!empty($contact_args['billing_address_street'])) {
+            $contact->primary_address_street = $contact_args['billing_address_street'];
+        }
+        if (!empty($contact_args['billing_address_city'])) {
+            $contact->primary_address_city = $contact_args['billing_address_city'];
+        }
+        if (!empty($contact_args['billing_address_state'])) {
+            $contact->primary_address_state = $contact_args['billing_address_state'];
+        }
+        if (!empty($args['postalcode'])) {
+            $contact->primary_address_postalcode = $args['postalcode'];
+        }
+
+        if (!empty($contact_args['phone_home'])) {
+            $contact->phone_home = $contact_args['phone_home'];
+        }
+        if (!empty($contact_args['phone_mobile'])) {
+            $contact->phone_mobile = $contact_args['phone_mobile'];
+        }
+        if (!empty($contact_args['phone_work'])) {
+            $contact->phone_work = $contact_args['phone_work'];
+        }
+        if (!empty($contact_args['phone_other'])) {
+            $contact->phone_other = $contact_args['phone_other'];
+        }
+        if (!empty($contact_args['first_name'])) {
+            $contact->first_name = $contact_args['first_name'];
+        }
+        if (!empty($contact_args['last_name'])) {
+            $contact->last_name = $contact_args['last_name'];
+        }
+        if (!empty($contact_args['email'])) {
+            $contact->email1 = $contact_args['email'];
+        }
+        if (!empty($contact_args['codecie_c'])) {
+            $contact->codecie_c = $contact_args['codecie_c'];
+        }
+        if (!empty($contact_args['etat_de_proprietaire'])) {
+            $contact->etat_de_proprietaire = $contact_args['etat_de_proprietaire'];
+        }
+        $contact->save();
     }
 
     /**
     * Book meeting
     */
-    protected function updateMeeting($meeting_id, SugarBean $contact)
+    protected function updateMeeting($args, $meeting_id, SugarBean $contact)
     {
         $meeting = $this->retrieveBean('Meetings', $meeting_id);
         //$GLOBALS['log']->fatal('meeting bean: '.print_r($meeting,1));
         if (empty($meeting)) {
-            throw new SugarApiExceptionMissingParameter('Meeting not found in SugarCRM');
+            throw new SugarApiExceptionInvalidParameter('Meeting not found in SugarCRM');
         }
         //$meeting->timeslot_datetime = '2018-02-21T20:30:00-05:00';
         // check if the meeting is today. For today's meetings they should be assigned directly, without waiting for
@@ -195,11 +255,12 @@ class AppointmentApi extends SugarApi {
         $now_date = $now_datetime->setTimezone($meeting_timezone)->format('Y-m-d');
         if ($meeting_date == $now_date) {
             $meeting->status = 'assigne';
-            $meeting_id->assigned_user_id = $meeting_id->created_by;
+            $meeting->assigned_user_id = $meeting->created_by;
         } else {
             $meeting->status = 'en_attente_dassignation';
         }
-        
+        $meeting->financement = $args['financement'];
+        $meeting->description = $args['description'];
         $meeting->save();
         $link = 'contacts';
         //$GLOBALS['log']->fatal('timeslot_datetime for meeting: '.$meeting->timeslot_datetime);
@@ -209,11 +270,78 @@ class AppointmentApi extends SugarApi {
             //$GLOBALS['log']->fatal('relationship is loaded');
             $meeting->$link->add($contact->id);
         }
+        //create/update account
+        $this->saveAccount($args, $meeting, $contact);
     }
 
-    protected function updateAccount($args, SugarBean $meeting, SugarBean $contact)
+    /**
+    * Save/update account when an appointment is booked
+    */
+    protected function saveAccount($args, SugarBean $meeting, SugarBean $contact)
     {
+        //if no account is related to contact, create account
+        if (empty($contact->account_id) && !empty($args['account_model'])) {
+            $account_args = $args['account_model'];
+            $account = $this->getNewBean('Accounts');
+            //copy address from contact
+            $account->billing_address_street = $contact->primary_address_street;
+            $account->billing_address_city = $contact->primary_address_city;
+            $account->billing_address_postalcode = $contact->primary_address_postalcode;
+            $account->billing_address_state = $contact->primary_address_state;
+            $acount->name = $account->billing_address_street . " " . $account->billing_address_city . " "
+            . $account->billing_address_postalcode;
+            $account->annee_construction = $account_args['annee_construction'];
+            $account->nombre_portes_total = $account_args['nombre_portes_total'];
+            $account->nombre_portes_achanger = $account_args['nombre_portes_achanger'];
+            $account->nombre_fenetres_total = $account_args['nombre_fenetres_total'];
+            $account->nombre_fenetres_achanger = $account_args['nombre_fenetres_achanger'];
+            $account->nombre_garage_total = $account_args['nombre_garage_total'];
+            $account->nombre_garage_achanger = $account_args['nombre_garage_achanger'];
+            $account->save();
+            //relate account to contact
+            $link = 'contacts';
+            if ($account->load_relationship($link)) {
+                //$GLOBALS['log']->fatal('relationship is loaded');
+                $account->$link->add($contact->id);
+            }           
+            //relate account to meeting
+            $link = 'meetings';
+            if ($account->load_relationship($link)) {
+                //$GLOBALS['log']->fatal('relationship is loaded');
+                $account->$link->add($meeting->id);
+            }
+            $this->saveOpportunity($args, $account, $contact);
+        }
+    }
 
+    /**
+    * create Opportunity when an appointment is booked
+    */
+    protected function saveOpportunity($args, Account $account, Contact $contact)
+    {
+        //if no account is related to contact, create account
+        $opp = $this->getNewBean('Opportunities');
+        $opp->name = $contact->name . " " . $account->name;
+        //copy address from contact
+/*        $account->billing_address_street = $contact->primary_address_street;
+        $account->billing_address_city = $contact->primary_address_city;
+        $account->billing_address_postalcode = $contact->primary_address_state;
+        $account->billing_address_state = $contact->primary_address_postalcode;
+        $account->annee_construction = $args['annee_construction'];
+        $account->nombre_portes_total = $args['nombre_portes_total'];
+        $account->nombre_portes_achanger = $args['nombre_portes_achanger'];
+        $account->nombre_fenetres_total = $args['nombre_fenetres_total'];
+        $account->nombre_fenetres_achanger = $args['nombre_fenetres_achanger'];
+        $account->nombre_garage_total = $args['nombre_garage_total'];
+        $account->nombre_garage_achanger = $args['nombre_garage_achanger'];*/
+        $opp->account_id = $account->id;
+        $opp->save();
+        //relate account to meeting
+      /*  $link = 'meetings';
+        if ($account->load_relationship($link)) {
+            //$GLOBALS['log']->fatal('relationship is loaded');
+            $account->$link->add($meeting->id);
+        }*/
     }
 
     /**
@@ -221,11 +349,12 @@ class AppointmentApi extends SugarApi {
     */
     protected function searchContact($args)
     {
-        $this->requireArgs($args, array('postalcode'));
+        $this->requireArgs($args, array('postalcode', 'contact_model'));
+        $contact_args = $args['contact_model'];
 
-        if (empty($args['phone_home']) && empty($args['phone_mobile']) && 
-            empty($args['phone_work']) && empty($args['phone_other'])) {
-            throw new SugarApiExceptionMissingParameter('Please provide atleaset one phone number');
+        if (empty($contact_args['phone_home']) && empty($contact_args['phone_mobile']) && 
+            empty($contact_args['phone_work']) && empty($contact_args['phone_other'])) {
+            throw new SugarApiExceptionInvalidParameter('Please provide atleaset one phone number');
         }
 
         $s_query = $this->getSugarQuery();
@@ -238,15 +367,16 @@ class AppointmentApi extends SugarApi {
         $s_query->where()->equals($s_query->getFromAlias().'.primary_address_postalcode', $args['postalcode']);
 
         $s_query->whereRaw($this->getPhoneWhere(
-                $args['phone_home'],
-                $args['phone_mobile'],
-                $args['phone_work'],
-                $args['phone_other']
+                $contact_args['phone_home'],
+                $contact_args['phone_mobile'],
+                $contact_args['phone_work'],
+                $contact_args['phone_other']
             )
         );
-        //$GLOBALS['log']->fatal('complete query: '.$s_query->compile());
+        //$GLOBALS['log']->fatal('completec contact search query: '.$s_query->compile());
         $result = $s_query->execute();
         //$GLOBALS['log']->fatal('result: '.print_r($result,1));
+        return $result;
     }
 
     /**

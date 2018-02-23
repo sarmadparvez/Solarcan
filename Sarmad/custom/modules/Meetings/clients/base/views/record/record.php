@@ -374,19 +374,24 @@ array (
               array (
                 'name' => 'description',
                 'rows' => 3,
-                'span' => 12,
+                'span' => 6,
               ),
               6 => 
               array (
+                'name' => 'email',
+                'span' => 6,
+              ),
+              7 => 
+              array (
                 'name' => 'type',
               ),
-              7 => 'parent_name',
-              8 => 
+              8 => 'parent_name',
+              9 => 
               array (
                 'name' => 'password',
                 'span' => 12,
               ),
-              9 => 
+              10 => 
               array (
                 'name' => 'invitees',
                 'type' => 'participants',
@@ -407,22 +412,12 @@ array (
                 ),
                 'span' => 12,
               ),
-              10 => 'assigned_user_name',
-              11 => 'team_name',
-              12 => 
+              11 => 'assigned_user_name',
+              12 => 'team_name',
+              13 => 
               array (
                 'name' => 'tag',
                 'span' => 12,
-              ),
-              13 => 
-              array (
-                'name' => 'timeslot_datetime',
-                'label' => 'LBL_TIMESLOT_DATETIME',
-              ),
-              14 => 
-              array (
-                'name' => 'timeslot_name',
-                'label' => 'LBL_TIMESLOT_NAME',
               ),
             ),
           ),

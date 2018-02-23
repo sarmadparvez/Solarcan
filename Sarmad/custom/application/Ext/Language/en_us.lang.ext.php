@@ -212,6 +212,21 @@ $app_strings['LBL_PORTAL_CONFIG_SAVING'] = 'Saving data ...';
 
 ?>
 <?php
+// Merged from custom/Extension/application/Ext/Language/en_us.custom_dropdowns.php
+
+
+$app_list_strings['codecie_dom'] = array (
+  'Solarcan' => 'Solarcan',
+  'Autre' => 'Autre',
+);
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
+?>
+<?php
 // Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
 
 // WARNING: The contents of this file are auto-generated.
@@ -319,13 +334,6 @@ $app_list_strings['yes_no_dom'] = array (
   'yes' => 'Yes',
   'no' => 'No',
 );
-
-$app_list_strings['owner_state_dom'] = array (
-  '' => '',
-  'proprietaire' => 'Propriétaire',
-  'locataire' => 'Locataire',
-);
-
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
@@ -576,12 +584,19 @@ $app_list_strings['user_secteur_rep_dom'] = array(
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.custom_dropdowns.php
+// Merged from custom/Extension/application/Ext/Language/temp.php
 
+
+$app_list_strings['owner_state_dom'] = array (
+  '' => '',
+  'proprietaire' => 'Propriétaire',
+  'locataire' => 'Locataire',
+);
 
 $app_list_strings['codecie_dom'] = array (
   'Solarcan' => 'Solarcan',
   'Autre' => 'Autre',
 );
+
 
 ?>

@@ -171,31 +171,26 @@ array (
               0 => 
               array (
                 'name' => 'assigned_user_name',
+                'span' => 12,
               ),
-              1 => 'team_name',
-              2 => 
+              1 => 
               array (
                 'name' => 'date_enregistrement',
                 'label' => 'LBL_DATE_ENREGISTREMENT',
                 'span' => 12,
               ),
-              3 => 
-              array (
-                'name' => 'tag',
-                'span' => 6,
-              ),
-              4 => 
+              2 => 
               array (
                 'name' => 'contact_name',
                 'label' => 'LBL_CONTACT_NAME',
-                'span' => 6,
+                'span' => 12,
               ),
-              5 => 
+              3 => 
               array (
                 'name' => 'dsm_dnc_name',
                 'label' => 'LBL_DSM_DNC_NAME',
               ),
-              6 => 
+              4 => 
               array (
                 'name' => 'source_details',
                 'studio' => 'visible',
