@@ -1,0 +1,4176 @@
+[2018-02-19 12:40:02.532807] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 12:40:12.749624] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 12:40:13.044584] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 13:00:53.953186] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 13:00:54.226260] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 14:29:22.078937] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 14:29:27.644435] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=&filter%5B1%5D%5Bpassword%5D=
+[2018-02-19 14:29:27.977430] [error] caught exception: Invalid Credentials ! : code: 422
+[2018-02-19 14:29:27.977534] [error] #0 /var/www/html/solarcanportal/api/index.php(49): Application->login()
+#1 [internal function]: login()
+#2 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#3 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#4 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#5 {main}
+[2018-02-19 14:29:35.308999] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 14:33:19.208796] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:33:19.506526] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 14:38:46.555953] [error] caught exception: Missing Parameter preferred_language_1 : code: 422
+[2018-02-19 14:38:46.556070] [error] #0 /var/www/html/solarcanportal/api/Application.php(229): Application->requireArgs(Array, Array)
+#1 /var/www/html/solarcanportal/api/index.php(101): Application->getAvailableAppointments()
+#2 [internal function]: getAvailableAppointments()
+#3 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('getAvailableApp...', Array)
+#4 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#5 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#6 {main}
+[2018-02-19 14:38:48.957542] [error] caught exception: Missing Parameter preferred_language_1 : code: 422
+[2018-02-19 14:38:48.957654] [error] #0 /var/www/html/solarcanportal/api/Application.php(229): Application->requireArgs(Array, Array)
+#1 /var/www/html/solarcanportal/api/index.php(101): Application->getAvailableAppointments()
+#2 [internal function]: getAvailableAppointments()
+#3 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('getAvailableApp...', Array)
+#4 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#5 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#6 {main}
+[2018-02-19 14:38:50.372569] [error] caught exception: Missing Parameter preferred_language_1 : code: 422
+[2018-02-19 14:38:50.372699] [error] #0 /var/www/html/solarcanportal/api/Application.php(229): Application->requireArgs(Array, Array)
+#1 /var/www/html/solarcanportal/api/index.php(101): Application->getAvailableAppointments()
+#2 [internal function]: getAvailableAppointments()
+#3 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('getAvailableApp...', Array)
+#4 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#5 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#6 {main}
+[2018-02-19 14:39:12.973150] [error] caught exception: Missing Parameter preferred_language_1 : code: 422
+[2018-02-19 14:39:12.973272] [error] #0 /var/www/html/solarcanportal/api/Application.php(229): Application->requireArgs(Array, Array)
+#1 /var/www/html/solarcanportal/api/index.php(101): Application->getAvailableAppointments()
+#2 [internal function]: getAvailableAppointments()
+#3 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('getAvailableApp...', Array)
+#4 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#5 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#6 {main}
+[2018-02-19 14:39:31.639027] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:39:31.980447] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 14:39:40.517784] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:39:40.853710] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 14:40:59.212943] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:40:59.540354] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: preferred_language_1"}
+[2018-02-19 14:40:59.540498] [error] caught exception: Server response status was: 422 with response: [{"error":"missing_parameter","error_message":"Missing parameter: preferred_language_1"}] : code: 422
+[2018-02-19 14:40:59.540541] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/solarcanportal/api/Application.php(244): RestCurlClient->post('http://localhos...', '{"postalcode":"...', Array)
+#2 /var/www/html/solarcanportal/api/index.php(101): Application->getAvailableAppointments()
+#3 [internal function]: getAvailableAppointments()
+#4 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('getAvailableApp...', Array)
+#5 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#7 {main}
+[2018-02-19 14:42:51.514489] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:42:51.807861] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 14:56:39.598658] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=123
+[2018-02-19 14:56:39.962698] [error] caught exception: Invalid Credentials ! : code: 422
+[2018-02-19 14:56:39.962799] [error] #0 /var/www/html/solarcanportal/api/index.php(49): Application->login()
+#1 [internal function]: login()
+#2 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#3 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#4 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#5 {main}
+[2018-02-19 14:56:43.314876] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 14:57:00.077755] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:57:00.432352] [error] caught exception:  : code: -1
+[2018-02-19 14:57:00.432459] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/solarcanportal/api/Application.php(250): RestCurlClient->post('http://localhos...', '{"postalcode":"...', Array)
+#2 /var/www/html/solarcanportal/api/index.php(101): Application->getAvailableAppointments()
+#3 [internal function]: getAvailableAppointments()
+#4 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('getAvailableApp...', Array)
+#5 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#7 {main}
+[2018-02-19 14:57:47.163583] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:57:47.470830] [error] caught exception:  : code: -1
+[2018-02-19 14:57:47.470927] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/solarcanportal/api/Application.php(250): RestCurlClient->post('http://localhos...', '{"postalcode":"...', Array)
+#2 /var/www/html/solarcanportal/api/index.php(101): Application->getAvailableAppointments()
+#3 [internal function]: getAvailableAppointments()
+#4 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('getAvailableApp...', Array)
+#5 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/solarcanportal/api/index.php(30): Slim->run()
+#7 {main}
+[2018-02-19 14:58:41.233552] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:58:41.554635] [info] result: Array
+(
+)
+
+[2018-02-19 14:59:13.100596] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:59:13.394957] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 14:59:29.493787] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 14:59:29.827781] [info] result: Array
+(
+)
+
+[2018-02-19 15:02:53.297233] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:02:53.756894] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:05:19.516644] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:05:19.799205] [info] result: Array
+(
+)
+
+[2018-02-19 15:05:41.930452] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:05:42.248816] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:05:51.118153] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:05:51.438904] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:08:39.089407] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:08:39.450889] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:13:28.953991] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:13:29.270095] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:14:21.912887] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:14:22.259807] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:15:44.863230] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:15:45.205600] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:16:13.655338] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:16:13.973149] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:17:03.352148] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:17:03.653006] [info] result: Array
+(
+)
+
+[2018-02-19 15:17:20.164624] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:17:20.481225] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:17:24.693571] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:17:24.999057] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:17:28.902534] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:17:29.265691] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:17:41.296549] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:17:41.650049] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:17:44.011485] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:17:44.330233] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:17:49.731017] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:17:50.092772] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:18:07.990012] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:18:08.440129] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:18:14.604419] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:18:14.942958] [info] result: Array
+(
+)
+
+[2018-02-19 15:23:47.569026] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:23:47.902767] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:24:26.858437] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:24:27.255650] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:27:48.772269] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 15:27:58.839890] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:27:59.128882] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:30:25.687267] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:30:25.993228] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:30:54.828129] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 15:31:23.914707] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:31:24.205507] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:32:28.126300] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:32:28.409893] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:32:52.177545] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:32:52.456341] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:35:41.733493] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:35:42.056694] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:36:26.577728] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:36:26.909033] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:37:48.918904] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:37:49.243056] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:38:38.884344] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:38:39.181411] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 15:39:42.600611] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 15:39:42.897594] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 17:07:05.716378] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 17:07:19.466525] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 17:07:19.761354] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 17:13:55.488622] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 17:14:13.160381] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 17:14:13.484662] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 17:36:48.910212] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 17:36:49.196532] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 17:36:52.581922] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 17:36:52.875447] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 17:37:06.275296] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 17:37:06.575964] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 17:37:53.839901] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 17:37:54.127621] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 17:38:51.631721] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 17:38:51.927525] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 17:43:04.711806] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 17:43:05.019102] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 18:20:21.434499] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 18:20:22.388144] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 18:20:28.385200] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 18:20:28.676007] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 239d2366-12ff-11e8-bbdc-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => e03aeb38-1300-11e8-8ce4-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1d67e970-1301-11e8-8835-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => e0602cae-1300-11e8-aff2-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1d8b4046-1301-11e8-ae35-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => e06af954-1300-11e8-8b29-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1d96d1d6-1301-11e8-938a-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => f479f968-1300-11e8-91eb-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 23a6015c-12ff-11e8-b8be-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [9] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => e0749194-1300-11e8-86b1-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 18:24:12.614923] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 18:24:12.954754] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10b7a96c-1578-11e8-bf59-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1116cc3a-1578-11e8-99dd-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10ecdb96-1578-11e8-bba9-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 11211e42-1578-11e8-811a-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10f8a9f8-1578-11e8-92b8-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 112ab9c0-1578-11e8-a943-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 110c6e48-1578-11e8-bf27-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10e2a3ba-1578-11e8-9bc1-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1102d9c8-1578-11e8-aaab-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 18:26:09.804960] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 18:26:10.148083] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10b7a96c-1578-11e8-bf59-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1116cc3a-1578-11e8-99dd-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10ecdb96-1578-11e8-bba9-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 11211e42-1578-11e8-811a-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10f8a9f8-1578-11e8-92b8-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 112ab9c0-1578-11e8-a943-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 110c6e48-1578-11e8-bf27-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10e2a3ba-1578-11e8-9bc1-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1102d9c8-1578-11e8-aaab-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 18:41:01.798347] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 18:41:02.114352] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10b7a96c-1578-11e8-bf59-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1116cc3a-1578-11e8-99dd-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10ecdb96-1578-11e8-bba9-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 11211e42-1578-11e8-811a-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10f8a9f8-1578-11e8-92b8-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 112ab9c0-1578-11e8-a943-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 110c6e48-1578-11e8-bf27-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10e2a3ba-1578-11e8-9bc1-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1102d9c8-1578-11e8-aaab-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+
+[2018-02-19 19:15:53.241055] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-19 19:16:05.667090] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-19 19:16:05.960098] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10b7a96c-1578-11e8-bf59-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [1] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1116cc3a-1578-11e8-99dd-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [2] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10ecdb96-1578-11e8-bba9-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [3] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 11211e42-1578-11e8-811a-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [4] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10f8a9f8-1578-11e8-92b8-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [5] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 112ab9c0-1578-11e8-a943-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+    [6] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 110c6e48-1578-11e8-bf27-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+    [7] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 10e2a3ba-1578-11e8-9bc1-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Monday
+            [dateonly] => 2018-02-19
+        )
+
+    [8] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1102d9c8-1578-11e8-aaab-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-02-20
+        )
+
+)
+

@@ -1,0 +1,95 @@
+[2018-02-08 20:50:46.351000] [debug] session: Array
+(
+    [user] => Array
+        (
+            [noagent] => 111
+            [role] => user
+        )
+
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-08 20:50:46.351219] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-08 20:50:46.351283] [info] slime request: 
+[2018-02-08 20:50:46.733289] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-08 20:50:58.263750] [debug] session: Array
+(
+    [user] => Array
+        (
+            [noagent] => 555
+            [role] => user
+        )
+
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-08 20:50:58.263945] [info] _REQUEST: Array
+(
+    [noagent] => 555
+    [password] => 555
+)
+
+[2018-02-08 20:50:58.264008] [info] slime request: 
+[2018-02-08 20:50:58.591694] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=555&filter%5B1%5D%5Bpassword%5D=555
+[2018-02-08 20:51:22.214354] [debug] session: Array
+(
+    [user] => Array
+        (
+            [noagent] => 111
+            [role] => user
+        )
+
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-08 20:51:22.214618] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-08 20:51:22.214695] [info] slime request: 
+[2018-02-08 20:51:22.550678] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-08 20:51:38.292155] [debug] session: Array
+(
+    [user] => Array
+        (
+            [noagent] => 555
+            [role] => user
+        )
+
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-08 20:51:38.294889] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => 111
+)
+
+[2018-02-08 20:51:38.294971] [info] slime request: 
+[2018-02-08 20:51:38.731182] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=111
+[2018-02-08 20:51:39.319883] [error] caught exception: Invalid Credentials ! : code: 422
+[2018-02-08 20:51:39.320008] [error] #0 /var/www/html/solarcanportal/api/index.php(46): Application->login()
+#1 [internal function]: login()
+#2 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#3 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#4 /var/www/html/solarcanportal/api/index.php(27): Slim->run()
+#5 {main}

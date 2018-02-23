@@ -1,0 +1,43 @@
+<div id ="portal-container">
+	<div class="container">
+		<!-- SOLARCAN PORTAIL -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div id = "contact-info">
+
+				</div><!-- End div contact-info !-->
+				</div>
+		
+			<div class="col-sm-6">
+			<div id = "batiment">
+
+			</div>
+			</div><!-- End div batiment !-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id ="calendar-container">
+	<div class="container">
+		<h3>Calendrier</h3>
+		<div id = "full-calendar">
+		</div>
+	</div>
+</div>
+
+<!-- Form for dialogue box !-->
+<div id = "dialog-form" style="display:none">
+<form onsubmit="return false;">
+  <div class="form-group">
+    <label for="note">Notes</label>
+    <input type="textarea" class="form-control" id="notes" aria-describedby="notesHelp" placeholder="Enter notes">
+    <small id="notesHelp" class="form-text text-muted">Please enter any notes in this field</small>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" style="margin-left: 0%;" class="form-check-input" id="financement">
+    <label class="form-check-label" for="financement">Financement</label>
+  </div>
+  <button type="submit" id = "book-appointment" class="btn btn-primary">Book</button>
+</form>
+</div>

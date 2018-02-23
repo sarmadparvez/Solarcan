@@ -1,0 +1,3649 @@
+[2018-02-12 10:51:46.324141] [debug] session: Array
+(
+)
+
+[2018-02-12 10:51:46.722444] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 10:59:14.007690] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 10:59:14.007883] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 10:59:14.007924] [info] slime request: 
+[2018-02-12 10:59:17.211388] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 10:59:27.652322] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+    [user] => Array
+        (
+            [noagent] => 111
+            [role] => user
+        )
+
+)
+
+[2018-02-12 10:59:34.236139] [debug] session: Array
+(
+)
+
+[2018-02-12 11:07:46.458714] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:07:57.587091] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:08:21.114866] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:44:09.269203] [debug] session: Array
+(
+)
+
+[2018-02-12 11:44:09.269413] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 11:44:09.269452] [info] slime request: 
+[2018-02-12 11:44:10.145603] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 11:44:10.314162] [debug] session: Array
+(
+    [user] => Array
+        (
+            [noagent] => 111
+            [role] => user
+        )
+
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:44:10.314354] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 11:44:10.314398] [info] slime request: 
+[2018-02-12 11:44:10.669742] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 11:44:27.330835] [debug] session: Array
+(
+)
+
+[2018-02-12 11:44:58.900122] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:44:58.900358] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 11:44:58.900413] [info] slime request: 
+[2018-02-12 11:44:59.272614] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 11:45:35.309437] [debug] session: Array
+(
+)
+
+[2018-02-12 11:45:39.115509] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:45:39.115745] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 11:45:39.115833] [info] slime request: 
+[2018-02-12 11:45:39.464608] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 11:46:04.620323] [debug] session: Array
+(
+)
+
+[2018-02-12 11:46:05.861639] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:46:05.861920] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 11:46:05.861998] [info] slime request: 
+[2018-02-12 11:46:06.215197] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 11:46:07.536755] [debug] session: Array
+(
+)
+
+[2018-02-12 11:46:08.695653] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:46:08.695928] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 11:46:08.695991] [info] slime request: 
+[2018-02-12 11:46:09.075654] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 11:46:10.155641] [debug] session: Array
+(
+)
+
+[2018-02-12 11:52:23.618626] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 11:52:23.618987] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 11:52:23.619101] [info] slime request: 
+[2018-02-12 11:52:23.959230] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 12:28:06.953227] [debug] session: Array
+(
+)
+
+[2018-02-12 12:28:10.117100] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 12:28:10.117413] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 12:28:10.117511] [info] slime request: 
+[2018-02-12 12:28:10.483628] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 12:28:12.868524] [debug] session: Array
+(
+)
+
+[2018-02-12 12:28:15.091908] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 12:28:15.092129] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 12:28:15.092194] [info] slime request: 
+[2018-02-12 12:28:15.457329] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 12:28:30.471308] [debug] session: Array
+(
+)
+
+[2018-02-12 12:28:52.778292] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 12:28:52.778497] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => 1%3D1
+)
+
+[2018-02-12 12:28:52.778551] [info] slime request: 
+[2018-02-12 12:28:53.136297] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=1%3D1
+[2018-02-12 12:28:53.253407] [error] caught exception: Invalid Credentials ! : code: 422
+[2018-02-12 12:28:53.253503] [error] #0 /var/www/html/solarcanportal/api/index.php(48): Application->login()
+#1 [internal function]: login()
+#2 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#3 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#4 /var/www/html/solarcanportal/api/index.php(29): Slim->run()
+#5 {main}
+[2018-02-12 12:28:55.942053] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 12:28:55.942200] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 12:28:55.942241] [info] slime request: 
+[2018-02-12 12:28:56.281575] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:04:17.322365] [debug] session: Array
+(
+)
+
+[2018-02-12 14:05:14.414428] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:05:18.748698] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:05:18.748851] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:05:18.748887] [info] slime request: 
+[2018-02-12 14:05:19.105063] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:06:20.050550] [debug] session: Array
+(
+)
+
+[2018-02-12 14:06:38.645749] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:06:38.645947] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:06:38.646008] [info] slime request: 
+[2018-02-12 14:06:38.970999] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:07:59.137525] [debug] session: Array
+(
+)
+
+[2018-02-12 14:08:06.691199] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:08:06.691355] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:08:06.691389] [info] slime request: 
+[2018-02-12 14:08:07.032489] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:08:11.148020] [debug] session: Array
+(
+)
+
+[2018-02-12 14:08:15.830221] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:08:15.830472] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:08:15.830534] [info] slime request: 
+[2018-02-12 14:08:16.219885] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:08:22.246695] [debug] session: Array
+(
+)
+
+[2018-02-12 14:08:23.372287] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:08:23.372442] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:08:23.372484] [info] slime request: 
+[2018-02-12 14:08:23.735244] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:16:39.097007] [debug] session: Array
+(
+)
+
+[2018-02-12 14:16:43.869621] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:16:43.869751] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:16:43.869786] [info] slime request: 
+[2018-02-12 14:16:44.200854] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:42:38.796864] [debug] session: Array
+(
+)
+
+[2018-02-12 14:42:49.909265] [debug] session: Array
+(
+)
+
+[2018-02-12 14:42:49.909497] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:42:49.909538] [info] slime request: 
+[2018-02-12 14:42:53.408539] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:42:53.551814] [error] caught exception:  : code: 404
+[2018-02-12 14:42:53.551923] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(62): RestCurlClient->http_parse_message('{"error":"no_me...')
+#1 /var/www/html/solarcanportal/api/Application.php(184): RestCurlClient->get('http://localhos...', Array)
+#2 /var/www/html/solarcanportal/api/index.php(48): Application->login()
+#3 [internal function]: login()
+#4 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#5 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/solarcanportal/api/index.php(29): Slim->run()
+#7 {main}
+[2018-02-12 14:42:59.775489] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:42:59.775837] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:42:59.775929] [info] slime request: 
+[2018-02-12 14:43:00.152308] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 14:43:00.249030] [error] caught exception:  : code: 404
+[2018-02-12 14:43:00.249110] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(62): RestCurlClient->http_parse_message('{"error":"no_me...')
+#1 /var/www/html/solarcanportal/api/Application.php(184): RestCurlClient->get('http://localhos...', Array)
+#2 /var/www/html/solarcanportal/api/index.php(48): Application->login()
+#3 [internal function]: login()
+#4 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#5 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/solarcanportal/api/index.php(29): Slim->run()
+#7 {main}
+[2018-02-12 14:47:58.235616] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+)
+
+[2018-02-12 14:48:01.026319] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:48:06.789217] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:48:24.554923] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:48:24.555260] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:48:24.555344] [info] slime request: 
+[2018-02-12 14:48:24.716315] [error] Server response status was: 401 with response: [{"error":"need_login","error_message":"You must specify a valid username and password."}]
+[2018-02-12 14:48:24.716394] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"need_...')
+#1 /var/www/html/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/solarcanportal/api/Application.php(171): Application->getSugarAuthToken()
+#3 /var/www/html/solarcanportal/api/index.php(48): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/solarcanportal/api/index.php(29): Slim->run()
+#8 {main}
+[2018-02-12 14:48:35.648276] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:48:35.648469] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:48:35.648510] [info] slime request: 
+[2018-02-12 14:48:35.792237] [error] Server response status was: 401 with response: [{"error":"need_login","error_message":"You must specify a valid username and password."}]
+[2018-02-12 14:48:35.792314] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"need_...')
+#1 /var/www/html/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/solarcanportal/api/Application.php(171): Application->getSugarAuthToken()
+#3 /var/www/html/solarcanportal/api/index.php(48): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/solarcanportal/api/index.php(29): Slim->run()
+#8 {main}
+[2018-02-12 14:48:41.415738] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:48:43.636440] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:48:43.636718] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:48:43.636807] [info] slime request: 
+[2018-02-12 14:48:43.754125] [error] Server response status was: 401 with response: [{"error":"need_login","error_message":"You must specify a valid username and password."}]
+[2018-02-12 14:48:43.754211] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"need_...')
+#1 /var/www/html/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/solarcanportal/api/Application.php(171): Application->getSugarAuthToken()
+#3 /var/www/html/solarcanportal/api/index.php(48): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/solarcanportal/api/index.php(29): Slim->run()
+#8 {main}
+[2018-02-12 14:49:51.631671] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:50:02.933222] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518428681
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 47
+            [lastTime] => 1518428681
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518428692
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 14:50:02.933466] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 14:50:02.933531] [info] slime request: 
+[2018-02-12 14:50:03.077398] [error] Server response status was: 401 with response: [{"error":"need_login","error_message":"You must specify a valid username and password."}]
+[2018-02-12 14:50:03.077486] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"need_...')
+#1 /var/www/html/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/solarcanportal/api/Application.php(171): Application->getSugarAuthToken()
+#3 /var/www/html/solarcanportal/api/index.php(48): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/solarcanportal/api/index.php(29): Slim->run()
+#8 {main}
+[2018-02-12 15:05:05.119458] [debug] session: Array
+(
+    [externalLogin] => 
+    [is_valid_session] => 1
+    [ip_address] => ::1
+    [user_id] => 1
+    [type] => user
+    [authenticated_user_id] => 1
+    [unique_key] => 8b7fe1412ce3987858fbca103888de0f
+    [platform] => base
+    [oauth2] => Array
+        (
+            [client_id] => sugar
+            [user_id] => 1
+            [expires] => 1518430472
+            [refresh_token] => ed5c6c22-c30c-4a86-80a2-8f80c3d5001d
+            [token_check_time] => 1518428630
+        )
+
+    [VALIDATION_EXPIRES_IN] => valid
+    [LICENSE_EXPIRES_IN] => valid
+    [EXCEEDING_OC_LICENSES] => 
+    [userTime] => Array
+        (
+            [last] => 1518429659
+        )
+
+    [ipaddress] => ::1
+    [userStats] => Array
+        (
+            [loginTime] => 1518426873
+            [pages] => 80
+            [lastTime] => 1518429659
+        )
+
+    [csrf_tokens] => Array
+        (
+            [session_form] => NuToC8JguA-M_zy7HoLwtQBDDro5w2qM
+        )
+
+    [file2Hash] => Array
+        (
+            [e1aaee17e575282e663625fbd8be49df] => upload%3A%2F%2Fupgrades%2Fmodule%2FTelemarketers2018_02_06_114445.zip
+            [703512270a15b9cc82dbb09076f64cae] => upload://upgrades/module/Telemarketers2018_02_06_114445.zip
+            [e106d8f0107358b8ccea2e5efeafec08] => upload%3A%2F%2Fupgrades%2Fmodule%2FPostal_Codes2018_01_31_123705.zip
+            [1b239be03c2a3e18d3b8d276a55b1acc] => upload://upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [2f8ecd54ddaad65b9c36af1a94b3af10] => upload%3A%2F%2Fupgrades%2Fmodule%2FDNC_Suivi_Modules2018_01_31_130048.zip
+            [3fea4e94ee0c6fc65ebe3f93647a2581] => upload://upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [c19e7bb22868534277defe5a3e3c7e15] => upload%3A%2F%2Fupgrades%2Fmodule%2FBasic_Fields_Dropdowns_Hooks.zip
+            [fb86ebc1f02ee24f0a7c04de813d0626] => upload://upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [c23be77b5ae344ae5ab34901f5c18c89] => upload/upgrades/module/ops-modules.zip
+            [62e6f66deb023ecbe8e93f2f6f87e5bf] => upload/upgrades/module/rt_classification2018_01_31_114716.zip
+            [11b8cbb9ebbb84787c386b17a67b88a8] => upload/upgrades/module/Basic_Fields_Dropdowns_Hooks.zip
+            [9f4dfb5beecfb427afe34e8649735570] => upload/upgrades/module/DNC_Suivi_Modules2018_01_31_130048.zip
+            [97879aa5c72fd52e2e490b35e81c88bf] => upload/upgrades/module/Postal_Codes2018_01_31_123705.zip
+            [961753f6bb7eb89f7639ac2fb737835e] => upload/upgrades/module/Telemarketers2018_02_06_114445.zip
+        )
+
+    [breadCrumbs] => __PHP_Incomplete_Class Object
+        (
+            [__PHP_Incomplete_Class_Name] => BreadCrumbStack
+            [stack:BreadCrumbStack:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [item_id] => 0084dc6a-0653-11e8-813e-ecf4bb90601d
+                            [id] => 9
+                            [item_summary] => A
+                            [module_name] => rt_Classification
+                            [monitor_id] => 4dc4672a-0676-11e8-a9b2-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:03:01
+                        )
+
+                    [1] => Array
+                        (
+                            [item_id] => 495e22d0-067a-11e8-a77c-ecf4bb90601d
+                            [id] => 14
+                            [item_summary] => Test Contact 1
+                            [module_name] => Contacts
+                            [monitor_id] => 4ddc9c1a-067a-11e8-b2ad-ecf4bb90601d
+                            [date_modified] => 2018-01-31 11:31:39
+                        )
+
+                    [2] => Array
+                        (
+                            [item_id] => f1b97da4-0679-11e8-8c26-ecf4bb90601d
+                            [id] => 15
+                            [item_summary] => Test meeting 1
+                            [module_name] => Meetings
+                            [monitor_id] => c4d32dd2-0686-11e8-a20f-ecf4bb90601d
+                            [date_modified] => 2018-01-31 13:00:53
+                        )
+
+                    [3] => Array
+                        (
+                            [item_id] => 92d3d0be-066a-11e8-aaa5-ecf4bb90601d
+                            [id] => 18
+                            [item_summary] => B
+                            [module_name] => rt_Classification
+                            [monitor_id] => d5338bfe-0690-11e8-ab00-ecf4bb90601d
+                            [date_modified] => 2018-01-31 14:12:55
+                        )
+
+                    [4] => Array
+                        (
+                            [item_id] => c77bced6-0b22-11e8-ae45-ecf4bb90601d
+                            [id] => 19
+                            [item_summary] => Test
+                            [module_name] => ProspectLists
+                            [monitor_id] => cba868de-0b22-11e8-8b8f-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:47:50
+                        )
+
+                    [5] => Array
+                        (
+                            [item_id] => fa59491e-0b22-11e8-ad7f-ecf4bb90601d
+                            [id] => 20
+                            [item_summary] => Test2
+                            [module_name] => Campaigns
+                            [monitor_id] => 06c5c7c2-0b23-11e8-be22-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:29
+                        )
+
+                    [6] => Array
+                        (
+                            [item_id] => fa6ce19a-0b22-11e8-bab7-ecf4bb90601d
+                            [id] => 21
+                            [item_summary] => Test2 Test List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0e765e0a-0b23-11e8-9a6b-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:42
+                        )
+
+                    [7] => Array
+                        (
+                            [item_id] => fa6bd0c0-0b22-11e8-9601-ecf4bb90601d
+                            [id] => 23
+                            [item_summary] => Test2 Unsubscription List
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0fbe6d70-0b23-11e8-9019-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [8] => Array
+                        (
+                            [item_id] => f6d9ce12-0b22-11e8-9522-ecf4bb90601d
+                            [id] => 22
+                            [item_summary] => Test TL 2
+                            [module_name] => ProspectLists
+                            [monitor_id] => 0f5c928a-0b23-11e8-abb9-ecf4bb90601d
+                            [date_modified] => 2018-02-06 09:49:44
+                        )
+
+                    [9] => Array
+                        (
+                            [item_id] => 38301ebe-0b34-11e8-9a7e-ecf4bb90601d
+                            [id] => 31
+                            [item_summary] => regular1
+                            [module_name] => Users
+                            [monitor_id] => af24a26a-0b34-11e8-9769-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:55:53
+                        )
+
+                    [10] => Array
+                        (
+                            [item_id] => 0d984806-0b35-11e8-8ab8-ecf4bb90601d
+                            [id] => 39
+                            [item_summary] => regular2
+                            [module_name] => Users
+                            [monitor_id] => 13d436d0-0b35-11e8-a282-ecf4bb90601d
+                            [date_modified] => 2018-02-06 11:58:42
+                        )
+
+                    [11] => Array
+                        (
+                            [item_id] => 0d9a0f56-0be4-11e8-ba88-ecf4bb90601d
+                            [id] => 52
+                            [item_summary] => Sheraz template
+                            [module_name] => PdfManager
+                            [monitor_id] => 0dbfee6a-0be4-11e8-900f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:14
+                        )
+
+                    [12] => Array
+                        (
+                            [item_id] => 15bf2252-0be4-11e8-ae32-ecf4bb90601d
+                            [id] => 54
+                            [item_summary] => Sheraz Account
+                            [module_name] => Accounts
+                            [monitor_id] => 1723d390-0be4-11e8-a62f-ecf4bb90601d
+                            [date_modified] => 2018-02-07 08:51:30
+                        )
+
+                    [13] => Array
+                        (
+                            [item_id] => 7b180a50-fbbe-11e7-a2b4-020c3285a1ab
+                            [id] => 57
+                            [item_summary] => Base Implementation.  Should be overridden.
+                            [module_name] => OutboundEmail
+                            [monitor_id] => 29bf07cc-0be9-11e8-ab17-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:27:48
+                        )
+
+                    [14] => Array
+                        (
+                            [item_id] => a5e7a002-0be9-11e8-9dd0-ecf4bb90601d
+                            [id] => 64
+                            [item_summary] => 
+                            [module_name] => Emails
+                            [monitor_id] => a5e38206-0be9-11e8-a7c5-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:31:17
+                        )
+
+                    [15] => Array
+                        (
+                            [item_id] => c8cdf80a-0be9-11e8-8c32-ecf4bb90601d
+                            [id] => 67
+                            [item_summary] => test email from sugar admin user personal email
+                            [module_name] => Emails
+                            [monitor_id] => c8c9a26e-0be9-11e8-b0cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:32:15
+                        )
+
+                    [16] => Array
+                        (
+                            [item_id] => 1
+                            [id] => 70
+                            [item_summary] => Admin Admin
+                            [module_name] => Users
+                            [monitor_id] => 3ad8f872-0beb-11e8-a7a1-ecf4bb90601d
+                            [date_modified] => 2018-02-07 09:42:36
+                        )
+
+                    [17] => Array
+                        (
+                            [item_id] => 7f472afc-0c03-11e8-b693-ecf4bb90601d
+                            [id] => 85
+                            [item_summary] => 321 321
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => 7e054d38-0c06-11e8-a3cd-ecf4bb90601d
+                            [date_modified] => 2018-02-07 12:57:45
+                        )
+
+                    [18] => Array
+                        (
+                            [item_id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                            [id] => 92
+                            [item_summary] => 
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => ea59f3cc-0cd7-11e8-88b7-ecf4bb90601d
+                            [date_modified] => 2018-02-08 13:56:52
+                        )
+
+                    [19] => Array
+                        (
+                            [item_id] => af64bffc-0c07-11e8-8294-ecf4bb90601d
+                            [id] => 93
+                            [item_summary] => 555 555
+                            [module_name] => tm_telemarketers
+                            [monitor_id] => c0bf5c8c-0ce6-11e8-b8fe-ecf4bb90601d
+                            [date_modified] => 2018-02-08 15:43:04
+                        )
+
+                )
+
+            [stackMap:BreadCrumbStack:private] => Array
+                (
+                    [0084dc6a-0653-11e8-813e-ecf4bb90601d] => 0
+                    [495e22d0-067a-11e8-a77c-ecf4bb90601d] => 1
+                    [f1b97da4-0679-11e8-8c26-ecf4bb90601d] => 2
+                    [92d3d0be-066a-11e8-aaa5-ecf4bb90601d] => 3
+                    [c77bced6-0b22-11e8-ae45-ecf4bb90601d] => 4
+                    [fa59491e-0b22-11e8-ad7f-ecf4bb90601d] => 5
+                    [fa6ce19a-0b22-11e8-bab7-ecf4bb90601d] => 6
+                    [fa6bd0c0-0b22-11e8-9601-ecf4bb90601d] => 7
+                    [f6d9ce12-0b22-11e8-9522-ecf4bb90601d] => 8
+                    [38301ebe-0b34-11e8-9a7e-ecf4bb90601d] => 9
+                    [0d984806-0b35-11e8-8ab8-ecf4bb90601d] => 10
+                    [0d9a0f56-0be4-11e8-ba88-ecf4bb90601d] => 11
+                    [15bf2252-0be4-11e8-ae32-ecf4bb90601d] => 12
+                    [7b180a50-fbbe-11e7-a2b4-020c3285a1ab] => 13
+                    [a5e7a002-0be9-11e8-9dd0-ecf4bb90601d] => 14
+                    [c8cdf80a-0be9-11e8-8c32-ecf4bb90601d] => 15
+                    [1] => 16
+                    [7f472afc-0c03-11e8-b693-ecf4bb90601d] => 17
+                    [b4b33c1a-0bec-11e8-931a-ecf4bb90601d] => 18
+                    [af64bffc-0c07-11e8-8294-ecf4bb90601d] => 19
+                )
+
+            [deleteInvisible:BreadCrumbStack:private] => 1
+        )
+
+    [license_seats_needed] => -7
+    [lpage] => 1518429659
+    [flash] => Array
+        (
+        )
+
+    [developerMode] => 
+)
+
+[2018-02-12 15:05:05.119775] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 15:05:05.119837] [info] slime request: 
+[2018-02-12 15:05:05.612426] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 15:05:10.001440] [debug] session: Array
+(
+)
+
+[2018-02-12 15:05:12.171699] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:05:12.171993] [info] _REQUEST: Array
+(
+    [noagent] => 222
+    [password] => asdf
+)
+
+[2018-02-12 15:05:12.172082] [info] slime request: 
+[2018-02-12 15:05:12.519469] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=222&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 15:05:12.656800] [error] caught exception: Invalid Credentials ! : code: 422
+[2018-02-12 15:05:12.656872] [error] #0 /var/www/html/solarcanportal/api/index.php(48): Application->login()
+#1 [internal function]: login()
+#2 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#3 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#4 /var/www/html/solarcanportal/api/index.php(29): Slim->run()
+#5 {main}
+[2018-02-12 15:05:26.172355] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:05:28.399914] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:05:28.400230] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 15:05:28.400326] [info] slime request: 
+[2018-02-12 15:05:28.770637] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 15:05:37.950258] [debug] session: Array
+(
+)
+
+[2018-02-12 15:06:15.099468] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:06:15.099611] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 15:06:15.099661] [info] slime request: 
+[2018-02-12 15:06:15.429531] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 15:06:21.230906] [debug] session: Array
+(
+)
+
+[2018-02-12 15:06:25.038279] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:06:25.038485] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 15:06:25.038568] [info] slime request: 
+[2018-02-12 15:06:25.376719] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 15:24:36.354640] [debug] session: Array
+(
+)
+
+[2018-02-12 15:24:36.396819] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:24:39.742032] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:24:39.742470] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 15:24:39.742624] [info] slime request: 
+[2018-02-12 15:24:40.063257] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-12 15:28:25.079391] [debug] session: Array
+(
+)
+
+[2018-02-12 15:28:51.743984] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:45:39.205451] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+)
+
+[2018-02-12 15:45:39.205727] [info] _REQUEST: Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-12 15:45:39.205770] [info] slime request: 
+[2018-02-12 15:45:39.561904] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf

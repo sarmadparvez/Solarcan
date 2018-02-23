@@ -1,0 +1,214 @@
+[2018-02-07 17:12:52.705817] [info] in get user of application.php 
+[2018-02-07 17:12:52.705892] [info] Array
+(
+    [noagent] => 123
+    [password] => abc@123
+)
+
+[2018-02-07 17:12:53.422550] [info] result: Array
+(
+    [next_offset] => -1
+    [records] => Array
+        (
+        )
+
+)
+
+[2018-02-07 17:13:33.520627] [info] in get user of application.php 
+[2018-02-07 17:13:33.520730] [info] Array
+(
+    [noagent] => 123
+    [password] => abc@123
+)
+
+[2018-02-07 17:13:33.873958] [info] http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=123&filter%5B1%5D%5Bpassword%5D=abc@123
+[2018-02-07 17:13:34.005369] [info] result: Array
+(
+    [next_offset] => -1
+    [records] => Array
+        (
+        )
+
+)
+
+[2018-02-07 17:13:42.706926] [info] in get user of application.php 
+[2018-02-07 17:13:42.706998] [info] Array
+(
+    [noagent] => 111
+    [password] => asdf
+)
+
+[2018-02-07 17:13:43.079350] [info] http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-07 17:13:43.236907] [info] result: Array
+(
+    [next_offset] => -1
+    [records] => Array
+        (
+            [0] => Array
+                (
+                    [id] => b4b33c1a-0bec-11e8-931a-ecf4bb90601d
+                    [name] => 
+                    [date_entered] => 2018-02-07T04:53:10-05:00
+                    [date_modified] => 2018-02-07T07:10:09-05:00
+                    [modified_user_id] => 1
+                    [modified_by_name] => Admin Admin
+                    [modified_user_link] => Array
+                        (
+                            [full_name] => Admin Admin
+                            [id] => 1
+                            [_acl] => Array
+                                (
+                                    [fields] => Array
+                                        (
+                                            [pwd_last_changed] => Array
+                                                (
+                                                    [write] => no
+                                                    [create] => no
+                                                )
+
+                                            [last_login] => Array
+                                                (
+                                                    [write] => no
+                                                    [create] => no
+                                                )
+
+                                        )
+
+                                    [delete] => no
+                                    [_hash] => 08b99a97c2e8d792f7a44d8882b5af6d
+                                )
+
+                        )
+
+                    [created_by] => 1
+                    [created_by_name] => Admin Admin
+                    [created_by_link] => Array
+                        (
+                            [full_name] => Admin Admin
+                            [id] => 1
+                            [_acl] => Array
+                                (
+                                    [fields] => Array
+                                        (
+                                            [pwd_last_changed] => Array
+                                                (
+                                                    [write] => no
+                                                    [create] => no
+                                                )
+
+                                            [last_login] => Array
+                                                (
+                                                    [write] => no
+                                                    [create] => no
+                                                )
+
+                                        )
+
+                                    [delete] => no
+                                    [_hash] => 08b99a97c2e8d792f7a44d8882b5af6d
+                                )
+
+                        )
+
+                    [description] => 
+                    [deleted] => 
+                    [noagent] => 111
+                    [nocallgen] => 123
+                    [notp] => 
+                    [nom] => Sarmad
+                    [prenom] => Parvez
+                    [team] => 100
+                    [password] => asdf
+                    [following] => 
+                    [my_favorite] => 
+                    [tag] => Array
+                        (
+                        )
+
+                    [locked_fields] => Array
+                        (
+                        )
+
+                    [team_count] => 
+                    [team_count_link] => Array
+                        (
+                            [team_count] => 
+                            [id] => 1
+                            [_acl] => Array
+                                (
+                                    [fields] => Array
+                                        (
+                                        )
+
+                                    [_hash] => 654d337e0e912edaa00dbb0fb3dc3c17
+                                )
+
+                        )
+
+                    [team_name] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [id] => 1
+                                    [name] => Global
+                                    [name_2] => 
+                                    [primary] => 1
+                                    [selected] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [id] => 7afc5a94-fbbe-11e7-9ea2-020c3285a1ab
+                                    [name] => Admin
+                                    [name_2] => Admin
+                                    [primary] => 
+                                    [selected] => 
+                                )
+
+                        )
+
+                    [assigned_user_id] => 1
+                    [assigned_user_name] => Admin Admin
+                    [assigned_user_link] => Array
+                        (
+                            [full_name] => Admin Admin
+                            [id] => 1
+                            [_acl] => Array
+                                (
+                                    [fields] => Array
+                                        (
+                                            [pwd_last_changed] => Array
+                                                (
+                                                    [write] => no
+                                                    [create] => no
+                                                )
+
+                                            [last_login] => Array
+                                                (
+                                                    [write] => no
+                                                    [create] => no
+                                                )
+
+                                        )
+
+                                    [delete] => no
+                                    [_hash] => 08b99a97c2e8d792f7a44d8882b5af6d
+                                )
+
+                        )
+
+                    [_acl] => Array
+                        (
+                            [fields] => Array
+                                (
+                                )
+
+                        )
+
+                    [_module] => tm_telemarketers
+                )
+
+        )
+
+)
+

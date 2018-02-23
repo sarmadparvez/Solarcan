@@ -1,0 +1,194 @@
+/* ==============================
+   1. Imported styles
+   ============================== */
+/**/
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700|Raleway:400,500,600,700");
+/* ===== CUSTOM MIXIN ========*/
+/*=========FORCE ELEMENT STATE ============ */
+/*========= POSITIONING ============ */
+/*========= TRANSFORM MIXIN ============ */
+/*========= BACKGROUND RGBA ============ */
+/*=========SECTION HEADING ============ */
+/*@import "responsive";*/
+/*@import "../css/icomoon.css";
+@import "../../node_modules/bootstrap/scss/custom";
+@import "../../node_modules/bootstrap/scss/forms";*/
+/*@import "../../node_modules/bootstrap/scss/dropdown";*/
+/* ==============================
+   2. Global styles
+   ============================== */
+body {
+  font: normal 14px/24px 'Raleway', sans-serif;
+  color: #222222; 
+	padding-bottom:70px;
+ }
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  color: #222; }
+  a:hover {
+    color: #48c7ec; }
+
+a:hover, a:focus, a:visited {
+  text-decoration: none;
+  outline: none; }
+
+img {
+  max-width: 100%;
+  display: inline-block; }
+
+figure {
+  margin: 0; }
+
+.img-fluid {
+  width: 100%; }
+
+button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  padding: 0;
+  background: transparent;
+  transition: all 0.3s ease-in-out; }
+
+input, textarea {
+  font-family: 'Raleway', sans-serif;
+  display: block;
+  font-size: 16px;
+  line-height: 28px;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'PT Serif', serif; }
+
+.sep-right{
+	border-right: 1px solid #ccc;
+}
+.header-top{
+	padding:25px 0 20px;
+}
+.header-top .logout-bttn{
+	margin-left: 15px;
+	cursor: pointer;
+}
+.header {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.from-group-fluid .form-group {
+  width: 100% !important; }
+.portail-box{
+	padding:20px 0;
+}
+.portail-box .form-inline label {
+  padding-right: 15px; }
+
+.portail-box .form-inline .form-group {
+  padding: 0 10px; }
+
+.portail-box .form-inline .row.address-from .form-group label {
+  min-width: 109px;
+  text-align: right;
+  justify-content: flex-end; }
+
+.portail-box .form-inline .row.address-from .form-group .form-control.postal-code {
+  min-width: 100px;
+  width: 100px; }
+
+.portail-box .form-inline .row.address-from .form-group .form-control {
+  min-width: 200px; }
+
+.portail-box .address-label-heading {
+  font-weight: bold; }
+
+.portail-box .text-left {
+  justify-content: start !important; }
+
+.portail-box .row {
+  width: 100%; }
+
+.portail-box .form-group {
+  margin-bottom: 1rem !important; }
+
+.portail-box .addres-row {
+  margin-bottom: 1.5rem !important; }
+
+.portail-box .sep-line {
+  border: 1px solid #ccc;
+  border-width: 1px 0; }
+
+.portal-from-md-field .form-group label{
+	min-width: 175px;
+	text-align: right;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.portal-from-md-field .form-group .form-control{
+	width:100px;
+}
+.portal-from-sm-field .form-group label {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.portal-from-sm-field  .form-control{
+	width:60px;
+}
+
+.portal-batiment .portal-from-sm-field {
+    width: 100%;
+    padding-left: 21%;
+}
+
+
+.portal-from-md-field  .form-control{
+	width:200px!important;
+}
+
+.inline-field .form-group {
+    display: flex;
+    width: 48%;
+}
+#calendar-info {
+    padding: 30px;
+}
+div#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #fff;
+    width: 100%;
+}
+
+/*=== RESPONSIVE FORM CSS HERE =======*/
+@media (max-width: 768px) {
+	  .field-label-responsive {
+		padding-top: .5rem;
+	} 
+	
+	.portail-box .form-inline .row.address-from .form-group label{
+		text-align:left!important;
+		justify-content: start;
+	}
+	.portail-box .form-inline label{
+		align-items: flex-start;
+	}
+}

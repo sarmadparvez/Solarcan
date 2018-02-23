@@ -1,0 +1,63 @@
+<div class="portail-box portal-batiment">
+	<h3>Batiment <i class="fa fa-home"></i></h3>
+	<form class="form-inline">
+		<div class="portal-from-md-field">
+			<div class="row">
+				<div class="form-group">
+					<label for="name">Anne de construction</label>
+					<input type="text" value = "<% annee_construction %>" name = "annee_construction" class="form-control" id="annee_construction" placeholder="1950">
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label for="name">Occupation depuis</label>
+					<input type="text" value = "<% occupant_depuis %>" name = "occupant_depuis" class="form-control" id="nom" placeholder="2000">
+				</div>
+			</div>
+		</div>
+
+		<div class="portal-from-sm-field">
+			<div class="row">
+				<div class="form-group">
+					<label for="name"># Porte total</label>
+					<input type="text" class="form-control" name = "nombre_portes_total" value = "<% nombre_portes_total %>" id="nom">
+				</div>
+				<div class="form-group">
+					<label for="name"># Porte à changer</label>
+					<input type="number" min="0" name = "nombre_portes_achanger" value = "<% nombre_portes_achanger %>" class="form-control" id="nom">
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label for="name"># Fenetre Total</label>
+					<input type="text" name = "nombre_fenetres_total" value = "<% nombre_fenetres_total %>" class="form-control" id="nom">
+				</div>
+				<div class="form-group">
+					<label for="name"># Fenetre à changer</label>
+					<input type="number" min="0" name = "nombre_fenetres_achanger" value = "<% nombre_fenetres_achanger %>" class="form-control" id="nom">
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label for="name"># Garage Total</label>
+					<input type="text" name = "nombre_garage_total" value = "<% nombre_garage_total %>" class="form-control" id="nom">
+				</div>
+				<div class="form-group">
+					<label for="name"># Garage à changer</label>
+					<input type="number" min="0" name = "nombre_garage_achanger" value = "<% nombre_garage_achanger %>" class="form-control" id="nom">
+				</div>
+			</div>
+		</div>
+		<div class="portal-from-md-field">
+			<div class="row">
+				<div class="form-group">
+					<label for="name">Type de propritair</label>
+					<select class="form-control" name = "etat_de_proprietaire" value = "<% etat_de_proprietaire %>" >
+						<option value=""></option>
+						<option value="proprietaire">Propriétaire</option>
+						<option value="locataire">Locataire</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</form>

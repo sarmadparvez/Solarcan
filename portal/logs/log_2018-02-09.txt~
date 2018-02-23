@@ -1,0 +1,14 @@
+[2018-02-09 19:43:01.088242] [debug] session: Array
+(
+    [flash] => Array
+        (
+        )
+
+    [user] => Array
+        (
+            [noagent] => 111
+            [role] => user
+        )
+
+)
+

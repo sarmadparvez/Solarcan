@@ -1,0 +1,20 @@
+window.Account = Backbone.Model.extend({
+    urlRoot:"../api/account",
+    defaults:{
+        "id" : null,
+        "annee_construction":"",
+        "occupant_depuis":"",
+        "nombre_portes_total":"",
+        "nombre_portes_achanger":"",
+        "nombre_fenetres_total":"",
+        "nombre_fenetres_achanger":"",
+        "nombre_garage_total":"",
+        "nombre_garage_achanger":"",
+        "etat_de_proprietaire":"",
+    }
+});
+
+/*window.WineCollection = Backbone.Collection.extend({
+    model:Wine,
+    url:"../api/wines"
+});*/

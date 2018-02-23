@@ -1,0 +1,563 @@
+[2018-02-23 17:08:56.317775] [debug] _REQUEST: Array
+(
+    [meeting_id] => 320759f6-1892-11e8-acc5-ecf4bb90601d
+    [postalcode] => test
+    [contact_id] => 
+    [description] => Test Notes
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => +923216671929
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => Test Rue
+            [billing_address_city] => Test Ville
+            [billing_address_postalcode] => test
+            [billing_address_state] => Test Province
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1
+            [occupant_depuis] => 1
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-02-23 17:08:56.955593] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/bookAppointment
+[2018-02-23 17:08:58.434567] [info] result: 1
+[2018-02-23 17:13:03.310606] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:13:03.706499] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => d680431c-1892-11e8-8c68-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:13:19.136801] [debug] _REQUEST: Array
+(
+    [meeting_id] => d680431c-1892-11e8-8c68-ecf4bb90601d
+    [postalcode] => test
+    [contact_id] => 
+    [description] => Test Notes
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => Sarmadd
+            [phone_home] => +923216671929
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => Test Rue
+            [billing_address_city] => Test Ville
+            [billing_address_postalcode] => test
+            [billing_address_state] => Test Province
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1
+            [occupant_depuis] => 1
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-02-23 17:13:19.751466] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/bookAppointment
+[2018-02-23 17:13:21.112483] [info] result: 1
+[2018-02-23 17:14:19.845076] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:14:20.244535] [info] result: Array
+(
+)
+
+[2018-02-23 17:19:39.486196] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:19:39.766191] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => cbdda458-1893-11e8-80a5-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:20:57.988070] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:20:58.579634] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => cbdda458-1893-11e8-80a5-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:21:09.026665] [debug] _REQUEST: Array
+(
+    [meeting_id] => cbdda458-1893-11e8-80a5-ecf4bb90601d
+    [postalcode] => test
+    [contact_id] => 
+    [description] => Test Notes
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Sarmad
+            [last_name] => Parvez
+            [phone_home] => +923216671929
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => Montreal
+            [billing_address_city] => Test Ville
+            [billing_address_postalcode] => test
+            [billing_address_state] => Qubec
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 200
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-02-23 17:21:10.419953] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/bookAppointment
+[2018-02-23 17:21:11.834377] [error] caught exception:  : code: -1
+[2018-02-23 17:21:11.834506] [error] #0 /var/www/html/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/solarcanportal/api/Application.php(332): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/solarcanportal/api/index.php(116): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/solarcanportal/api/index.php(31): Slim->run()
+#7 {main}
+[2018-02-23 17:24:05.576200] [info] url: http://localhost/Solarcan/Sugar/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=111&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-02-23 17:24:29.038789] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:24:29.352159] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 2fe515a8-1894-11e8-8f86-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:26:01.438133] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:26:01.739768] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 2fe515a8-1894-11e8-8f86-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:26:20.201260] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:26:20.504868] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 2fe515a8-1894-11e8-8f86-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:26:48.399837] [debug] _REQUEST: Array
+(
+    [meeting_id] => 2fe515a8-1894-11e8-8f86-ecf4bb90601d
+    [postalcode] => test
+    [contact_id] => 
+    [description] => Notes for the meeting
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => +923216671929
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => test
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 2000
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-02-23 17:26:49.115149] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/bookAppointment
+[2018-02-23 17:26:50.286576] [info] result: 1
+[2018-02-23 17:29:07.347043] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:29:07.697283] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 1377462e-1895-11e8-8e70-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:29:14.813987] [debug] _REQUEST: Array
+(
+    [meeting_id] => 1377462e-1895-11e8-8e70-ecf4bb90601d
+    [postalcode] => test
+    [contact_id] => 
+    [description] => Notes for the meeting
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => +923216671929
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => test
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 2000
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-02-23 17:29:15.451284] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/bookAppointment
+[2018-02-23 17:29:16.657383] [info] result: 1
+[2018-02-23 17:31:13.150119] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:31:13.470176] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 6b977950-1895-11e8-ab40-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:31:48.699645] [debug] _REQUEST: Array
+(
+    [meeting_id] => 6b977950-1895-11e8-ab40-ecf4bb90601d
+    [postalcode] => test
+    [contact_id] => 
+    [description] => Notes for the meeting
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => +923216671929
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => test
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 2000
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-02-23 17:31:51.309653] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/bookAppointment
+[2018-02-23 17:31:54.270603] [info] result: 1
+[2018-02-23 17:32:01.394979] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:32:02.273724] [info] result: Array
+(
+)
+
+[2018-02-23 17:36:23.359246] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:36:23.939805] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 23485c90-1896-11e8-a1cc-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 1
+            [dayname] => Friday
+            [dateonly] => 2018-02-23
+        )
+
+)
+
+[2018-02-23 17:36:30.301814] [debug] _REQUEST: Array
+(
+    [meeting_id] => 23485c90-1896-11e8-a1cc-ecf4bb90601d
+    [postalcode] => test
+    [contact_id] => 
+    [description] => Notes for the meeting
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => +923216671929
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => test
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 2000
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-02-23 17:36:31.953313] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/bookAppointment
+[2018-02-23 17:36:33.434988] [info] result: 1
+[2018-02-23 17:38:43.411432] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:38:43.709862] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 7773caca-1896-11e8-8d90-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+)
+
+[2018-02-23 17:39:27.437865] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/getAvailableAppointments
+[2018-02-23 17:39:28.140820] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => test
+            [meeting_id] => 7773caca-1896-11e8-8d90-ecf4bb90601d
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-02-24
+        )
+
+)
+
+[2018-02-23 17:39:30.574053] [debug] _REQUEST: Array
+(
+    [meeting_id] => 7773caca-1896-11e8-8d90-ecf4bb90601d
+    [postalcode] => test
+    [contact_id] => 
+    [description] => Notes for the meeting
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => +923347682080
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => test
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 2000
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-02-23 17:39:31.890625] [info] url: http://localhost/Solarcan/Sugar/rest/v11/Meetings/bookAppointment
+[2018-02-23 17:39:32.969918] [info] result: 1
