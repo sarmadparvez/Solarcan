@@ -2291,6 +2291,36 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/modules/Meetings/clients/base/views/record/record.php',
       'to' => 'custom/modules/Meetings/clients/base/views/record/record.php',
     ),
+    ////////
+    386 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php',
+      'to' => 'custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php',
+    ),
+    387 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_codecie_c.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_codecie_c.php',
+    ),
+    388 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_doors_rep_c.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_doors_rep_c.php',
+    ),
+    389 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_garage_rep_c.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_garage_rep_c.php',
+    ),
+    390 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_windows_rep_c.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_windows_rep_c.php',
+    ),
+    391 => array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Language/fr_FR.Basic_Fields_Dropdowns_Hooks.lang.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Language/fr_FR.Basic_Fields_Dropdowns_Hooks.lang.php',
+    )
   ),
   'roles' => 
   array (

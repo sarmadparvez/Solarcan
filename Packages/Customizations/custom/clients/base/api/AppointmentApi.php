@@ -56,7 +56,11 @@ class AppointmentApi extends SugarApi {
      */
     public function getAvailableAppointments(ServiceBase $api, array $args)
     {
-        $this->requireArgs($args, array('postalcode', 'preferred_language_1', 'preferred_language_2'));
+        $this->requireArgs($args, array(
+                'postalcode','preferred_language_1', 'preferred_language_2', 'codecie_c', 'categories'
+            )
+        );
+        //$GLOBALS['log']->fatal('getAvailableAppointments args: '.print_r($args,1));
         $postalcode = trim($args['postalcode']);
         if (strlen($args['postalcode']) > 3) {
             $postalcode = substr($postalcode, 0, 3);
@@ -70,6 +74,7 @@ class AppointmentApi extends SugarApi {
         } else {
             $lang_code = array('2', '3'); //english, bilingual
         }
+        $categories_where = $this->getCategoryWhere($args['categories'], 'pc_u');
 
         // meeting start time should be after and before the hours and datetime saved in config
         $x_hours = $this->getSugarConfig()->get('appointment_config')['x_hours'];
@@ -99,7 +104,9 @@ class AppointmentApi extends SugarApi {
             )
         )->on()->equals('pc_u.status', 'Active')
         ->in('pc_u.codelangue_rep', $lang_code)
-        ->starts($s_query->getFromAlias().'.name', $postalcode);
+        ->equals('pc_u.codecie_rep_c', $args['codecie_c'])
+        ->starts($s_query->getFromAlias().'.name', $postalcode)
+        ->addRaw($categories_where);
         
         // join with meetings
         $s_query->joinTable(
@@ -120,6 +127,7 @@ class AppointmentApi extends SugarApi {
             ->equals('m.deleted', 0);
         $s_query->groupBy('m.timeslot_name');
         $s_query->groupByRaw('DATE(m.timeslot_datetime)');
+        //$GLOBALS['log']->fatal('getAvailableAppointments sql: '.$s_query->compile());
         $result = $s_query->execute();
         return $result;
     }
@@ -133,12 +141,12 @@ class AppointmentApi extends SugarApi {
      */
     public function bookAppointment(ServiceBase $api, array $args)
     {
-        $GLOBALS['log']->fatal('in book appointment');
+        //$GLOBALS['log']->fatal('in book appointment');
         $this->requireArgs($args, array('meeting_id'));
         if (!empty($args['contact_id'])) {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_id']);
-            $GLOBALS['log']->fatal('contact last_name: '.$contact->last_name);
+            //$GLOBALS['log']->fatal('contact last_name: '.$contact->last_name);
         } else if (!empty($args['postalcode']) && 
             (!empty($args['phone_home']) || !empty($args['phone_mobile']) ||
              !empty($args['phone_work']) || !empty($args['phone_other']))
@@ -163,6 +171,9 @@ class AppointmentApi extends SugarApi {
         return true;
     }
 
+    /**
+    * Book meeting
+    */
     protected function updateMeeting($meeting_id, SugarBean $contact)
     {
         $meeting = $this->retrieveBean('Meetings', $meeting_id);
@@ -170,7 +181,7 @@ class AppointmentApi extends SugarApi {
         if (empty($meeting)) {
             throw new SugarApiExceptionMissingParameter('Meeting not found in SugarCRM');
         }
-        $meeting->timeslot_datetime = '2018-02-21T20:30:00-05:00';
+        //$meeting->timeslot_datetime = '2018-02-21T20:30:00-05:00';
         // check if the meeting is today. For today's meetings they should be assigned directly, without waiting for
         // scheduled job which will assign future (next days ) meetings at day end
         // meeting date in Y-m-d format e.g 2018-02-21
@@ -191,13 +202,18 @@ class AppointmentApi extends SugarApi {
         
         $meeting->save();
         $link = 'contacts';
-        $GLOBALS['log']->fatal('timeslot_datetime for meeting: '.$meeting->timeslot_datetime);
-        $GLOBALS['log']->fatal('now for saved timezone: '.$now_date);
+        //$GLOBALS['log']->fatal('timeslot_datetime for meeting: '.$meeting->timeslot_datetime);
+        //$GLOBALS['log']->fatal('now for saved timezone: '.$now_date);
 
         if ($meeting->load_relationship($link)) {
-            $GLOBALS['log']->fatal('relationship is loaded');
+            //$GLOBALS['log']->fatal('relationship is loaded');
             $meeting->$link->add($contact->id);
         }
+    }
+
+    protected function updateAccount($args, SugarBean $meeting, SugarBean $contact)
+    {
+
     }
 
     /**
@@ -228,9 +244,9 @@ class AppointmentApi extends SugarApi {
                 $args['phone_other']
             )
         );
-        $GLOBALS['log']->fatal('complete query: '.$s_query->compile());
+        //$GLOBALS['log']->fatal('complete query: '.$s_query->compile());
         $result = $s_query->execute();
-        $GLOBALS['log']->fatal('result: '.print_r($result,1));
+        //$GLOBALS['log']->fatal('result: '.print_r($result,1));
     }
 
     /**
@@ -245,6 +261,7 @@ class AppointmentApi extends SugarApi {
     {
         global $db;
         $sql_parts = array();
+        $sql = '';
 
         if (!empty($phone_home)) {
             $phone_home =  preg_replace('/[^0-9]/s', '', $phone_home);
@@ -265,10 +282,37 @@ class AppointmentApi extends SugarApi {
 
         if (count($sql_parts) > 1) {
             $sql = implode(' OR ', $sql_parts);
-        } else {
+        } else if (count($sql_parts) == 1){
             $sql = $sql_parts[0];
         }
-        $GLOBALS['log']->fatal('phone sql : '.$sql);
+        //$GLOBALS['log']->fatal('phone sql : '.$sql);
+        return $sql;
+    }
+
+    /**
+    * Prepare where part to match categories
+    * @param $categories array
+    * @return string
+    */
+    protected function getCategoryWhere($categories = array(), $join_alias)
+    {
+        $sql_parts = array();
+        $sql = '';
+
+        if (empty($join_alias)) {
+            return $sql;
+        }
+
+        foreach ($categories as $category) {
+            $sql_parts[] = $join_alias . '.' .$category . " = 1 ";
+        }
+
+        if (count($sql_parts) > 1) {
+            $sql = implode(' AND ', $sql_parts);
+        } else if (count($sql_parts) == 1) {
+            $sql = $sql_parts[0];
+        }
+        //$GLOBALS['log']->fatal('categories sql : '.$sql);
         return $sql;
     }
 
