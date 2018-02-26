@@ -1,5 +1,5 @@
 <?php
- // created: 2018-02-20 16:39:04
+ // created: 2018-01-23 17:11:38
 $dictionary['Meeting']['fields']['status']['audited']=false;
 $dictionary['Meeting']['fields']['status']['massupdate']=true;
 $dictionary['Meeting']['fields']['status']['comments']='Meeting status (ex: Planned, Held, Not held)';

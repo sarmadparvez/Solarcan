@@ -13,7 +13,7 @@ $dictionary['Opportunity']['fields']['nombre_garage_achanger']['massupdate']=fal
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['duplicate_merge']='disabled';
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['merge_filter']='disabled';
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['calculated']='true';
-$dictionary['Opportunity']['fields']['nombre_garage_achanger']['required']=true;
+$dictionary['Opportunity']['fields']['nombre_garage_achanger']['required']=false;
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['audited']=true;
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['importable']='false';
 $dictionary['Opportunity']['fields']['nombre_garage_achanger']['duplicate_merge_dom_value']=0;
@@ -31,6 +31,25 @@ $dictionary['Opportunity']['fields']['nombre_garage_achanger']['enforced']=true;
 // Merged from custom/Extension/modules/Opportunities/Ext/Vardefs/rli_link_workflow.php
 
 $dictionary['Opportunity']['fields']['revenuelineitems']['workflow'] = true;
+?>
+<?php
+// Merged from custom/Extension/modules/Opportunities/Ext/Vardefs/sugarfield_sales_stage.php
+
+ // created: 2018-01-17 19:42:01
+$dictionary['Opportunity']['fields']['sales_stage']['required']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['audited']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['massupdate']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['comments']='Indication of progression towards closure';
+$dictionary['Opportunity']['fields']['sales_stage']['importable']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['duplicate_merge']='enabled';
+$dictionary['Opportunity']['fields']['sales_stage']['duplicate_merge_dom_value']=1;
+$dictionary['Opportunity']['fields']['sales_stage']['merge_filter']='disabled';
+$dictionary['Opportunity']['fields']['sales_stage']['reportable']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['calculated']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['dependency']=false;
+$dictionary['Opportunity']['fields']['sales_stage']['studio']=true;
+
+ 
 ?>
 <?php
 // Merged from custom/Extension/modules/Opportunities/Ext/Vardefs/dupe_check.ext.php
@@ -554,25 +573,6 @@ $dictionary['Opportunity']['fields']['probability']['min']=false;
 $dictionary['Opportunity']['fields']['probability']['max']=false;
 $dictionary['Opportunity']['fields']['probability']['disable_num_format']='';
 $dictionary['Opportunity']['fields']['probability']['studio']=false;
-
- 
-?>
-<?php
-// Merged from custom/Extension/modules/Opportunities/Ext/Vardefs/sugarfield_sales_stage.php
-
- // created: 2018-01-17 19:42:01
-$dictionary['Opportunity']['fields']['sales_stage']['required']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['audited']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['massupdate']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['comments']='Indication of progression towards closure';
-$dictionary['Opportunity']['fields']['sales_stage']['importable']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['duplicate_merge']='enabled';
-$dictionary['Opportunity']['fields']['sales_stage']['duplicate_merge_dom_value']=1;
-$dictionary['Opportunity']['fields']['sales_stage']['merge_filter']='disabled';
-$dictionary['Opportunity']['fields']['sales_stage']['reportable']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['calculated']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['dependency']=false;
-$dictionary['Opportunity']['fields']['sales_stage']['studio']=true;
 
  
 ?>

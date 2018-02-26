@@ -39,5 +39,10 @@ $mod_strings['LBL_SOURCE'] = 'Source';
 $mod_strings['LBL_OCCUPANT_DEPUIS'] = 'Occupant depuis';
 $mod_strings['LBL_PHONE_HOME'] = 'Phone home';
 $mod_strings['LBL_PHONE_MOBILE'] = 'Phone mobile';
+$mod_strings['LBL_FINANCEMENT'] = 'Financement';
+$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'New Panel 1';
+$mod_strings['LBL_EMAIL'] = 'Email';
+$mod_strings['LBL_ETAT_DE_PROPRIETAIRE'] = 'Etat de proprietaire';
+$mod_strings['LBL_PARTENAIRE_INFO'] = 'Partenaire info';
 
 ?>

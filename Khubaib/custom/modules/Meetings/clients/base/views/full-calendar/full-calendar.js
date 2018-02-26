@@ -114,6 +114,8 @@
                         time = meetingSlots.special_case.PM2.start_time;
                     }
                 }
+
+                // set slot name of current event
                 var slotName = '';
                 for (var i in meetingSlots.regular_case) {
                     if (time == meetingSlots.regular_case[i].start_time) {
@@ -127,7 +129,7 @@
                         }
                     }
                 }
-                var renderCheckBox = self.renderCheckBox(id, time);
+                var renderCheckBox = self.isEventAhead(id, time);
                 if (renderCheckBox == true) {
                     if (event.start.day() == 6) {
                         for (var i in meetingSlots.special_case) {
@@ -288,41 +290,14 @@
         }
         return slotEvents;
     },
-    renderCheckBox: function (eventDate, eventTime) {
-        var current_date = (new Date()).toISOString().substring(0, 10);
-        var current_time = (new Date()).toISOString().substring(11, 18);
-
-        var broken_current_date = current_date.split('-');
-        var broken_current_time = current_time.split(':');
-
-        var broken_event_date = eventDate.split('-');
-        var broken_event_time = eventTime.split(':');
-
-        var timeZoneOffset = ((new Date()).getTimezoneOffset()) / 60;
-
-        if (Number(broken_event_date[0]) > Number(broken_current_date[0])) {        // year greater
+    isEventAhead: function (eventDate, eventTime) {
+        // get time difference between current date and event date that is being rendered
+        var timeDiff = App.date().diff(eventDate + " " + eventTime, 'hours', true);
+        if (timeDiff < 0) {
+            // if current date/time is behind event date/time
             return true;
-        } else if (Number(broken_event_date[0]) == Number(broken_current_date[0])) {    // year equal
-            if (Number(broken_event_date[1]) > Number(broken_current_date[1])) {    // month greater
-                return true;
-            } else if (Number(broken_event_date[1]) == Number(broken_current_date[1])) {    // month equal
-                if (Number(broken_event_date[2]) > Number(broken_current_date[2])) {   // day greater
-                    return true;
-                } else if (Number(broken_event_date[2]) == Number(broken_current_date[2])) {    // day equal
-                    if (Number(broken_event_time[0]) > ((Number(broken_current_time[0]) - timeZoneOffset) % 24)) {  // hour greater
-                        return true;
-                    } else {
-                        return false;
-                    }
-                } else {
-                    return false;
-                }
-            } else {
-                return false;
-            }
-        } else {
-            return false;
         }
+        return false;
     },
     slotExists: function (slot) {
         return this.selectedSlots.some(function (el) {

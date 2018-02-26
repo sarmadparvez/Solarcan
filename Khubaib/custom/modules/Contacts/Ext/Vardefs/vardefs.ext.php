@@ -60,27 +60,6 @@ $dictionary['Contact']['fields']['primary_address_country']['calculated']=false;
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_etat_de_proprietaire.php
-
- // created: 2018-01-23 15:39:21
-$dictionary['Contact']['fields']['etat_de_proprietaire']['name']='etat_de_proprietaire';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['vname']='LBL_ETAT_DE_PROPRIÉTAIRE';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['type']='enum';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['massupdate']=true;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge']='enabled';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['merge_filter']='enabled';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['calculated']=false;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['required']=true;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['len']=100;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['audited']=true;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['importable']='true';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['options']='yes_no_dom';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge_dom_value']='2';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['dependency']=false;
-
- 
-?>
-<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_alt_address_country.php
 
  // created: 2018-01-23 15:34:40
@@ -404,6 +383,26 @@ $dictionary['Contact']['fields']['picture']['duplicate_merge_dom_value']=1;
 $dictionary['Contact']['fields']['picture']['merge_filter']='disabled';
 $dictionary['Contact']['fields']['picture']['reportable']=true;
 $dictionary['Contact']['fields']['picture']['calculated']=false;
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_preferred_language.php
+
+ // created: 2018-01-23 14:49:51
+$dictionary['Contact']['fields']['preferred_language']['name']='preferred_language';
+$dictionary['Contact']['fields']['preferred_language']['vname']='LBL_PREFERRED_LANGUAGE';
+$dictionary['Contact']['fields']['preferred_language']['type']='enum';
+$dictionary['Contact']['fields']['preferred_language']['options']='preferred_language_dom';
+$dictionary['Contact']['fields']['preferred_language']['massupdate']=false;
+$dictionary['Contact']['fields']['preferred_language']['duplicate_merge']='enabled';
+$dictionary['Contact']['fields']['preferred_language']['merge_filter']='enabled';
+$dictionary['Contact']['fields']['preferred_language']['calculated']=false;
+$dictionary['Contact']['fields']['preferred_language']['required']=true;
+$dictionary['Contact']['fields']['preferred_language']['audited']=true;
+$dictionary['Contact']['fields']['preferred_language']['importable']='true';
+$dictionary['Contact']['fields']['preferred_language']['default']='francais';
+$dictionary['Contact']['fields']['preferred_language']['duplicate_merge_dom_value']='2';
 
  
 ?>
@@ -772,33 +771,6 @@ $dictionary['Contact']['fields']['do_not_call']['calculated']=false;
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_statut_dnc.php
-
- // created: 2018-01-29 15:19:58
-$dictionary['Contact']['fields']['statut_dnc']['name']='statut_dnc';
-$dictionary['Contact']['fields']['statut_dnc']['vname']='LBL_STATUT_DNC';
-$dictionary['Contact']['fields']['statut_dnc']['type']='text';
-$dictionary['Contact']['fields']['statut_dnc']['dbType']='varchar';
-$dictionary['Contact']['fields']['statut_dnc']['massupdate']=false;
-$dictionary['Contact']['fields']['statut_dnc']['duplicate_merge']='enabled';
-$dictionary['Contact']['fields']['statut_dnc']['merge_filter']='enabled';
-$dictionary['Contact']['fields']['statut_dnc']['calculated']=false;
-$dictionary['Contact']['fields']['statut_dnc']['required']=false;
-$dictionary['Contact']['fields']['statut_dnc']['default']='Active';
-$dictionary['Contact']['fields']['statut_dnc']['audited']=true;
-$dictionary['Contact']['fields']['statut_dnc']['importable']='true';
-$dictionary['Contact']['fields']['statut_dnc']['duplicate_merge_dom_value']='2';
-$dictionary['Contact']['fields']['statut_dnc']['full_text_search']=array (
-  'enabled' => '0',
-  'boost' => '1',
-  'searchable' => false,
-);
-$dictionary['Contact']['fields']['statut_dnc']['rows']='4';
-$dictionary['Contact']['fields']['statut_dnc']['cols']='20';
-
- 
-?>
-<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_phone_work.php
 
  // created: 2018-01-23 15:30:31
@@ -933,23 +905,48 @@ $dictionary['Contact']['fields']['salutation']['required']=true;
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_preferred_language.php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_etat_de_proprietaire.php
 
- // created: 2018-02-20 16:31:18
-$dictionary['Contact']['fields']['preferred_language']['name']='preferred_language';
-$dictionary['Contact']['fields']['preferred_language']['vname']='LBL_PREFERRED_LANGUAGE';
-$dictionary['Contact']['fields']['preferred_language']['type']='enum';
-$dictionary['Contact']['fields']['preferred_language']['options']='preferred_language_dom';
-$dictionary['Contact']['fields']['preferred_language']['massupdate']=false;
-$dictionary['Contact']['fields']['preferred_language']['duplicate_merge']='enabled';
-$dictionary['Contact']['fields']['preferred_language']['merge_filter']='enabled';
-$dictionary['Contact']['fields']['preferred_language']['calculated']=false;
-$dictionary['Contact']['fields']['preferred_language']['required']=true;
-$dictionary['Contact']['fields']['preferred_language']['audited']=true;
-$dictionary['Contact']['fields']['preferred_language']['importable']='true';
-$dictionary['Contact']['fields']['preferred_language']['duplicate_merge_dom_value']='2';
-$dictionary['Contact']['fields']['preferred_language']['default']='francais';
-$dictionary['Contact']['fields']['preferred_language']['dependency']=false;
+ // created: 2018-01-23 15:39:21
+$dictionary['Contact']['fields']['etat_de_proprietaire']['name']='etat_de_proprietaire';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['vname']='LBL_ETAT_DE_PROPRIÉTAIRE';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['type']='enum';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['massupdate']=true;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge']='enabled';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['merge_filter']='enabled';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['calculated']=false;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['required']=true;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['len']=100;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['audited']=true;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['importable']='true';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['options']='etat_de_proprietaire_dom';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge_dom_value']='2';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['dependency']=false;
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_statut_dnc.php
+
+ // created: 2018-01-29 15:19:58
+$dictionary['Contact']['fields']['statut_dnc']['name']='statut_dnc';
+$dictionary['Contact']['fields']['statut_dnc']['vname']='LBL_STATUT_DNC';
+$dictionary['Contact']['fields']['statut_dnc']['type']='enum';
+$dictionary['Contact']['fields']['statut_dnc']['options']='statut_dnc_dom';
+$dictionary['Contact']['fields']['statut_dnc']['massupdate']=false;
+$dictionary['Contact']['fields']['statut_dnc']['duplicate_merge']='enabled';
+$dictionary['Contact']['fields']['statut_dnc']['merge_filter']='enabled';
+$dictionary['Contact']['fields']['statut_dnc']['calculated']=false;
+$dictionary['Contact']['fields']['statut_dnc']['required']=false;
+$dictionary['Contact']['fields']['statut_dnc']['default']='active';
+$dictionary['Contact']['fields']['statut_dnc']['audited']=true;
+$dictionary['Contact']['fields']['statut_dnc']['importable']='true';
+$dictionary['Contact']['fields']['statut_dnc']['duplicate_merge_dom_value']='2';
+$dictionary['Contact']['fields']['statut_dnc']['full_text_search']=array (
+  'enabled' => '0',
+  'boost' => '1',
+  'searchable' => false,
+);
 
  
 ?>

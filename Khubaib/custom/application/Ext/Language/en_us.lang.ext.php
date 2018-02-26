@@ -21,18 +21,6 @@ $app_list_strings['moduleListSingular']['ops_Backups'] = 'Backup';
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.lead_source_dom.php
-
-  
-$app_list_strings['lead_source_dom'] = array(
-    'site_web' => 'Site Web',
-    'hit' => 'HIT',
-    'reno_depot' => 'Reno Depot',
-    'autre' => 'Autre',
-);
-
-?>
-<?php
 // Merged from custom/Extension/application/Ext/Language/en_us.yes_no_dom.php
 
   
@@ -332,18 +320,6 @@ $app_list_strings['moduleListSingular']['rt_postal_codes'] = 'Postal Code';
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.meeting_status_dom.php
-
-
-$app_list_strings['meeting_status_dom'] = array(
-	'disponible' => 'Disponible',
-	'planifie' => 'Planifié',
-	'confirme_au_client' => 'Confirmé au client',
-	'complete' => 'Complété',
-	'annule' => 'Annulé',
-);
-?>
-<?php
 // Merged from custom/Extension/application/Ext/Language/en_us.DNC_Suivi_Modules.php
 
 // WARNING: The contents of this file are auto-generated.
@@ -403,6 +379,171 @@ $app_list_strings['prov_dom'] = array(
     'ont' => 'On',
 );
 
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.user_codelangue_dom.php
+
+
+$app_list_strings['user_codelangue_dom'] = array(
+	'1' => 'Francais',
+	'2' => 'Anglais',
+	'3' => 'Bilingue',
+);
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Telemarketers.php
+
+/*
+ * Your installation or use of this SugarCRM file is subject to the applicable
+ * terms available at
+ * http://support.sugarcrm.com/Resources/Master_Subscription_Agreements/.
+ * If you do not agree to all of the applicable terms or do not have the
+ * authority to bind the entity as an authorized representative, then do not
+ * install or use this SugarCRM file.
+ *
+ * Copyright (C) SugarCRM Inc. All rights reserved.
+ */
+
+$app_list_strings['moduleList']['tm_telemarketers'] = 'Telemarketer';
+$app_list_strings['moduleListSingular']['tm_telemarketers'] = 'Telemarketers';
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.suivi_mode_paiement_dom.php
+
+
+$app_list_strings['suivi_mode_paiement_dom'] = array(
+	'' => '',
+	'cod' => 'C.O.D',
+	'financement' => 'Financement',
+);
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.suivi_coupon_dom.php
+
+
+$app_list_strings['suivi_coupon_dom'] = array(
+	'' => '',
+	'0.03' => '3%',
+	'0.015' => '1.5%',
+);
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.info_manquante_suivi_dom.php
+
+
+$app_list_strings['info_manquante_suivi_dom'] = array(
+	'' => '',
+	'demande_faite' => 'Demande faite',
+	'information_recue_partiellement' => 'Information recue partiellement',
+	'information_recue_completement' => 'Information recue complétement',
+);
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.statut_suivi_dom.php
+
+  
+$app_list_strings['statut_suivi_dom'] = array(
+    '' => '',
+    'accepte' => 'Accepté',
+    'refus_en_nego' => 'Refus en négo',
+    'refus_officiel' => 'Refus Officiel',
+    'accepte_conditionnelle' => 'Accepté conditionnelle',
+    'annule_par_representant' => 'Annulé par représentant',
+    'annule_par_client' => 'Annulé par client',
+    'complete_et_envoye' => 'Complété et envoyé',
+);
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.user_secteur_rep_dom.php
+
+
+$app_list_strings['user_secteur_rep_dom'] = array(
+	'' => '',
+	'quebec' => 'Quebec',
+	'ontario' => 'Ontario',
+	'manitoba' => 'Manitoba',
+	'alberta' => 'Alberta',
+	'saskatchewan' => 'Saskatchewan',
+	'colombie-britannique' => 'Colombie-Britannique',
+	'maritimes' => 'Maritimes',
+);
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.salesRepSchedule.php
+
+
+//create the links label
+$app_strings['LNK_SALES_REP_SCHEDULE'] = 'Sales Rep Schedule';
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.meeting_type_list.php
+
+
+$app_list_strings['meeting_type_list'] = array(
+	'1ere_rencontre' => '1ere Rencontre',
+	'2e_rencontre' => '2e rencontre',
+	'autre' => 'Autre',
+);
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.meeting_status_dom.php
+
+
+$app_list_strings['meeting_status_dom'] = array (
+ 'disponible' => 'Disponible',	
+ 'en_attente_dassignation' => 'En attente d\'assignation',
+ 'confirme_au_client' => 'Confirmé au client',
+ 'complete' => 'Complété',
+ 'annule' => 'Annulé',
+);
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.lead_source_dom.php
+
+  
+$app_list_strings['lead_source_dom'] = array(
+    'site_web' => 'Site Web',
+    'hit' => 'HIT',
+    'reno_depot' => 'Reno Depot',
+    'autre' => 'Autre',
+    'solarcan' => 'Solarcan',
+);
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
@@ -520,13 +661,16 @@ $app_list_strings['statut_apres_vente_dom'] = array (
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
- 
-$app_list_strings['lead_source_dom'] = array (
-  'site_web' => 'Site Web',
-  'hit' => 'HIT',
-  'reno_depot' => 'Reno Depot',
-  'autre' => 'Autre',
+
+  
+$app_list_strings['lead_source_dom'] = array(
+    'site_web' => 'Site Web',
+    'hit' => 'HIT',
+    'reno_depot' => 'Reno Depot',
+    'autre' => 'Autre',
+    'solarcan' => 'Solarcan',
 );
+
 
 ?>
 <?php
@@ -555,12 +699,14 @@ $app_list_strings['statut_apres_rencontre_dom'] = array (
 <?php
 // Merged from custom/Extension/application/Ext/Language/temp.php
  
+
 $app_list_strings['meeting_status_dom'] = array (
-  'disponible' => 'Disponible',	
-  'planifie' => 'Planifié',
-  'confirme_au_client' => 'Confirmé au client',
-  'complete' => 'Complété',
-  'annule' => 'Annulé',
+ 'disponible' => 'Disponible',	
+ 'en_attente_dassignation' => 'En attente d\'assignation',
+ 'assigne' => 'ASSIGNÉ',
+ 'confirme_au_client' => 'Confirmé au client',
+ 'complete' => 'Complété',
+ 'annule' => 'Annulé',
 );
 
 ?>
@@ -647,7 +793,7 @@ $app_list_strings['source_details_dom'] = array (
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.user_codelangue_dom.php
+// Merged from custom/Extension/application/Ext/Language/temp.php
 
 
 $app_list_strings['user_codelangue_dom'] = array(
@@ -655,27 +801,10 @@ $app_list_strings['user_codelangue_dom'] = array(
 	'2' => 'Anglais',
 	'3' => 'Bilingue',
 );
-?>
-<?php
-// Merged from custom/Extension/application/Ext/Language/en_us.Telemarketers.php
-
-/*
- * Your installation or use of this SugarCRM file is subject to the applicable
- * terms available at
- * http://support.sugarcrm.com/Resources/Master_Subscription_Agreements/.
- * If you do not agree to all of the applicable terms or do not have the
- * authority to bind the entity as an authorized representative, then do not
- * install or use this SugarCRM file.
- *
- * Copyright (C) SugarCRM Inc. All rights reserved.
- */
-
-$app_list_strings['moduleList']['tm_telemarketers'] = 'Telemarketer';
-$app_list_strings['moduleListSingular']['tm_telemarketers'] = 'Telemarketers';
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.suivi_mode_paiement_dom.php
+// Merged from custom/Extension/application/Ext/Language/temp.php
 
 
 $app_list_strings['suivi_mode_paiement_dom'] = array(
@@ -683,20 +812,22 @@ $app_list_strings['suivi_mode_paiement_dom'] = array(
 	'cod' => 'C.O.D',
 	'financement' => 'Financement',
 );
+
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.suivi_coupon_dom.php
+// Merged from custom/Extension/application/Ext/Language/temp.php
 
 
 $app_list_strings['suivi_coupon_dom'] = array(
 	'' => '',
-	'0.03' => '3%',
-	'0.015' => '1.5%',
+	'0_03' => '3 percent',
+	'0_015' => '1_5 percent',
 );
+
 
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.info_manquante_suivi_dom.php
+// Merged from custom/Extension/application/Ext/Language/temp.php
 
 
 $app_list_strings['info_manquante_suivi_dom'] = array(
@@ -706,9 +837,10 @@ $app_list_strings['info_manquante_suivi_dom'] = array(
 	'information_recue_completement' => 'Information recue complétement',
 );
 
+
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.statut_suivi_dom.php
+// Merged from custom/Extension/application/Ext/Language/temp.php
 
   
 $app_list_strings['statut_suivi_dom'] = array(
@@ -722,9 +854,10 @@ $app_list_strings['statut_suivi_dom'] = array(
     'complete_et_envoye' => 'Complété et envoyé',
 );
 
+
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.user_secteur_rep_dom.php
+// Merged from custom/Extension/application/Ext/Language/temp.php
 
 
 $app_list_strings['user_secteur_rep_dom'] = array(
@@ -734,25 +867,27 @@ $app_list_strings['user_secteur_rep_dom'] = array(
 	'manitoba' => 'Manitoba',
 	'alberta' => 'Alberta',
 	'saskatchewan' => 'Saskatchewan',
-	'colombie-britannique' => 'Colombie-Britannique',
+	'colombie_britannique' => 'Colombie_Britannique',
 	'maritimes' => 'Maritimes',
+);
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.etat_de_proprietaire_dom.php
+
+
+$app_list_strings['etat_de_proprietaire_dom'] = array(
+	'' => '',
+	'proprietaire' => 'Propriétaire',
+	'locataire' => 'Locataire',
 );
 ?>
 <?php
-// Merged from custom/Extension/application/Ext/Language/en_us.salesRepSchedule.php
+// Merged from custom/Extension/application/Ext/Language/en_us.statut_dnc_dom.php
 
 
-//create the links label
-$app_strings['LNK_SALES_REP_SCHEDULE'] = 'Sales Rep Schedule';
-
-?>
-<?php
-// Merged from custom/Extension/application/Ext/Language/en_us.meeting_type_list.php
-
-
-$app_list_strings['meeting_type_list'] = array(
-	'1ere_rencontre' => '1ere Rencontre',
-	'2e_rencontre' => '2e rencontre',
-	'autre' => 'Autre',
+$app_list_strings['statut_dnc_dom'] = array(
+	'active' => 'Active',
+	'inactive' => 'Inactive',
 );
 ?>

@@ -1,5 +1,5 @@
 <?php
- // created: 2018-02-06 12:24:00
+ // created: 2018-02-02 14:49:58
 $dictionary['User']['fields']['nosolarcan_rep']['name']='nosolarcan_rep';
 $dictionary['User']['fields']['nosolarcan_rep']['vname']='LBL_NOSOLARCAN_REP';
 $dictionary['User']['fields']['nosolarcan_rep']['type']='varchar';

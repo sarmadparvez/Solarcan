@@ -1,5 +1,5 @@
 <?php
- // created: 2018-02-20 16:31:18
+ // created: 2018-01-23 14:49:51
 $dictionary['Contact']['fields']['preferred_language']['name']='preferred_language';
 $dictionary['Contact']['fields']['preferred_language']['vname']='LBL_PREFERRED_LANGUAGE';
 $dictionary['Contact']['fields']['preferred_language']['type']='enum';
@@ -11,8 +11,7 @@ $dictionary['Contact']['fields']['preferred_language']['calculated']=false;
 $dictionary['Contact']['fields']['preferred_language']['required']=true;
 $dictionary['Contact']['fields']['preferred_language']['audited']=true;
 $dictionary['Contact']['fields']['preferred_language']['importable']='true';
-$dictionary['Contact']['fields']['preferred_language']['duplicate_merge_dom_value']='2';
 $dictionary['Contact']['fields']['preferred_language']['default']='francais';
-$dictionary['Contact']['fields']['preferred_language']['dependency']=false;
+$dictionary['Contact']['fields']['preferred_language']['duplicate_merge_dom_value']='2';
 
  ?>

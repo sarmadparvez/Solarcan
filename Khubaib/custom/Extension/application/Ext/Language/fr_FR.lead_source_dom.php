@@ -5,4 +5,5 @@ $app_list_strings['lead_source_dom'] = array(
     'hit' => 'HIT',
     'reno_depot' => 'Reno Depot',
     'autre' => 'Autre',
+    'solarcan' => 'Solarcan',
 );

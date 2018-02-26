@@ -41,11 +41,7 @@ $GLOBALS['log']->fatal('---------------IMPORT SCRIPT---------------');
 //    $line = next($data);
 //}
 //$GLOBALS['log']->fatal("$processed records processed");
-
-
 // -----------------------------------------------------------------------------------------------------------------------------------
-
-
 //$teamCSV     = file("/home/khubaib.afzal/Desktop/Solarcan/Packages/Team.csv");
 //$salesRepCSV = file("/home/khubaib.afzal/Desktop/Solarcan/Packages/List_salesrep.csv");
 //
@@ -101,3 +97,66 @@ $GLOBALS['log']->fatal('---------------IMPORT SCRIPT---------------');
 //        $salesRepLine = next($salesRepData);
 //    }
 //}
+
+
+$GLOBALS['log']->fatal("DNC Post Import Job");
+global $db;
+$contacts_dnc_query = " SELECT dsm_dnc.id as dsm_dnc, contacts.id as contact
+                        FROM dsm_dnc
+			RIGHT OUTER JOIN contacts
+			ON digits(CONCAT(dsm_dnc.regional_code, dsm_dnc.name)) = digits(contacts.phone_home)
+                        OR digits(CONCAT(dsm_dnc.regional_code, dsm_dnc.name)) = digits(contacts.phone_mobile)
+                        OR digits(CONCAT(dsm_dnc.regional_code, dsm_dnc.name)) = digits(contacts.phone_work)
+                        OR digits(CONCAT(dsm_dnc.regional_code, dsm_dnc.name)) = digits(contacts.phone_other)
+			WHERE contacts.deleted = 0";
+$result             = $db->query($contacts_dnc_query, true,
+    "Error retrieving matching contacts");
+
+$contact_dnc_list = array();
+$i           = 0;
+while (($row         = $db->fetchByAssoc($result))) {
+    $contact_dnc_list[$i]['contact'] = empty($row['contact']) ? "" : $row['contact'];
+    $contact_dnc_list[$i]['dsm_dnc'] = empty($row['dsm_dnc']) ? "" : $row['dsm_dnc'];
+    ++$i;
+}
+
+if (!empty($contact_dnc_list)) {
+    foreach ($contact_dnc_list as $arr) {
+        $contactBean = BeanFactory::newBean('Contacts')->retrieve($arr['contact']);
+        if ($contactBean) {
+
+            if ($contactBean->consentement == false) {  // no explicit consent
+                if ($arr['dsm_dnc'] == "") {    // if not on dnc list
+                    $GLOBALS['log']->fatal("NOT ON DNC ---> $contactBean->id");
+                    if ($contactBean->statut_dnc != 'active') {     // if this contact is not active
+                        $contactBean->statut_dnc = "active";        // make it active
+                    }
+                } else {    // if on dnc list
+                    if ($contactBean->statut_dnc != "inactive") {   // if not already inactive
+                        $GLOBALS['log']->fatal("ON DNC ---> $contactBean->id");
+                        $contactBean->statut_dnc = "inactive";
+                        $contactBean->dsm_dnc_id = $arr['dsm_dnc'];
+                        $dnc                     = BeanFactory::newBean('dsm_dnc')->retrieve($arr['dsm_dnc']);
+                        if ($dnc->load_relationship('dsm_dnc_dsm_dnc_historic')) {
+                            $dnc->dsm_dnc_dsm_dnc_historic->add($contactBean->id);
+                        }
+                    } else {
+                        $GLOBALS['log']->fatal("ALREADY INACTIVE ---> $contactBean->id");
+                    }
+                }
+                $dnc_historic                   = BeanFactory::newBean('dsm_dnc_historic');
+                $dnc_historic->name             = $contactBean->name;
+                $dnc_historic->statut_precedent = $contactBean->statut_dnc;
+
+                $contactBean->save();
+                $dnc_historic->save();
+
+                if ($contactBean->load_relationship('contacts_dsm_dnc_historic')) {
+                    $contactBean->contacts_dsm_dnc_historic->add($dnc_historic->id);
+                }
+            } else {
+                $GLOBALS['log']->fatal("EXPLICIT CONSENT ---> $contactBean->id");
+            }
+        }
+    }
+}

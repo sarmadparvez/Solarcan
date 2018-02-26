@@ -1,5 +1,5 @@
 <?php
- // created: 2018-02-06 12:24:11
+ // created: 2018-02-02 14:50:16
 $dictionary['User']['fields']['codelangue_rep']['name']='codelangue_rep';
 $dictionary['User']['fields']['codelangue_rep']['vname']='LBL_CODELANGUE_REP';
 $dictionary['User']['fields']['codelangue_rep']['type']='enum';
@@ -14,6 +14,6 @@ $dictionary['User']['fields']['codelangue_rep']['importable']='true';
 $dictionary['User']['fields']['codelangue_rep']['duplicate_merge_dom_value']='2';
 $dictionary['User']['fields']['codelangue_rep']['unified_search']=false;
 $dictionary['User']['fields']['codelangue_rep']['dependency']=false;
-$dictionary['User']['fields']['codelangue_rep']['default']='1';
+$dictionary['User']['fields']['codelangue_rep']['default']='';
 
  ?>

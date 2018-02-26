@@ -1,5 +1,5 @@
 <?php
- // created: 2018-02-06 12:23:47
+ // created: 2018-02-02 14:49:40
 $dictionary['User']['fields']['novendeur_rep']['name']='novendeur_rep';
 $dictionary['User']['fields']['novendeur_rep']['vname']='LBL_NOVENDEUR_REP';
 $dictionary['User']['fields']['novendeur_rep']['type']='varchar';
