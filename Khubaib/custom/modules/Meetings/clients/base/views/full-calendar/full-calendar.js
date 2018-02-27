@@ -114,7 +114,7 @@
                         time = meetingSlots.special_case.PM2.start_time;
                     }
                 }
-
+                
                 // set slot name of current event
                 var slotName = '';
                 for (var i in meetingSlots.regular_case) {
@@ -159,8 +159,8 @@
                 var filters = [
                     {
                         status: 'disponible',
-                        created_by: app.user.attributes.id,
-                        date_start: {$dateBetween: [filterStart, filterEnd]}
+                        date_start: {$dateBetween: [filterStart, filterEnd]},
+                        "$or": [{created_by: app.user.attributes.id}, {assigned_user_id: app.user.attributes.id}]
                     }
                 ];
                 var request = self.availableMeetings.fetch(

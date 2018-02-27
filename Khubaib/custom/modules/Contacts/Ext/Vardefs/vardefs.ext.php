@@ -60,6 +60,27 @@ $dictionary['Contact']['fields']['primary_address_country']['calculated']=false;
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_etat_de_proprietaire.php
+
+ // created: 2018-01-23 15:39:21
+$dictionary['Contact']['fields']['etat_de_proprietaire']['name']='etat_de_proprietaire';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['vname']='LBL_ETAT_DE_PROPRIÉTAIRE';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['type']='enum';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['massupdate']=true;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge']='enabled';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['merge_filter']='enabled';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['calculated']=false;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['required']=true;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['len']=100;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['audited']=true;
+$dictionary['Contact']['fields']['etat_de_proprietaire']['importable']='true';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['options']='owner_state_dom';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge_dom_value']='2';
+$dictionary['Contact']['fields']['etat_de_proprietaire']['dependency']=false;
+
+ 
+?>
+<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_alt_address_country.php
 
  // created: 2018-01-23 15:34:40
@@ -557,6 +578,29 @@ $dictionary['Contact']['fields']['consentement']['unified_search']=false;
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php
+
+
+$dictionary['Contact']['fields']['codecie_c'] = array (
+	'name' => 'codecie_c',
+	'vname' => 'LBL_CODECIE_C',
+	'type' => 'enum',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'required' => true,
+	'len' => 50,
+	'size' => 50,
+	'importable' => true,
+	'options' => 'codecie_dom',
+	'audited' => true,
+	'reportable' => true,
+	'default' => 'Solarcan'
+);
+
+?>
+<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_alt_address_street.php
 
  // created: 2018-01-23 15:34:15
@@ -901,27 +945,6 @@ $dictionary['Contact']['fields']['salutation']['merge_filter']='disabled';
 $dictionary['Contact']['fields']['salutation']['calculated']=false;
 $dictionary['Contact']['fields']['salutation']['dependency']=false;
 $dictionary['Contact']['fields']['salutation']['required']=true;
-
- 
-?>
-<?php
-// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_etat_de_proprietaire.php
-
- // created: 2018-01-23 15:39:21
-$dictionary['Contact']['fields']['etat_de_proprietaire']['name']='etat_de_proprietaire';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['vname']='LBL_ETAT_DE_PROPRIÉTAIRE';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['type']='enum';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['massupdate']=true;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge']='enabled';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['merge_filter']='enabled';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['calculated']=false;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['required']=true;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['len']=100;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['audited']=true;
-$dictionary['Contact']['fields']['etat_de_proprietaire']['importable']='true';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['options']='etat_de_proprietaire_dom';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['duplicate_merge_dom_value']='2';
-$dictionary['Contact']['fields']['etat_de_proprietaire']['dependency']=false;
 
  
 ?>

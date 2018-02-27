@@ -2,6 +2,30 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
+// Merged from custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_regional_code.php
+
+ // created: 2018-02-22 19:07:07
+$dictionary['dsm_dnc']['fields']['regional_code']['name']='regional_code';
+$dictionary['dsm_dnc']['fields']['regional_code']['vname']='LBL_REGIONAL_CODE';
+$dictionary['dsm_dnc']['fields']['regional_code']['type']='varchar';
+$dictionary['dsm_dnc']['fields']['regional_code']['massupdate']=false;
+$dictionary['dsm_dnc']['fields']['regional_code']['duplicate_merge']='enabled';
+$dictionary['dsm_dnc']['fields']['regional_code']['merge_filter']='enabled';
+$dictionary['dsm_dnc']['fields']['regional_code']['calculated']=false;
+$dictionary['dsm_dnc']['fields']['regional_code']['required']=true;
+$dictionary['dsm_dnc']['fields']['regional_code']['audited']=true;
+$dictionary['dsm_dnc']['fields']['regional_code']['importable']='true';
+$dictionary['dsm_dnc']['fields']['regional_code']['duplicate_merge_dom_value']='2';
+$dictionary['dsm_dnc']['fields']['regional_code']['full_text_search']=array (
+  'enabled' => '0',
+  'boost' => '1',
+  'searchable' => false,
+);
+$dictionary['dsm_dnc']['fields']['regional_code']['unified_search']=false;
+
+ 
+?>
+<?php
 // Merged from custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_date_enregistrement.php
 
  // created: 2018-01-24 19:33:49
@@ -122,7 +146,7 @@ $dictionary['dsm_dnc']['fields']['dsm_dnc_dsm_dnc_historic'] = array(
 <?php
 // Merged from custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_name.php
 
- // created: 2018-02-22 19:03:20
+ // created: 2018-02-26 12:45:55
 $dictionary['dsm_dnc']['fields']['name']['len']='255';
 $dictionary['dsm_dnc']['fields']['name']['audited']=false;
 $dictionary['dsm_dnc']['fields']['name']['massupdate']=false;
@@ -133,30 +157,6 @@ $dictionary['dsm_dnc']['fields']['name']['full_text_search']=array (
   'searchable' => true,
 );
 $dictionary['dsm_dnc']['fields']['name']['calculated']=false;
-
- 
-?>
-<?php
-// Merged from custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_regional_code.php
-
- // created: 2018-02-22 19:07:07
-$dictionary['dsm_dnc']['fields']['regional_code']['name']='regional_code';
-$dictionary['dsm_dnc']['fields']['regional_code']['vname']='LBL_REGIONAL_CODE';
-$dictionary['dsm_dnc']['fields']['regional_code']['type']='varchar';
-$dictionary['dsm_dnc']['fields']['regional_code']['massupdate']=false;
-$dictionary['dsm_dnc']['fields']['regional_code']['duplicate_merge']='enabled';
-$dictionary['dsm_dnc']['fields']['regional_code']['merge_filter']='enabled';
-$dictionary['dsm_dnc']['fields']['regional_code']['calculated']=false;
-$dictionary['dsm_dnc']['fields']['regional_code']['required']=true;
-$dictionary['dsm_dnc']['fields']['regional_code']['audited']=true;
-$dictionary['dsm_dnc']['fields']['regional_code']['importable']='true';
-$dictionary['dsm_dnc']['fields']['regional_code']['duplicate_merge_dom_value']='2';
-$dictionary['dsm_dnc']['fields']['regional_code']['full_text_search']=array (
-  'enabled' => '0',
-  'boost' => '1',
-  'searchable' => false,
-);
-$dictionary['dsm_dnc']['fields']['regional_code']['unified_search']=false;
 
  
 ?>

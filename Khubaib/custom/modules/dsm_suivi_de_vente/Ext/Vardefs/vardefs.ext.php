@@ -149,31 +149,6 @@ $dictionary['dsm_suivi_de_vente']['fields']['date_contrat_initial_recu']['enable
  
 ?>
 <?php
-// Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_account_name.php
-
- // created: 2018-02-08 14:57:04
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['required']=true;
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['source']='non-db';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['name']='account_name';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['vname']='LBL_ACCOUNT_NAME';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['type']='relate';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['rname']='name';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['id_name']='account_id';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['table']='accounts';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['isnull']='true';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['module']='Accounts';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['audited']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['massupdate']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['duplicate_merge']='enabled';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['duplicate_merge_dom_value']='1';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['merge_filter']='disabled';
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['unified_search']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['calculated']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['account_name']['studio']='visible';
-
- 
-?>
-<?php
 // Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_meeting_id.php
 
 
@@ -525,6 +500,31 @@ $dictionary['dsm_suivi_de_vente']['fields']['mode_paiement']['importable']='true
 $dictionary['dsm_suivi_de_vente']['fields']['mode_paiement']['duplicate_merge_dom_value']='2';
 $dictionary['dsm_suivi_de_vente']['fields']['mode_paiement']['unified_search']=false;
 $dictionary['dsm_suivi_de_vente']['fields']['mode_paiement']['dependency']=false;
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_account_name.php
+
+ // created: 2018-02-26 16:02:54
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['required']=true;
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['source']='non-db';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['name']='account_name';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['vname']='LBL_ACCOUNT_NAME';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['type']='relate';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['rname']='name';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['id_name']='account_id';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['table']='accounts';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['isnull']='true';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['module']='Accounts';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['audited']=false;
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['massupdate']=false;
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['duplicate_merge']='enabled';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['duplicate_merge_dom_value']='1';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['merge_filter']='disabled';
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['unified_search']=false;
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['calculated']=false;
+$dictionary['dsm_suivi_de_vente']['fields']['account_name']['studio']='visible';
 
  
 ?>

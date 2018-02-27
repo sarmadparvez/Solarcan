@@ -1,14 +1,13 @@
 <?php
-
 require_once 'modules/Configurator/Configurator.php';
 
-    function post_install () {
-        $configuratorObj = new Configurator();
-        //Load config
-        $configuratorObj->loadConfig();
-        //Update a specific setting
-        $configuratorObj->config['additional_js_config']['appointment_timeslots'] = 
-        array(
+function post_install()
+{
+    $configuratorObj                                                          = new Configurator();
+    //Load config
+    $configuratorObj->loadConfig();
+    //Update a specific setting
+    $configuratorObj->config['additional_js_config']['appointment_timeslots'] = array(
             'regular_case' => array(
                 'AM2' => array(
                     'start_time' => '10:00:00',
@@ -41,11 +40,11 @@ require_once 'modules/Configurator/Configurator.php';
                     'end_time' => '14:30:00',
                 ),
                 'PM2' => array(
-                  'start_time' => '15:00:00',
+                    'start_time' => '15:00:00',
                     'end_time' => '17:00:00',
                 ),
             )
-        );
-        //Save the new setting
-        $configuratorObj->saveConfig();
-    }
+    );
+    //Save the new setting
+    $configuratorObj->saveConfig();
+}

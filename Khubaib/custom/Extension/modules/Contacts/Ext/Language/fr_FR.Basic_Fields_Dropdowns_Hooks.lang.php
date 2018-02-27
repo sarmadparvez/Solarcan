@@ -57,3 +57,4 @@ $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'New Panel 1';
 $mod_strings['LBL_DSM_DNC_HISTORIC'] = 'dsm_dnc_historic';
 $mod_strings['LBL_CONTACTS_DSM_DNC_HISTORIC_FROM_DSM_DNC_HISTORIC_TITLE'] = 'Do Not Call Historic';
 $mod_strings['LBL_DSM_DNC_NAME'] = 'DNC';
+$mod_strings['LBL_CODECIE_C'] = 'CodeCie';

@@ -9,3 +9,11 @@ include('custom/metadata/rt_postal_codes_usersMetaData.php');
 
 
 ?>
+<?php
+// Merged from custom/Extension/application/Ext/TableDictionary/rt_classification_users.php
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/rt_classification_usersMetaData.php');
+
+
+?>

@@ -98,6 +98,11 @@
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.php
  
 $app_list_strings['yes_no_dom'] = array (
   '' => '',
@@ -351,4 +356,21 @@ $app_list_strings['user_secteur_rep_dom'] = array(
 	'colombie_britannique' => 'Colombie_Britannique',
 	'maritimes' => 'Maritimes',
 );
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/temp.php
+
+
+$app_list_strings['owner_state_dom'] = array (
+  '' => '',
+  'proprietaire' => 'Propriétaire',
+  'locataire' => 'Locataire',
+);
+
+$app_list_strings['codecie_dom'] = array (
+  'Solarcan' => 'Solarcan',
+  'Autre' => 'Autre',
+);
+
 ?>

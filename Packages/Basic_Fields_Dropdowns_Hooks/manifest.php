@@ -522,7 +522,19 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.custom_dropdowns.php',
       'to_module' => 'application',
       'language' => 'fr_FR',
-    )
+    ),
+    80 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.statut_dnc_dom.php',
+      'to_module' => 'application',
+      'language' => 'en_us',
+    ),
+    81 => 
+    array (
+      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.statut_dnc_dom.php',
+      'to_module' => 'application',
+      'language' => 'fr_FR',
+    ),
   ),
   'copy' => 
   array (
@@ -1691,11 +1703,6 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_name.php',
       'to' => 'custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_name.php',
     ),
-    266 => 
-    array (
-      'from' => '<basepath>/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_telephone.php',
-      'to' => 'custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_telephone.php',
-    ),
     267 => 
     array (
       'from' => '<basepath>/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_user_id.php',
@@ -1990,16 +1997,6 @@ $installdefs = array (
     array (
       'from' => '<basepath>/SugarModules/modules/dsm_dnc_historic/dsm_dnc_historicHooksImpl.php',
       'to' => 'custom/modules/dsm_dnc_historic/dsm_dnc_historicHooksImpl.php',
-    ),
-    326 => 
-    array (
-      'from' => '<basepath>/Extension/modules/Meetings/Ext/LogicHooks/MeetingsHooks.php',
-      'to' => 'custom/Extension/modules/Meetings/Ext/LogicHooks/MeetingsHooks.php',
-    ),
-    327 => 
-    array (
-      'from' => '<basepath>/SugarModules/modules/Meetings/MeetingsHooksImpl.php',
-      'to' => 'custom/modules/Meetings/MeetingsHooksImpl.php',
     ),
     328 => 
     array (
@@ -2317,10 +2314,16 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_windows_rep_c.php',
       'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_windows_rep_c.php',
     ),
-    391 => array (
+    391 => 
+    array (
       'from' => '<basepath>/Extension/modules/Users/Ext/Language/fr_FR.Basic_Fields_Dropdowns_Hooks.lang.php',
       'to' => 'custom/Extension/modules/Users/Ext/Language/fr_FR.Basic_Fields_Dropdowns_Hooks.lang.php',
-    )
+    ),
+    392 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_regional_code.php',
+      'to' => 'custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_regional_code.php',
+    ),
   ),
   'roles' => 
   array (

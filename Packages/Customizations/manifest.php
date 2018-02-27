@@ -109,7 +109,19 @@ $installdefs = array (
     array (
       'from' => '<basepath>/custom/clients/base/layouts/portal-config/portal-config.php',
       'to' => 'custom/clients/base/layouts/portal-config/portal-config.php',
-    )
+    ),
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Schedulers/Ext/ScheduledTasks/ContactsDNCUpdate.php',
+      'to' => 'custom/Extension/modules/Schedulers/Ext/ScheduledTasks/ContactsDNCUpdate.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/modules/Import/views/view.last.php',
+      'to' => 'custom/modules/Import/views/view.last.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/modules/Import/views/view.step4.php',
+      'to' => 'custom/modules/Import/views/view.step4.php',
+    ),
   ),
   'language' => 
   array (

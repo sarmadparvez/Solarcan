@@ -1,5 +1,5 @@
 <?php
- // created: 2018-02-08 14:57:04
+ // created: 2018-02-26 16:02:54
 $dictionary['dsm_suivi_de_vente']['fields']['account_name']['required']=true;
 $dictionary['dsm_suivi_de_vente']['fields']['account_name']['source']='non-db';
 $dictionary['dsm_suivi_de_vente']['fields']['account_name']['name']='account_name';

@@ -170,13 +170,13 @@ array (
             array (
               0 => 
               array (
-                'name' => 'regional_code',
-                'label' => 'LBL_REGIONAL_CODE',
+                'name' => 'assigned_user_name',
                 'span' => 12,
               ),
               1 => 
               array (
-                'name' => 'assigned_user_name',
+                'name' => 'telephone',
+                'label' => 'LBL_TELEPHONE',
                 'span' => 12,
               ),
               2 => 

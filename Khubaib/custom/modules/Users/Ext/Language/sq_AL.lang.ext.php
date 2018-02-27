@@ -39,3 +39,11 @@ $mod_strings['LBL_RT_POSTAL_CODES_USERS_FROM_RT_POSTAL_CODES_TITLE'] = 'Postal C
 $mod_strings['LBL_RT_POSTAL_CODES_USERS_FROM_USERS_TITLE'] = 'Postal Codes';
 
 ?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Language/sq_AL.rt_classification.php
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_RT_CLASSIFICATION_USERS_FROM_RT_CLASSIFICATION_TITLE'] = 'Classification';
+$mod_strings['LBL_RT_CLASSIFICATION_USERS_FROM_USERS_TITLE'] = 'Classification';
+
+?>
