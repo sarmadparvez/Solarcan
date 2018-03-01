@@ -1,5 +1,5 @@
 <?php
- // created: 2018-02-26 12:45:55
+ // created: 2018-01-24 18:50:26
 $dictionary['dsm_dnc']['fields']['name']['len']='255';
 $dictionary['dsm_dnc']['fields']['name']['audited']=false;
 $dictionary['dsm_dnc']['fields']['name']['massupdate']=false;

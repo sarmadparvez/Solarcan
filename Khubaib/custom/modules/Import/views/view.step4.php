@@ -36,30 +36,27 @@ class CustomImportViewStep4 extends ImportViewStep4
 
         // Check to be sure we are getting an import file that is in the right place
         $uploadFile = $sugar_config['upload_dir']."/".basename($_REQUEST['tmp_file']);
-        
-        if(!SugarAutoLoader::fileExists($uploadFile)) {
-            trigger_error($mod_strings['LBL_CANNOT_OPEN'],E_USER_ERROR);
+
+        if (!SugarAutoLoader::fileExists($uploadFile)) {
+            trigger_error($mod_strings['LBL_CANNOT_OPEN'], E_USER_ERROR);
         }
 
         $currentPart = end(explode("-", $uploadFile));
 
         // Open the import file
         $importSource = new ImportFile(
-            $uploadFile,
-            $_REQUEST['custom_delimiter'],
-            html_entity_decode($_REQUEST['custom_enclosure'], ENT_QUOTES),
-            true,
-            true,
-            $sugar_config['import_max_records_per_file'] * $currentPart
+            $uploadFile, $_REQUEST['custom_delimiter'],
+            html_entity_decode($_REQUEST['custom_enclosure'], ENT_QUOTES), true,
+            true, $sugar_config['import_max_records_per_file'] * $currentPart
         );
 
         //Ensure we have a valid file.
-        if ( !$importSource->fileExists() )
-            trigger_error($mod_strings['LBL_CANNOT_OPEN'],E_USER_ERROR);
+        if (!$importSource->fileExists())
+                trigger_error($mod_strings['LBL_CANNOT_OPEN'], E_USER_ERROR);
 
-        if (!ImportCacheFiles::ensureWritable())
-        {
-            trigger_error($mod_strings['LBL_ERROR_IMPORT_CACHE_NOT_WRITABLE'], E_USER_ERROR);
+        if (!ImportCacheFiles::ensureWritable()) {
+            trigger_error($mod_strings['LBL_ERROR_IMPORT_CACHE_NOT_WRITABLE'],
+                E_USER_ERROR);
         }
 
         /**
@@ -69,11 +66,17 @@ class CustomImportViewStep4 extends ImportViewStep4
             $GLOBALS['log']->debug("CURRENT PART: $currentPart");
             if ($currentPart == 0) {
                 global $db;
-                $dnc_trucnate        = 'TRUNCATE TABLE dsm_dnc';
-                $dnc_trucnate_result = $db->query($dnc_trucnate, true,
-                    'Failed to Truncate dsm_dnc table');
 
-                $GLOBALS['log']->debug("DNC Table Truncated");
+                // first save current dsm_dnc
+                $dnc_backup = "DROP TABLE IF EXISTS dsm_dnc_old";
+                $db->query($dnc_backup, true, 'Failed to drop table dsm_dnc_old');
+                $dnc_backup = "CREATE TABLE dsm_dnc_old AS SELECT * FROM dsm_dnc";
+                $db->query($dnc_backup, true, 'Failed to Backup dsm_dnc table');
+
+                // truncate dsm_dnc table
+                $dnc_trucnate = 'TRUNCATE TABLE dsm_dnc';
+                $db->query($dnc_trucnate, true,
+                    'Failed to Truncate dsm_dnc table');
             }
         }
 

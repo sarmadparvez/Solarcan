@@ -1,6 +1,6 @@
 <?php
-// created: 2018-03-01 18:31:02
-$searchFields['dsm_dnc_historic'] = array (
+// created: 2018-03-01 18:39:55
+$searchFields['dsm_dnc'] = array (
   'name' => 
   array (
     'query_type' => 'default',
@@ -26,7 +26,7 @@ $searchFields['dsm_dnc_historic'] = array (
     'operator' => 'subquery',
     'subquery' => 'SELECT sugarfavorites.record_id FROM sugarfavorites 
 			                    WHERE sugarfavorites.deleted=0 
-			                        and sugarfavorites.module = \'dsm_dnc_historic\'
+			                        and sugarfavorites.module = \'dsm_dnc\'
 			                        and sugarfavorites.assigned_user_id = \'{0}\'',
     'db_field' => 
     array (

@@ -33,7 +33,7 @@ class MeetingsHooksImpl
                 }
 
                 $opportunity = BeanFactory::newBean('Opportunities');
-                $opportunity->name = $contact->name;
+                $opportunity->name = $account->name;
                 $opportunity->account_id = $account->id;
                 $opportunity->save();
 

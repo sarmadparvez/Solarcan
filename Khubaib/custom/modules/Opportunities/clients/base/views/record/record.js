@@ -1,0 +1,5 @@
+({
+    extendsFrom: 'OpportunitiesRecordView',
+    showRLIWarningMessage: function () {
+    }
+})

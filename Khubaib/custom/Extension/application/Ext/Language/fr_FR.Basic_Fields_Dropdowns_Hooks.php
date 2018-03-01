@@ -98,6 +98,11 @@
 ?>
 <?php
 // Merged from custom/Extension/application/Ext/Language/fr_FR.Basic_Fields_Dropdowns_Hooks.php
+
+// WARNING: The contents of this file are auto-generated.
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/fr_FR.Basic_Fields_Dropdowns_Hooks.php
  
 $app_list_strings['meeting_type'] = array (
   '1ere_rencontre' => '1ere Rencontre',
@@ -370,4 +375,14 @@ $app_list_strings['codecie_dom'] = array (
   'Autre' => 'Autre',
 );
 
+
+?>
+<?php
+// Merged from custom/Extension/application/Ext/Language/temp.php
+
+
+$app_list_strings['statut_dnc_dom'] = array(
+	'active' => 'Active',
+	'inactive' => 'Inactive',
+);
 ?>

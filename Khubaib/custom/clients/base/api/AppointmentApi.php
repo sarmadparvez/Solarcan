@@ -43,7 +43,14 @@ class AppointmentApi extends SugarApi {
                 'pathVars' => array(''),
                 'method' => 'getAppointmentConfig',
                 'shortHelp' => 'Stores appointment related configuration in sugar config',
-            )
+            ),
+            'saveInfoandAccount' => array(
+                'reqType' => 'POST',
+                'path' => array('<module>', 'saveInfoandAccount'),
+                'pathVars' => array('module', 'saveInfoandAccount'),
+                'method' => 'saveInfoandAccount',
+                'shortHelp' => 'Save Contact and Batiment information',
+            ),
         );
     }
 
@@ -142,7 +149,7 @@ class AppointmentApi extends SugarApi {
     public function bookAppointment(ServiceBase $api, array $args)
     {
         //$GLOBALS['log']->fatal('in book appointment args: '.print_r($args,1));
-        $this->requireArgs($args, array('meeting_id', 'contact_model', 'account_model'));
+        $this->requireArgs($args, array('meeting_id', 'contact_model', 'account_model', 'noagent'));
         if (!empty($args['contact_id'])) {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_id']);
@@ -168,13 +175,44 @@ class AppointmentApi extends SugarApi {
                 );
             }
         }
+        
         if (empty($contact)) {
-            throw new SugarApiExceptionInvalidParameter("Contact not found in CRM");
-            
+            if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
+                $contact = BeanFactory::newBean('Contacts');
+            } else {
+                throw new SugarApiExceptionInvalidParameter("Contact not found in CRM");
+            }
         }
         //populate contact fields and update it
         $this->updateContact($args, $contact);
         $this->updateMeeting($args, $args['meeting_id'], $contact);
+        return true;
+    }
+
+    public function saveInfoandAccount(ServiceBase $api, array $args)
+    {
+        $GLOBALS['log']->fatal('in saveInfoandAccount: '.print_r($args, 1));
+        $this->requireArgs($args, array('contact_model', 'account_model', 'noagent', 'postal_code'));
+        if (!empty($args['contact_model']['id'])) {
+            //retrieve contact
+            $contact = $this->retrieveBean('Contacts', $args['contact_model']['id']);
+        } else if (!empty($args['postal_code']) &&
+            (!empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
+             !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other']))
+        ) {
+            $contact = $this->searchContact($args);
+        } else {
+            if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
+                // if reseller, then create account
+                $contact = BeanFactory::newBean('Contacts');
+            } else {
+                throw new SugarApiExceptionInvalidParameter(
+                    'Please either provide contact_id or postalcode and one of the phone numbers'
+                );
+            }
+        }
+        //populate contact fields and update it
+        $this->updateContact($args, $contact);
         return true;
     }
 

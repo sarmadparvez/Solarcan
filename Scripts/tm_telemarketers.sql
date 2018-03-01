@@ -83,7 +83,9 @@ REPLACE INTO `tm_telemarketers` (`id`, `name`, `date_entered`, `date_modified`, 
 ('0e243288-0b14-11e8-b91e-2c56dc94b8c8', 'Yessica_Patricia Ungo', '2018-02-06 08:02:19', '2018-02-06 08:02:34', '1', '1', NULL, 0, '873', '800462', NULL, 'Ungo', 'Yessica_Patricia', '100', '1', '1', NULL, '1', NULL),
 ('0e26334e-0b14-11e8-a1ff-2c56dc94b8c8', 'Samir Larbi', '2018-02-06 08:02:19', '2018-02-06 08:02:19', '1', '1', NULL, 0, '876', '800464', NULL, 'Larbi', 'Samir', '100', '1', '1', '8e7f0fda-04dd-11e8-9ebd-2c56dc94b8c8', '1', NULL),
 ('0e283cc0-0b14-11e8-bcb7-2c56dc94b8c8', 'Wahiba Filali', '2018-02-06 08:02:19', '2018-02-06 08:02:19', '1', '1', NULL, 0, '883', '800475', NULL, 'Filali', 'Wahiba', '100', '1', '1', '8e7f0fda-04dd-11e8-9ebd-2c56dc94b8c8', '1', NULL),
-('0e2afffa-0b14-11e8-901d-2c56dc94b8c8', 'Dior Kane', '2018-02-06 08:02:19', '2018-02-06 08:02:19', '1', '1', NULL, 0, '888', '800486', NULL, 'Kane', 'Dior', '100', '1', '1', '8e7f0fda-04dd-11e8-9ebd-2c56dc94b8c8', '1', NULL);
+('0e2afffa-0b14-11e8-901d-2c56dc94b8c8', 'Dior Kane', '2018-02-06 08:02:19', '2018-02-06 08:02:19', '1', '1', NULL, 0, '888', '800486', NULL, 'Kane', 'Dior', '100', '1', '1', '8e7f0fda-04dd-11e8-9ebd-2c56dc94b8c8', '1', NULL),
+('9e90154e-1c85-11e8-9ede-000000000000', 'Reno-Depot', '2018-02-06 08:02:19', '2018-02-06 08:02:19', '1', '1', NULL, 0, '2000', '', NULL, 'Reno-Depot', 'Reno-Depot', '100', '1', '1', '8e7f0fda-04dd-11e8-9ebd-2c56dc94b8c8', '1', NULL),
+('8703f9a4-1c85-11e8-a561-000000000000', 'HIT', '2018-02-06 08:02:19', '2018-02-06 08:02:19', '1', '1', NULL, 0, '1000', '', NULL, 'HIT', 'HIT', '100', '1', '1', '8e7f0fda-04dd-11e8-9ebd-2c56dc94b8c8', '1', NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

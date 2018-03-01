@@ -1,0 +1,5 @@
+({
+    extendsFrom: 'CreateView',
+    showRLIWarningMessage: function () {
+    }
+})

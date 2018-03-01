@@ -32,6 +32,14 @@ $mod_strings['LBL_RT_POSTAL_CODES_USERS_FROM_USERS_TITLE'] = 'Postal Codes';
 
 ?>
 <?php
+// Merged from custom/Extension/modules/Users/Ext/Language/fr_FR.rt_classification.php
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_RT_CLASSIFICATION_USERS_FROM_RT_CLASSIFICATION_TITLE'] = 'Classification';
+$mod_strings['LBL_RT_CLASSIFICATION_USERS_FROM_USERS_TITLE'] = 'Classification';
+
+?>
+<?php
 // Merged from custom/Extension/modules/Users/Ext/Language/fr_FR.Postal_Codes.php.Basic_Fields_Dropdowns_Hooks.lang.php
 
 //THIS FILE IS AUTO GENERATED, DO NOT MODIFY
@@ -62,13 +70,5 @@ $mod_strings['LBL_CODECIE_REP_C'] = 'CodeCie';
 $mod_strings['LBL_QUALIFIED_GARAGE_REP_C'] = 'Qualified Garage';
 $mod_strings['LBL_QUALIFIED_WINDOWS_REP_C'] = 'Qualified Windows';
 $mod_strings['LBL_QUALIFIED_DOORS_REP_C'] = 'Qualified Doors';
-
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Language/fr_FR.rt_classification.php
-
-//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
-$mod_strings['LBL_RT_CLASSIFICATION_USERS_FROM_RT_CLASSIFICATION_TITLE'] = 'Classification';
-$mod_strings['LBL_RT_CLASSIFICATION_USERS_FROM_USERS_TITLE'] = 'Classification';
 
 ?>
