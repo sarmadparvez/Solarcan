@@ -51,7 +51,7 @@ window.User = Backbone.Model.extend({
         return Backbone.sync(method, model, options);
     },*/
 
-    validateRequired(value) {
+    validateRequired: function(value) {
         return !_.isEmpty(value) ? {isValid: true} : {
             isValid: false,
             message: "This field is required"

@@ -308,7 +308,7 @@ class Application
                         'financement' => $_REQUEST['financement'],
                         'description' => $_REQUEST['description'],
                         'contact_model' => $_REQUEST['contact_model'],
-                        'account_model' => $_REQUEST['account_model']
+                        'account_model' => $_REQUEST['account_model'],
                         /*'annee_construction' => $_REQUEST['annee_construction'],
                         'occupant_depuis' => $_REQUEST['occupant_depuis'],
                         'billing_address_street' => $_REQUEST['billing_address_street'],
@@ -321,6 +321,8 @@ class Application
                         'nombre_garage_total' => $_REQUEST['nombre_garage_total'],
                         'nombre_garage_achanger' => $_REQUEST['nombre_garage_achanger'],
                         'etat_de_proprietaire' => $_REQUEST['etat_de_proprietaire']*/
+                        'noagent' => $_SESSION['user']['noagent'],
+                        'partenaire_info' => isset($_REQUEST['partenaire_info']) ? $_REQUEST['partenaire_info'] : ''
                     )
                 ),
                 array(
@@ -353,6 +355,61 @@ class Application
         }
     }
 
+    public function saveInfoandAccount()
+    {
+        try{
+            self::$logger->debug('_REQUEST: '.print_r($_REQUEST,1));
+            $required_args = array(
+                'contact_model',
+                'account_model'
+            );
+            //require arguments
+            $this->requireArgs($_REQUEST, $required_args);
+            $oauth_token = empty($this->sugar_access_token) ?
+                $this->getSugarAuthToken() : $this->sugar_access_token;
+            $url =  $this->getApiUrl().'/Meetings/saveInfoandAccount';
+            self::$logger->info('url: '.$url);
+            $client = self::getApiClient();
+            $res = $client->post(
+                $url,
+                json_encode(
+                    array(
+                        'contact_model' => $_REQUEST['contact_model'],
+                        'account_model' => $_REQUEST['account_model'],
+                        'noagent' => $_SESSION['user']['noagent'],
+                        'postalcode' => $_REQUEST['contact_model']['billing_address_postalcode'],
+                        'partenaire_info' => isset($_REQUEST['partenaire_info']) ? $_REQUEST['partenaire_info'] : ''
+                    )
+                ),
+                array(
+                    CURLOPT_HTTPHEADER => array(
+                      'Content-Type: application/json',
+                      'oauth-token: ' . $oauth_token
+                    )
+                )
+            );
+            self::$logger->info('result: '.print_r($res,1));
+            echo json_encode(array('result' => true, 'res' => $res));
+        }
+        catch (Exception $e) {
+            self::$logger->error('caught exception: '.$e->getMessage() . ' : code: '. $e->getCode());
+            self::$logger->error($e->getTraceAsString());
+            if ($e->getCode() == 401) {
+                // access token expired
+                self::$logger->error('SugarCRM access token expired');
+            } else {
+                //safely return
+                echo json_encode(
+                    array(
+                      'error' => array(
+                            'msg' => $e->getMessage(),
+                            'code' => $e->getCode()
+                        ),
+                    )
+                );
+            }
+        }
+    }
 
     /**
     * require arguments for the api

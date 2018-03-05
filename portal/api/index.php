@@ -27,6 +27,7 @@ $app->get('/checkLogin', 'checkLogin');
 $app->post('/logout', 'logout');
 $app->post('/getAvailableAppointments', authorize(), 'getAvailableAppointments');
 $app->post('/bookAppointment', authorize(), 'bookAppointment');
+$app->post('/saveInfoandAccount', authorize(), 'saveInfoandAccount');
 
 $app->run();
 
@@ -114,6 +115,14 @@ function bookAppointment()
 {
 	$app = Application::getInstance();
 	$app->bookAppointment();
+}
+/**
+* Save Info and Account
+*/
+function saveInfoandAccount()
+{
+	$app = Application::getInstance();
+	$app->saveInfoandAccount();	
 }
 
 function getWines() {

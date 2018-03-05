@@ -1,0 +1,2560 @@
+[2018-03-02 14:51:49.166971] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1000&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-02 14:52:30.835624] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 01234567
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 155
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => false
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 14:52:31.286375] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 14:52:31.449681] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: postalcode"}
+[2018-03-02 14:52:31.449819] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: postalcode"} : code: 422
+[2018-03-02 14:52:31.449861] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 14:55:51.180015] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 01234567
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 155
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => false
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 14:55:51.517115] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 14:55:51.612782] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: postalcode"}
+[2018-03-02 14:55:51.612886] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: postalcode"} : code: 422
+[2018-03-02 14:55:51.612917] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 14:56:46.274038] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => hello
+            [last_name] => hi
+            [phone_home] => 01234567
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 155
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => false
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 14:56:46.582396] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 14:56:46.688363] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: postalcode"}
+[2018-03-02 14:56:46.688488] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: postalcode"} : code: 422
+[2018-03-02 14:56:46.688527] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 14:57:18.029882] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => hello
+            [last_name] => hi
+            [phone_home] => 01234567
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 155
+            [billing_address_postalcode] => H10 J99
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => false
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 14:57:18.354733] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 14:57:18.460851] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: postalcode"}
+[2018-03-02 14:57:18.461007] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: postalcode"} : code: 422
+[2018-03-02 14:57:18.461046] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 15:01:37.017812] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:01:37.371325] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:01:38.597193] [info] result: 1
+[2018-03-02 15:08:04.704930] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:08:05.023255] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:08:05.973743] [info] result: 1
+[2018-03-02 15:09:56.491245] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:09:56.830876] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:09:56.936451] [error] caught exception:  : code: -1
+[2018-03-02 15:09:56.936511] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 15:12:52.748603] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:12:53.560420] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:12:53.825634] [error] caught exception:  : code: -1
+[2018-03-02 15:12:53.825717] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 15:16:47.817428] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:16:48.310602] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:16:48.441181] [error] caught exception:  : code: -1
+[2018-03-02 15:16:48.441251] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 15:18:25.491436] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:18:25.843928] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:18:25.960020] [error] caught exception:  : code: -1
+[2018-03-02 15:18:25.960099] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 15:24:51.261423] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:24:51.860893] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:24:52.384725] [info] result: 1
+[2018-03-02 15:28:58.262248] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:28:58.915827] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:28:59.358346] [info] result: 1
+[2018-03-02 15:29:24.063589] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Qamar
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:29:24.499141] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:29:24.748724] [info] result: 1
+[2018-03-02 15:32:32.939455] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:32:33.524087] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:32:33.870042] [error] caught exception:  : code: -1
+[2018-03-02 15:32:33.870111] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 15:39:12.204587] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:39:12.859844] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:39:14.097538] [info] result: 1
+[2018-03-02 15:43:11.150918] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => 
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:43:11.524399] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:43:12.516141] [info] result: 1
+[2018-03-02 15:57:43.659348] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:57:44.211585] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:57:44.583564] [info] result: 1
+[2018-03-02 15:58:06.283341] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-02 15:58:06.574702] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 15:58:06.821209] [info] result: 1
+[2018-03-02 16:03:03.036520] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:03:04.141633] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:03:04.505567] [error] caught exception:  : code: -1
+[2018-03-02 16:03:04.505644] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:07:18.170094] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:07:19.072724] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:07:19.406701] [error] caught exception:  : code: -1
+[2018-03-02 16:07:19.406773] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:09:35.346740] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:09:35.945122] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:09:36.441265] [error] caught exception:  : code: -1
+[2018-03-02 16:09:36.441339] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:14:55.116705] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:14:56.120640] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:14:56.396672] [error] caught exception:  : code: -1
+[2018-03-02 16:14:56.396745] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:18:08.099525] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:18:08.466274] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:18:08.714730] [error] caught exception:  : code: -1
+[2018-03-02 16:18:08.714798] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:18:23.773078] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:18:24.127199] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:18:24.402790] [error] caught exception:  : code: -1
+[2018-03-02 16:18:24.402867] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:19:40.477552] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:19:40.928175] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:19:41.099453] [error] caught exception:  : code: -1
+[2018-03-02 16:19:41.099523] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:20:23.267343] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:20:23.793020] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:20:24.143376] [error] caught exception:  : code: -1
+[2018-03-02 16:20:24.143448] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(388): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:22:41.596184] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 020202
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:22:42.039899] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-02 16:22:42.406939] [info] result: 1
+[2018-03-02 16:41:54.568758] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:41:54.678471] [info] result: Array
+(
+)
+
+[2018-03-02 16:42:40.442435] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:42:40.572972] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89a6da16-1e0e-11e8-8658-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 16:44:42.174004] [debug] _REQUEST: Array
+(
+    [meeting_id] => 89a6da16-1e0e-11e8-8658-2c56dc94b8c8
+    [postalcode] => G0S 3G0
+    [contact_id] => 
+    [description] => 
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => G0S 3G0
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:44:42.543324] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-02 16:44:42.651962] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: Array"}
+[2018-03-02 16:44:42.652148] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: Array"} : code: 422
+[2018-03-02 16:44:42.652213] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:44:52.483983] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:44:52.613965] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89a6da16-1e0e-11e8-8658-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 16:45:10.541147] [debug] _REQUEST: Array
+(
+    [meeting_id] => 89a6da16-1e0e-11e8-8658-2c56dc94b8c8
+    [postalcode] => G0S 3G0
+    [contact_id] => 
+    [description] => 
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => G0S 3G0
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:45:10.898174] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-02 16:45:11.000261] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: noagent"}
+[2018-03-02 16:45:11.000454] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: noagent"} : code: 422
+[2018-03-02 16:45:11.000505] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 16:45:37.811326] [debug] _REQUEST: Array
+(
+    [meeting_id] => 89a6da16-1e0e-11e8-8658-2c56dc94b8c8
+    [postalcode] => G0S 3G0
+    [contact_id] => 
+    [description] => 
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Zahid
+            [phone_home] => 123456789
+            [phone_mobile] => 123456789
+            [phone_work] => 123456789
+            [phone_other] => 123456789
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => G0S 3G0
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 16:45:38.299880] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-02 16:45:38.979295] [info] result: 1
+[2018-03-02 16:48:25.635504] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:48:25.776716] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 16:49:59.080641] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:49:59.228188] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 16:51:09.647854] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:51:09.779531] [info] result: Array
+(
+)
+
+[2018-03-02 16:53:15.552659] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:53:15.682260] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 16:54:29.163969] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:54:29.291944] [info] result: Array
+(
+)
+
+[2018-03-02 16:54:32.644377] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:54:32.787137] [info] result: Array
+(
+)
+
+[2018-03-02 16:54:41.171731] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:54:41.302145] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 16:56:04.454431] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 16:56:04.582952] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 17:06:53.046063] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:06:53.387531] [info] result: Array
+(
+)
+
+[2018-03-02 17:08:03.925286] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:08:04.035933] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 17:28:39.490725] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:28:39.590178] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0S 1E1
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 14
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 17:30:31.011049] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:30:31.180428] [info] result: Array
+(
+)
+
+[2018-03-02 17:36:43.341557] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:36:43.465202] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 41
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 17:36:52.511018] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:36:52.627574] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 41
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 17:36:59.874876] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:36:59.992084] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 41
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-02 17:39:23.853440] [debug] _REQUEST: Array
+(
+    [meeting_id] => 89c00996-1e0e-11e8-a8a5-2c56dc94b8c8
+    [postalcode] => 123456
+    [contact_id] => 
+    [description] => 
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => Mr
+            [last_name] => Imran
+            [phone_home] => 1111111
+            [phone_mobile] => 1111111
+            [phone_work] => 1111111
+            [phone_other] => 1111111
+            [billing_address_street] => 10
+            [billing_address_city] => 101
+            [billing_address_postalcode] => 123456
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => false
+            [codecie_c] => Solarcan
+            [0] => true
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 1
+            [nombre_portes_achanger] => 3
+            [nombre_fenetres_total] => 1
+            [nombre_fenetres_achanger] => 3
+            [nombre_garage_total] => 1
+            [nombre_garage_achanger] => 3
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 17:39:24.157821] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-02 17:39:26.180020] [info] result: 1
+[2018-03-02 17:55:11.622903] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:55:11.748008] [info] result: Array
+(
+)
+
+[2018-03-02 17:55:30.585443] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 17:55:30.735901] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => f9378272-1e18-11e8-9f0d-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => f9650968-1e18-11e8-b2b7-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => f956af6c-1e18-11e8-8e35-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:06:13.130393] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:06:13.242150] [info] result: Array
+(
+)
+
+[2018-03-02 18:06:32.951188] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:06:33.077580] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:06:43.954037] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:06:44.082712] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:08:39.480597] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:08:39.613271] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:09:16.951628] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:09:17.120812] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:13:09.444188] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:13:09.592463] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:22:46.466727] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:22:46.571598] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:25:02.604867] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:25:02.737662] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 123
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:26:08.466552] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:26:08.604142] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 123
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:28:41.265804] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:28:41.386977] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:29:29.081006] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:29:29.313319] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 18:30:33.198363] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 18:30:33.337192] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 123
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:01:47.770229] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:01:47.894571] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 123
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:12:39.442678] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:12:39.574657] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:16:00.601584] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:16:00.709805] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => G0R 1A0
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:19:04.901424] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:19:05.016347] [info] result: 
+[2018-03-02 19:20:26.190038] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:20:26.303966] [info] result: 
+[2018-03-02 19:22:26.932548] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:22:27.048857] [info] result: 
+[2018-03-02 19:25:50.245404] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:25:50.366811] [info] result: 
+[2018-03-02 19:27:29.776127] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:27:29.890664] [error] caught exception:  : code: -1
+[2018-03-02 19:27:29.890738] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(254): RestCurlClient->post('http://localhos...', '{"postalcode":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(108): Application->getAvailableAppointments()
+#3 [internal function]: getAvailableAppointments()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('getAvailableApp...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-02 19:28:38.663501] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:28:38.788173] [info] result: Array
+(
+    [current_field] => 
+    [field_count] => 
+    [lengths] => 
+    [num_rows] => 
+    [type] => 
+)
+
+[2018-03-02 19:29:39.832500] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:29:39.951061] [info] result: Array
+(
+    [current_field] => 
+    [field_count] => 
+    [lengths] => 
+    [num_rows] => 
+    [type] => 
+)
+
+[2018-03-02 19:30:29.321022] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:30:29.439189] [info] result: Array
+(
+    [0] => Array
+        (
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:32:39.349617] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:32:39.473962] [info] result: Array
+(
+    [0] => Array
+        (
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:33:06.011730] [debug] _REQUEST: Array
+(
+    [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+    [postalcode] => 12345
+    [contact_id] => 
+    [description] => 
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => 12345
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => 12345
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1000
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 19:33:06.396328] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-02 19:33:07.979584] [info] result: 1
+[2018-03-02 19:33:13.109059] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:33:13.234277] [info] result: Array
+(
+    [0] => Array
+        (
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [meeting_id] => 8209e4d6-1e1a-11e8-957a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:34:01.742077] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:34:01.871505] [info] result: Array
+(
+    [0] => Array
+        (
+            [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 2
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [meeting_id] => 8c92e68a-1e26-11e8-b035-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:34:08.883341] [debug] _REQUEST: Array
+(
+    [meeting_id] => 81de73f0-1e1a-11e8-937a-2c56dc94b8c8
+    [postalcode] => 12345
+    [contact_id] => 
+    [description] => 
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => 12345
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => 12345
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1000
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-02 19:34:09.256689] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-02 19:34:09.856527] [info] result: 1
+[2018-03-02 19:34:13.470101] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:34:13.599983] [info] result: Array
+(
+    [0] => Array
+        (
+            [meeting_id] => 99a95e36-1e20-11e8-a780-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [meeting_id] => 8c92e68a-1e26-11e8-b035-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:42:27.791944] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:42:27.922882] [info] result: Array
+(
+    [0] => Array
+        (
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 41
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-02 19:44:02.639420] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-02 19:44:02.753870] [info] result: Array
+(
+    [0] => Array
+        (
+            [meeting_id] => 99a95e36-1e20-11e8-a780-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [meeting_id] => 81fc89f8-1e1a-11e8-9ca0-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [meeting_id] => 8c92e68a-1e26-11e8-b035-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 1
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+

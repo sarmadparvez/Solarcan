@@ -9,7 +9,7 @@ window.Account = Backbone.Model.extend({
         }, this);
     },
 
-    validateRequired(value) {
+    validateRequired: function(value) {
         console.log('in validate required: ', value);
         return !_.isEmpty(value) ? {isValid: true} : {
             isValid: false,

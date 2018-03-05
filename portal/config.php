@@ -6,8 +6,8 @@
 
 $app_config = array(
 	'sugar_username' => 'admin',
-	'sugar_password' => 'asdf',
+	'sugar_password' => 'admin',
 	'log_dir' => ROOT.'logs/',
 	'enable_curl_logs' => false,
-	'sugar_api_url' => 'http://localhost/Solarcan/Sugar/rest/v11',
+	'sugar_api_url' => 'http://localhost/Solarcan/rest/v11',
 );

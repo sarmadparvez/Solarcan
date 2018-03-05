@@ -1,0 +1,87 @@
+[2018-02-27 11:07:05.544776] [error] error: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-02-27 11:07:05.545166] [error] <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-02-27 11:07:05.545306] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('<!DOCTYPE HTML ...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/Application.php(166): Application->getSugarAuthToken()
+#3 /var/www/html/Solarcan/solarcanportal/api/index.php(50): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/Solarcan/solarcanportal/api/index.php(31): Slim->run()
+#8 {main}
+[2018-02-27 11:07:09.440557] [error] error: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-02-27 11:07:09.440820] [error] <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-02-27 11:07:09.440915] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('<!DOCTYPE HTML ...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/Application.php(166): Application->getSugarAuthToken()
+#3 /var/www/html/Solarcan/solarcanportal/api/index.php(50): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/Solarcan/solarcanportal/api/index.php(31): Slim->run()
+#8 {main}
+[2018-02-27 11:08:17.693289] [error] error: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-02-27 11:08:17.693459] [error] <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-02-27 11:08:17.693507] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('<!DOCTYPE HTML ...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/Application.php(166): Application->getSugarAuthToken()
+#3 /var/www/html/Solarcan/solarcanportal/api/index.php(50): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/Solarcan/solarcanportal/api/index.php(31): Slim->run()
+#8 {main}

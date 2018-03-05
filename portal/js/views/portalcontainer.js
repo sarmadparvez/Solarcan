@@ -30,6 +30,10 @@ window.PortalContainerView = Backbone.View.extend({
             }
         }
     },
+    
+    events: {
+        "click #saveToSugar": "saveToSugar",
+    },
 
 /*    events: {
         "click #book-appointment" : "bookAppointment"
@@ -53,8 +57,48 @@ window.PortalContainerView = Backbone.View.extend({
         $(this.el).html(this.template());
         return this;
     },
+    
+    saveToSugar: function() {
+        console.log("Save Info and Batiment");
+        this.api_call_sent = true;
+        var contact_model = this.childViews.contactView.model,
+            account_model = this.childViews.accountView.model;
+        
+        if (!this.validateContactModel()
+            || !this.validateContactPhone()
+            || !this.validateAccountModel()
+            || !this.validateCategory()) {
+            return;
+        }
+        
+        $.ajax({
+            method: "POST",
+            url: "api/saveInfoandAccount",
+            dataType: 'json',
+            data: {
+                "contact_model" : contact_model.toJSON(),
+                "account_model" : account_model.toJSON(),
+                "partenaire_info": $('#partenaire_info').val()
+            },
+            success: _.bind(function(response) {
+                console.log('in success');
+                if (response.result) {
+                    alert('Info and Batiment Saved Successfully');
+                } else {
+                    alert(response.error.msg);
+                }
+            }, this),
+            error: _.bind(function(error) {
+                alert(error.statusText);
+            }, this),
+            complete: _.bind(function(){
+                console.log('in complete function');
+                this.api_call_sent = false;
+            }, this)
+        });
+    },
 
-    appendContactInfoView()
+    appendContactInfoView: function()
     {
         var contact = new Contact(),
             contactView = new ContactInfoView({model: contact});
@@ -62,7 +106,7 @@ window.PortalContainerView = Backbone.View.extend({
         this.childViews.contactView = contactView;
     },
 
-    appendAccountView()
+    appendAccountView: function()
     {
         var account = new Account(),
             accountView = new AccountView({model: account});
@@ -82,6 +126,7 @@ window.PortalContainerView = Backbone.View.extend({
             navLinks: true, // can click day/week names to navigate views
             editable: false,
             eventLimit: true, // allow "more" link when too many events
+            defaultView: 'basicWeek',
             events: this.cal_events,
             customButtons: {
                 myCustomButton: {
@@ -175,7 +220,8 @@ window.PortalContainerView = Backbone.View.extend({
                 "description" : $('#notes').val(),
                 "financement" : $('#financement').prop('checked'),
                 "contact_model" : contact_model.toJSON(),
-                "account_model" : account_model.toJSON()
+                "account_model" : account_model.toJSON(),
+                "partenaire_info": $('#partenaire_info').val()
             },
             success: _.bind(function(response) {
                 console.log('in success');

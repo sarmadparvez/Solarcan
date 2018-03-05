@@ -1,0 +1,1727 @@
+[2018-03-01 12:31:57.273224] [error] error: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-03-01 12:31:57.273876] [error] <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-03-01 12:31:57.273978] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('<!DOCTYPE HTML ...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/Application.php(166): Application->getSugarAuthToken()
+#3 /var/www/html/Solarcan/solarcanportal/api/index.php(50): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/Solarcan/solarcanportal/api/index.php(31): Slim->run()
+#8 {main}
+[2018-03-01 12:32:06.827013] [error] error: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-03-01 12:32:06.827375] [error] <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /Solarcan/Sugar/rest/v11/oauth2/token was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+[2018-03-01 12:32:06.827474] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('<!DOCTYPE HTML ...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(99): RestCurlClient->post('http://localhos...', '{"grant_type":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/Application.php(166): Application->getSugarAuthToken()
+#3 /var/www/html/Solarcan/solarcanportal/api/index.php(50): Application->login()
+#4 [internal function]: login()
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('login', Array)
+#6 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#7 /var/www/html/Solarcan/solarcanportal/api/index.php(31): Slim->run()
+#8 {main}
+[2018-03-01 12:33:45.435663] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1015&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-01 17:06:28.034337] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1000&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-01 17:40:42.183053] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1000&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-01 17:45:19.988703] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => nom1
+            [last_name] => nom1
+            [phone_home] => 2134903
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 1
+            [billing_address_city] => 12
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-01 17:45:20.491064] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-01 17:45:20.696970] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: noagent"}
+[2018-03-01 17:45:20.697177] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: noagent"} : code: 422
+[2018-03-01 17:45:20.697231] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(387): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 17:45:58.492279] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => nom1
+            [last_name] => nom1
+            [phone_home] => 2134903
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 1
+            [billing_address_city] => 12
+            [billing_address_postalcode] => 010101
+            [billing_address_state] => Punjab
+            [email] => client@gmail.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-01 17:45:58.852797] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-01 17:45:59.092721] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: noagent"}
+[2018-03-01 17:45:59.092878] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: noagent"} : code: 422
+[2018-03-01 17:45:59.092922] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(387): RestCurlClient->post('http://localhos...', '{"contact_model...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(125): Application->saveInfoandAccount()
+#3 [internal function]: saveInfoandAccount()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('saveInfoandAcco...', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 17:46:58.471848] [debug] _REQUEST: Array
+(
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => nom1
+            [last_name] => nom1
+            [phone_home] => 231482943
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 1
+            [billing_address_city] => 12
+            [billing_address_postalcode] => 101010
+            [billing_address_state] => Punjab
+            [email] => abc@def.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 
+            [occupant_depuis] => 
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 
+            [etat_de_proprietaire] => 
+        )
+
+)
+
+[2018-03-01 17:46:58.925352] [info] url: http://localhost/Solarcan/rest/v11/Meetings/saveInfoandAccount
+[2018-03-01 17:46:59.060087] [info] result: 
+[2018-03-01 20:57:48.500571] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1000&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-01 21:45:39.911573] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1015&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-01 21:47:10.643342] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 21:47:10.768177] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => b69b1edc-1d6f-11e8-93be-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => b680e792-1d6f-11e8-95a9-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 21:47:51.627204] [debug] _REQUEST: Array
+(
+    [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 32457234
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:47:51.910700] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:47:52.026108] [error] error: {"error":"missing_parameter","error_message":"Missing parameter: noagent"}
+[2018-03-01 21:47:52.026258] [error] caught exception: {"error":"missing_parameter","error_message":"Missing parameter: noagent"} : code: 422
+[2018-03-01 21:47:52.026305] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"missi...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:49:49.593986] [debug] _REQUEST: Array
+(
+    [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 32457234
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:49:50.469789] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:49:50.591495] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:49:50.591610] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:49:50.591644] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:50:17.979466] [debug] _REQUEST: Array
+(
+    [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 438-2141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:50:18.311794] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:50:18.425868] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:50:18.426000] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:50:18.426042] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:51:17.738272] [debug] _REQUEST: Array
+(
+    [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:51:18.043354] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:51:18.126590] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:51:18.126696] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:51:18.126729] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:52:31.425828] [debug] _REQUEST: Array
+(
+    [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 4382141086
+            [phone_work] => 4382141086
+            [phone_other] => 4382141086
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => 
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:52:31.708863] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:52:31.804025] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:52:31.804229] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:52:31.804294] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:53:35.843684] [debug] _REQUEST: Array
+(
+    [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 4382141086
+            [phone_work] => 4382141086
+            [phone_other] => 4382141086
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => false
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:53:36.135346] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:53:36.250204] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:53:36.250345] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:53:36.250389] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:53:40.722261] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 21:53:40.830746] [info] result: Array
+(
+)
+
+[2018-03-01 21:53:45.855161] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 21:53:45.968398] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => b69b1edc-1d6f-11e8-93be-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => b680e792-1d6f-11e8-95a9-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 21:53:50.685378] [debug] _REQUEST: Array
+(
+    [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 4382141086
+            [phone_work] => 4382141086
+            [phone_other] => 4382141086
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:53:51.002526] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:53:51.109508] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:53:51.109669] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:53:51.109716] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:54:51.082263] [debug] _REQUEST: Array
+(
+    [meeting_id] => b66719de-1d6f-11e8-9b96-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 4382141086
+            [phone_work] => 4382141086
+            [phone_other] => 4382141086
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:54:51.395324] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:54:52.265175] [info] result: 1
+[2018-03-01 21:55:43.390800] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 21:55:43.505362] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 5a014fe6-1d71-11e8-8fc9-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 5a1c002a-1d71-11e8-b7fb-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 21:55:49.145318] [debug] _REQUEST: Array
+(
+    [meeting_id] => 5a014fe6-1d71-11e8-8fc9-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 4382141086
+            [phone_work] => 4382141086
+            [phone_other] => 4382141086
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:55:49.488172] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:55:49.860282] [info] result: 1
+[2018-03-01 21:56:38.923434] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 21:56:39.031443] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 77f5a29a-1d71-11e8-958e-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 5a1c002a-1d71-11e8-b7fb-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 77cb03b4-1d71-11e8-be81-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [3] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 77ded3a8-1d71-11e8-a68c-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 21:56:42.822413] [debug] _REQUEST: Array
+(
+    [meeting_id] => 77ded3a8-1d71-11e8-a68c-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 4382141086
+            [phone_work] => 4382141086
+            [phone_other] => 4382141086
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:56:43.096735] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:56:43.504755] [info] result: 1
+[2018-03-01 21:57:52.155072] [debug] _REQUEST: Array
+(
+    [meeting_id] => 77ded3a8-1d71-11e8-a68c-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 4382141086
+            [phone_work] => 4382141086
+            [phone_other] => 4382141086
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:57:52.443942] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:57:52.794291] [info] result: 1
+[2018-03-01 21:57:58.393486] [debug] _REQUEST: Array
+(
+    [meeting_id] => 77ded3a8-1d71-11e8-a68c-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 4382141086
+            [phone_work] => 4382141086
+            [phone_other] => 4382141086
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:57:58.676300] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:57:58.987061] [info] result: 1
+[2018-03-01 21:58:27.992444] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 21:58:28.096204] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => c0b5d68a-1d71-11e8-846d-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => c088299c-1d71-11e8-bd7d-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => c0a4096e-1d71-11e8-8949-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 21:58:50.007153] [debug] _REQUEST: Array
+(
+    [meeting_id] => c0b5d68a-1d71-11e8-846d-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:58:50.325771] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:58:50.698257] [info] result: 1
+[2018-03-01 21:59:11.793917] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 21:59:11.905426] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => c088299c-1d71-11e8-bd7d-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => c0a4096e-1d71-11e8-8949-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 21:59:22.036017] [debug] _REQUEST: Array
+(
+    [meeting_id] => c088299c-1d71-11e8-bd7d-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 123123
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:59:22.357199] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:59:22.463829] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:59:22.463953] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:59:22.463994] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:59:41.789511] [debug] _REQUEST: Array
+(
+    [meeting_id] => c0a4096e-1d71-11e8-8949-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 123123
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:59:42.082253] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:59:42.200720] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:59:42.200864] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:59:42.200906] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 21:59:46.755461] [debug] _REQUEST: Array
+(
+    [meeting_id] => c088299c-1d71-11e8-bd7d-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => false
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 123123
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 21:59:47.059365] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 21:59:47.157496] [error] error: {"error":"invalid_parameter","error_message":"Contact not found in CRM"}
+[2018-03-01 21:59:47.157618] [error] caught exception: {"error":"invalid_parameter","error_message":"Contact not found in CRM"} : code: 422
+[2018-03-01 21:59:47.157664] [error] #0 /var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php(96): RestCurlClient->http_parse_message('{"error":"inval...')
+#1 /var/www/html/Solarcan/solarcanportal/api/Application.php(333): RestCurlClient->post('http://localhos...', '{"meeting_id":"...', Array)
+#2 /var/www/html/Solarcan/solarcanportal/api/index.php(117): Application->bookAppointment()
+#3 [internal function]: bookAppointment()
+#4 /var/www/html/Solarcan/solarcanportal/api/Slim/Route.php(392): call_user_func_array('bookAppointment', Array)
+#5 /var/www/html/Solarcan/solarcanportal/api/Slim/Slim.php(1052): Slim_Route->dispatch()
+#6 /var/www/html/Solarcan/solarcanportal/api/index.php(32): Slim->run()
+#7 {main}
+[2018-03-01 22:00:05.711954] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:00:05.800262] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => c088299c-1d71-11e8-bd7d-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => c0a4096e-1d71-11e8-8949-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 22:02:35.976974] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:02:36.068193] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 4ee2ab9a-1d72-11e8-bf7a-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 4ebf4e02-1d72-11e8-8cb6-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 4ed420fc-1d72-11e8-8306-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 22:02:57.524205] [debug] _REQUEST: Array
+(
+    [meeting_id] => 4ee2ab9a-1d72-11e8-bf7a-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 22:02:57.857032] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 22:02:58.217751] [info] result: 1
+[2018-03-01 22:03:34.908955] [debug] _REQUEST: Array
+(
+    [meeting_id] => 4ebf4e02-1d72-11e8-8cb6-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 22:03:35.191062] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 22:03:35.547024] [info] result: 1
+[2018-03-01 22:03:47.772479] [debug] _REQUEST: Array
+(
+    [meeting_id] => 4ed420fc-1d72-11e8-8306-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 22:03:48.091641] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 22:03:48.486968] [info] result: 1
+[2018-03-01 22:03:58.945669] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:03:59.065053] [info] result: Array
+(
+)
+
+[2018-03-01 22:04:15.055891] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:04:15.172861] [info] result: Array
+(
+)
+
+[2018-03-01 22:04:17.598140] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:04:17.715868] [info] result: Array
+(
+)
+
+[2018-03-01 22:04:35.224406] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:04:35.343379] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 9bf547a8-1d72-11e8-a6da-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 9c0cb08c-1d72-11e8-b208-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR1
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 9c1e297a-1d72-11e8-bdef-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => SOIR2
+            [available_count] => 4
+            [dayname] => Friday
+            [dateonly] => 2018-03-02
+        )
+
+)
+
+[2018-03-01 22:04:39.627966] [debug] _REQUEST: Array
+(
+    [meeting_id] => 9bf547a8-1d72-11e8-a6da-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => abc
+            [last_name] => def
+            [phone_home] => 4382141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 8
+            [billing_address_city] => 1273
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => Punjab
+            [email] => dsad@adas.com
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 22:04:39.905280] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 22:04:40.309389] [info] result: 1
+[2018-03-01 22:06:07.845813] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:06:07.962960] [info] result: Array
+(
+)
+
+[2018-03-01 22:07:47.802881] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1015&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-01 22:09:13.925792] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:09:14.047645] [info] result: Array
+(
+)
+
+[2018-03-01 22:09:28.495085] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:09:28.599791] [info] result: Array
+(
+)
+
+[2018-03-01 22:10:12.818320] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:10:12.925295] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 62571610-1d73-11e8-ace3-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 4
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 626baa94-1d73-11e8-8ed3-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 4
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 627c80f8-1d73-11e8-a8a6-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-01 22:10:37.579070] [debug] _REQUEST: Array
+(
+    [meeting_id] => 626baa94-1d73-11e8-8ed3-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => 4382141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 22:10:37.861104] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 22:10:38.284473] [info] result: 1
+[2018-03-01 22:12:10.847939] [info] url: http://localhost/Solarcan/rest/v11/Meetings/getAvailableAppointments
+[2018-03-01 22:12:10.965960] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 62571610-1d73-11e8-ace3-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => AM2
+            [available_count] => 4
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => 627c80f8-1d73-11e8-a8a6-2c56dc94b8c8
+            [meeting] => Available Meetings
+            [timeslot] => PM2
+            [available_count] => 4
+            [dayname] => Saturday
+            [dateonly] => 2018-03-03
+        )
+
+)
+
+[2018-03-01 22:12:14.266982] [debug] _REQUEST: Array
+(
+    [meeting_id] => 627c80f8-1d73-11e8-a8a6-2c56dc94b8c8
+    [postalcode] => J0L 1P0
+    [contact_id] => 
+    [description] => NO
+    [financement] => true
+    [contact_model] => Array
+        (
+            [id] => 
+            [first_name] => 
+            [last_name] => 
+            [phone_home] => 4382141086
+            [phone_mobile] => 
+            [phone_work] => 
+            [phone_other] => 
+            [billing_address_street] => 
+            [billing_address_city] => 
+            [billing_address_postalcode] => J0L 1P0
+            [billing_address_state] => 
+            [email] => 
+            [consentement] => 
+            [date_de_consentement_datestamp] => 
+            [preferred_language_1] => true
+            [preferred_language_2] => true
+            [codecie_c] => Solarcan
+        )
+
+    [account_model] => Array
+        (
+            [id] => 
+            [annee_construction] => 1950
+            [occupant_depuis] => 2000
+            [nombre_portes_total] => 
+            [nombre_portes_achanger] => 1
+            [nombre_fenetres_total] => 
+            [nombre_fenetres_achanger] => 1
+            [nombre_garage_total] => 
+            [nombre_garage_achanger] => 1
+            [etat_de_proprietaire] => proprietaire
+        )
+
+)
+
+[2018-03-01 22:12:14.566340] [info] url: http://localhost/Solarcan/rest/v11/Meetings/bookAppointment
+[2018-03-01 22:12:15.019761] [info] result: 1
