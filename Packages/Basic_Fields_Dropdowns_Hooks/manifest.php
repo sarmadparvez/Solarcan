@@ -2324,6 +2324,26 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_regional_code.php',
       'to' => 'custom/Extension/modules/dsm_dnc/Ext/Vardefs/sugarfield_regional_code.php',
     ),
+    393 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/Opportunities/clients/base/views/record/record.js',
+      'to' => 'custom/modules/Opportunities/clients/base/views/record/record.js',
+    ),
+    394 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/Opportunities/clients/base/views/create/create.js',
+      'to' => 'custom/modules/Opportunities/clients/base/views/create/create.js',
+    ),
+    395 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/dsm_dnc/dsm_dncHooksImpl.php',
+      'to' => 'custom/modules/dsm_dnc/dsm_dncHooksImpl.php',
+    ),
+    396 => 
+    array (
+      'from' => '<basepath>/Extension/modules/dsm_dnc/Ext/LogicHooks/dsm_dncHooks.php',
+      'to' => 'custom/Extension/modules/dsm_dnc/Ext/LogicHooks/dsm_dncHooks.php',
+    ),
   ),
   'roles' => 
   array (

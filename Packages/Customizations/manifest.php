@@ -122,6 +122,10 @@ $installdefs = array (
       'from' => '<basepath>/custom/modules/Import/views/view.step4.php',
       'to' => 'custom/modules/Import/views/view.step4.php',
     ),
+    array (
+      'from' => '<basepath>/custom/modules/Import/views/view.undo.php',
+      'to' => 'custom/modules/Import/views/view.undo.php',
+    ),
   ),
   'language' => 
   array (
