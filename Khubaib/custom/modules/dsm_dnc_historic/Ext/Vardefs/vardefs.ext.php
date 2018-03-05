@@ -2,6 +2,26 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
+// Merged from custom/Extension/modules/dsm_dnc_historic/Ext/Vardefs/sugarfield_date_enregistrement.php
+
+ // created: 2018-03-01 18:31:02
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['name']='date_enregistrement';
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['vname']='LBL_DATE_ENREGISTREMENT';
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['type']='datetime';
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['massupdate']=false;
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['duplicate_merge']='disabled';
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['merge_filter']='disabled';
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['calculated']=false;
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['required']=false;
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['audited']=true;
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['importable']='false';
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['duplicate_merge_dom_value']='0';
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['unified_search']=false;
+$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['enable_range_search']=false;
+
+ 
+?>
+<?php
 // Merged from custom/Extension/modules/dsm_dnc_historic/Ext/Vardefs/sugarfield_source_details.php
 
  // created: 2018-01-24 19:48:06
@@ -264,24 +284,4 @@ $dictionary['dsm_dnc_historic']['fields']['dsm_dnc_name']['merge_filter']='disab
 $dictionary['dsm_dnc_historic']['fields']['dsm_dnc_name']['unified_search']=false;
 $dictionary['dsm_dnc_historic']['fields']['dsm_dnc_name']['calculated']=false;
 
-?>
-<?php
-// Merged from custom/Extension/modules/dsm_dnc_historic/Ext/Vardefs/sugarfield_date_enregistrement.php
-
- // created: 2018-03-01 18:31:02
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['name']='date_enregistrement';
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['vname']='LBL_DATE_ENREGISTREMENT';
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['type']='datetime';
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['massupdate']=false;
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['duplicate_merge']='disabled';
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['merge_filter']='disabled';
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['calculated']=false;
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['required']=false;
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['audited']=true;
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['importable']='false';
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['duplicate_merge_dom_value']='0';
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['unified_search']=false;
-$dictionary['dsm_dnc_historic']['fields']['date_enregistrement']['enable_range_search']=false;
-
- 
 ?>

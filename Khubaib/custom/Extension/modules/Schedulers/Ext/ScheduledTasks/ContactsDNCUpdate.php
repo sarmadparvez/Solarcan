@@ -85,24 +85,29 @@ class ContactsDNCUpdate implements RunnableSchedulerJob
         return true;
     }
 
-    private function updateDNCHistory(&$contactBean)
+    function updateDNCHistory(&$contactBean)
     {
-        $dnc_historic                      = BeanFactory::newBean('dsm_dnc_historic');
-        $dnc_historic->name                = $contactBean->first_name." ".$contactBean->last_name;
-        $dnc_historic->statut_precedent    = $contactBean->statut_dnc;
-        $dnc = null;
+        global $current_user;
+
+        $dnc_historic                   = BeanFactory::newBean('dsm_dnc_historic');
+        $dnc_historic->name             = $contactBean->first_name." ".$contactBean->last_name;
+        $dnc_historic->statut_precedent = $contactBean->statut_dnc;
+        $dnc                            = null;
         if (!empty($contactBean->dsm_dnc_id)) {
             $dnc = BeanFactory::newBean('dsm_dnc')->retrieve($contactBean->dsm_dnc_id);
         }
         if ($dnc) {
-            $date_reg = (new TimeDate())->to_db($dnc->date_enregistrement);
+            // $dnc->date_enregistrement holds datetime of Do Not Call registeration time
+            $date_reg                          = (new TimeDate())->to_db($dnc->date_enregistrement);
             $dnc_historic->date_enregistrement = $date_reg;
             $GLOBALS['log']->fatal($date_reg);
         }
         $dnc_historic->save();
 
-        if ($dnc->load_relationship('dsm_dnc_dsm_dnc_historic')) {
-            $dnc->dsm_dnc_dsm_dnc_historic->add($dnc_historic->id);
+        if ($dnc) {
+            if ($dnc->load_relationship('dsm_dnc_dsm_dnc_historic')) {
+                $dnc->dsm_dnc_dsm_dnc_historic->add($dnc_historic->id);
+            }
         }
         if ($contactBean->load_relationship('contacts_dsm_dnc_historic')) {
             $contactBean->contacts_dsm_dnc_historic->add($dnc_historic->id);

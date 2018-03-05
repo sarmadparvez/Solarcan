@@ -437,9 +437,11 @@ array (
               array (
                 'name' => 'partenaire_info',
                 'label' => 'LBL_PARTENAIRE_INFO',
-                'span' => 12,
               ),
               1 => 
+              array (
+              ),
+              2 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -463,7 +465,7 @@ array (
                   ),
                 ),
               ),
-              2 => 
+              3 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,

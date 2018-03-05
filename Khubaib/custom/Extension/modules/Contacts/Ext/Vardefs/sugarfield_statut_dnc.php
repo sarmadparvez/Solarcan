@@ -1,5 +1,5 @@
 <?php
- // created: 2018-03-01 14:42:55
+ // created: 2018-03-02 11:07:33
 $dictionary['Contact']['fields']['statut_dnc']['name']='statut_dnc';
 $dictionary['Contact']['fields']['statut_dnc']['vname']='LBL_STATUT_DNC';
 $dictionary['Contact']['fields']['statut_dnc']['type']='enum';
