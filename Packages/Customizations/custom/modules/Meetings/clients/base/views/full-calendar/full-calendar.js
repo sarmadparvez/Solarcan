@@ -158,9 +158,8 @@
 
                 var filters = [
                     {
-                        status: 'disponible',
                         date_start: {$dateBetween: [filterStart, filterEnd]},
-                        "$or": [{created_by: app.user.attributes.id}, {assigned_user_id: app.user.attributes.id}]
+                        created_by: app.user.attributes.id
                     }
                 ];
                 var request = self.availableMeetings.fetch(

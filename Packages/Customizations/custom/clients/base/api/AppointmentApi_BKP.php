@@ -87,55 +87,58 @@ class AppointmentApi extends SugarApi {
         $x_hours = $this->getSugarConfig()->get('appointment_config')['x_hours'];
         $start_time_before = $this->getSugarConfig()->get('appointment_config')['appointments_upto'];
         $start_time_after = $this->getTimeDate()->getNow()->modify('+'.$x_hours.'hours')->asDb();
-
+        
         // query to get available appointments based on postal code
-        $s_query = $this->getSugarQuery();
-        $s_query->from(BeanFactory::newBean('rt_postal_codes'), array('team_security' => false));
-        $s_query->select(
+
+        $pcu_query = $this->getSugarQuery();
+        $pcu_query->select()->fieldRaw('pc_u.rt_postal_codes_usersusers_idb', 'user_id');
+        $pcu_query->from(BeanFactory::newBean('rt_postal_codes'), array('alias' => 'pc','team_security' => false));
+        $pcu_query->joinTable('rt_postal_codes_users_c',
             array(
-                array($s_query->getFromAlias().'.name', 'postalcode')
+                'alias' => 'pc_u'
             )
-        );
+        )->on()
+        ->equalsField('pc.id', 'pc_u.rt_postal_codes_usersrt_postal_codes_ida')
+        ->starts('pc.name', $postalcode);
+        $pcu_query->distinct(true);
+
+        $user_ids = $pcu_query->execute();
+        $users_list = array();
+        for($i = 0; $i < count($user_ids); $i++) {
+            $users_list[] = $user_ids[$i]['user_id'];
+        }
+        
+        $s_query = $this->getSugarQuery();
+        $s_query->from(BeanFactory::newBean('Meetings'), array('alias' => 'm','team_security' => false));
         $s_query->select()->fieldRaw('m.id', 'meeting_id');
         $s_query->select()->fieldRaw('m.name', 'meeting');
         $s_query->select()->fieldRaw('m.timeslot_name', 'timeslot');
-        $s_query->select()->fieldRaw('count(distinct m.id)', 'available_count');
+        $s_query->select()->fieldRaw('count(m.timeslot_name)', 'available_count');
         $s_query->select()->fieldRaw('DAYNAME(m.timeslot_datetime)', 'dayname');
         $s_query->select()->fieldRaw('DATE(m.timeslot_datetime)', 'dateonly');
         //join users
-        $s_query->join(
-            'rt_postal_codes_users',
+        $s_query->joinTable(
+            'users',
             array(
-                'alias' => 'pc_u',
+                'alias' => 'u',
                 'team_security' => false
             )
-        )->on()->equals('pc_u.status', 'Active')
-        ->in('pc_u.codelangue_rep', $lang_code)
-        ->equals('pc_u.codecie_rep_c', $args['codecie_c'])
-        ->starts($s_query->getFromAlias().'.name', $postalcode)
-        ->addRaw($categories_where);
-
-        // join with meetings
-        $s_query->joinTable(
-            'meetings',
-            array(
-                'alias' => 'm',
-                'joinType' => 'INNER',
-                'linkingTable' => true
-            )
         )->on()
-            ->equalsField(
-                'm.created_by',
-                'pc_u.id'
-            )
-            ->gt('m.date_start', $start_time_after)
-            ->lt('m.date_start', $start_time_before)
-            ->equals('m.status', 'disponible')
-            ->equals('m.deleted', 0);
+        ->equalsField('u.id', 'm.created_by')
+        ->equals('u.status', 'Active')
+        ->equals('u.codecie_rep_c', $args['codecie_c'])
+        ->equals('u.deleted', 0)
+        ->in('u.codelangue_rep', $lang_code)
+        ->in('u.id', $users_list)
+        ->gt('m.date_start', $start_time_after)
+        ->lt('m.date_start', $start_time_before)
+        ->equals('m.status', 'disponible')
+        ->equals('m.deleted', 0);
+
         $s_query->groupBy('m.timeslot_name');
         $s_query->groupByRaw('DATE(m.timeslot_datetime)');
-        //$GLOBALS['log']->fatal('getAvailableAppointments sql: '.$s_query->compile());
         $result = $s_query->execute();
+
         return $result;
     }
 
@@ -290,10 +293,8 @@ class AppointmentApi extends SugarApi {
         }
         if (isset($args['noagent'])) {
             if ($args['noagent'] == '1000') {
-                $contact->source = 'partenaire';
                 $contact->source_details = 'hit';
             } else if ($args['noagent'] == '2000') {
-                $contact->source = 'partenaire';
                 $contact->source_details = 'reno_depot';
             } else {
                 $contact->source_details = '';
@@ -333,9 +334,6 @@ class AppointmentApi extends SugarApi {
         }
         $meeting->financement = $args['financement'];
         $meeting->description = $args['description'];
-        if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
-            $meeting->partenaire_info = isset($args['partenaire_info']) ? $args['partenaire_info'] : '';
-        }
         $meeting->save();
         $link = 'contacts';
         //$GLOBALS['log']->fatal('timeslot_datetime for meeting: '.$meeting->timeslot_datetime);
@@ -346,17 +344,6 @@ class AppointmentApi extends SugarApi {
             $meeting->$link->add($contact->id);
         }
         //create/update account
-
-        if (isset($args['noagent'])) {
-            if ($args['noagent'] == '1000') {
-                $contact->lead_source = 'hit';
-            } else if ($args['noagent'] == '2000') {
-                $contact->lead_source = 'reno_depot';
-            } else {
-                $contact->lead_source = 'solarcan';
-            }
-        }
-        $contact->save();
         $this->saveAccount($args, $contact, $meeting);
     }
 
