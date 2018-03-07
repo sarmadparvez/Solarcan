@@ -126,6 +126,14 @@ $installdefs = array (
       'from' => '<basepath>/custom/modules/Import/views/view.undo.php',
       'to' => 'custom/modules/Import/views/view.undo.php',
     ),
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Schedulers/Ext/ScheduledTasks/meetingAssignationWorkflow.php',
+      'to' => 'custom/Extension/modules/Schedulers/Ext/ScheduledTasks/meetingAssignationWorkflow.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Schedulers/Ext/Language/en_us.meetingAssignationWorkflow.php',
+      'to' => 'custom/Extension/modules/Schedulers/Ext/Language/en_us.meetingAssignationWorkflow.php',
+    ),
   ),
   'language' => 
   array (

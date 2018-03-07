@@ -290,8 +290,10 @@ class AppointmentApi extends SugarApi {
         }
         if (isset($args['noagent'])) {
             if ($args['noagent'] == '1000') {
+                $contact->source = 'partenaire';
                 $contact->source_details = 'hit';
             } else if ($args['noagent'] == '2000') {
+                $contact->source = 'partenaire';
                 $contact->source_details = 'reno_depot';
             } else {
                 $contact->source_details = '';
@@ -344,6 +346,17 @@ class AppointmentApi extends SugarApi {
             $meeting->$link->add($contact->id);
         }
         //create/update account
+
+        if (isset($args['noagent'])) {
+            if ($args['noagent'] == '1000') {
+                $contact->lead_source = 'hit';
+            } else if ($args['noagent'] == '2000') {
+                $contact->lead_source = 'reno_depot';
+            } else {
+                $contact->lead_source = 'solarcan';
+            }
+        }
+        $contact->save();
         $this->saveAccount($args, $contact, $meeting);
     }
 
