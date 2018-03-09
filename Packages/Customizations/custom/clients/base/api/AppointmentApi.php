@@ -288,6 +288,13 @@ class AppointmentApi extends SugarApi {
         } else if (!empty($contact_args['preferred_language_2'])) {
             $contact->preferred_language = 'anglais';
         }
+        $account_model = $args['account_model'];
+        if (!empty($account_model['occupant_depuis'])) {
+            $contact->occupant_depuis = $account_model['occupant_depuis'];
+        }
+        if (!empty($account_model['etat_de_proprietaire'])) {
+            $contact->etat_de_proprietaire = $account_model['etat_de_proprietaire'];
+        }
         if (isset($args['noagent'])) {
             if ($args['noagent'] == '1000') {
                 $contact->source = 'partenaire';
