@@ -316,13 +316,11 @@ class AppointmentApi extends SugarApi {
     protected function updateMeeting($args, $meeting_id, SugarBean $contact)
     {
         $meeting = $this->retrieveBean('Meetings', $meeting_id);
-        //$GLOBALS['log']->fatal('meeting bean: '.print_r($meeting,1));
         if (empty($meeting)) {
             throw new SugarApiExceptionInvalidParameter('Meeting not found in SugarCRM');
         }
-        //$meeting->timeslot_datetime = '2018-02-21T20:30:00-05:00';
-        // check if the meeting is today. For today's meetings they should be assigned directly, without waiting for
-        // scheduled job which will assign future (next days ) meetings at day end
+        // check if the meeting is today. For today's meetings they should be assigned directly, 
+        // without waiting for scheduled job which will assign future (next days ) meetings at day end
         // meeting date in Y-m-d format e.g 2018-02-21
         $meeting_date = substr($meeting->timeslot_datetime, 0, strpos($meeting->timeslot_datetime, "T"));
         //get timezone from meeting date
@@ -343,13 +341,34 @@ class AppointmentApi extends SugarApi {
         if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
             $meeting->partenaire_info = isset($args['partenaire_info']) ? $args['partenaire_info'] : '';
         }
+        // calculate potential amount of sales
+        $sugar_config = $this->getSugarConfig();
+        if (!empty($sugar_config->get('appointment_config'))) {
+            $config = $sugar_config->get('appointment_config');
+            if (!empty($config['param_portes']) && !empty($config['param_fenetres']) &&
+                !empty($config['param_garage'])) {
+                $account_args = $args['account_model'];
+                //if int, convert to int, if float, covert to float
+                $param_portes = ($config['param_portes'] == (int) $config['param_portes']) ? 
+                (int) $config['param_portes'] : (float) $config['param_portes'];
+                $param_fenetres = ($config['param_fenetres'] == (int) $config['param_fenetres']) ? 
+                (int) $config['param_fenetres'] : (float) $config['param_fenetres'];
+                $param_garage = ($config['param_garage'] == (int) $config['param_garage']) ? 
+                (int) $config['param_garage'] : (float) $config['param_garage'];
+
+                $sum = ($param_portes *  (int)$account_args['nombre_portes_achanger']) + 
+                ($param_fenetres *  (int)$account_args['nombre_fenetres_achanger']) + 
+                ($param_garage *  (int)$account_args['nombre_garage_achanger']);
+                $GLOBALS['log']->fatal('amount of potential sales : '.$sum);
+                // $meeting->fieldname = $sum; //field to be described yet by client
+
+            }
+        }
+
         $meeting->save();
         $link = 'contacts';
-        //$GLOBALS['log']->fatal('timeslot_datetime for meeting: '.$meeting->timeslot_datetime);
-        //$GLOBALS['log']->fatal('now for saved timezone: '.$now_date);
 
         if ($meeting->load_relationship($link)) {
-            //$GLOBALS['log']->fatal('relationship is loaded');
             $meeting->$link->add($contact->id);
         }
         //create/update account
