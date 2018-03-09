@@ -225,23 +225,6 @@ $dictionary['Meeting']['fields']['annee_construction']['enforced']=true;
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_type.php
-
- // created: 2018-01-23 17:34:47
-$dictionary['Meeting']['fields']['type']['len']=100;
-$dictionary['Meeting']['fields']['type']['audited']=false;
-$dictionary['Meeting']['fields']['type']['comments']='Meeting type (ex: WebEx, Other)';
-$dictionary['Meeting']['fields']['type']['duplicate_merge']='enabled';
-$dictionary['Meeting']['fields']['type']['duplicate_merge_dom_value']='1';
-$dictionary['Meeting']['fields']['type']['merge_filter']='disabled';
-$dictionary['Meeting']['fields']['type']['calculated']=false;
-$dictionary['Meeting']['fields']['type']['dependency']=false;
-$dictionary['Meeting']['fields']['type']['options']='meeting_type';
-$dictionary['Meeting']['fields']['type']['default']='1ere_rencontre';
-
- 
-?>
-<?php
 // Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_partenaire_info.php
 
  // created: 2018-01-25 12:40:23
@@ -505,4 +488,22 @@ $dictionary['Meeting']['fields']['duration_minutes'] = array(
     'importable' => 'false',
 );
 
+?>
+<?php
+// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_type.php
+
+ // created: 2018-01-23 17:34:47
+$dictionary['Meeting']['fields']['type']['len']=100;
+$dictionary['Meeting']['fields']['type']['audited']=false;
+$dictionary['Meeting']['fields']['type']['comments']='Meeting type (ex: WebEx, Other)';
+$dictionary['Meeting']['fields']['type']['duplicate_merge']='enabled';
+$dictionary['Meeting']['fields']['type']['duplicate_merge_dom_value']='1';
+$dictionary['Meeting']['fields']['type']['merge_filter']='disabled';
+$dictionary['Meeting']['fields']['type']['calculated']=false;
+$dictionary['Meeting']['fields']['type']['dependency']=false;
+$dictionary['Meeting']['fields']['type']['options']='meeting_type_list';
+$dictionary['Meeting']['fields']['type']['default']='1ere_rencontre';
+$dictionary['Meeting']['fields']['type']['function']='';
+
+ 
 ?>

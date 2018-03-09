@@ -1,6 +1,8 @@
 <?php
 if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
+ini_set('display_errors', 1);
+
 $GLOBALS['log']->fatal('---------------IMPORT SCRIPT---------------');
 
 //$GLOBALS['log']->fatal('---------------USER-POSTALCODE IMPORT---------------');
@@ -178,10 +180,16 @@ $GLOBALS['log']->fatal('---------------IMPORT SCRIPT---------------');
 //}
 
 
-$GLOBALS['log']->fatal("-------------- GEOLOCATION API --------------");
+//$GLOBALS['log']->fatal("-------------- GEOLOCATION API --------------");
+//
+//require '/var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php';
+//$rcc      = new RestCurlClient();
+//$url      = 'https://maps.googleapis.com/maps/api/geocode/json?address=J0L+2L0&key=AIzaSyA55lZ-A1lzH51qpARA1tExIz5KgWINfKk';
+//$response = $rcc->get($url);
+//$GLOBALS['log']->fatal($response);
 
-require '/var/www/html/Solarcan/solarcanportal/api/RestCurlClient.php';
-$rcc      = new RestCurlClient();
-$url      = 'https://maps.googleapis.com/maps/api/geocode/json?address=J0L+2L0&key=AIzaSyA55lZ-A1lzH51qpARA1tExIz5KgWINfKk';
-$response = $rcc->get($url);
-$GLOBALS['log']->fatal($response);
+$m = BeanFactory::newBean('Meetings')->retrieve('6f37f71e-21d3-11e8-9451-2c56dc94b8c8');
+$m->status = 'en_attente_dassignation'; // en_attente_dassignation, disponible
+$m->assigned_user_id = '';
+$m->type = '1ere_rencontre';
+$m->save();

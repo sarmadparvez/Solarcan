@@ -230,8 +230,8 @@ array (
               ),
               8 => 
               array (
-                'name' => 'statut_suivi',
-                'label' => 'LBL_STATUT_SUIVI',
+                'name' => 'status',
+                'label' => 'LBL_STATUS',
                 'span' => 12,
               ),
               9 => 

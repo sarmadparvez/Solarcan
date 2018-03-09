@@ -405,7 +405,6 @@ function getCoords($address)
     $coords = $rcc->get($url."json?address=".$address."&key=".$api_key);
     if (isset($coords['results'][0]['geometry']['location'])) {
         $coords = $coords['results'][0]['geometry']['location'];    // array('lat' => ?, 'lng' => ?)
-        $GLOBALS['log']->fatal($coords);
         return $coords;
     } else {
         $GLOBALS['log']->fatal("ADDRESS RETURNED: ", $coords);
