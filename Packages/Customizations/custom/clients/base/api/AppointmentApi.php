@@ -160,14 +160,14 @@ class AppointmentApi extends SugarApi {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_id']);
             //$GLOBALS['log']->fatal('contact last_name: '.$contact->last_name);
-        } else if (!empty($args['postalcode']) && 
-            (!empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
-             !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other']))
+        } else if (
+            !empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
+             !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other'])
         ) {
             $contact = $this->searchContact($args);
         } else {
             throw new SugarApiExceptionInvalidParameter(
-                'Please either provide contact_id or postalcode and one of the phone numbers'
+                'Please either provide contact_id or one of the phone numbers'
             );
         }
 
@@ -195,15 +195,22 @@ class AppointmentApi extends SugarApi {
         return true;
     }
 
+    /**
+     * Creates/updates contact and batiment in sugar
+     * @param ServiceBase $api
+     * @param array $args
+     * @return boolean
+     * @throws SugarApiExceptionInvalidParameter
+     */
     public function saveInfoandAccount(ServiceBase $api, array $args)
     {
         $this->requireArgs($args, array('contact_model', 'account_model', 'noagent', 'postalcode'));
         if (!empty($args['contact_model']['id'])) {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_model']['id']);
-        } else if (!empty($args['postalcode']) &&
-            (!empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
-             !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other']))
+        } else if (
+            !empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
+             !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other'])
         ) {
             $contact_id = $this->searchContact($args);
             if (!empty($contact_id) && !empty($contact_id[0]['id'])) {
@@ -214,7 +221,7 @@ class AppointmentApi extends SugarApi {
                     $contact = BeanFactory::newBean('Contacts');
                 } else {
                     throw new SugarApiExceptionInvalidParameter(
-                        'Please either provide contact_id or postalcode and one of the phone numbers'
+                        'Contact not found in CRM'
                     );
                 }
             }
@@ -224,7 +231,7 @@ class AppointmentApi extends SugarApi {
                 $contact = BeanFactory::newBean('Contacts');
             } else {
                 throw new SugarApiExceptionInvalidParameter(
-                    'Please either provide contact_id or postalcode and one of the phone numbers'
+                    'Contact not found in CRM'
                 );
             }
         }
@@ -483,7 +490,7 @@ class AppointmentApi extends SugarApi {
                 $s_query->getFromAlias().'.id'
             )
         );
-        $s_query->where()->equals($s_query->getFromAlias().'.primary_address_postalcode', $args['postalcode']);
+        // $s_query->where()->equals($s_query->getFromAlias().'.primary_address_postalcode', $args['postalcode']);
 
         $s_query->whereRaw($this->getPhoneWhere(
                 $contact_args['phone_home'],
