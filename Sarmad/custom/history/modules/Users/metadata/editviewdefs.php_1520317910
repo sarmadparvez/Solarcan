@@ -32,18 +32,12 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
-        'LBL_EDITVIEW_PANEL1' => 
-        array (
-          'newTab' => false,
-          'panelDefault' => 'expanded',
-        ),
         'LBL_EMPLOYEE_INFORMATION' => 
         array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
       ),
-      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
@@ -84,121 +78,6 @@ array (
         3 => 
         array (
           0 => 'picture',
-        ),
-      ),
-      'lbl_editview_panel1' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            'name' => 'adresse_rep',
-            'label' => 'LBL_ADRESSE_REP',
-          ),
-          1 => 
-          array (
-            'name' => 'ville_rep',
-            'label' => 'LBL_VILLE_REP',
-          ),
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            'name' => 'prenom_rep',
-            'label' => 'LBL_PRENOM_REP',
-          ),
-          1 => 
-          array (
-            'name' => 'nom_rep',
-            'label' => 'LBL_NOM_REP',
-          ),
-        ),
-        2 => 
-        array (
-          0 => 
-          array (
-            'name' => 'cellulaire_rep',
-            'label' => 'LBL_CELLULAIRE_REP',
-          ),
-          1 => 
-          array (
-            'name' => 'fax_rep',
-            'label' => 'LBL_FAX_REP',
-          ),
-        ),
-        3 => 
-        array (
-          0 => 
-          array (
-            'name' => 'codecie_rep_c',
-            'label' => 'LBL_CODECIE_REP_C',
-          ),
-          1 => 
-          array (
-            'name' => 'codelangue_rep',
-            'label' => 'LBL_CODELANGUE_REP',
-          ),
-        ),
-        4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'courriel_rep',
-            'label' => 'LBL_COURRIEL_REP',
-          ),
-          1 => 
-          array (
-            'name' => 'pager_rep',
-            'label' => 'LBL_PAGER_REP',
-          ),
-        ),
-        5 => 
-        array (
-          0 => 
-          array (
-            'name' => 'novendeur_rep',
-            'label' => 'LBL_NOVENDEUR_REP',
-          ),
-          1 => 
-          array (
-            'name' => 'nosolarcan_rep',
-            'label' => 'LBL_NOSOLARCAN_REP',
-          ),
-        ),
-        6 => 
-        array (
-          0 => 
-          array (
-            'name' => 'secteur_rep',
-            'label' => 'LBL_SECTEUR_REP',
-          ),
-          1 => 
-          array (
-            'name' => 'telres_rep',
-            'label' => 'LBL_TELRES_REP',
-          ),
-        ),
-        7 => 
-        array (
-          0 => 
-          array (
-            'name' => 'qualified_doors_rep_c',
-            'label' => 'LBL_QUALIFIED_DOORS_REP_C',
-          ),
-          1 => 
-          array (
-            'name' => 'qualified_windows_rep_c',
-            'label' => 'LBL_QUALIFIED_WINDOWS_REP_C',
-          ),
-        ),
-        8 => 
-        array (
-          0 => 
-          array (
-            'name' => 'qualified_garage_rep_c',
-            'label' => 'LBL_QUALIFIED_GARAGE_REP_C',
-          ),
         ),
       ),
       'LBL_EMPLOYEE_INFORMATION' => 
@@ -255,6 +134,14 @@ array (
         10 => 
         array (
           0 => 'description',
+        ),
+        11 => 
+        array (
+          0 => 
+          array (
+            'name' => 'can_sell',
+            'label' => 'LBL_CAN_SELL',
+          ),
         ),
       ),
     ),

@@ -175,12 +175,6 @@ array (
               ),
               1 => 
               array (
-                'name' => 'telephone',
-                'label' => 'LBL_TELEPHONE',
-                'span' => 12,
-              ),
-              2 => 
-              array (
                 'name' => 'date_enregistrement',
                 'label' => 'LBL_DATE_ENREGISTREMENT',
                 'span' => 12,

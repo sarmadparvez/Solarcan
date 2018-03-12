@@ -43,7 +43,14 @@ class AppointmentApi extends SugarApi {
                 'pathVars' => array(''),
                 'method' => 'getAppointmentConfig',
                 'shortHelp' => 'Stores appointment related configuration in sugar config',
-            )
+            ),
+            'saveInfoandAccount' => array(
+                'reqType' => 'POST',
+                'path' => array('<module>', 'saveInfoandAccount'),
+                'pathVars' => array('module', 'saveInfoandAccount'),
+                'method' => 'saveInfoandAccount',
+                'shortHelp' => 'Save Contact and Batiment information',
+            ),
         );
     }
 
@@ -80,7 +87,7 @@ class AppointmentApi extends SugarApi {
         $x_hours = $this->getSugarConfig()->get('appointment_config')['x_hours'];
         $start_time_before = $this->getSugarConfig()->get('appointment_config')['appointments_upto'];
         $start_time_after = $this->getTimeDate()->getNow()->modify('+'.$x_hours.'hours')->asDb();
-        
+
         // query to get available appointments based on postal code
         $s_query = $this->getSugarQuery();
         $s_query->from(BeanFactory::newBean('rt_postal_codes'), array('team_security' => false));
@@ -92,7 +99,7 @@ class AppointmentApi extends SugarApi {
         $s_query->select()->fieldRaw('m.id', 'meeting_id');
         $s_query->select()->fieldRaw('m.name', 'meeting');
         $s_query->select()->fieldRaw('m.timeslot_name', 'timeslot');
-        $s_query->select()->fieldRaw('count(m.timeslot_name)', 'available_count');
+        $s_query->select()->fieldRaw('count(distinct m.id)', 'available_count');
         $s_query->select()->fieldRaw('DAYNAME(m.timeslot_datetime)', 'dayname');
         $s_query->select()->fieldRaw('DATE(m.timeslot_datetime)', 'dateonly');
         //join users
@@ -107,7 +114,7 @@ class AppointmentApi extends SugarApi {
         ->equals('pc_u.codecie_rep_c', $args['codecie_c'])
         ->starts($s_query->getFromAlias().'.name', $postalcode)
         ->addRaw($categories_where);
-        
+
         // join with meetings
         $s_query->joinTable(
             'meetings',
@@ -132,6 +139,12 @@ class AppointmentApi extends SugarApi {
         return $result;
     }
 
+
+    /**
+     * 
+     */
+
+
     /**
      * Book appointment for contact
      *
@@ -142,7 +155,7 @@ class AppointmentApi extends SugarApi {
     public function bookAppointment(ServiceBase $api, array $args)
     {
         //$GLOBALS['log']->fatal('in book appointment args: '.print_r($args,1));
-        $this->requireArgs($args, array('meeting_id', 'contact_model', 'account_model'));
+        $this->requireArgs($args, array('meeting_id', 'contact_model', 'account_model', 'noagent'));
         if (!empty($args['contact_id'])) {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_id']);
@@ -168,13 +181,56 @@ class AppointmentApi extends SugarApi {
                 );
             }
         }
+        
         if (empty($contact)) {
-            throw new SugarApiExceptionInvalidParameter("Contact not found in CRM");
-            
+            if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
+                $contact = BeanFactory::newBean('Contacts');
+            } else {
+                throw new SugarApiExceptionInvalidParameter("Contact not found in CRM");
+            }
         }
         //populate contact fields and update it
         $this->updateContact($args, $contact);
         $this->updateMeeting($args, $args['meeting_id'], $contact);
+        return true;
+    }
+
+    public function saveInfoandAccount(ServiceBase $api, array $args)
+    {
+        $this->requireArgs($args, array('contact_model', 'account_model', 'noagent', 'postalcode'));
+        if (!empty($args['contact_model']['id'])) {
+            //retrieve contact
+            $contact = $this->retrieveBean('Contacts', $args['contact_model']['id']);
+        } else if (!empty($args['postalcode']) &&
+            (!empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
+             !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other']))
+        ) {
+            $contact_id = $this->searchContact($args);
+            if (!empty($contact_id) && !empty($contact_id[0]['id'])) {
+                $contact = BeanFactory::newBean('Contacts')->retrieve($contact_id[0]['id']);
+            } else {
+                if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
+                // if reseller, then create account
+                    $contact = BeanFactory::newBean('Contacts');
+                } else {
+                    throw new SugarApiExceptionInvalidParameter(
+                        'Please either provide contact_id or postalcode and one of the phone numbers'
+                    );
+                }
+            }
+        } else {
+            if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
+                // if reseller, then create account
+                $contact = BeanFactory::newBean('Contacts');
+            } else {
+                throw new SugarApiExceptionInvalidParameter(
+                    'Please either provide contact_id or postalcode and one of the phone numbers'
+                );
+            }
+        }
+        //populate contact fields and update it
+        $this->updateContact($args, $contact);
+        $this->saveAccount($args, $contact);
         return true;
     }
 
@@ -200,7 +256,6 @@ class AppointmentApi extends SugarApi {
         if (!empty($args['postalcode'])) {
             $contact->primary_address_postalcode = $args['postalcode'];
         }
-
         if (!empty($contact_args['phone_home'])) {
             $contact->phone_home = $contact_args['phone_home'];
         }
@@ -228,6 +283,30 @@ class AppointmentApi extends SugarApi {
         if (!empty($contact_args['etat_de_proprietaire'])) {
             $contact->etat_de_proprietaire = $contact_args['etat_de_proprietaire'];
         }
+        if (!empty($contact_args['preferred_language_1'])) {
+            $contact->preferred_language = 'francais';
+        } else if (!empty($contact_args['preferred_language_2'])) {
+            $contact->preferred_language = 'anglais';
+        }
+        $account_model = $args['account_model'];
+        if (!empty($account_model['occupant_depuis'])) {
+            $contact->occupant_depuis = $account_model['occupant_depuis'];
+        }
+        if (!empty($account_model['etat_de_proprietaire'])) {
+            $contact->etat_de_proprietaire = $account_model['etat_de_proprietaire'];
+        }
+        if (isset($args['noagent'])) {
+            if ($args['noagent'] == '1000') {
+                $contact->source = 'partenaire';
+                $contact->source_details = 'hit';
+            } else if ($args['noagent'] == '2000') {
+                $contact->source = 'partenaire';
+                $contact->source_details = 'reno_depot';
+            } else {
+                $contact->source_details = '';
+            }
+        }
+        //$contact->consentement = $contact_args['consentement'];
         $contact->save();
     }
 
@@ -237,13 +316,11 @@ class AppointmentApi extends SugarApi {
     protected function updateMeeting($args, $meeting_id, SugarBean $contact)
     {
         $meeting = $this->retrieveBean('Meetings', $meeting_id);
-        //$GLOBALS['log']->fatal('meeting bean: '.print_r($meeting,1));
         if (empty($meeting)) {
             throw new SugarApiExceptionInvalidParameter('Meeting not found in SugarCRM');
         }
-        //$meeting->timeslot_datetime = '2018-02-21T20:30:00-05:00';
-        // check if the meeting is today. For today's meetings they should be assigned directly, without waiting for
-        // scheduled job which will assign future (next days ) meetings at day end
+        // check if the meeting is today. For today's meetings they should be assigned directly, 
+        // without waiting for scheduled job which will assign future (next days ) meetings at day end
         // meeting date in Y-m-d format e.g 2018-02-21
         $meeting_date = substr($meeting->timeslot_datetime, 0, strpos($meeting->timeslot_datetime, "T"));
         //get timezone from meeting date
@@ -261,28 +338,68 @@ class AppointmentApi extends SugarApi {
         }
         $meeting->financement = $args['financement'];
         $meeting->description = $args['description'];
+        if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
+            $meeting->partenaire_info = isset($args['partenaire_info']) ? $args['partenaire_info'] : '';
+        }
+        // calculate potential amount of sales
+        $sugar_config = $this->getSugarConfig();
+        if (!empty($sugar_config->get('appointment_config'))) {
+            $config = $sugar_config->get('appointment_config');
+            if (!empty($config['param_portes']) && !empty($config['param_fenetres']) &&
+                !empty($config['param_garage'])) {
+                $account_args = $args['account_model'];
+                //if int, convert to int, if float, covert to float
+                $param_portes = ($config['param_portes'] == (int) $config['param_portes']) ? 
+                (int) $config['param_portes'] : (float) $config['param_portes'];
+                $param_fenetres = ($config['param_fenetres'] == (int) $config['param_fenetres']) ? 
+                (int) $config['param_fenetres'] : (float) $config['param_fenetres'];
+                $param_garage = ($config['param_garage'] == (int) $config['param_garage']) ? 
+                (int) $config['param_garage'] : (float) $config['param_garage'];
+
+                $sum = ($param_portes *  (int)$account_args['nombre_portes_achanger']) + 
+                ($param_fenetres *  (int)$account_args['nombre_fenetres_achanger']) + 
+                ($param_garage *  (int)$account_args['nombre_garage_achanger']);
+                $GLOBALS['log']->fatal('amount of potential sales : '.$sum);
+                // $meeting->fieldname = $sum; //field to be described yet by client
+
+            }
+        }
+
         $meeting->save();
         $link = 'contacts';
-        //$GLOBALS['log']->fatal('timeslot_datetime for meeting: '.$meeting->timeslot_datetime);
-        //$GLOBALS['log']->fatal('now for saved timezone: '.$now_date);
 
         if ($meeting->load_relationship($link)) {
-            //$GLOBALS['log']->fatal('relationship is loaded');
             $meeting->$link->add($contact->id);
         }
         //create/update account
-        $this->saveAccount($args, $meeting, $contact);
+
+        if (isset($args['noagent'])) {
+            if ($args['noagent'] == '1000') {
+                $contact->lead_source = 'hit';
+            } else if ($args['noagent'] == '2000') {
+                $contact->lead_source = 'reno_depot';
+            } else {
+                $contact->lead_source = 'solarcan';
+            }
+        }
+        $contact->save();
+        $this->saveAccount($args, $contact, $meeting);
     }
 
     /**
     * Save/update account when an appointment is booked
     */
-    protected function saveAccount($args, SugarBean $meeting, SugarBean $contact)
+    protected function saveAccount($args, SugarBean $contact, SugarBean $meeting = null)
     {
         //if no account is related to contact, create account
-        if (empty($contact->account_id) && !empty($args['account_model'])) {
+        if (!empty($args['account_model'])) {
+            $account = null;
+            if (empty($contact->account_id)) {
+                $account = BeanFactory::newBean('Accounts');
+            } else {
+                $account = BeanFactory::newBean('Accounts')->retrieve($contact->account_id);
+            }
             $account_args = $args['account_model'];
-            $account = $this->getNewBean('Accounts');
             //copy address from contact
             $account->billing_address_street = $contact->primary_address_street;
             $account->billing_address_city = $contact->primary_address_city;
@@ -306,11 +423,13 @@ class AppointmentApi extends SugarApi {
             }           
             //relate account to meeting
             $link = 'meetings';
-            if ($account->load_relationship($link)) {
+            if ($account->load_relationship($link) && $meeting) {
                 //$GLOBALS['log']->fatal('relationship is loaded');
                 $account->$link->add($meeting->id);
             }
-            $this->saveOpportunity($args, $account, $contact);
+            if ($meeting) {
+                $this->saveOpportunity($args, $account, $contact);
+            }
         }
     }
 

@@ -506,3 +506,10 @@ $dictionary['Meeting']['fields']['type']['default']='1ere_rencontre';
 
  
 ?>
+<?php
+// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/acls.php
+
+
+$dictionary['Meeting']['acls']['SugarACLFieldOverride'] = true;
+
+?>
