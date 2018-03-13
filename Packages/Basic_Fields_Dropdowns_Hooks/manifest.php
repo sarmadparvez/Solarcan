@@ -2188,16 +2188,6 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_note.php',
       'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_note.php',
     ),
-    366 => 
-    array (
-      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_id.php',
-      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_id.php',
-    ),
-    367 => 
-    array (
-      'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_name.php',
-      'to' => 'custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_name.php',
-    ),
     368 => 
     array (
       'from' => '<basepath>/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_statut_suivi.php',
