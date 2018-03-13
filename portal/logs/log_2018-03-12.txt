@@ -1,0 +1,248 @@
+[2018-03-12 7:10:39.573417] [info] url: https://localhost:443/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=rolustech&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-12 7:20:21.079081] [info] url: https://localhost:443/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=rolustech&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-12 7:28:43.489213] [info] url: https://localhost:443/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=rolustech&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-12 7:30:44.906980] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 7:30:45.139550] [info] result: Array
+(
+)
+
+[2018-03-12 7:35:38.796344] [info] url: https://localhost:443/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=rolustech&filter%5B1%5D%5Bpassword%5D=asdf
+[2018-03-12 7:36:00.335058] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 7:36:00.567118] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 2L0
+            [meeting_id] => efb50c9a-25c7-11e8-abc9-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-03-13
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 2M0
+            [meeting_id] => efc1e28a-25c7-11e8-ae34-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Wednesday
+            [dateonly] => 2018-03-14
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 2J0
+            [meeting_id] => efc5a87a-25c7-11e8-9d87-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Thursday
+            [dateonly] => 2018-03-15
+        )
+
+)
+
+[2018-03-12 7:40:24.010699] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 7:40:24.241725] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1C0
+            [meeting_id] => efb50c9a-25c7-11e8-abc9-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-03-13
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 2R0
+            [meeting_id] => efc1e28a-25c7-11e8-ae34-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Wednesday
+            [dateonly] => 2018-03-14
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => efc5a87a-25c7-11e8-9d87-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Thursday
+            [dateonly] => 2018-03-15
+        )
+
+)
+
+[2018-03-12 7:47:41.712627] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 7:47:41.942986] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 2L0
+            [meeting_id] => efb50c9a-25c7-11e8-abc9-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-03-13
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 2M0
+            [meeting_id] => efc1e28a-25c7-11e8-ae34-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Wednesday
+            [dateonly] => 2018-03-14
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 2J0
+            [meeting_id] => efc5a87a-25c7-11e8-9d87-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Thursday
+            [dateonly] => 2018-03-15
+        )
+
+)
+
+[2018-03-12 7:58:02.837030] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 7:58:03.067856] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 2L0
+            [meeting_id] => efb50c9a-25c7-11e8-abc9-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-03-13
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 2M0
+            [meeting_id] => efc1e28a-25c7-11e8-ae34-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Wednesday
+            [dateonly] => 2018-03-14
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 2J0
+            [meeting_id] => efc5a87a-25c7-11e8-9d87-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Thursday
+            [dateonly] => 2018-03-15
+        )
+
+)
+
+[2018-03-12 7:59:53.134963] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 7:59:53.364515] [info] result: Array
+(
+)
+
+[2018-03-12 8:00:01.851560] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 8:00:02.258920] [info] result: Array
+(
+)
+
+[2018-03-12 8:00:15.074033] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 8:00:15.536808] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 2L0
+            [meeting_id] => efb50c9a-25c7-11e8-abc9-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-03-13
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 2M0
+            [meeting_id] => efc1e28a-25c7-11e8-ae34-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Wednesday
+            [dateonly] => 2018-03-14
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 2J0
+            [meeting_id] => efc5a87a-25c7-11e8-9d87-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Thursday
+            [dateonly] => 2018-03-15
+        )
+
+)
+
+[2018-03-12 8:02:24.769849] [info] url: https://localhost:443/rest/v11/Meetings/getAvailableAppointments
+[2018-03-12 8:02:25.001000] [info] result: Array
+(
+    [0] => Array
+        (
+            [postalcode] => J0L 1P0
+            [meeting_id] => efb50c9a-25c7-11e8-abc9-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Tuesday
+            [dateonly] => 2018-03-13
+        )
+
+    [1] => Array
+        (
+            [postalcode] => J0L 2L0
+            [meeting_id] => efc1e28a-25c7-11e8-ae34-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Wednesday
+            [dateonly] => 2018-03-14
+        )
+
+    [2] => Array
+        (
+            [postalcode] => J0L 2M0
+            [meeting_id] => efc5a87a-25c7-11e8-9d87-000000000000
+            [meeting] => Available Meetings
+            [timeslot] => PM1
+            [available_count] => 1
+            [dayname] => Thursday
+            [dateonly] => 2018-03-15
+        )
+
+)
+
+[2018-03-12 19:34:49.119164] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=007&filter%5B1%5D%5Bpassword%5D=asdf

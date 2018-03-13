@@ -59,15 +59,14 @@ window.PortalContainerView = Backbone.View.extend({
     },
     
     saveToSugar: function() {
-        console.log("Save Info and Batiment");
         this.api_call_sent = true;
         var contact_model = this.childViews.contactView.model,
             account_model = this.childViews.accountView.model;
         
-        if (!this.validateContactModel()
-            || !this.validateContactPhone()
-            || !this.validateAccountModel()
-            || !this.validateCategory()) {
+        if (!this.validateContactModel() ||
+            !this.validateContactPhone() ||
+            !this.validateAccountModel() ||
+            !this.validateCategory()) {
             return;
         }
         
@@ -85,7 +84,8 @@ window.PortalContainerView = Backbone.View.extend({
                 if (response.result) {
                     alert('Info and Batiment Saved Successfully');
                 } else {
-                    alert(response.error.msg);
+                    var error = JSON.parse(response.error.msg);
+                    alert(error.error_message);
                 }
             }, this),
             error: _.bind(function(error) {
@@ -188,7 +188,8 @@ window.PortalContainerView = Backbone.View.extend({
                     this.available_appointments = response.records;
                     this.populateCalendar();
                 } else {
-                    alert(response.error.msg);
+                    var error = JSON.parse(response.error.msg);
+                    alert(error.error_message);
                 }
             }, this),
             error: _.bind(function(error) {
@@ -228,7 +229,8 @@ window.PortalContainerView = Backbone.View.extend({
                 if (response.result) {
                     alert('Appointment successfully booked');
                 } else {
-                    alert(response.error.msg);
+                    var error = JSON.parse(response.error.msg);
+                    alert(error.error_message);
                 }
             }, this),
             error: _.bind(function(error) {

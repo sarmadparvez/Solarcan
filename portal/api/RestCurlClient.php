@@ -167,7 +167,7 @@ class RestCurlClient {
         $code = $this->response_info['http_code'];
 
         if(($code >= 400 && $code <=600) || !in_array($code, range(200,207))) {
-          Application::getLogger()->error('error: '.print_r($res,1));
+          // Application::getLogger()->error('error: '.print_r($res,1));
           throw new HttpServerException($res, $code);
         }
     }

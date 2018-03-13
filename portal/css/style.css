@@ -62,8 +62,12 @@ button {
   display: block;
   padding: 0;
   background: transparent;
-  transition: all 0.3s ease-in-out; }
-
+  transition: all 0.3s ease-in-out; 
+  cursor: pointer;
+}
+.btn {
+	cursor: pointer;
+}
 input, textarea {
   font-family: 'Raleway', sans-serif;
   display: block;
@@ -146,6 +150,7 @@ h1, h2, h3, h4, h5 {
     text-align: left;
     align-items: flex-start;
     justify-content: flex-start;
+    min-width: 150px;
 }
 .portal-from-sm-field  .form-control{
 	width:60px;
@@ -177,7 +182,12 @@ div#footer {
     background: #fff;
     width: 100%;
 }
-
+.ui-dialog .ui-dialog-titlebar-close{
+	top:39%!important;
+}
+button.ui-dialog-titlebar-close:after {
+    content: "x";
+}
 /*=== RESPONSIVE FORM CSS HERE =======*/
 @media (max-width: 768px) {
 	  .field-label-responsive {
