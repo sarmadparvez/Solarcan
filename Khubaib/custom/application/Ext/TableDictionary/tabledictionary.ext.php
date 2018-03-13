@@ -17,3 +17,11 @@ include('custom/metadata/rt_classification_usersMetaData.php');
 
 
 ?>
+<?php
+// Merged from custom/Extension/application/Ext/TableDictionary/dsm_suivi_de_vente_opportunities.php
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/dsm_suivi_de_vente_opportunitiesMetaData.php');
+
+
+?>

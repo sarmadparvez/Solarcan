@@ -578,29 +578,6 @@ $dictionary['Contact']['fields']['consentement']['unified_search']=false;
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php
-
-
-$dictionary['Contact']['fields']['codecie_c'] = array (
-	'name' => 'codecie_c',
-	'vname' => 'LBL_CODECIE_C',
-	'type' => 'enum',
-	'massupdate' => true,
-	'duplicate_merge' => 'enabled',
-	'merge_filter' => 'enabled',
-	'calculated' => false,
-	'required' => true,
-	'len' => 50,
-	'size' => 50,
-	'importable' => true,
-	'options' => 'codecie_dom',
-	'audited' => true,
-	'reportable' => true,
-	'default' => 'Solarcan'
-);
-
-?>
-<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_alt_address_street.php
 
  // created: 2018-01-23 15:34:15
@@ -815,6 +792,31 @@ $dictionary['Contact']['fields']['do_not_call']['calculated']=false;
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_statut_dnc.php
+
+ // created: 2018-01-29 15:19:58
+$dictionary['Contact']['fields']['statut_dnc']['name']='statut_dnc';
+$dictionary['Contact']['fields']['statut_dnc']['vname']='LBL_STATUT_DNC';
+$dictionary['Contact']['fields']['statut_dnc']['type']='enum';
+$dictionary['Contact']['fields']['statut_dnc']['options']='statut_dnc_dom';
+$dictionary['Contact']['fields']['statut_dnc']['massupdate']=false;
+$dictionary['Contact']['fields']['statut_dnc']['duplicate_merge']='enabled';
+$dictionary['Contact']['fields']['statut_dnc']['merge_filter']='enabled';
+$dictionary['Contact']['fields']['statut_dnc']['calculated']=false;
+$dictionary['Contact']['fields']['statut_dnc']['required']=false;
+$dictionary['Contact']['fields']['statut_dnc']['default']='active';
+$dictionary['Contact']['fields']['statut_dnc']['audited']=true;
+$dictionary['Contact']['fields']['statut_dnc']['importable']='true';
+$dictionary['Contact']['fields']['statut_dnc']['duplicate_merge_dom_value']='2';
+$dictionary['Contact']['fields']['statut_dnc']['full_text_search']=array (
+  'enabled' => '0',
+  'boost' => '1',
+  'searchable' => false,
+);
+
+ 
+?>
+<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_phone_work.php
 
  // created: 2018-01-23 15:30:31
@@ -949,23 +951,25 @@ $dictionary['Contact']['fields']['salutation']['required']=true;
  
 ?>
 <?php
-// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_statut_dnc.php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php
 
- // created: 2018-03-02 11:07:33
-$dictionary['Contact']['fields']['statut_dnc']['name']='statut_dnc';
-$dictionary['Contact']['fields']['statut_dnc']['vname']='LBL_STATUT_DNC';
-$dictionary['Contact']['fields']['statut_dnc']['type']='enum';
-$dictionary['Contact']['fields']['statut_dnc']['options']='statut_dnc_dom';
-$dictionary['Contact']['fields']['statut_dnc']['massupdate']=true;
-$dictionary['Contact']['fields']['statut_dnc']['duplicate_merge']='enabled';
-$dictionary['Contact']['fields']['statut_dnc']['merge_filter']='enabled';
-$dictionary['Contact']['fields']['statut_dnc']['calculated']=false;
-$dictionary['Contact']['fields']['statut_dnc']['required']=false;
-$dictionary['Contact']['fields']['statut_dnc']['default']='active';
-$dictionary['Contact']['fields']['statut_dnc']['audited']=true;
-$dictionary['Contact']['fields']['statut_dnc']['importable']='true';
-$dictionary['Contact']['fields']['statut_dnc']['duplicate_merge_dom_value']='2';
-$dictionary['Contact']['fields']['statut_dnc']['dependency']=false;
 
- 
+$dictionary['Contact']['fields']['codecie_c'] = array (
+	'name' => 'codecie_c',
+	'vname' => 'LBL_CODECIE_C',
+	'type' => 'enum',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'required' => true,
+	'len' => 50,
+	'size' => 50,
+	'importable' => true,
+	'options' => 'codecie_dom',
+	'audited' => true,
+	'reportable' => true,
+	'default' => 'Solarcan'
+);
+
 ?>

@@ -22,3 +22,4 @@ $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Additional Info';
 $mod_strings['LBL_LEAD_SOURCE'] = 'Lead Source';
 $mod_strings['LBL_RECORDVIEW_PANEL2'] = 'Suivi de Vente';
 $mod_strings['LBL_RECORDVIEW_PANEL3'] = 'Suivi de Vente';
+$mod_strings['LBL_DSM_SUIVI_DE_VENTE_NAME'] = 'Suivi de Vente';

@@ -29,9 +29,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'DNC_Suivi_Modules',
-  'published_date' => '2018-01-31 08:00:45',
+  'published_date' => '2018-03-13 06:00:05',
   'type' => 'module',
-  'version' => 1517385647,
+  'version' => 1520920805,
   'remove_tables' => 'prompt',
 );
 

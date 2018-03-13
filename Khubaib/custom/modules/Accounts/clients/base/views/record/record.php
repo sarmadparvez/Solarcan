@@ -178,56 +178,6 @@ array (
             array (
               0 => 
               array (
-                'name' => 'annee_construction',
-                'label' => 'LBL_ANNEE_CONSTRUCTION',
-                'span' => 12,
-              ),
-              1 => 
-              array (
-                'name' => 'nombre_fenetres_achanger',
-                'label' => 'LBL_NOMBRE_FENETRES_ACHANGER',
-              ),
-              2 => 
-              array (
-                'name' => 'nombre_fenetres_total',
-                'label' => 'LBL_NOMBRE_FENETRES_TOTAL',
-              ),
-              3 => 
-              array (
-                'name' => 'nombre_garage_achanger',
-                'label' => 'LBL_NOMBRE_GARAGE_ACHANGER',
-              ),
-              4 => 
-              array (
-                'name' => 'nombre_garage_total',
-                'label' => 'LBL_NOMBRE_GARAGE_TOTAL',
-              ),
-              5 => 
-              array (
-                'name' => 'nombre_portes_achanger',
-                'label' => 'LBL_NOMBRE_PORTES_ACHANGER',
-              ),
-              6 => 
-              array (
-                'name' => 'nombre_portes_total',
-                'label' => 'LBL_NOMBRE_PORTES_TOTAL',
-              ),
-            ),
-          ),
-          2 => 
-          array (
-            'name' => 'panel_hidden',
-            'label' => 'LBL_RECORD_SHOWMORE',
-            'hide' => true,
-            'columns' => 2,
-            'labelsOnTop' => true,
-            'placeholders' => true,
-            'newTab' => false,
-            'panelDefault' => 'expanded',
-            'fields' => 
-            array (
-              0 => 
-              array (
                 'name' => 'billing_address',
                 'type' => 'fieldset',
                 'css_class' => 'address',
@@ -269,6 +219,56 @@ array (
               ),
               1 => 
               array (
+                'name' => 'annee_construction',
+                'label' => 'LBL_ANNEE_CONSTRUCTION',
+                'span' => 12,
+              ),
+              2 => 
+              array (
+                'name' => 'nombre_portes_total',
+                'label' => 'LBL_NOMBRE_PORTES_TOTAL',
+              ),
+              3 => 
+              array (
+                'name' => 'nombre_portes_achanger',
+                'label' => 'LBL_NOMBRE_PORTES_ACHANGER',
+              ),
+              4 => 
+              array (
+                'name' => 'nombre_fenetres_total',
+                'label' => 'LBL_NOMBRE_FENETRES_TOTAL',
+              ),
+              5 => 
+              array (
+                'name' => 'nombre_fenetres_achanger',
+                'label' => 'LBL_NOMBRE_FENETRES_ACHANGER',
+              ),
+              6 => 
+              array (
+                'name' => 'nombre_garage_total',
+                'label' => 'LBL_NOMBRE_GARAGE_TOTAL',
+              ),
+              7 => 
+              array (
+                'name' => 'nombre_garage_achanger',
+                'label' => 'LBL_NOMBRE_GARAGE_ACHANGER',
+              ),
+            ),
+          ),
+          2 => 
+          array (
+            'name' => 'panel_hidden',
+            'label' => 'LBL_RECORD_SHOWMORE',
+            'hide' => true,
+            'columns' => 2,
+            'labelsOnTop' => true,
+            'placeholders' => true,
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'fields' => 
+            array (
+              0 => 
+              array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
                 'inline' => true,
@@ -291,7 +291,7 @@ array (
                   ),
                 ),
               ),
-              2 => 
+              1 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,

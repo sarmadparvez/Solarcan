@@ -170,6 +170,11 @@ array (
             array (
               0 => 'assigned_user_name',
               1 => 'team_name',
+              2 => 
+              array (
+                'name' => 'dsm_suivi_de_vente_opportunities_name',
+                'span' => 12,
+              ),
             ),
           ),
           2 => 
@@ -199,7 +204,6 @@ array (
               2 => 
               array (
                 'name' => 'opportunity_name',
-                'studio' => 'visible',
                 'label' => 'LBL_OPPORTUNITY_NAME',
                 'span' => 12,
               ),
@@ -230,8 +234,8 @@ array (
               ),
               8 => 
               array (
-                'name' => 'statut_suivi',
-                'label' => 'LBL_STATUT_SUIVI',
+                'name' => 'status',
+                'label' => 'LBL_STATUS',
                 'span' => 12,
               ),
               9 => 

@@ -2,6 +2,50 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
+// Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/dsm_suivi_de_vente_opportunities_dsm_suivi_de_vente.php
+
+// created: 2018-03-13 11:00:06
+$dictionary["dsm_suivi_de_vente"]["fields"]["dsm_suivi_de_vente_opportunities"] = array (
+  'name' => 'dsm_suivi_de_vente_opportunities',
+  'type' => 'link',
+  'relationship' => 'dsm_suivi_de_vente_opportunities',
+  'source' => 'non-db',
+  'module' => 'Opportunities',
+  'bean_name' => 'Opportunity',
+  'vname' => 'LBL_DSM_SUIVI_DE_VENTE_OPPORTUNITIES_FROM_OPPORTUNITIES_TITLE',
+  'id_name' => 'dsm_suivi_de_vente_opportunitiesopportunities_idb',
+);
+$dictionary["dsm_suivi_de_vente"]["fields"]["dsm_suivi_de_vente_opportunities_name"] = array (
+  'name' => 'dsm_suivi_de_vente_opportunities_name',
+  'type' => 'relate',
+  'source' => 'non-db',
+  'vname' => 'LBL_DSM_SUIVI_DE_VENTE_OPPORTUNITIES_FROM_OPPORTUNITIES_TITLE',
+  'save' => true,
+  'id_name' => 'dsm_suivi_de_vente_opportunitiesopportunities_idb',
+  'link' => 'dsm_suivi_de_vente_opportunities',
+  'table' => 'opportunities',
+  'module' => 'Opportunities',
+  'rname' => 'name',
+);
+$dictionary["dsm_suivi_de_vente"]["fields"]["dsm_suivi_de_vente_opportunitiesopportunities_idb"] = array (
+  'name' => 'dsm_suivi_de_vente_opportunitiesopportunities_idb',
+  'type' => 'id',
+  'source' => 'non-db',
+  'vname' => 'LBL_DSM_SUIVI_DE_VENTE_OPPORTUNITIES_FROM_OPPORTUNITIES_TITLE_ID',
+  'id_name' => 'dsm_suivi_de_vente_opportunitiesopportunities_idb',
+  'link' => 'dsm_suivi_de_vente_opportunities',
+  'table' => 'opportunities',
+  'module' => 'Opportunities',
+  'rname' => 'id',
+  'reportable' => false,
+  'side' => 'left',
+  'massupdate' => false,
+  'duplicate_merge' => 'disabled',
+  'hideacl' => true,
+);
+
+?>
+<?php
 // Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_note.php
 
  // created: 2018-02-08 14:59:52
@@ -85,31 +129,6 @@ $dictionary['dsm_suivi_de_vente']['fields']['account_id'] = array(
     'duplicate_merge'   => 'disabled',
 );
 
-?>
-<?php
-// Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_name.php
-
- // created: 2018-02-08 14:31:50
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['required']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['source']='non-db';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['name']='opportunity_name';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['vname']='LBL_OPPORTUNITY_NAME';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['type']='relate';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['rname']='name';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['id_name']='opportunity_id';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['table']='opportunities';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['isnull']='true';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['module']='Opportunities';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['audited']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['massupdate']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['duplicate_merge']='enabled';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['duplicate_merge_dom_value']='1';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['merge_filter']='disabled';
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['unified_search']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['calculated']=false;
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_name']['studio']='visible';
-
- 
 ?>
 <?php
 // Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_name.php
@@ -441,25 +460,6 @@ $dictionary['dsm_suivi_de_vente']['fields']['meeting_name']['calculated']=false;
 $dictionary['dsm_suivi_de_vente']['fields']['meeting_name']['studio']='visible';
 
  
-?>
-<?php
-// Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_opportunity_id.php
-
-
-$dictionary['dsm_suivi_de_vente']['fields']['opportunity_id'] = array(
-    'name'              => 'opportunity_id',
-    'rname'             => 'id',
-    'vname'             => 'LBL_OPPORTUNITY_ID',
-    'type'              => 'id',
-    'table'             => 'dsm_suivi_de_vente',
-    'isnull'            => 'true',
-    'module'            => 'dsm_suivi_de_vente',
-    'dbType'            => 'id',
-    'reportable'        => false,
-    'massupdate'        => false,
-    'duplicate_merge'   => 'disabled',
-);
-
 ?>
 <?php
 // Merged from custom/Extension/modules/dsm_suivi_de_vente/Ext/Vardefs/sugarfield_depot.php

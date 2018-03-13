@@ -154,12 +154,13 @@ array (
             'header' => true,
             'fields' => 
             array (
-              0 => array(
-                    'name' => 'picture',
-                    'type' => 'avatar',
-                    'size' => 'large',
-                    'dismiss_label' => true,
-                ),
+              0 => 
+              array (
+                'name' => 'picture',
+                'type' => 'avatar',
+                'size' => 'large',
+                'dismiss_label' => true,
+              ),
               1 => 
               array (
                 'name' => 'full_name',
@@ -197,28 +198,28 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
-            'newTab' => false,
+            'newTab' => true,
             'panelDefault' => 'expanded',
             'fields' => 
             array (
               0 => 
               array (
                 'name' => 'account_name',
-                'span' => 12,
               ),
               1 => 
               array (
-                'name' => 'do_not_call',
+                'name' => 'statut_contact',
+                'label' => 'LBL_STATUT_CONTACT',
               ),
               2 => 
+              array (
+                'name' => 'do_not_call',
+              ),
+              3 => 
               array (
                 'name' => 'dsm_dnc_name',
                 'studio' => 'visible',
                 'label' => 'LBL_DSM_DNC_NAME',
-              ),
-              3 => 
-              array (
-                'name' => 'phone_mobile',
               ),
               4 => 
               array (
@@ -226,25 +227,39 @@ array (
                 'comment' => 'Home phone number of the contact',
                 'label' => 'LBL_HOME_PHONE',
               ),
-              5 => 'phone_work',
-              6 => 
+              5 => 
+              array (
+                'name' => 'phone_mobile',
+              ),
+              6 => 'phone_work',
+              7 => 
               array (
                 'name' => 'phone_other',
                 'comment' => 'Other phone number for the contact',
                 'label' => 'LBL_OTHER_PHONE',
               ),
+              8 => 
+              array (
+                'name' => 'email',
+                'span' => 12,
+              ),
+              9 => 
+              array (
+                'name' => 'preferred_language',
+                'type' => 'language',
+                'span' => 12,
+              ),
             ),
           ),
           2 => 
           array (
-            'columns' => 2,
-            'name' => 'panel_hidden',
-            'label' => 'LBL_RECORD_SHOWMORE',
-            'hide' => true,
-            'labelsOnTop' => true,
-            'placeholders' => true,
-            'newTab' => false,
+            'newTab' => true,
             'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL1',
+            'label' => 'LBL_RECORDVIEW_PANEL1',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
             'fields' => 
             array (
               0 => 
@@ -290,54 +305,64 @@ array (
               ),
               1 => 
               array (
-                'name' => 'email',
+                'name' => 'etat_de_proprietaire',
+                'label' => 'LBL_ETAT_DE_PROPRIÉTAIRE',
                 'span' => 12,
               ),
               2 => 
               array (
-                'name' => 'description',
+                'name' => 'occupant_depuis',
+                'label' => 'LBL_OCCUPANT_DEPUIS',
                 'span' => 12,
+              ),
+            ),
+          ),
+          3 => 
+          array (
+            'columns' => 2,
+            'name' => 'panel_hidden',
+            'label' => 'LBL_RECORD_SHOWMORE',
+            'hide' => true,
+            'labelsOnTop' => true,
+            'placeholders' => true,
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'lead_source',
+              ),
+              1 => 
+              array (
+                'name' => 'source',
+                'label' => 'LBL_SOURCE',
+              ),
+              2 => 
+              array (
+                'name' => 'source_details',
+                'label' => 'LBL_SOURCE_DETAILS',
               ),
               3 => 
               array (
-                'name' => 'lead_source',
-                'span' => 12,
+                'name' => 'campaign_name',
               ),
               4 => 
               array (
-                'name' => 'campaign_name',
+                'name' => 'consentement',
+                'label' => 'LBL_CONSENTEMENT',
                 'span' => 12,
               ),
               5 => 
               array (
-                'name' => 'preferred_language',
-                'type' => 'language',
-                'span' => 12,
+                'name' => 'date_de_consentement_datestamp',
+                'readonly' => true,
+                'label' => 'LBL_DATE_DE_CONSENTEMENT_DATESTAMP',
               ),
               6 => 
               array (
-                'name' => 'date_modified_by',
-                'readonly' => true,
-                'inline' => true,
-                'type' => 'fieldset',
-                'label' => 'LBL_DATE_MODIFIED',
-                'fields' => 
-                array (
-                  0 => 
-                  array (
-                    'name' => 'date_modified',
-                  ),
-                  1 => 
-                  array (
-                    'type' => 'label',
-                    'default_value' => 'LBL_BY',
-                  ),
-                  2 => 
-                  array (
-                    'name' => 'modified_by_name',
-                  ),
-                ),
-                'span' => 12,
+                'name' => 'statut_dnc',
+                'label' => 'LBL_STATUT_DNC',
               ),
               7 => 
               array (
@@ -364,66 +389,36 @@ array (
                 ),
                 'span' => 12,
               ),
-            ),
-          ),
-          3 => 
-          array (
-            'newTab' => false,
-            'panelDefault' => 'expanded',
-            'name' => 'LBL_RECORDVIEW_PANEL1',
-            'label' => 'LBL_RECORDVIEW_PANEL1',
-            'columns' => 2,
-            'labelsOnTop' => 1,
-            'placeholders' => 1,
-            'fields' => 
-            array (
-              0 => 
+              8 => 
               array (
-                'name' => 'etat_de_proprietaire',
-                'label' => 'LBL_ETAT_DE_PROPRIÉTAIRE',
-              ),
-              1 => 
-              array (
-                'name' => 'source_details',
-                'label' => 'LBL_SOURCE_DETAILS',
-              ),
-              2 => 
-              array (
-                'name' => 'source',
-                'label' => 'LBL_SOURCE',
-              ),
-              3 => 
-              array (
-                'name' => 'occupant_depuis',
-                'label' => 'LBL_OCCUPANT_DEPUIS',
-              ),
-              4 => 
-              array (
-                'name' => 'consentement',
-                'label' => 'LBL_CONSENTEMENT',
-              ),
-              5 => 
-              array (
-                'name' => 'date_de_consentement_datestamp',
+                'name' => 'date_modified_by',
                 'readonly' => true,
-                'label' => 'LBL_DATE_DE_CONSENTEMENT_DATESTAMP',
-              ),
-              6 => 
-              array (
-                'name' => 'statut_dnc',
-                'label' => 'LBL_STATUT_DNC',
-              ),
-              7 => 
-              array (
-                'name' => 'statut_contact',
-                'label' => 'LBL_STATUT_CONTACT',
+                'inline' => true,
+                'type' => 'fieldset',
+                'label' => 'LBL_DATE_MODIFIED',
+                'fields' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'date_modified',
+                  ),
+                  1 => 
+                  array (
+                    'type' => 'label',
+                    'default_value' => 'LBL_BY',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'modified_by_name',
+                  ),
+                ),
               ),
             ),
           ),
         ),
         'templateMeta' => 
         array (
-          'useTabs' => false,
+          'useTabs' => true,
         ),
       ),
     ),
