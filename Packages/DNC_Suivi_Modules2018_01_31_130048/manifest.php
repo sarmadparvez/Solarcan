@@ -29,9 +29,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'DNC_Suivi_Modules',
-  'published_date' => '2018-01-31 08:00:47',
+  'published_date' => '2018-03-13 06:00:06',
   'type' => 'module',
-  'version' => 1517385647,
+  'version' => 1520920806,
   'remove_tables' => 'prompt',
 );
 
@@ -67,6 +67,10 @@ $installdefs = array (
   ),
   'relationships' => 
   array (
+    0 => 
+    array (
+      'meta_data' => '<basepath>/SugarModules/relationships/relationships/dsm_suivi_de_vente_opportunitiesMetaData.php',
+    ),
   ),
   'copy' => 
   array (
@@ -90,9 +94,488 @@ $installdefs = array (
   array (
     0 => 
     array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'en_us',
+    ),
+    1 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'bg_BG',
+    ),
+    2 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'cs_CZ',
+    ),
+    3 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'da_DK',
+    ),
+    4 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'de_DE',
+    ),
+    5 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'el_EL',
+    ),
+    6 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'es_ES',
+    ),
+    7 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'fr_FR',
+    ),
+    8 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'he_IL',
+    ),
+    9 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'hu_HU',
+    ),
+    10 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'hr_HR',
+    ),
+    11 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'it_it',
+    ),
+    12 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'lt_LT',
+    ),
+    13 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'ja_JP',
+    ),
+    14 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'ko_KR',
+    ),
+    15 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'lv_LV',
+    ),
+    16 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'nb_NO',
+    ),
+    17 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'nl_NL',
+    ),
+    18 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'pl_PL',
+    ),
+    19 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'pt_PT',
+    ),
+    20 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'ro_RO',
+    ),
+    21 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'ru_RU',
+    ),
+    22 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'sv_SE',
+    ),
+    23 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'th_TH',
+    ),
+    24 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'tr_TR',
+    ),
+    25 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'zh_TW',
+    ),
+    26 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'zh_CN',
+    ),
+    27 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'pt_BR',
+    ),
+    28 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'ca_ES',
+    ),
+    29 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'en_UK',
+    ),
+    30 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'sr_RS',
+    ),
+    31 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'sk_SK',
+    ),
+    32 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'sq_AL',
+    ),
+    33 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'et_EE',
+    ),
+    34 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'es_LA',
+    ),
+    35 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'fi_FI',
+    ),
+    36 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'ar_SA',
+    ),
+    37 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+      'language' => 'uk_UA',
+    ),
+    38 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'en_us',
+    ),
+    39 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'bg_BG',
+    ),
+    40 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'cs_CZ',
+    ),
+    41 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'da_DK',
+    ),
+    42 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'de_DE',
+    ),
+    43 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'el_EL',
+    ),
+    44 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'es_ES',
+    ),
+    45 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'fr_FR',
+    ),
+    46 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'he_IL',
+    ),
+    47 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'hu_HU',
+    ),
+    48 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'hr_HR',
+    ),
+    49 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'it_it',
+    ),
+    50 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'lt_LT',
+    ),
+    51 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'ja_JP',
+    ),
+    52 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'ko_KR',
+    ),
+    53 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'lv_LV',
+    ),
+    54 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'nb_NO',
+    ),
+    55 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'nl_NL',
+    ),
+    56 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'pl_PL',
+    ),
+    57 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'pt_PT',
+    ),
+    58 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'ro_RO',
+    ),
+    59 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'ru_RU',
+    ),
+    60 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'sv_SE',
+    ),
+    61 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'th_TH',
+    ),
+    62 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'tr_TR',
+    ),
+    63 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'zh_TW',
+    ),
+    64 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'zh_CN',
+    ),
+    65 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'pt_BR',
+    ),
+    66 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'ca_ES',
+    ),
+    67 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'en_UK',
+    ),
+    68 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'sr_RS',
+    ),
+    69 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'sk_SK',
+    ),
+    70 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'sq_AL',
+    ),
+    71 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'et_EE',
+    ),
+    72 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'es_LA',
+    ),
+    73 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'fi_FI',
+    ),
+    74 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'ar_SA',
+    ),
+    75 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Opportunities.php',
+      'to_module' => 'Opportunities',
+      'language' => 'uk_UA',
+    ),
+    76 => 
+    array (
       'from' => '<basepath>/SugarModules/language/application/en_us.lang.php',
       'to_module' => 'application',
       'language' => 'en_us',
+    ),
+  ),
+  'vardefs' => 
+  array (
+    0 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/vardefs/dsm_suivi_de_vente_opportunities_Opportunities.php',
+      'to_module' => 'Opportunities',
+    ),
+    1 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/vardefs/dsm_suivi_de_vente_opportunities_dsm_suivi_de_vente.php',
+      'to_module' => 'dsm_suivi_de_vente',
+    ),
+  ),
+  'layoutfields' => 
+  array (
+    0 => 
+    array (
+      'additional_fields' => 
+      array (
+        'Opportunities' => 'dsm_suivi_de_vente_opportunities_name',
+      ),
     ),
   ),
   'image_dir' => '<basepath>/icons',
