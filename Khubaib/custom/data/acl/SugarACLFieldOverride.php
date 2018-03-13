@@ -27,7 +27,9 @@ class SugarACLFieldOverride extends SugarACLStrategy
         global $current_user;
 
         //acl should apply to users own records and should not apply to admin
-        if ($current_user->id == $context['bean']->assigned_user_id && !$current_user->is_admin) {
+        if ($current_user->id == $context['bean']->assigned_user_id &&
+            !$current_user->is_admin &&
+            $context['bean']->status == 'assigne') {
             $is_owner = true;
         } else {
             return $acl;
@@ -36,26 +38,39 @@ class SugarACLFieldOverride extends SugarACLStrategy
         // if current date is one day before meeting then acl should not apply , simple return empty $acl array
         // acl should only apply once the meeting is booked and assigned to sales rep
         $acl = parent::getFieldListAccess($module, $field_list, $context);
-        
-        $timedate = new TimeDate($current_user);
-        $meeting_date = $timedate->to_db_date($context['bean']->date_start);
-        $current_date = date('Y-m-d');
+
+        $td = new TimeDate($current_user);
+        $time_offset = ($td->getUserUTCOffset() / 60);  // get time offset of current user
+        $meeting_date = $td->to_db_date($context['bean']->date_start);  // get meeting date according to db (utc)
+        $current_date = gmdate('Y-m-d');    // get current date according to db (utc)
+
+        $date1 = new DateTime($meeting_date);
+        $date2 = new DateTime($current_date);
+        $date_diff = $date1->diff($date2);
+        $GLOBALS['log']->fatal("Date diff: $date_diff->d");
+
+        $current_hour = (int) gmdate('H');  // get current utc hour
+        $current_hour = ($current_hour + $time_offset) % 24;    // add current user timezone offset in it
 
         $force_acl = true;
-        if ($meeting_date == $current_date) {
-            $GLOBALS['log']->fatal("INT HOUR: ".(int)date('H'));
-            if ((int)date('H') >= 8) {
+        if ($date_diff->d == 1 && $meeting_date > $current_date) {   // $date_diff->d gives date difference in days
+            // if day before appointment
+            if ($current_hour >= 8) {
+                // if hour greater than 8 AM do not hide fields
                 $force_acl = false;
             }
         }
 
         if ($force_acl) {
-            $role_id = '06fd180a-25de-11e8-bbe7-2c56dc94b8c8';
-            // get the field acl from this $role_id
-            $field_acl = $this->getACLFieldsByRoleModule($role_id, 'Meetings', $is_owner);
-            // modifying the field acl (applying role's acl)
-            foreach ($field_acl as $acl_data) {
-                $acl[$acl_data['name']] = $acl_data['aclaccess'];
+            $role_bean = BeanFactory::newBean('ACLRoles')->retrieve_by_string_fields(array('name' => 'Non Visible Fields'));
+            if (!empty($role_bean)) {
+                $role_id = $role_bean->id;
+                // get the field acl from this $role_id
+                $field_acl = $this->getACLFieldsByRoleModule($role_id, $module, $is_owner);
+                // modifying the field acl (applying role's acl)
+                foreach ($field_acl as $acl_data) {
+                    $acl[$acl_data['name']] = $acl_data['aclaccess'];
+                }
             }
         }
         return $acl;

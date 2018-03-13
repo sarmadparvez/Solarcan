@@ -16,3 +16,4 @@ $mod_strings['LBL_PAGER_REP'] = 'PAGER';
 $mod_strings['LBL_COURRIEL_REP'] = 'COURRIEL';
 $mod_strings['LBL_SECTEUR_REP'] = 'SECTEUR';
 $mod_strings['LBL_DETAILVIEW_PANEL1'] = 'New Panel 1';
+$mod_strings['LBL_LAST_MINUTE_APPT'] = 'Accept a Last Minute Appointment';

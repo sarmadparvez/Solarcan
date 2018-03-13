@@ -1,7 +1,7 @@
 <?php
 $viewdefs['Users'] = 
 array (
-  'EditView' => 
+  'DetailView' => 
   array (
     'templateMeta' => 
     array (
@@ -21,8 +21,8 @@ array (
       ),
       'form' => 
       array (
-        'headerTpl' => 'modules/Users/tpls/EditViewHeader.tpl',
-        'footerTpl' => 'modules/Users/tpls/EditViewFooter.tpl',
+        'headerTpl' => 'modules/Users/tpls/DetailViewHeader.tpl',
+        'footerTpl' => 'modules/Users/tpls/DetailViewFooter.tpl',
       ),
       'useTabs' => false,
       'tabDefs' => 
@@ -51,34 +51,28 @@ array (
       array (
         0 => 
         array (
-          0 => 
+          0 => 'user_name',
+          1 => 
           array (
-            'name' => 'user_name',
-            'displayParams' => 
-            array (
-              'required' => true,
-            ),
+            'name' => 'first_name',
+            'label' => 'LBL_FIRST_NAME',
           ),
-          1 => 'first_name',
         ),
         1 => 
         array (
-          0 => 
+          0 => 'status',
+          1 => 
           array (
-            'name' => 'status',
-            'displayParams' => 
-            array (
-              'required' => true,
-            ),
+            'name' => 'last_name',
+            'label' => 'LBL_LAST_NAME',
           ),
-          1 => 'last_name',
         ),
         2 => 
         array (
           0 => 
           array (
             'name' => 'UserType',
-            'customCode' => '{if $IS_ADMIN}{$USER_TYPE_DROPDOWN}{else}{$USER_TYPE_READONLY}{/if}',
+            'customCode' => '{$USER_TYPE_READONLY}',
           ),
         ),
         3 => 
@@ -198,11 +192,6 @@ array (
           array (
             'name' => 'qualified_garage_rep_c',
             'label' => 'LBL_QUALIFIED_GARAGE_REP_C',
-          ),
-          1 => 
-          array (
-            'name' => 'last_minute_appt',
-            'label' => 'LBL_LAST_MINUTE_APPT',
           ),
         ),
       ),

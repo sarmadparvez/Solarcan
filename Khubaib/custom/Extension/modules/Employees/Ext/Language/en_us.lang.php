@@ -21,3 +21,4 @@ $mod_strings['LBL_FAX_REP'] = 'FAX';
 $mod_strings['LBL_PAGER_REP'] = 'PAGER';
 $mod_strings['LBL_COURRIEL_REP'] = 'COURRIEL';
 $mod_strings['LBL_SECTEUR_REP'] = 'SECTEUR';
+$mod_strings['LBL_LAST_MINUTE_APPT'] = 'Accept a Last Minute Appointment';

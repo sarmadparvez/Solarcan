@@ -203,36 +203,42 @@ array (
               ),
               2 => 
               array (
-                'name' => 'description',
+                'name' => 'opportunity_name',
+                'label' => 'LBL_OPPORTUNITY_NAME',
                 'span' => 12,
               ),
               3 => 
               array (
+                'name' => 'description',
+                'span' => 12,
+              ),
+              4 => 
+              array (
                 'name' => 'montant',
                 'label' => 'LBL_MONTANT',
               ),
-              4 => 
+              5 => 
               array (
                 'name' => 'numero_de_contrat',
                 'label' => 'LBL_NUMERO_DE_CONTRAT',
               ),
-              5 => 
+              6 => 
               array (
                 'name' => 'numero_de_cheque',
                 'label' => 'LBL_NUMERO_DE_CHEQUE',
               ),
-              6 => 
+              7 => 
               array (
                 'name' => 'depot',
                 'label' => 'LBL_DEPOT',
               ),
-              7 => 
+              8 => 
               array (
-                'name' => 'statut_suivi',
-                'label' => 'LBL_STATUT_SUIVI',
+                'name' => 'status',
+                'label' => 'LBL_STATUS',
                 'span' => 12,
               ),
-              8 => 
+              9 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -256,7 +262,7 @@ array (
                   ),
                 ),
               ),
-              9 => 
+              10 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
