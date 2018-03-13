@@ -193,6 +193,11 @@ array (
             'name' => 'qualified_garage_rep_c',
             'label' => 'LBL_QUALIFIED_GARAGE_REP_C',
           ),
+          1 => 
+          array (
+            'name' => 'last_minute_appt',
+            'label' => 'LBL_LAST_MINUTE_APPT',
+          ),
         ),
       ),
       'LBL_EMPLOYEE_INFORMATION' => 

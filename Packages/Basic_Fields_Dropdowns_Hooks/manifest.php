@@ -2324,6 +2324,11 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/dsm_dnc/Ext/LogicHooks/dsm_dncHooks.php',
       'to' => 'custom/Extension/modules/dsm_dnc/Ext/LogicHooks/dsm_dncHooks.php',
     ),
+    397 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_last_minute_appt.php',
+      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_last_minute_appt.php',
+    ),
   ),
   'roles' => 
   array (
