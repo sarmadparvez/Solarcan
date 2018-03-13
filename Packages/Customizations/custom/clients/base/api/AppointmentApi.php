@@ -216,9 +216,15 @@ class AppointmentApi extends SugarApi {
             if (!empty($contact_id) && !empty($contact_id[0]['id'])) {
                 $contact = BeanFactory::newBean('Contacts')->retrieve($contact_id[0]['id']);
             } else {
-                if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
-                // if reseller, then create account
-                    $contact = BeanFactory::newBean('Contacts');
+                if (($args['noagent'] == '1000' || $args['noagent'] == '2000')) {
+                    // if reseller, then create account if firstname and lastname is provided
+                    if (empty($args['contact_model']['first_name']) && empty($args['contact_model']['last_name'])) {
+                        throw new SugarApiExceptionMissingParameter(
+                            'Please either provide Nom or Prenom to create Contact'
+                        );
+                    } else {
+                        $contact = BeanFactory::newBean('Contacts');
+                    }
                 } else {
                     throw new SugarApiExceptionInvalidParameter(
                         'Contact not found in CRM'
@@ -226,14 +232,9 @@ class AppointmentApi extends SugarApi {
                 }
             }
         } else {
-            if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
-                // if reseller, then create account
-                $contact = BeanFactory::newBean('Contacts');
-            } else {
-                throw new SugarApiExceptionInvalidParameter(
-                    'Contact not found in CRM'
-                );
-            }
+            throw new SugarApiExceptionInvalidParameter(
+                'Please either provide contact_id or one of the phone numbers'
+            );
         }
         //populate contact fields and update it
         $this->updateContact($args, $contact);
@@ -246,6 +247,7 @@ class AppointmentApi extends SugarApi {
     */
     protected function updateContact($args, Contact $contact)
     {
+        //$GLOBALS['log']->fatal("CONTACT MODEL: ", $args['contact_model']);
         if (empty($args['contact_model'])) {
             return false;
         }
@@ -313,7 +315,9 @@ class AppointmentApi extends SugarApi {
                 $contact->source_details = '';
             }
         }
-        //$contact->consentement = $contact_args['consentement'];
+        //if (!empty($args['consentement'])) {
+        //    $contact->consentement = $args['consentement'];
+        //}
         $contact->save();
     }
 
@@ -323,6 +327,7 @@ class AppointmentApi extends SugarApi {
     protected function updateMeeting($args, $meeting_id, SugarBean $contact)
     {
         $meeting = $this->retrieveBean('Meetings', $meeting_id);
+        //$GLOBALS['log']->fatal('meeting bean: '.print_r($meeting,1));
         if (empty($meeting)) {
             throw new SugarApiExceptionInvalidParameter('Meeting not found in SugarCRM');
         }
@@ -374,8 +379,11 @@ class AppointmentApi extends SugarApi {
 
         $meeting->save();
         $link = 'contacts';
+        //$GLOBALS['log']->fatal('timeslot_datetime for meeting: '.$meeting->timeslot_datetime);
+        //$GLOBALS['log']->fatal('now for saved timezone: '.$now_date);
 
         if ($meeting->load_relationship($link)) {
+            //$GLOBALS['log']->fatal('relationship is loaded');
             $meeting->$link->add($contact->id);
         }
         //create/update account
@@ -389,6 +397,7 @@ class AppointmentApi extends SugarApi {
                 $contact->lead_source = 'solarcan';
             }
         }
+        $contact->statut_contact = 'prospect_avec_rv';
         $contact->save();
         $this->saveAccount($args, $contact, $meeting);
     }

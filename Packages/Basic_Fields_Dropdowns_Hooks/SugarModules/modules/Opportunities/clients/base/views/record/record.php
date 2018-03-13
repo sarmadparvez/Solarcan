@@ -201,7 +201,11 @@ array (
                 'readonly' => true,
                 'studio' => true,
                 'label' => 'LBL_SALES_STATUS',
-                'span' => 12,
+              ),
+              3 => 
+              array (
+                'name' => 'dsm_suivi_de_vente_opportunities_name',
+                'label' => 'LBL_DSM_SUIVI_DE_VENTE_OPPORTUNITIES_FROM_DSM_SUIVI_DE_VENTE_TITLE',
               ),
             ),
           ),

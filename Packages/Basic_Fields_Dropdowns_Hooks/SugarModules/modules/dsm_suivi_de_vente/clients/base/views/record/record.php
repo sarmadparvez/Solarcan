@@ -170,6 +170,11 @@ array (
             array (
               0 => 'assigned_user_name',
               1 => 'team_name',
+              2 => 
+              array (
+                'name' => 'dsm_suivi_de_vente_opportunities_name',
+                'span' => 12,
+              ),
             ),
           ),
           2 => 
@@ -198,43 +203,36 @@ array (
               ),
               2 => 
               array (
-                'name' => 'opportunity_name',
-                'studio' => 'visible',
-                'label' => 'LBL_OPPORTUNITY_NAME',
+                'name' => 'description',
                 'span' => 12,
               ),
               3 => 
               array (
-                'name' => 'description',
-                'span' => 12,
-              ),
-              4 => 
-              array (
                 'name' => 'montant',
                 'label' => 'LBL_MONTANT',
               ),
-              5 => 
+              4 => 
               array (
                 'name' => 'numero_de_contrat',
                 'label' => 'LBL_NUMERO_DE_CONTRAT',
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'numero_de_cheque',
                 'label' => 'LBL_NUMERO_DE_CHEQUE',
               ),
-              7 => 
+              6 => 
               array (
                 'name' => 'depot',
                 'label' => 'LBL_DEPOT',
               ),
-              8 => 
+              7 => 
               array (
-                'name' => 'status',
-                'label' => 'LBL_STATUS',
+                'name' => 'statut_suivi',
+                'label' => 'LBL_STATUT_SUIVI',
                 'span' => 12,
               ),
-              9 => 
+              8 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -258,7 +256,7 @@ array (
                   ),
                 ),
               ),
-              10 => 
+              9 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
