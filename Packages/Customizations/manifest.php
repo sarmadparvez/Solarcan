@@ -134,6 +134,22 @@ $installdefs = array (
       'from' => '<basepath>/custom/Extension/modules/Schedulers/Ext/Language/en_us.meetingAssignationWorkflow.php',
       'to' => 'custom/Extension/modules/Schedulers/Ext/Language/en_us.meetingAssignationWorkflow.php',
     ),
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Meetings/Ext/LogicHooks/MeetingsHooks.php',
+      'to' => 'custom/Extension/modules/Meetings/Ext/LogicHooks/MeetingsHooks.php.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/modules/Meetings/MeetingsHooksImpl.php',
+      'to' => 'custom/modules/Meetings/MeetingsHooksImpl.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Opportunities/Ext/LogicHooks/OpportunitiesHooks.php',
+      'to' => 'custom/Extension/modules/Opportunities/Ext/LogicHooks/OpportunitiesHooks.php.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/modules/Opportunities/OpportunitiesHooksImpl.php',
+      'to' => 'custom/modules/Opportunities/OpportunitiesHooksImpl.php',
+    ),
   ),
   'language' => 
   array (

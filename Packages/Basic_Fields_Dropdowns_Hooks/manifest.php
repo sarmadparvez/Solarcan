@@ -1998,16 +1998,6 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/modules/dsm_dnc_historic/dsm_dnc_historicHooksImpl.php',
       'to' => 'custom/modules/dsm_dnc_historic/dsm_dnc_historicHooksImpl.php',
     ),
-    328 => 
-    array (
-      'from' => '<basepath>/Extension/modules/Opportunities/Ext/LogicHooks/OpportunitiesHooks.php',
-      'to' => 'custom/Extension/modules/Opportunities/Ext/LogicHooks/OpportunitiesHooks.php',
-    ),
-    329 => 
-    array (
-      'from' => '<basepath>/SugarModules/modules/Opportunities/OpportunitiesHooksImpl.php',
-      'to' => 'custom/modules/Opportunities/OpportunitiesHooksImpl.php',
-    ),
     330 => 
     array (
       'from' => '<basepath>/Extension/modules/dsm_dnc/Ext/Vardefs/dsm_dnc_historic_relationship.php',
