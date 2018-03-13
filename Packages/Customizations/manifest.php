@@ -136,7 +136,7 @@ $installdefs = array (
     ),
     array (
       'from' => '<basepath>/custom/Extension/modules/Meetings/Ext/LogicHooks/MeetingsHooks.php',
-      'to' => 'custom/Extension/modules/Meetings/Ext/LogicHooks/MeetingsHooks.php.php',
+      'to' => 'custom/Extension/modules/Meetings/Ext/LogicHooks/MeetingsHooks.php',
     ),
     array (
       'from' => '<basepath>/custom/modules/Meetings/MeetingsHooksImpl.php',
@@ -144,11 +144,19 @@ $installdefs = array (
     ),
     array (
       'from' => '<basepath>/custom/Extension/modules/Opportunities/Ext/LogicHooks/OpportunitiesHooks.php',
-      'to' => 'custom/Extension/modules/Opportunities/Ext/LogicHooks/OpportunitiesHooks.php.php',
+      'to' => 'custom/Extension/modules/Opportunities/Ext/LogicHooks/OpportunitiesHooks.php',
     ),
     array (
       'from' => '<basepath>/custom/modules/Opportunities/OpportunitiesHooksImpl.php',
       'to' => 'custom/modules/Opportunities/OpportunitiesHooksImpl.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Meetings/Ext/Vardefs/acls.php',
+      'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/acls.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/data/acl/SugarACLFieldOverride.php',
+      'to' => 'custom/data/acl/SugarACLFieldOverride.php',
     ),
   ),
   'language' => 
