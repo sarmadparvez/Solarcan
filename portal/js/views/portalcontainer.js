@@ -228,6 +228,8 @@ window.PortalContainerView = Backbone.View.extend({
                 console.log('in success');
                 if (response.result) {
                     alert('Appointment successfully booked');
+                    $('#dialog-form').dialog("close");
+                    this.getAvailableAppointments();
                 } else {
                     var error = JSON.parse(response.error.msg);
                     alert(error.error_message);
