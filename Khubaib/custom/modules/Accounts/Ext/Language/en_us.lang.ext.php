@@ -2,7 +2,7 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
-// Merged from custom/Extension/modules/Accounts/Ext/Language/en_us.lang.php
+// Merged from custom/Extension/modules/Accounts/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.lang.php
 
 // WARNING: The contents of this file are auto-generated.
 $mod_strings['LNK_NEW_ACCOUNT'] = 'Create Bâtiment';
@@ -47,7 +47,7 @@ $mod_strings['LBL_BILLING_ADDRESS_COUNTRY'] = 'Country:';
 
 ?>
 <?php
-// Merged from custom/Extension/modules/Accounts/Ext/Language/en_us.Basic_Fields_Dropdowns_Hooks.lang.php
+// Merged from custom/Extension/modules/Accounts/Ext/Language/en_us.lang.php
 
 // WARNING: The contents of this file are auto-generated.
 $mod_strings['LNK_NEW_ACCOUNT'] = 'Create Bâtiment';
@@ -89,5 +89,6 @@ $mod_strings['LBL_BILLING_ADDRESS_CITY'] = 'City:';
 $mod_strings['LBL_BILLING_ADDRESS_STATE'] = 'State:';
 $mod_strings['LBL_BILLING_ADDRESS_POSTALCODE'] = 'Postal Code:';
 $mod_strings['LBL_BILLING_ADDRESS_COUNTRY'] = 'Country:';
+$mod_strings['LBL_CHECKING'] = 'CHECKING';
 
 ?>

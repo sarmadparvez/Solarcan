@@ -2,11 +2,6 @@
 // WARNING: The contents of this file are auto-generated.
 ?>
 <?php
-// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/acls.php
-
-$dictionary['Meeting']['acls']['SugarACLFieldOverride'] = true;
-?>
-<?php
 // Merged from custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_nombre_garage_achanger.php
 
  // created: 2018-01-25 12:39:25
@@ -511,4 +506,9 @@ $dictionary['Meeting']['fields']['timeslot_name']['importable']='true';
 $dictionary['Meeting']['fields']['timeslot_name']['duplicate_merge_dom_value']='2';
 $dictionary['Meeting']['fields']['timeslot_name']['dependency']=false;
 $dictionary['Meeting']['fields']['timeslot_name']['studio']=false;
+?>
+<?php
+// Merged from custom/Extension/modules/Meetings/Ext/Vardefs/acls.php
+
+$dictionary['Meeting']['acls']['SugarACLFieldOverride'] = true;
 ?>

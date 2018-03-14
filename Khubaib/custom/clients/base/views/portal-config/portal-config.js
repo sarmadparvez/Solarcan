@@ -114,6 +114,11 @@
             } else if (field.def.type == 'int' && !(/^\d+$/.test(fieldValue))) {
                 // If field value is not a number
                isValidated = false;
+            } else if (field.type == 'decimal' &&
+                !((fieldValue - 0) == fieldValue && (''+fieldValue).trim().length > 0 && fieldValue > 0)
+            ) {
+                //not a numeric value
+                isValidated = false;
             }
             if (!isValidated) {
                 app.alert.show('invalid_data_error', {

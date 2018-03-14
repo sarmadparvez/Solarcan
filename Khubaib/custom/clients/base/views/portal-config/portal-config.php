@@ -24,6 +24,39 @@ $viewdefs['base']['view']['portal-config'] = array(
                             'error_message'=> 'ERR_APPOINTMENT_FILTER',
                             'span' => 3
                         ),
+                    ),
+                    2 => array(
+                        array(
+                            'name' => 'param_portes',
+                            'label' => 'LBL_PARAM_PORTES',
+                            'type' => 'decimal',
+                            'comment' => 'Parameter for portential amount of sales for doors',
+                            'required' => true,
+                            'span' => 3,
+                            'error_message'=> 'ERR_INVALID_PARAM_DOORS',
+                        ),
+                    ),
+                    3 => array(
+                        array(
+                            'name' => 'param_fenetres',
+                            'label' => 'LBL_PARAM_FENETRES',
+                            'type' => 'decimal',
+                            'comment' => 'Parameter for portential amount of sales for windows',
+                            'required' => true,
+                            'span' => 3,
+                            'error_message'=> 'ERR_INVALID_PARAM_WINDOWS',
+                        ),
+                    ),
+                    4 => array(
+                        array(
+                            'name' => 'param_garage',
+                            'label' => 'LBL_PARAM_GARAGE',
+                            'type' => 'decimal',
+                            'comment' => 'Parameter for portential amount of sales for garage',
+                            'required' => true,
+                            'span' => 3,
+                            'error_message'=> 'ERR_INVALID_PARAM_GARAGE',
+                        ),
                     )
                 )
             ),

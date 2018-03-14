@@ -315,12 +315,6 @@ array (
                   ),
                 ),
               ),
-              2 => 
-              array (
-                'name' => 'checking_c',
-                'label' => 'LBL_CHECKING',
-                'span' => 12,
-              ),
             ),
           ),
         ),
