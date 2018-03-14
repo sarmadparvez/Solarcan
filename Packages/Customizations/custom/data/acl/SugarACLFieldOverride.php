@@ -47,18 +47,12 @@ class SugarACLFieldOverride extends SugarACLStrategy
         $date1 = new DateTime($meeting_date);
         $date2 = new DateTime($current_date);
         $date_diff = $date1->diff($date2);
-        $GLOBALS['log']->fatal("Date diff: $date_diff->d");
+        // $GLOBALS['log']->fatal("Date diff: $date_diff->d");
 
-        $current_hour = (int) gmdate('H');  // get current utc hour
-        $current_hour = ($current_hour + $time_offset) % 24;    // add current user timezone offset in it
-
-        $force_acl = true;
-        if ($date_diff->d == 1 && $meeting_date > $current_date) {   // $date_diff->d gives date difference in days
+        $force_acl = false;
+        if ($date_diff->d > 1 && $meeting_date > $current_date) {   // $date_diff->d gives date difference in days
             // if day before appointment
-            if ($current_hour >= 8) {
-                // if hour greater than 8 AM do not hide fields
-                $force_acl = false;
-            }
+            $force_acl = true;
         }
 
         if ($force_acl) {
