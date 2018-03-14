@@ -13,10 +13,10 @@ function meetingAssignationWorkflow()
                         (a.nombre_garage_achanger > 0) as garage,
                         DATE(m.date_start) as date, m.timeslot_name AS timeslot
                         FROM meetings m
-                        INNER JOIN meetings_contacts mc on mc.meeting_id = m.id
-                        INNER JOIN contacts c on mc.contact_id = c.id
-                        INNER JOIN accounts_contacts ac ON ac.contact_id = c.id
-                        INNER JOIN accounts a ON ac.account_id = a.id
+                        INNER JOIN meetings_contacts mc on mc.meeting_id = m.id AND mc.deleted = 0
+                        INNER JOIN contacts c on mc.contact_id = c.id AND c.deleted = 0
+                        INNER JOIN accounts_contacts ac ON ac.contact_id = c.id AND ac.deleted = 0
+                        INNER JOIN accounts a ON ac.account_id = a.id AND a.deleted = 0
                         WHERE m.status = 'en_attente_dassignation'
                         AND m.deleted = 0
                         AND c.deleted = 0
@@ -48,7 +48,7 @@ function meetingAssignationWorkflow()
                         INNER JOIN rt_classification_users_c cu on m.created_by = cu.rt_classification_usersusers_idb AND cu.deleted =0
                         INNER JOIN rt_classification c on cu.rt_classification_usersrt_classification_ida = c.id AND c.deleted =0
                         INNER JOIN users u on u.id = m.created_by
-                        WHERE m.assigned_user_id IS NULL OR m.assigned_user_id = ''
+                        WHERE (m.status = 'disponible' OR m.status = 'en_attente_dassignation')
                         AND m.deleted = 0
                         AND u.deleted = 0
                         AND DATE(m.date_start) > CURDATE()
@@ -73,8 +73,10 @@ function meetingAssignationWorkflow()
         }
     }
 
+
+    // $GLOBALS['log']->fatal("MEETINGS AND REPS: ", $meetings_and_reps);
+    // $GLOBALS['log']->fatal("STARTING ASSIGNATION");
     // for each timeslot check if the available reps match remaining criterias
-    $GLOBALS['log']->fatal("STARTING ASSIGNATION");
     foreach($meetings_and_reps as $key => $timeslot) {
         if (isset($timeslot['waiting']) && isset($timeslot['reps'])) {
             foreach($timeslot['waiting'] as $m => $meeting) {
@@ -82,11 +84,13 @@ function meetingAssignationWorkflow()
                 if (!empty($postalcodeBean)) {
                     $assigned = false;
                     foreach($timeslot['reps'] as $r => $rep) {
+                        // first match all critereas to make sure this sales rep is qualified
                         if ($rep['codecie_rep_c'] == $meeting['codecie_c'] &&
                            ($rep['codelangue_rep'] == '3' || $rep['codelangue_rep'] == $meeting['preferred_language']) &&
                            (($meeting['door'] == 1) ? ($meeting['door'] == $rep['door']) : true) &&
                            (($meeting['window'] == 1) ? ($meeting['window'] == $rep['window']) : true) &&
                            (($meeting['garage'] == 1) ? ($meeting['garage'] == $rep['garage']) : true)) {
+                            // now check if this sales rep has this postal code
                             $query = "  SELECT id
                                         FROM rt_postal_codes_users_c pcu
                                         WHERE pcu.rt_postal_codes_usersusers_idb = '".$rep['id']."'
@@ -94,9 +98,9 @@ function meetingAssignationWorkflow()
                                         AND pcu.deleted = 0";
                             $result = $db->query($query, true, "Failed to check postal code from DB");
                             while($row = $db->fetchByAssoc($result)) {
-                                // already checking for best classification sales_rep
-                                // inside this loop means we found a matching id for postal code
-                                // now just assign this sales rep the meeting and remove him from array
+                                // already checking for best classification sales_rep (sorted in $sales_rep_query)
+                                // inside this loop means this rep can go to the postal code
+                                // now just assign this sales rep the meeting and remove him from this timeslot array
                                 $meetingBean = BeanFactory::newBean('Meetings')->retrieve($meeting['id']);
                                 $meetingBean->status = 'assigne';
                                 $meetingBean->assigned_user_id = $rep['id'];

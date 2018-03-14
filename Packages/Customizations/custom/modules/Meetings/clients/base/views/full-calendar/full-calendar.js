@@ -39,7 +39,8 @@
                                                         autoClose: true
                                                     });
                                                     self.selectedSlots = [];
-                                                    self.$('#calendar').fullCalendar('rerenderEvents');
+                                                    var currentView = self.$('#calendar').fullCalendar('getView');
+                                                    self.fetchMeetings(currentView);
                                                 }, self),
                                                 error: _.bind(function (data) {
                                                     app.alert.show('1', {
@@ -65,8 +66,9 @@
                 refreshButton: {
                     text: 'Refresh Events',
                     click: function () {
-                        self.$('#calendar').fullCalendar('rerenderEvents');
                         self.selectedSlots = [];
+                        var currentView = self.$('#calendar').fullCalendar('getView');
+                        self.fetchMeetings(currentView);
                     }
                 }
             },
@@ -114,7 +116,7 @@
                         time = meetingSlots.special_case.PM2.start_time;
                     }
                 }
-                
+
                 // set slot name of current event
                 var slotName = '';
                 for (var i in meetingSlots.regular_case) {
@@ -145,39 +147,16 @@
                     element.html('<input type="checkbox" id="new_' + id + '" name="' + slotName + '"/>');
                 }
             },
-            eventAfterAllRender: function (view) {
-                var startDate = self.formatForDate(view.start.date());
-                var startMonth = self.formatForDate((Number(view.start.month()) + 1).toString());
-                var startYear = self.formatForDate(view.start.year());
-                var filterStart = startYear + "-" + startMonth + "-" + startDate;
-
-                var endDate = self.formatForDate(view.end.date());
-                var endMonth = self.formatForDate((Number(view.end.month()) + 1).toString());
-                var endYear = self.formatForDate(view.end.year());
-                var filterEnd = endYear + "-" + endMonth + "-" + endDate;
-
-                var filters = [
-                    {
-                        date_start: {$dateBetween: [filterStart, filterEnd]},
-                        created_by: app.user.attributes.id
-                    }
-                ];
-                var request = self.availableMeetings.fetch(
-                        {
-                            limit: 30,
-                            filter: filters
-                        }
-                );
-                request.xhr.done(function () {
-                    self.prepopulateCalendar();
-                });
-                var timeSlotsLabels = ['AM2', 'PM1', 'PM2', 'SOIR1', 'SOIR2'], i = 0, slot_elem = $('.fc-timeslots-axis');
-                for (i = 0; i < slot_elem.length; i++) {
-                    $(slot_elem[i]).html(timeSlotsLabels[i]);
-                }
+            eventAfterAllRender: function(view) {
+                // when we call fullCalendar('rerenderEvents') function
+                // this function is also called after all re-rendering completes
+                // but viewRender is not called again as it is a view not an event
+                self.recheckSlotsOnNavigation();
             },
             viewRender: function (view, element) {
-                self.recheckSlotsOnNavigation();
+                // this function is called whenever view is changed
+                // for e.g, navigating to next/previous or today view
+                self.fetchMeetings(view);
             },
             eventClick: function (event, jsEvent, view) {
                 var startDate = self.formatForDate(event.start.date());
@@ -224,6 +203,39 @@
                 }
             },
         });
+    },
+    fetchMeetings: function (view) {
+        var self = this;
+        var startDate = this.formatForDate(view.start.date());
+        var startMonth = this.formatForDate((Number(view.start.month()) + 1).toString());
+        var startYear = this.formatForDate(view.start.year());
+        var filterStart = startYear + "-" + startMonth + "-" + startDate;
+
+        var endDate = this.formatForDate(view.end.date());
+        var endMonth = this.formatForDate((Number(view.end.month()) + 1).toString());
+        var endYear = this.formatForDate(view.end.year());
+        var filterEnd = endYear + "-" + endMonth + "-" + endDate;
+
+        var filters = [
+            {
+                date_start: {$dateBetween: [filterStart, filterEnd]},
+                "$or": [{"created_by": app.user.attributes.id}, {"assigned_user_id": app.user.attributes.id}]
+            }
+        ];
+        var request = this.availableMeetings.fetch(
+                {
+                    limit: 30,
+                    filter: filters
+                }
+        );
+        request.xhr.done(function () {
+            self.$('#calendar').fullCalendar('rerenderEvents'); // Fix for issues #63879, #63880
+            self.prepopulateCalendar();
+        });
+        var timeSlotsLabels = ['AM2', 'PM1', 'PM2', 'SOIR1', 'SOIR2'], i = 0, slot_elem = $('.fc-timeslots-axis');
+        for (i = 0; i < slot_elem.length; i++) {
+            $(slot_elem[i]).html(timeSlotsLabels[i]);
+        }
     },
     formatForDate: function (string) {
         if (Number(string) < 10) {
