@@ -2198,11 +2198,6 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_location.php',
       'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_location.php',
     ),
-    372 => 
-    array (
-      'from' => '<basepath>/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_campaign_type.php',
-      'to' => 'custom/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_campaign_type.php',
-    ),
     373 => 
     array (
       'from' => '<basepath>/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_status.php',
