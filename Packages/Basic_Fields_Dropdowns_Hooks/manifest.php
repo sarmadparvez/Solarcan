@@ -2333,4 +2333,7 @@ $installdefs = array (
   'roles' => 
   array (
   ),
+  'pre_install' => array(
+        '<basepath>/scripts/pre_install.php',
+    )
 );
