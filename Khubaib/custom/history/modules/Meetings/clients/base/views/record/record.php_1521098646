@@ -387,27 +387,15 @@ array (
               ),
               8 => 
               array (
-                'name' => 'potential_sales',
-                'comment' => 'Potential amount of sales for a Meeting',
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'label' => 'LBL_POTENTIAL_SALES',
-                'span' => 12,
-              ),
-              9 => 
-              array (
                 'name' => 'type',
               ),
-              10 => 'parent_name',
-              11 => 
+              9 => 'parent_name',
+              10 => 
               array (
                 'name' => 'password',
                 'span' => 12,
               ),
-              12 => 
+              11 => 
               array (
                 'name' => 'invitees',
                 'type' => 'participants',
@@ -428,9 +416,9 @@ array (
                 ),
                 'span' => 12,
               ),
-              13 => 'assigned_user_name',
-              14 => 'team_name',
-              15 => 
+              12 => 'assigned_user_name',
+              13 => 'team_name',
+              14 => 
               array (
                 'name' => 'tag',
                 'span' => 12,

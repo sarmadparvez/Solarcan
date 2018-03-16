@@ -395,19 +395,21 @@ array (
                   1 => 'base_rate',
                 ),
                 'label' => 'LBL_POTENTIAL_SALES',
-                'span' => 12,
               ),
               9 => 
               array (
+              ),
+              10 => 
+              array (
                 'name' => 'type',
               ),
-              10 => 'parent_name',
-              11 => 
+              11 => 'parent_name',
+              12 => 
               array (
                 'name' => 'password',
                 'span' => 12,
               ),
-              12 => 
+              13 => 
               array (
                 'name' => 'invitees',
                 'type' => 'participants',
@@ -428,9 +430,9 @@ array (
                 ),
                 'span' => 12,
               ),
-              13 => 'assigned_user_name',
-              14 => 'team_name',
-              15 => 
+              14 => 'assigned_user_name',
+              15 => 'team_name',
+              16 => 
               array (
                 'name' => 'tag',
                 'span' => 12,

@@ -20,7 +20,7 @@ function meetingAssignationWorkflow()
                         WHERE m.status = 'en_attente_dassignation'
                         AND m.deleted = 0
                         AND c.deleted = 0
-                        AND DATE(m.date_start) > CURDATE()
+                        AND DATE(m.date_start) > (CURDATE() + INTERVAL 1 DAY)
                         ORDER BY m.date_start ASC";
     $result = $db->query($meetings_query, true, "Could not fetch 'en_attente_dassignation' meetings from DB");
 
@@ -51,10 +51,11 @@ function meetingAssignationWorkflow()
                         WHERE (m.status = 'disponible' OR m.status = 'en_attente_dassignation')
                         AND m.deleted = 0
                         AND u.deleted = 0
-                        AND DATE(m.date_start) > CURDATE()
+                        AND DATE(m.date_start) > (CURDATE() + INTERVAL 1 DAY)
                         ORDER BY m.date_start ASC, c.name ASC";
     $result = $db->query($sales_rep_query, true, "Could not fetch sales_reps from DB");
 
+    // add sales reps in timeslots of $meetings_and_reps array
     while ($row = $db->fetchByAssoc($result)) {
         $key = $row['date'].' '.$row['timeslot'];
         if (isset($meetings_and_reps[$key])) {
@@ -72,7 +73,6 @@ function meetingAssignationWorkflow()
             $meetings_and_reps[$key]['reps'][] = $arr;
         }
     }
-
 
     // $GLOBALS['log']->fatal("MEETINGS AND REPS: ", $meetings_and_reps);
     // $GLOBALS['log']->fatal("STARTING ASSIGNATION");
@@ -105,7 +105,7 @@ function meetingAssignationWorkflow()
                                 $meetingBean->status = 'assigne';
                                 $meetingBean->assigned_user_id = $rep['id'];
                                 $meetingBean->save();
-                                $GLOBALS['log']->fatal("Meeting $meetingBean->id is assinged to User ".$rep['id']." $r");
+                                // $GLOBALS['log']->fatal("Meeting $meetingBean->id is assinged to User ".$rep['id']." $r");
                                 unset($timeslot['reps'][$r]);
                                 $assigned = true;
                                 break;

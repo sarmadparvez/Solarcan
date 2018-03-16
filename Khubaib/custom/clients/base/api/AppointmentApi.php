@@ -11,10 +11,12 @@
  */
 require_once 'custom/include/helpers/UtHelper.php';
 
-class AppointmentApi extends SugarApi {
+class AppointmentApi extends SugarApi
+{
     use UtHelper;
 
-    public function registerApiRest() {
+    public function registerApiRest()
+    {
         return array(
             'getAvailableAppointments' => array(
                 'reqType' => 'POST',
@@ -63,7 +65,9 @@ class AppointmentApi extends SugarApi {
      */
     public function getAvailableAppointments(ServiceBase $api, array $args)
     {
-        $this->requireArgs($args, array(
+        $this->requireArgs(
+            $args,
+            array(
                 'postalcode','preferred_language_1', 'preferred_language_2', 'codecie_c', 'categories'
             )
         );
@@ -76,12 +80,12 @@ class AppointmentApi extends SugarApi {
         //get language code for codelangue_rep field in users from the arguments
         if ($args['preferred_language_1'] == 'true' && $args['preferred_language_2'] == 'true') {
             $lang_code = array('1', '2', '3'); //french , english, bilingual
-        } else if ($args['preferred_language_1'] == 'true') {
+        } elseif ($args['preferred_language_1'] == 'true') {
             $lang_code = array('1', '3'); //french, bilingual
         } else {
             $lang_code = array('2', '3'); //english, bilingual
         }
-        $categories_where = $this->getCategoryWhere($args['categories'], 'pc_u');
+        $categories_where = $this->getCategoryWhere('pc_u', $args['categories']);
 
         // meeting start time should be after and before the hours and datetime saved in config
         $x_hours = $this->getSugarConfig()->get('appointment_config')['x_hours'];
@@ -139,12 +143,6 @@ class AppointmentApi extends SugarApi {
         return $result;
     }
 
-
-    /**
-     * 
-     */
-
-
     /**
      * Book appointment for contact
      *
@@ -160,8 +158,7 @@ class AppointmentApi extends SugarApi {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_id']);
             //$GLOBALS['log']->fatal('contact last_name: '.$contact->last_name);
-        } else if (
-            !empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
+        } elseif (!empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
              !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other'])
         ) {
             $contact = $this->searchContact($args);
@@ -171,11 +168,10 @@ class AppointmentApi extends SugarApi {
             );
         }
 
-        if (is_array($contact) && count($contact) > 0 )
-        {
+        if (is_array($contact) && count($contact) > 0) {
             $GLOBALS['log']->fatal('contact id: '.$contact[0]['id']);
             $contact = $this->retrieveBean('Contacts', $contact[0]['id']);
-            if (count($contact) > 1 ) {
+            if (count($contact) > 1) {
                 $GLOBALS['log']->fatal(
                     'duplicate contacts found based on postal code and phone number. contact ids: '.print_r($contact, 1)
                 );
@@ -184,7 +180,14 @@ class AppointmentApi extends SugarApi {
         
         if (empty($contact)) {
             if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
-                $contact = BeanFactory::newBean('Contacts');
+                // if reseller, then create account if firstname and lastname is provided
+                if (empty($args['contact_model']['first_name']) && empty($args['contact_model']['last_name'])) {
+                    throw new SugarApiExceptionMissingParameter(
+                        'Please either provide Nom or Prenom to create Contact'
+                    );
+                } else {
+                    $contact = BeanFactory::newBean('Contacts');
+                }
             } else {
                 throw new SugarApiExceptionInvalidParameter("Contact not found in CRM");
             }
@@ -208,8 +211,7 @@ class AppointmentApi extends SugarApi {
         if (!empty($args['contact_model']['id'])) {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_model']['id']);
-        } else if (
-            !empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
+        } elseif (!empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
              !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other'])
         ) {
             $contact_id = $this->searchContact($args);
@@ -294,7 +296,7 @@ class AppointmentApi extends SugarApi {
         }
         if (!empty($contact_args['preferred_language_1'])) {
             $contact->preferred_language = 'francais';
-        } else if (!empty($contact_args['preferred_language_2'])) {
+        } elseif (!empty($contact_args['preferred_language_2'])) {
             $contact->preferred_language = 'anglais';
         }
         $account_model = $args['account_model'];
@@ -308,7 +310,7 @@ class AppointmentApi extends SugarApi {
             if ($args['noagent'] == '1000') {
                 $contact->source = 'partenaire';
                 $contact->source_details = 'hit';
-            } else if ($args['noagent'] == '2000') {
+            } elseif ($args['noagent'] == '2000') {
                 $contact->source = 'partenaire';
                 $contact->source_details = 'reno_depot';
             } else {
@@ -331,20 +333,92 @@ class AppointmentApi extends SugarApi {
         if (empty($meeting)) {
             throw new SugarApiExceptionInvalidParameter('Meeting not found in SugarCRM');
         }
-        // check if the meeting is today. For today's meetings they should be assigned directly, 
+        // check if the meeting is today. For today's meetings they should be assigned directly,
         // without waiting for scheduled job which will assign future (next days ) meetings at day end
         // meeting date in Y-m-d format e.g 2018-02-21
         $meeting_date = substr($meeting->timeslot_datetime, 0, strpos($meeting->timeslot_datetime, "T"));
         //get timezone from meeting date
-        $iso_datetime = date_create_from_format ( "Y-m-d\TH:i:se" , $meeting->timeslot_datetime);
+        $iso_datetime = date_create_from_format("Y-m-d\TH:i:se", $meeting->timeslot_datetime);
         $meeting_timezone = $iso_datetime->getTimezone();
         //get current datetime in GMT
         $now_datetime = $this->getTimeDate()->getNow();
         // convert current datetime to date in the timezone in which the meeting was saved
         $now_date = $now_datetime->setTimezone($meeting_timezone)->format('Y-m-d');
-        if ($meeting_date == $now_date) {
-            $meeting->status = 'assigne';
-            $meeting->assigned_user_id = $meeting->created_by;
+
+        $md = new DateTime($meeting_date);
+        $nd = new DateTime($now_date);
+        $date_diff = $md->diff($nd);
+
+        if ($meeting_date == $now_date ||
+            ($meeting_date > $now_date && $date_diff->d == 1)) {
+            // now get available sales rep of this slot
+            // that match the following criteria
+            // date, timeslot, codecie, language, category, postal code, best classification
+            global $db;
+            $language = "('3', ";
+            if ($contact->preferred_language == 'francais') {
+                $language .= "'1')";
+            } else {
+                $language .= "'2')";
+            }
+
+            $postalcode_bean = BeanFactory::newBean('rt_postal_codes')->retrieve_by_string_fields(
+                array('name' => $contact->primary_address_postalcode)
+            );
+            if (empty($postalcode_bean)) {
+                throw new SugarApiExceptionNotFound("Postal Code: $postalcode_bean->name not found in CRM");
+            }
+            $query = "  SELECT u.id
+                        FROM users u
+                        INNER JOIN meetings m ON u.id = m.created_by
+                        INNER JOIN rt_classification_users_c cu on u.id = cu.rt_classification_usersusers_idb AND cu.deleted = 0
+                        INNER JOIN rt_classification c on cu.rt_classification_usersrt_classification_ida = c.id AND c.deleted = 0
+                        WHERE u.deleted = 0
+                        AND m.deleted = 0
+                        AND DATE(m.date_start) = '$meeting_date'
+                        AND m.timeslot_name = '$meeting->timeslot_name'
+                        AND u.codecie_rep_c = '$contact->codecie_c'
+                        AND u.codelangue_rep IN $language
+                        ";
+            $account_model = $args['account_model'];
+            if (!empty($account_model['nombre_portes_achanger']) &&
+                (int) $account_model['nombre_portes_achanger'] > 0) {
+                $query .= " AND u.qualified_doors_rep_c = 1
+                            ";
+            }
+            if (!empty($account_model['nombre_fenetres_achanger']) &&
+                (int) $account_model['nombre_fenetres_achanger'] > 0) {
+                $query .= " AND u.qualified_windows_rep_c = 1
+                            ";
+            }
+            if (!empty($account_model['nombre_garage_achanger']) &&
+                (int) $account_model['nombre_garage_achanger'] > 0) {
+                $query .= " AND u.qualified_garage_rep_c = 1
+                            ";
+            }
+            $query .= " AND u.id IN (SELECT pcu.rt_postal_codes_usersusers_idb
+                                     FROM rt_postal_codes_users_c pcu
+                                     WHERE pcu.deleted = 0
+                                     AND pcu.rt_postal_codes_usersrt_postal_codes_ida = '$postalcode_bean->id')
+                        AND u.id NOT IN (SELECT mt.assigned_user_id
+                                         FROM meetings mt
+                                         WHERE DATE(mt.date_start) = '$meeting_date'
+                                         AND mt.timeslot_name = '$meeting->timeslot_name'
+                                         AND mt.assigned_user_id IS NOT NULL
+                                         AND mt.deleted = 0)
+                        ";
+            $query .= " ORDER BY c.name ASC
+                        LIMIT 1";
+
+            //$GLOBALS['log']->fatal($query);
+            $result = $db->query($query, true, "Error finding users for specified Meeting");
+            $row = $db->fetchByAssoc($result);
+            if ($row) {
+                $meeting->status = 'assigne';
+                $meeting->assigned_user_id = $row['id'];
+            } else {
+                throw new SugarApiExceptionNotFound('No Sales Rep available for this Meeting');
+            }
         } else {
             $meeting->status = 'en_attente_dassignation';
         }
@@ -361,19 +435,17 @@ class AppointmentApi extends SugarApi {
                 !empty($config['param_garage'])) {
                 $account_args = $args['account_model'];
                 //if int, convert to int, if float, covert to float
-                $param_portes = ($config['param_portes'] == (int) $config['param_portes']) ? 
+                $param_portes = ($config['param_portes'] == (int) $config['param_portes']) ?
                 (int) $config['param_portes'] : (float) $config['param_portes'];
-                $param_fenetres = ($config['param_fenetres'] == (int) $config['param_fenetres']) ? 
+                $param_fenetres = ($config['param_fenetres'] == (int) $config['param_fenetres']) ?
                 (int) $config['param_fenetres'] : (float) $config['param_fenetres'];
-                $param_garage = ($config['param_garage'] == (int) $config['param_garage']) ? 
+                $param_garage = ($config['param_garage'] == (int) $config['param_garage']) ?
                 (int) $config['param_garage'] : (float) $config['param_garage'];
 
-                $sum = ($param_portes *  (int)$account_args['nombre_portes_achanger']) + 
-                ($param_fenetres *  (int)$account_args['nombre_fenetres_achanger']) + 
+                $sum = ($param_portes *  (int)$account_args['nombre_portes_achanger']) +
+                ($param_fenetres *  (int)$account_args['nombre_fenetres_achanger']) +
                 ($param_garage *  (int)$account_args['nombre_garage_achanger']);
-                $GLOBALS['log']->fatal('amount of potential sales : '.$sum);
-                // $meeting->fieldname = $sum; //field to be described yet by client
-
+                $meeting->potential_sales = $sum;
             }
         }
 
@@ -391,7 +463,7 @@ class AppointmentApi extends SugarApi {
         if (isset($args['noagent'])) {
             if ($args['noagent'] == '1000') {
                 $contact->lead_source = 'hit';
-            } else if ($args['noagent'] == '2000') {
+            } elseif ($args['noagent'] == '2000') {
                 $contact->lead_source = 'reno_depot';
             } else {
                 $contact->lead_source = 'solarcan';
@@ -436,7 +508,7 @@ class AppointmentApi extends SugarApi {
             if ($account->load_relationship($link)) {
                 //$GLOBALS['log']->fatal('relationship is loaded');
                 $account->$link->add($contact->id);
-            }           
+            }
             //relate account to meeting
             $link = 'meetings';
             if ($account->load_relationship($link) && $meeting) {
@@ -444,7 +516,7 @@ class AppointmentApi extends SugarApi {
                 $account->$link->add($meeting->id);
             }
             if ($meeting) {
-                $this->saveOpportunity($args, $account, $contact);
+                $this->saveOpportunity($args, $account, $contact, $meeting);
             }
         }
     }
@@ -452,31 +524,22 @@ class AppointmentApi extends SugarApi {
     /**
     * create Opportunity when an appointment is booked
     */
-    protected function saveOpportunity($args, Account $account, Contact $contact)
+    protected function saveOpportunity($args, Account $account, Contact $contact, Meeting $meeting)
     {
-        //if no account is related to contact, create account
+        // create opportunity and relate to account, contact and meeting
         $opp = $this->getNewBean('Opportunities');
         $opp->name = $contact->name . " " . $account->name;
-        //copy address from contact
-/*        $account->billing_address_street = $contact->primary_address_street;
-        $account->billing_address_city = $contact->primary_address_city;
-        $account->billing_address_postalcode = $contact->primary_address_state;
-        $account->billing_address_state = $contact->primary_address_postalcode;
-        $account->annee_construction = $args['annee_construction'];
-        $account->nombre_portes_total = $args['nombre_portes_total'];
-        $account->nombre_portes_achanger = $args['nombre_portes_achanger'];
-        $account->nombre_fenetres_total = $args['nombre_fenetres_total'];
-        $account->nombre_fenetres_achanger = $args['nombre_fenetres_achanger'];
-        $account->nombre_garage_total = $args['nombre_garage_total'];
-        $account->nombre_garage_achanger = $args['nombre_garage_achanger'];*/
         $opp->account_id = $account->id;
         $opp->save();
-        //relate account to meeting
-      /*  $link = 'meetings';
-        if ($account->load_relationship($link)) {
-            //$GLOBALS['log']->fatal('relationship is loaded');
-            $account->$link->add($meeting->id);
-        }*/
+        
+        $link = 'contacts';
+        if ($opp->load_relationship($link)) {
+            $opp->$link->add($contact->id);
+        }
+        $link = 'meetings';
+        if ($opp->load_relationship($link)) {
+            $opp->$link->add($meeting->id);
+        }
     }
 
     /**
@@ -487,7 +550,7 @@ class AppointmentApi extends SugarApi {
         $this->requireArgs($args, array('postalcode', 'contact_model'));
         $contact_args = $args['contact_model'];
 
-        if (empty($contact_args['phone_home']) && empty($contact_args['phone_mobile']) && 
+        if (empty($contact_args['phone_home']) && empty($contact_args['phone_mobile']) &&
             empty($contact_args['phone_work']) && empty($contact_args['phone_other'])) {
             throw new SugarApiExceptionInvalidParameter('Please provide atleaset one phone number');
         }
@@ -501,7 +564,8 @@ class AppointmentApi extends SugarApi {
         );
         // $s_query->where()->equals($s_query->getFromAlias().'.primary_address_postalcode', $args['postalcode']);
 
-        $s_query->whereRaw($this->getPhoneWhere(
+        $s_query->whereRaw(
+            $this->getPhoneWhere(
                 $contact_args['phone_home'],
                 $contact_args['phone_mobile'],
                 $contact_args['phone_work'],
@@ -547,7 +611,7 @@ class AppointmentApi extends SugarApi {
 
         if (count($sql_parts) > 1) {
             $sql = implode(' OR ', $sql_parts);
-        } else if (count($sql_parts) == 1){
+        } elseif (count($sql_parts) == 1) {
             $sql = $sql_parts[0];
         }
         //$GLOBALS['log']->fatal('phone sql : '.$sql);
@@ -559,7 +623,7 @@ class AppointmentApi extends SugarApi {
     * @param $categories array
     * @return string
     */
-    protected function getCategoryWhere($categories = array(), $join_alias)
+    protected function getCategoryWhere($join_alias, $categories = array())
     {
         $sql_parts = array();
         $sql = '';
@@ -574,7 +638,7 @@ class AppointmentApi extends SugarApi {
 
         if (count($sql_parts) > 1) {
             $sql = implode(' AND ', $sql_parts);
-        } else if (count($sql_parts) == 1) {
+        } elseif (count($sql_parts) == 1) {
             $sql = $sql_parts[0];
         }
         //$GLOBALS['log']->fatal('categories sql : '.$sql);
@@ -590,6 +654,10 @@ class AppointmentApi extends SugarApi {
      */
     public function saveAppointmentConfig(ServiceBase $api, array $args)
     {
+        global $current_user;
+        if (!$current_user->is_admin) {
+            throw new SugarApiExceptionNotAuthorized('User not permitted for this action');
+        }
         $this->requireArgs($args, array('data'));
         $config_obj = $this->getConfigurator();
         //Load config
@@ -620,7 +688,7 @@ class AppointmentApi extends SugarApi {
         $time_date = $this->getTimeDate();
         if (!empty($sugar_config->get('appointment_config'))) {
             $response['data'] = $sugar_config->get('appointment_config');
-            if(!empty($response['data']['appointments_upto'])) {
+            if (!empty($response['data']['appointments_upto'])) {
                 $response['data']['appointments_upto'] = $time_date->fromDbType(
                     $response['data']['appointments_upto'],
                     'datetime'
@@ -630,5 +698,4 @@ class AppointmentApi extends SugarApi {
         }
         return $response;
     }
-
 }

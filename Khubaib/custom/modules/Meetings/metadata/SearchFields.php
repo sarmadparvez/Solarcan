@@ -156,4 +156,8 @@ $searchFields['Meetings'] = array (
   array (
     'query_type' => 'default',
   ),
+  'potential_sales' => 
+  array (
+    'query_type' => 'default',
+  ),
 );

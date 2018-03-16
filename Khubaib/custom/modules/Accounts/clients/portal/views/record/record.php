@@ -1,7 +1,7 @@
 <?php
 $viewdefs['Accounts'] = 
 array (
-  'base' => 
+  'portal' => 
   array (
     'view' => 
     array (
@@ -94,24 +94,16 @@ array (
               7 => 
               array (
                 'type' => 'rowaction',
-                'event' => 'button:historical_summary_button:click',
-                'name' => 'historical_summary_button',
-                'label' => 'LBL_HISTORICAL_SUMMARY',
-                'acl_action' => 'view',
-              ),
-              8 => 
-              array (
-                'type' => 'rowaction',
                 'event' => 'button:audit_button:click',
                 'name' => 'audit_button',
                 'label' => 'LNK_VIEW_CHANGE_LOG',
                 'acl_action' => 'view',
               ),
-              9 => 
+              8 => 
               array (
                 'type' => 'divider',
               ),
-              10 => 
+              9 => 
               array (
                 'type' => 'rowaction',
                 'event' => 'button:delete_button:click',
@@ -132,7 +124,7 @@ array (
           0 => 
           array (
             'name' => 'panel_header',
-            'label' => 'LBL_PANEL_HEADER',
+            'label' => 'LBL_RECORD_HEADER',
             'header' => true,
             'fields' => 
             array (
@@ -140,19 +132,18 @@ array (
               array (
                 'name' => 'picture',
                 'type' => 'avatar',
-                'size' => 'large',
+                'width' => 42,
+                'height' => 42,
                 'dismiss_label' => true,
                 'readonly' => true,
               ),
-              1 => 
-              array (
-                'name' => 'name',
-              ),
+              1 => 'name',
               2 => 
               array (
                 'name' => 'favorite',
                 'label' => 'LBL_FAVORITE',
                 'type' => 'favorite',
+                'readonly' => true,
                 'dismiss_label' => true,
               ),
               3 => 
@@ -167,16 +158,20 @@ array (
           ),
           1 => 
           array (
-            'newTab' => false,
-            'panelDefault' => 'expanded',
-            'name' => 'LBL_RECORDVIEW_PANEL1',
-            'label' => 'LBL_RECORDVIEW_PANEL1',
+            'name' => 'panel_body',
+            'label' => 'LBL_RECORD_BODY',
             'columns' => 2,
-            'labelsOnTop' => 1,
-            'placeholders' => 1,
+            'labelsOnTop' => true,
+            'placeholders' => true,
             'fields' => 
             array (
-              0 => 
+              0 => 'website',
+              1 => 'phone_office',
+              2 => 'employees',
+              3 => 'phone_alternate',
+              4 => 'email',
+              5 => 'phone_fax',
+              6 => 
               array (
                 'name' => 'billing_address',
                 'type' => 'fieldset',
@@ -215,83 +210,92 @@ array (
                     'placeholder' => 'LBL_BILLING_ADDRESS_COUNTRY',
                   ),
                 ),
-                'span' => 12,
-              ),
-              1 => 
-              array (
-                'name' => 'annee_construction',
-                'label' => 'LBL_ANNEE_CONSTRUCTION',
-                'span' => 12,
-              ),
-              2 => 
-              array (
-                'name' => 'nombre_portes_total',
-                'label' => 'LBL_NOMBRE_PORTES_TOTAL',
-              ),
-              3 => 
-              array (
-                'name' => 'nombre_portes_achanger',
-                'label' => 'LBL_NOMBRE_PORTES_ACHANGER',
-              ),
-              4 => 
-              array (
-                'name' => 'nombre_fenetres_total',
-                'label' => 'LBL_NOMBRE_FENETRES_TOTAL',
-              ),
-              5 => 
-              array (
-                'name' => 'nombre_fenetres_achanger',
-                'label' => 'LBL_NOMBRE_FENETRES_ACHANGER',
-              ),
-              6 => 
-              array (
-                'name' => 'nombre_garage_total',
-                'label' => 'LBL_NOMBRE_GARAGE_TOTAL',
               ),
               7 => 
               array (
-                'name' => 'nombre_garage_achanger',
-                'label' => 'LBL_NOMBRE_GARAGE_ACHANGER',
+                'name' => 'shipping_address',
+                'type' => 'fieldset',
+                'css_class' => 'address',
+                'label' => 'LBL_SHIPPING_ADDRESS',
+                'fields' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'shipping_address_street',
+                    'css_class' => 'address_street',
+                    'placeholder' => 'LBL_SHIPPING_ADDRESS_STREET',
+                  ),
+                  1 => 
+                  array (
+                    'name' => 'shipping_address_city',
+                    'css_class' => 'address_city',
+                    'placeholder' => 'LBL_SHIPPING_ADDRESS_CITY',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'shipping_address_state',
+                    'css_class' => 'address_state',
+                    'placeholder' => 'LBL_SHIPPING_ADDRESS_STATE',
+                  ),
+                  3 => 
+                  array (
+                    'name' => 'shipping_address_postalcode',
+                    'css_class' => 'address_zip',
+                    'placeholder' => 'LBL_SHIPPING_ADDRESS_POSTALCODE',
+                  ),
+                  4 => 
+                  array (
+                    'name' => 'shipping_address_country',
+                    'css_class' => 'address_country',
+                    'placeholder' => 'LBL_SHIPPING_ADDRESS_COUNTRY',
+                  ),
+                  5 => 
+                  array (
+                    'name' => 'copy',
+                    'label' => 'NTC_COPY_BILLING_ADDRESS',
+                    'type' => 'copy',
+                    'mapping' => 
+                    array (
+                      'billing_address_street' => 'shipping_address_street',
+                      'billing_address_city' => 'shipping_address_city',
+                      'billing_address_state' => 'shipping_address_state',
+                      'billing_address_postalcode' => 'shipping_address_postalcode',
+                      'billing_address_country' => 'shipping_address_country',
+                    ),
+                  ),
+                ),
+              ),
+              8 => 
+              array (
+                'name' => 'tag',
+                'span' => 12,
               ),
             ),
           ),
           2 => 
           array (
             'name' => 'panel_hidden',
-            'label' => 'LBL_RECORD_SHOWMORE',
+            'label' => 'LBL_SHOW_MORE',
             'hide' => true,
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
-            'newTab' => false,
-            'panelDefault' => 'expanded',
             'fields' => 
             array (
-              0 => 
-              array (
-                'name' => 'date_entered_by',
-                'readonly' => true,
-                'inline' => true,
-                'type' => 'fieldset',
-                'label' => 'LBL_DATE_ENTERED',
-                'fields' => 
-                array (
-                  0 => 
-                  array (
-                    'name' => 'date_entered',
-                  ),
-                  1 => 
-                  array (
-                    'type' => 'label',
-                    'default_value' => 'LBL_BY',
-                  ),
-                  2 => 
-                  array (
-                    'name' => 'created_by_name',
-                  ),
-                ),
-              ),
+              0 => 'twitter',
               1 => 
+              array (
+                'name' => 'description',
+                'span' => 12,
+              ),
+              2 => 'accounts_type',
+              3 => 'industry',
+              4 => 'annual_revenue',
+              5 => 'ticker_symbol',
+              6 => 'ownership',
+              7 => 'rating',
+              8 => 'assigned_user_name',
+              9 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -315,12 +319,33 @@ array (
                   ),
                 ),
               ),
+              10 => 'team_name',
+              11 => 
+              array (
+                'name' => 'date_entered_by',
+                'readonly' => true,
+                'inline' => true,
+                'type' => 'fieldset',
+                'label' => 'LBL_DATE_ENTERED',
+                'fields' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'date_entered',
+                  ),
+                  1 => 
+                  array (
+                    'type' => 'label',
+                    'default_value' => 'LBL_BY',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'created_by_name',
+                  ),
+                ),
+              ),
             ),
           ),
-        ),
-        'templateMeta' => 
-        array (
-          'useTabs' => false,
         ),
       ),
     ),

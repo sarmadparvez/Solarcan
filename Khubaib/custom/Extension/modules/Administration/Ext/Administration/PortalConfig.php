@@ -6,6 +6,7 @@ $admin_option_defs['Administration']['portal_config'] = array(
     'LBL_APPOINTMENT_CONFIG',
     '',
     'javascript:parent.SUGAR.App.router.navigate("Home/layout/portal-config", {trigger: true})',
+    // './index.php?module=Administration&layout=portal_config',
 );
 
 $admin_group_header[] = array(
