@@ -12,6 +12,14 @@
 
     initialize: function(options)
     {
+        if (app.user.attributes.type != "admin") {
+            app.alert.show('no_access', {
+                level: 'error',
+                messages: 'User not permitted to access this content.',
+                autoClose: false
+            });
+            return;
+        }
         this._super('initialize', [options]);
     },
 

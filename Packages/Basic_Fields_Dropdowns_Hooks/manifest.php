@@ -2324,6 +2324,11 @@ $installdefs = array (
       'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_last_minute_appt.php',
       'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_last_minute_appt.php',
     ),
+    398 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_potential_sales.php',
+      'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_potential_sales.php',
+    ),
   ),
   'roles' => 
   array (
