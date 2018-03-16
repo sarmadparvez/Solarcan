@@ -276,11 +276,6 @@ array (
               ),
               2 => 
               array (
-                'name' => 'partenaire_info',
-                'label' => 'LBL_PARTENAIRE_INFO',
-              ),
-              3 => 
-              array (
                 'name' => 'recurrence',
                 'type' => 'recurrence',
                 'inline' => true,
@@ -359,9 +354,10 @@ array (
                     'type' => 'repeat-count',
                   ),
                 ),
+                'span' => 12,
               ),
-              4 => 'location',
-              5 => 
+              3 => 'location',
+              4 => 
               array (
                 'name' => 'reminders',
                 'type' => 'fieldset',
@@ -374,40 +370,28 @@ array (
                   1 => 'email_reminder_time',
                 ),
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'description',
                 'rows' => 3,
                 'span' => 6,
               ),
-              7 => 
+              6 => 
               array (
                 'name' => 'email',
                 'span' => 6,
               ),
-              8 => 
-              array (
-                'name' => 'potential_sales',
-                'comment' => 'Potential amount of sales for a Meeting',
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'label' => 'LBL_POTENTIAL_SALES',
-                'span' => 12,
-              ),
-              9 => 
+              7 => 
               array (
                 'name' => 'type',
               ),
-              10 => 'parent_name',
-              11 => 
+              8 => 'parent_name',
+              9 => 
               array (
                 'name' => 'password',
                 'span' => 12,
               ),
-              12 => 
+              10 => 
               array (
                 'name' => 'invitees',
                 'type' => 'participants',
@@ -428,9 +412,9 @@ array (
                 ),
                 'span' => 12,
               ),
-              13 => 'assigned_user_name',
-              14 => 'team_name',
-              15 => 
+              11 => 'assigned_user_name',
+              12 => 'team_name',
+              13 => 
               array (
                 'name' => 'tag',
                 'span' => 12,

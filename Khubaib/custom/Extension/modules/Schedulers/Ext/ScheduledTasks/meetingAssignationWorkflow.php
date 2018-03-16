@@ -20,13 +20,13 @@ function meetingAssignationWorkflow()
                         WHERE m.status = 'en_attente_dassignation'
                         AND m.deleted = 0
                         AND c.deleted = 0
-                        AND DATE(m.date_start) > (CURDATE() + INTERVAL 1 DAY)
+                        AND DATE(m.date_start) > CURDATE()
                         ORDER BY m.date_start ASC";
     $result = $db->query($meetings_query, true, "Could not fetch 'en_attente_dassignation' meetings from DB");
 
     // collect in array according to sorted date_start index
     $meetings_and_reps = array();
-    while ($row = $db->fetchByAssoc($result)) {
+    while($row = $db->fetchByAssoc($result)) {
         $arr = array(
             'id' => $row['id'],
             'codecie_c' => $row['codecie_c'],
@@ -51,12 +51,11 @@ function meetingAssignationWorkflow()
                         WHERE (m.status = 'disponible' OR m.status = 'en_attente_dassignation')
                         AND m.deleted = 0
                         AND u.deleted = 0
-                        AND DATE(m.date_start) > (CURDATE() + INTERVAL 1 DAY)
+                        AND DATE(m.date_start) > CURDATE()
                         ORDER BY m.date_start ASC, c.name ASC";
     $result = $db->query($sales_rep_query, true, "Could not fetch sales_reps from DB");
 
-    // add sales reps in timeslots of $meetings_and_reps array
-    while ($row = $db->fetchByAssoc($result)) {
+    while($row = $db->fetchByAssoc($result)) {
         $key = $row['date'].' '.$row['timeslot'];
         if (isset($meetings_and_reps[$key])) {
             $arr = array(
@@ -74,16 +73,17 @@ function meetingAssignationWorkflow()
         }
     }
 
+
     // $GLOBALS['log']->fatal("MEETINGS AND REPS: ", $meetings_and_reps);
     // $GLOBALS['log']->fatal("STARTING ASSIGNATION");
     // for each timeslot check if the available reps match remaining criterias
-    foreach ($meetings_and_reps as $key => $timeslot) {
+    foreach($meetings_and_reps as $key => $timeslot) {
         if (isset($timeslot['waiting']) && isset($timeslot['reps'])) {
-            foreach ($timeslot['waiting'] as $m => $meeting) {
+            foreach($timeslot['waiting'] as $m => $meeting) {
                 $postalcodeBean = BeanFactory::newBean('rt_postal_codes')->retrieve_by_string_fields(array('name' => $meeting['postalcode']));
                 if (!empty($postalcodeBean)) {
                     $assigned = false;
-                    foreach ($timeslot['reps'] as $r => $rep) {
+                    foreach($timeslot['reps'] as $r => $rep) {
                         // first match all critereas to make sure this sales rep is qualified
                         if ($rep['codecie_rep_c'] == $meeting['codecie_c'] &&
                            ($rep['codelangue_rep'] == '3' || $rep['codelangue_rep'] == $meeting['preferred_language']) &&
@@ -97,7 +97,7 @@ function meetingAssignationWorkflow()
                                         AND pcu.rt_postal_codes_usersrt_postal_codes_ida = '".$postalcodeBean->id."'
                                         AND pcu.deleted = 0";
                             $result = $db->query($query, true, "Failed to check postal code from DB");
-                            while ($row = $db->fetchByAssoc($result)) {
+                            while($row = $db->fetchByAssoc($result)) {
                                 // already checking for best classification sales_rep (sorted in $sales_rep_query)
                                 // inside this loop means this rep can go to the postal code
                                 // now just assign this sales rep the meeting and remove him from this timeslot array
@@ -105,14 +105,12 @@ function meetingAssignationWorkflow()
                                 $meetingBean->status = 'assigne';
                                 $meetingBean->assigned_user_id = $rep['id'];
                                 $meetingBean->save();
-                                // $GLOBALS['log']->fatal("Meeting $meetingBean->id is assinged to User ".$rep['id']." $r");
+                                $GLOBALS['log']->fatal("Meeting $meetingBean->id is assinged to User ".$rep['id']." $r");
                                 unset($timeslot['reps'][$r]);
                                 $assigned = true;
                                 break;
                             }
-                            if ($assigned) {
-                                break;
-                            }
+                            if ($assigned) break;
                         }
                     }
                 } else {

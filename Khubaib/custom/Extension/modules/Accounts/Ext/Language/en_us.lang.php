@@ -40,3 +40,4 @@ $mod_strings['LBL_BILLING_ADDRESS_STATE'] = 'State:';
 $mod_strings['LBL_BILLING_ADDRESS_POSTALCODE'] = 'Postal Code:';
 $mod_strings['LBL_BILLING_ADDRESS_COUNTRY'] = 'Country:';
 $mod_strings['LBL_CHECKING'] = 'CHECKING';
+$mod_strings['LBL_TEST'] = 'Test';

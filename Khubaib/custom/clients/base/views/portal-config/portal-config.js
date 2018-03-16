@@ -15,8 +15,7 @@
         if (app.user.attributes.type != "admin") {
             app.alert.show('no_access', {
                 level: 'error',
-                messages: 'User not permitted to access this content.',
-                autoClose: false
+                messages: 'ERR_NOT_ADMIN'
             });
             return;
         }
@@ -119,7 +118,7 @@
             //all values are required
             if (field.def.required && !fieldValue) {
                 isValidated = false;
-            } else if (field.def.type == 'int' && !(/^\d+$/.test(fieldValue))) {
+            } else if (field.name == 'x_hours' && !(/^\d+$/.test(fieldValue))) {
                 // If field value is not a number
                isValidated = false;
             } else if (field.type == 'decimal' &&
@@ -165,6 +164,7 @@
                 });
             },
             error: function (error) {
+                console.log("Error", error);
                 app.alert.show('appointment_config__error', {
                     level: 'error',
                     autoClose: true,
@@ -173,16 +173,6 @@
             },
             complete: function () {
                 app.alert.dismiss('sending_wait');
-/*                if (!app.acl.hasAccess('admin', 'aud_Job_Queue')) {
-                    app.error.handleRenderError(self, 'view_render_denied');
-                    app.controller.loadView({
-                        layout: 'error',
-                        errorType: '404',
-                        module: 'Error',
-                        create: true
-                    });
-                    return;
-                }*/
                 self._super('_render');
             },
         }); 

@@ -8,7 +8,7 @@ $viewdefs['base']['view']['portal-config'] = array(
                         array(
                             'name' => 'x_hours',
                             'label' => 'LBL_APPOINTMENT_IN_X_HOURS',
-                            'type' => 'int',
+                            'type' => 'text',
                             'required' => true,
                             'error_message'=> 'ERR_INVALID_X_HOURS',
                             'span' => 3,

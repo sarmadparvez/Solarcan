@@ -1,6 +1,5 @@
 <?php
-$module_name = 'dsm_dnc';
-$viewdefs[$module_name] = 
+$viewdefs['Accounts'] = 
 array (
   'base' => 
   array (
@@ -89,10 +88,18 @@ array (
                 'event' => 'button:duplicate_button:click',
                 'name' => 'duplicate_button',
                 'label' => 'LBL_DUPLICATE_BUTTON_LABEL',
-                'acl_module' => 'dsm_dnc',
+                'acl_module' => 'Accounts',
                 'acl_action' => 'create',
               ),
               7 => 
+              array (
+                'type' => 'rowaction',
+                'event' => 'button:historical_summary_button:click',
+                'name' => 'historical_summary_button',
+                'label' => 'LBL_HISTORICAL_SUMMARY',
+                'acl_action' => 'view',
+              ),
+              8 => 
               array (
                 'type' => 'rowaction',
                 'event' => 'button:audit_button:click',
@@ -100,11 +107,11 @@ array (
                 'label' => 'LNK_VIEW_CHANGE_LOG',
                 'acl_action' => 'view',
               ),
-              8 => 
+              9 => 
               array (
                 'type' => 'divider',
               ),
-              9 => 
+              10 => 
               array (
                 'type' => 'rowaction',
                 'event' => 'button:delete_button:click',
@@ -125,7 +132,7 @@ array (
           0 => 
           array (
             'name' => 'panel_header',
-            'label' => 'LBL_RECORD_HEADER',
+            'label' => 'LBL_PANEL_HEADER',
             'header' => true,
             'fields' => 
             array (
@@ -133,18 +140,19 @@ array (
               array (
                 'name' => 'picture',
                 'type' => 'avatar',
-                'width' => 42,
-                'height' => 42,
+                'size' => 'large',
                 'dismiss_label' => true,
                 'readonly' => true,
               ),
-              1 => 'name',
+              1 => 
+              array (
+                'name' => 'name',
+              ),
               2 => 
               array (
                 'name' => 'favorite',
                 'label' => 'LBL_FAVORITE',
                 'type' => 'favorite',
-                'readonly' => true,
                 'dismiss_label' => true,
               ),
               3 => 
@@ -159,32 +167,98 @@ array (
           ),
           1 => 
           array (
-            'name' => 'panel_body',
-            'label' => 'LBL_RECORD_BODY',
-            'columns' => 2,
-            'labelsOnTop' => true,
-            'placeholders' => true,
             'newTab' => false,
             'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL1',
+            'label' => 'LBL_RECORDVIEW_PANEL1',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
             'fields' => 
             array (
               0 => 
               array (
-                'name' => 'assigned_user_name',
+                'name' => 'billing_address',
+                'type' => 'fieldset',
+                'css_class' => 'address',
+                'label' => 'LBL_BILLING_ADDRESS',
+                'fields' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'billing_address_street',
+                    'css_class' => 'address_street',
+                    'placeholder' => 'LBL_BILLING_ADDRESS_STREET',
+                  ),
+                  1 => 
+                  array (
+                    'name' => 'billing_address_city',
+                    'css_class' => 'address_city',
+                    'placeholder' => 'LBL_BILLING_ADDRESS_CITY',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'billing_address_state',
+                    'css_class' => 'address_state',
+                    'placeholder' => 'LBL_BILLING_ADDRESS_STATE',
+                  ),
+                  3 => 
+                  array (
+                    'name' => 'billing_address_postalcode',
+                    'css_class' => 'address_zip',
+                    'placeholder' => 'LBL_BILLING_ADDRESS_POSTALCODE',
+                  ),
+                  4 => 
+                  array (
+                    'name' => 'billing_address_country',
+                    'css_class' => 'address_country',
+                    'placeholder' => 'LBL_BILLING_ADDRESS_COUNTRY',
+                  ),
+                ),
                 'span' => 12,
               ),
               1 => 
               array (
-                'name' => 'date_enregistrement',
-                'label' => 'LBL_DATE_ENREGISTREMENT',
+                'name' => 'annee_construction',
+                'label' => 'LBL_ANNEE_CONSTRUCTION',
                 'span' => 12,
+              ),
+              2 => 
+              array (
+                'name' => 'nombre_portes_total',
+                'label' => 'LBL_NOMBRE_PORTES_TOTAL',
+              ),
+              3 => 
+              array (
+                'name' => 'nombre_portes_achanger',
+                'label' => 'LBL_NOMBRE_PORTES_ACHANGER',
+              ),
+              4 => 
+              array (
+                'name' => 'nombre_fenetres_total',
+                'label' => 'LBL_NOMBRE_FENETRES_TOTAL',
+              ),
+              5 => 
+              array (
+                'name' => 'nombre_fenetres_achanger',
+                'label' => 'LBL_NOMBRE_FENETRES_ACHANGER',
+              ),
+              6 => 
+              array (
+                'name' => 'nombre_garage_total',
+                'label' => 'LBL_NOMBRE_GARAGE_TOTAL',
+              ),
+              7 => 
+              array (
+                'name' => 'nombre_garage_achanger',
+                'label' => 'LBL_NOMBRE_GARAGE_ACHANGER',
               ),
             ),
           ),
           2 => 
           array (
             'name' => 'panel_hidden',
-            'label' => 'LBL_SHOW_MORE',
+            'label' => 'LBL_RECORD_SHOWMORE',
             'hide' => true,
             'columns' => 2,
             'labelsOnTop' => true,
@@ -194,52 +268,6 @@ array (
             'fields' => 
             array (
               0 => 
-              array (
-                'name' => 'source',
-                'label' => 'LBL_SOURCE',
-              ),
-              1 => 
-              array (
-                'name' => 'source_details',
-                'studio' => 'visible',
-                'label' => 'LBL_SOURCE_DETAILS',
-              ),
-              2 => 
-              array (
-                'name' => 'description',
-                'span' => 6,
-              ),
-              3 => 
-              array (
-                'name' => 'contact_name',
-                'label' => 'LBL_CONTACT_NAME',
-                'span' => 6,
-              ),
-              4 => 
-              array (
-                'name' => 'date_modified_by',
-                'readonly' => true,
-                'inline' => true,
-                'type' => 'fieldset',
-                'label' => 'LBL_DATE_MODIFIED',
-                'fields' => 
-                array (
-                  0 => 
-                  array (
-                    'name' => 'date_modified',
-                  ),
-                  1 => 
-                  array (
-                    'type' => 'label',
-                    'default_value' => 'LBL_BY',
-                  ),
-                  2 => 
-                  array (
-                    'name' => 'modified_by_name',
-                  ),
-                ),
-              ),
-              5 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -260,6 +288,30 @@ array (
                   2 => 
                   array (
                     'name' => 'created_by_name',
+                  ),
+                ),
+              ),
+              1 => 
+              array (
+                'name' => 'date_modified_by',
+                'readonly' => true,
+                'inline' => true,
+                'type' => 'fieldset',
+                'label' => 'LBL_DATE_MODIFIED',
+                'fields' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'date_modified',
+                  ),
+                  1 => 
+                  array (
+                    'type' => 'label',
+                    'default_value' => 'LBL_BY',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'modified_by_name',
                   ),
                 ),
               ),

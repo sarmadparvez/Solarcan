@@ -48,62 +48,6 @@ $dictionary["User"]["fields"]["rt_classification_usersrt_classification_ida"] = 
 
 ?>
 <?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/rt_postal_codes_users_Users.php
-
-// created: 2018-01-31 12:37:05
-$dictionary["User"]["fields"]["rt_postal_codes_users"] = array (
-  'name' => 'rt_postal_codes_users',
-  'type' => 'link',
-  'relationship' => 'rt_postal_codes_users',
-  'source' => 'non-db',
-  'module' => 'rt_postal_codes',
-  'bean_name' => false,
-  'vname' => 'LBL_RT_POSTAL_CODES_USERS_FROM_RT_POSTAL_CODES_TITLE',
-  'id_name' => 'rt_postal_codes_usersrt_postal_codes_ida',
-);
-
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_can_sell.php
-
- // created: 2018-01-30 17:58:15
-$dictionary['User']['fields']['can_sell']['name']='can_sell';
-$dictionary['User']['fields']['can_sell']['vname']='LBL_CAN_SELL';
-$dictionary['User']['fields']['can_sell']['type']='multienum';
-$dictionary['User']['fields']['can_sell']['isMultiSelect']=true;
-$dictionary['User']['fields']['can_sell']['options']='user_can_sell_dom';
-$dictionary['User']['fields']['can_sell']['massupdate']=false;
-$dictionary['User']['fields']['can_sell']['duplicate_merge']='enabled';
-$dictionary['User']['fields']['can_sell']['merge_filter']='enabled';
-$dictionary['User']['fields']['can_sell']['calculated']=false;
-$dictionary['User']['fields']['can_sell']['required']=false;
-$dictionary['User']['fields']['can_sell']['audited']=true;
-$dictionary['User']['fields']['can_sell']['importable']='true';
-$dictionary['User']['fields']['can_sell']['duplicate_merge_dom_value']='2';
-$dictionary['User']['fields']['can_sell']['unified_search']=false;
-$dictionary['User']['fields']['can_sell']['dependency']='';
-$dictionary['User']['fields']['can_sell']['default']='^^';
-
- 
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_preferred_language.php
-
- // created: 2018-01-30 17:39:59
-$dictionary['User']['fields']['preferred_language']['default']='en_us';
-$dictionary['User']['fields']['preferred_language']['required']=false;
-$dictionary['User']['fields']['preferred_language']['audited']=false;
-$dictionary['User']['fields']['preferred_language']['massupdate']=true;
-$dictionary['User']['fields']['preferred_language']['duplicate_merge']='enabled';
-$dictionary['User']['fields']['preferred_language']['duplicate_merge_dom_value']='1';
-$dictionary['User']['fields']['preferred_language']['merge_filter']='disabled';
-$dictionary['User']['fields']['preferred_language']['unified_search']=false;
-$dictionary['User']['fields']['preferred_language']['calculated']=false;
-$dictionary['User']['fields']['preferred_language']['dependency']=false;
-
- 
-?>
-<?php
 // Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_prenom_rep.php
 
  // created: 2018-02-08 16:10:58
@@ -150,6 +94,66 @@ $dictionary['User']['fields']['cellulaire_rep']['full_text_search']=array (
   'boost' => '1',
   'searchable' => false,
 );
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/rt_postal_codes_users_Users.php
+
+// created: 2018-01-31 12:37:05
+$dictionary["User"]["fields"]["rt_postal_codes_users"] = array (
+  'name' => 'rt_postal_codes_users',
+  'type' => 'link',
+  'relationship' => 'rt_postal_codes_users',
+  'source' => 'non-db',
+  'module' => 'rt_postal_codes',
+  'bean_name' => false,
+  'vname' => 'LBL_RT_POSTAL_CODES_USERS_FROM_RT_POSTAL_CODES_TITLE',
+  'id_name' => 'rt_postal_codes_usersrt_postal_codes_ida',
+);
+
+?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_can_sell.php
+
+ // created: 2018-01-30 17:58:15
+$dictionary['User']['fields']['can_sell']['name']='can_sell';
+$dictionary['User']['fields']['can_sell']['vname']='LBL_CAN_SELL';
+$dictionary['User']['fields']['can_sell']['type']='multienum';
+$dictionary['User']['fields']['can_sell']['isMultiSelect']=true;
+$dictionary['User']['fields']['can_sell']['options']='user_can_sell_dom';
+$dictionary['User']['fields']['can_sell']['massupdate']=false;
+$dictionary['User']['fields']['can_sell']['duplicate_merge']='enabled';
+$dictionary['User']['fields']['can_sell']['merge_filter']='enabled';
+$dictionary['User']['fields']['can_sell']['calculated']=false;
+$dictionary['User']['fields']['can_sell']['required']=false;
+$dictionary['User']['fields']['can_sell']['audited']=true;
+$dictionary['User']['fields']['can_sell']['importable']='true';
+$dictionary['User']['fields']['can_sell']['duplicate_merge_dom_value']='2';
+$dictionary['User']['fields']['can_sell']['unified_search']=false;
+$dictionary['User']['fields']['can_sell']['dependency']='';
+$dictionary['User']['fields']['can_sell']['default']='^^';
+
+ 
+?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_last_minute_appt.php
+
+ // created: 2018-03-13 18:59:39
+$dictionary['User']['fields']['last_minute_appt']['name']='last_minute_appt';
+$dictionary['User']['fields']['last_minute_appt']['vname']='LBL_LAST_MINUTE_APPT';
+$dictionary['User']['fields']['last_minute_appt']['type']='bool';
+$dictionary['User']['fields']['last_minute_appt']['massupdate']=false;
+$dictionary['User']['fields']['last_minute_appt']['duplicate_merge']='enabled';
+$dictionary['User']['fields']['last_minute_appt']['merge_filter']='enabled';
+$dictionary['User']['fields']['last_minute_appt']['calculated']=false;
+$dictionary['User']['fields']['last_minute_appt']['importable']='true';
+$dictionary['User']['fields']['last_minute_appt']['audited']=true;
+$dictionary['User']['fields']['last_minute_appt']['reportable']=true;
+$dictionary['User']['fields']['last_minute_appt']['isnull']='true';
+$dictionary['User']['fields']['last_minute_appt']['default']=true;
+$dictionary['User']['fields']['last_minute_appt']['duplicate_merge_dom_value']='2';
+$dictionary['User']['fields']['last_minute_appt']['unified_search']=false;
 
  
 ?>
@@ -368,6 +372,23 @@ $dictionary['User']['fields']['codelangue_rep']['default']='';
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_preferred_language.php
+
+ // created: 2018-01-30 17:39:59
+$dictionary['User']['fields']['preferred_language']['default']='en_us';
+$dictionary['User']['fields']['preferred_language']['required']=false;
+$dictionary['User']['fields']['preferred_language']['audited']=false;
+$dictionary['User']['fields']['preferred_language']['massupdate']=true;
+$dictionary['User']['fields']['preferred_language']['duplicate_merge']='enabled';
+$dictionary['User']['fields']['preferred_language']['duplicate_merge_dom_value']='1';
+$dictionary['User']['fields']['preferred_language']['merge_filter']='disabled';
+$dictionary['User']['fields']['preferred_language']['unified_search']=false;
+$dictionary['User']['fields']['preferred_language']['calculated']=false;
+$dictionary['User']['fields']['preferred_language']['dependency']=false;
+
+ 
+?>
+<?php
 // Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_qualified_windows_rep_c.php
 
 
@@ -502,27 +523,6 @@ $dictionary['User']['fields']['adresse_rep']['full_text_search']=array (
   'boost' => '1',
   'searchable' => false,
 );
-
- 
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Vardefs/sugarfield_last_minute_appt.php
-
- // created: 2018-03-13 18:59:39
-$dictionary['User']['fields']['last_minute_appt']['name']='last_minute_appt';
-$dictionary['User']['fields']['last_minute_appt']['vname']='LBL_LAST_MINUTE_APPT';
-$dictionary['User']['fields']['last_minute_appt']['type']='bool';
-$dictionary['User']['fields']['last_minute_appt']['massupdate']=false;
-$dictionary['User']['fields']['last_minute_appt']['duplicate_merge']='enabled';
-$dictionary['User']['fields']['last_minute_appt']['merge_filter']='enabled';
-$dictionary['User']['fields']['last_minute_appt']['calculated']=false;
-$dictionary['User']['fields']['last_minute_appt']['importable']='true';
-$dictionary['User']['fields']['last_minute_appt']['audited']=true;
-$dictionary['User']['fields']['last_minute_appt']['reportable']=true;
-$dictionary['User']['fields']['last_minute_appt']['isnull']='true';
-$dictionary['User']['fields']['last_minute_appt']['default']=true;
-$dictionary['User']['fields']['last_minute_appt']['duplicate_merge_dom_value']='2';
-$dictionary['User']['fields']['last_minute_appt']['unified_search']=false;
 
  
 ?>

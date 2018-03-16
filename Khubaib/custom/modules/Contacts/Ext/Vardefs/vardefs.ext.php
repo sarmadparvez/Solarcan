@@ -578,6 +578,29 @@ $dictionary['Contact']['fields']['consentement']['unified_search']=false;
  
 ?>
 <?php
+// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php
+
+
+$dictionary['Contact']['fields']['codecie_c'] = array (
+	'name' => 'codecie_c',
+	'vname' => 'LBL_CODECIE_C',
+	'type' => 'enum',
+	'massupdate' => true,
+	'duplicate_merge' => 'enabled',
+	'merge_filter' => 'enabled',
+	'calculated' => false,
+	'required' => true,
+	'len' => 50,
+	'size' => 50,
+	'importable' => true,
+	'options' => 'codecie_dom',
+	'audited' => true,
+	'reportable' => true,
+	'default' => 'Solarcan'
+);
+
+?>
+<?php
 // Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_alt_address_street.php
 
  // created: 2018-01-23 15:34:15
@@ -949,27 +972,4 @@ $dictionary['Contact']['fields']['salutation']['dependency']=false;
 $dictionary['Contact']['fields']['salutation']['required']=true;
 
  
-?>
-<?php
-// Merged from custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php
-
-
-$dictionary['Contact']['fields']['codecie_c'] = array (
-	'name' => 'codecie_c',
-	'vname' => 'LBL_CODECIE_C',
-	'type' => 'enum',
-	'massupdate' => true,
-	'duplicate_merge' => 'enabled',
-	'merge_filter' => 'enabled',
-	'calculated' => false,
-	'required' => true,
-	'len' => 50,
-	'size' => 50,
-	'importable' => true,
-	'options' => 'codecie_dom',
-	'audited' => true,
-	'reportable' => true,
-	'default' => 'Solarcan'
-);
-
 ?>
