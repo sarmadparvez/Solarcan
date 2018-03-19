@@ -175,23 +175,11 @@ $installdefs = array (
       'to_module' => 'application',
       'language' => 'fr_FR',
     ),
-    22 => 
-    array (
-      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.user_can_sell_dom.Basic_Fields_Dropdowns_Hooks.php',
-      'to_module' => 'application',
-      'language' => 'en_us',
-    ),
     23 => 
     array (
       'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/en_us.statut_apres_rencontre_dom.Basic_Fields_Dropdowns_Hooks.php',
       'to_module' => 'application',
       'language' => 'en_us',
-    ),
-    24 => 
-    array (
-      'from' => '<basepath>/SugarModules/Extension/application/Ext/Language/fr_FR.user_can_sell_dom.Basic_Fields_Dropdowns_Hooks.php',
-      'to_module' => 'application',
-      'language' => 'fr_FR',
     ),
     25 => 
     array (
@@ -1547,11 +1535,6 @@ $installdefs = array (
     array (
       'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/rt_postal_codes_users_Users.php',
       'to' => 'custom/Extension/modules/Users/Ext/Vardefs/rt_postal_codes_users_Users.php',
-    ),
-    232 => 
-    array (
-      'from' => '<basepath>/Extension/modules/Users/Ext/Vardefs/sugarfield_can_sell.php',
-      'to' => 'custom/Extension/modules/Users/Ext/Vardefs/sugarfield_can_sell.php',
     ),
     235 => 
     array (
