@@ -249,20 +249,20 @@ class AppointmentApi extends SugarApi
     */
     protected function updateContact($args, Contact $contact)
     {
-        //$GLOBALS['log']->fatal("CONTACT MODEL: ", $args['contact_model']);
+        // $GLOBALS['log']->fatal("CONTACT MODEL: ", $args['contact_model']);
         if (empty($args['contact_model'])) {
             return false;
         }
         $contact_args = $args['contact_model'];
 
-        if (!empty($contact_args['billing_address_street'])) {
-            $contact->primary_address_street = $contact_args['billing_address_street'];
+        if (!empty($contact_args['primary_address_street'])) {
+            $contact->primary_address_street = $contact_args['primary_address_street'];
         }
-        if (!empty($contact_args['billing_address_city'])) {
-            $contact->primary_address_city = $contact_args['billing_address_city'];
+        if (!empty($contact_args['primary_address_city'])) {
+            $contact->primary_address_city = $contact_args['primary_address_city'];
         }
-        if (!empty($contact_args['billing_address_state'])) {
-            $contact->primary_address_state = $contact_args['billing_address_state'];
+        if (!empty($contact_args['primary_address_state'])) {
+            $contact->primary_address_state = $contact_args['primary_address_state'];
         }
         if (!empty($args['postalcode'])) {
             $contact->primary_address_postalcode = $args['postalcode'];
@@ -396,6 +396,10 @@ class AppointmentApi extends SugarApi
                 $query .= " AND u.qualified_garage_rep_c = 1
                             ";
             }
+            // now get those users who have this postal code in their
+            // related postal codes AND
+            // exclude those sales reps who have meeting assiged to them already
+            // on this specific date and timeslot (this avoids reassigning to same sales rep)
             $query .= " AND u.id IN (SELECT pcu.rt_postal_codes_usersusers_idb
                                      FROM rt_postal_codes_users_c pcu
                                      WHERE pcu.deleted = 0
