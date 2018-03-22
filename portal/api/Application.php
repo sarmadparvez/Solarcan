@@ -215,6 +215,55 @@ class Application
     }
 
     /**
+    * Get contact information based on the id 
+    */
+    public function getContact()
+    {
+        // self::$logger->info('REQUEST: '.print_r($_REQUEST, 1));
+        try {
+            $required_args = array(
+                'id'
+            );
+            //require arguments
+            $this->requireArgs($_REQUEST, $required_args);
+            $oauth_token = empty($this->sugar_access_token) ?
+                $this->getSugarAuthToken() : $this->sugar_access_token;
+            $url =  $this->getApiUrl().'/Contacts/'.$_REQUEST['id'];
+            self::$logger->info('url: '.$url);
+            $client = self::getApiClient();
+            $res = $client->get(
+                $url,
+                array(
+                    CURLOPT_HTTPHEADER => array(
+                      'Content-Type: application/json',
+                      'oauth-token: ' . $oauth_token
+                    )
+                )
+            );
+            self::$logger->info('Contact: '.print_r($res, 1));
+            echo json_encode(array('result' => true, 'records' => $res));
+        }
+        catch (Exception $e) {
+            self::$logger->error('caught exception: '.$e->getMessage() . ' : code: '. $e->getCode());
+            self::$logger->error($e->getTraceAsString());
+            if ($e->getCode() == 401) {
+                // access token expired
+                self::$logger->error('SugarCRM access token expired');
+            } else {
+                //safely return
+                echo json_encode(
+                    array(
+                      'error' => array(
+                            'msg' => $e->getMessage(),
+                            'code' => $e->getCode()
+                        ),
+                    )
+                );
+            }
+        }
+    }
+
+    /**
     * Get available appointments from sugarcrm
     */
     public function getAvailableAppointments()

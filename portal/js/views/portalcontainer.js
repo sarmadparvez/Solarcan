@@ -40,12 +40,19 @@ window.PortalContainerView = Backbone.View.extend({
     },*/
 
     api_call_sent: false, //attribute to lock multiple api calls
+    contact_id: null,
 
-    initialize: function () {
+    initialize: function (options) {
         if (!window.sessionStorage.logged_in) {
             utils.checkLogin();
             return;
         }
+        console.log(options);
+        if (!_.isUndefined(options) &&
+            !_.isEmpty(options.contact_id)) {
+            this.contact_id = options.contact_id;
+        }
+        console.log("Contact_id", this.contact_id);
         this.render();
         this.appendContactInfoView();
         this.appendAccountView();
@@ -55,6 +62,7 @@ window.PortalContainerView = Backbone.View.extend({
 
     render: function () {
         $(this.el).html(this.template());
+        console.log("Contact Passed: " + this.contact_id);
         return this;
     },
     
@@ -100,10 +108,70 @@ window.PortalContainerView = Backbone.View.extend({
 
     appendContactInfoView: function()
     {
-        var contact = new Contact(),
-            contactView = new ContactInfoView({model: contact});
-        $(this.el).find("#contact-info").html(contactView.el);   
-        this.childViews.contactView = contactView;
+        if (!_.isEmpty(this.contact_id)) {
+            $.ajax({
+                method: "POST",
+                url: "api/contact",
+                dataType: 'json',
+                data: {
+                    'id' : this.contact_id
+                },
+                success: _.bind(function(response) {
+                    if (response.result) {
+                        var contact = new Contact(response.records);
+                        var contactView = new ContactInfoView({ model: contact });
+                        
+                        $(this.el).find("#contact-info").html(contactView.el);
+                        this.childViews.contactView = contactView;
+                        console.log('response.records ', response.records);
+                        
+                        for (var field in response.records) {
+                            if (field == 'preferred_language') {
+                                if (response.records[field] == 'francais') {
+                                    $('input[name=preferred_language_1]').prop('checked', true);
+                                    this.childViews.contactView.model.set('preferred_language_1', true);
+                                } else {
+                                    $('input[name=preferred_language_2]').prop('checked', true);
+                                    this.childViews.contactView.model.set('preferred_language_2', true);
+                                }
+                            } else if (field == 'email') {
+                                var emails = "";
+                                for (var e in response.records[field]) {
+                                    if (emails == "") {
+                                        emails += response.records[field][e].email_address;
+                                    } else {
+                                        emails += "; " + response.records[field][e].email_address;
+                                    }
+                                }
+                                $('input[name=' + field + ']').val(emails);
+                            } else if ($('input[name=' + field + ']').length > 0) {
+                                $('input[name=' + field + ']').val(response.records[field]);
+                                if (field == 'occupant_depuis') {
+                                    this.childViews.accountView.model.set('occupant_depuis', response.records[field]);
+                                }
+                            } else if ($('select[name=' + field + ']').length > 0) {
+                                $('select[name=' + field + ']').val(response.records[field]);
+                                if (field == 'etat_de_proprietaire') {
+                                    this.childViews.accountView.model.set('etat_de_proprietaire', response.records[field]);
+                                }
+                            }
+                        }
+                        
+                    } else {
+                        var error = JSON.parse(response.error.msg);
+                        alert(error.error_message);
+                    }
+                }, this),
+                error: _.bind(function(error) {
+                    alert(error.statusText);
+                }, this)
+            });
+        } else {
+            var contact = new Contact();
+            var contactView = new ContactInfoView({model: contact});
+            $(this.el).find("#contact-info").html(contactView.el);
+            this.childViews.contactView = contactView;
+        }
     },
 
     appendAccountView: function()
@@ -177,7 +245,7 @@ window.PortalContainerView = Backbone.View.extend({
             url: "api/getAvailableAppointments",
             dataType: 'json',
             data: {
-                'billing_address_postalcode' : contact_model.get('billing_address_postalcode'),
+                'billing_address_postalcode' : contact_model.get('primary_address_postalcode'),
                 'preferred_language_1' : contact_model.get('preferred_language_1'),
                 'preferred_language_2' : contact_model.get('preferred_language_2'),
                 'codecie_c' : contact_model.get('codecie_c'),
@@ -215,7 +283,7 @@ window.PortalContainerView = Backbone.View.extend({
             dataType: 'json',
             data: {
                 "meeting_id" : event.data.meeting_id,
-                "postalcode" : contact_model.get('billing_address_postalcode'),
+                "postalcode" : contact_model.get('primary_address_postalcode'),
                 "contact_id" : contact_model.get('id'), //when pronto will be integrated, contact id will be passed here as this contact
                 // will be already in CRM, pronto will provide contact id that we will set in model
                 "description" : $('#notes').val(),
@@ -274,7 +342,7 @@ window.PortalContainerView = Backbone.View.extend({
     validateContactModel: function()
     {
         var contact_model = this.childViews.contactView.model;
-        if (_.isEmpty(contact_model.get('billing_address_postalcode'))) {
+        if (_.isEmpty(contact_model.get('primary_address_postalcode'))) {
             alert('Please enter Postal Code for Contact');
             return false;
         } else if (!contact_model.get('preferred_language_1') && !contact_model.get('preferred_language_2')) {
@@ -355,7 +423,7 @@ window.PortalContainerView = Backbone.View.extend({
         if (!(this.available_appointments.length > 0)) {
             var msg = 'No available appointments found for Postal Code';
             if (!_.isEmpty(this.childViews.contactView) && !_.isEmpty(this.childViews.contactView.model)) {
-                msg += ' : ' + this.childViews.contactView.model.get('billing_address_postalcode');
+                msg += ' : ' + this.childViews.contactView.model.get('primary_address_postalcode');
                 this.cal_events = [];
                 this.refreshCalenderEvents();
             }

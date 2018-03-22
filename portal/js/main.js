@@ -17,7 +17,8 @@ var AppRouter = Backbone.Router.extend({
         ""                  : "portalcontainerView",
         "login" : "login",
         //"portalcontainer" : "portalcontainerView",
-        "user/add" : "signup"
+        "user/add" : "signup",
+        "contact/:id" : "portalcontainerView"
 /*        ""                  : "list",
         "wines/page/:page"	: "list",
         "wines/add"         : "addWine",
@@ -40,8 +41,14 @@ var AppRouter = Backbone.Router.extend({
         $("#content").html(new SignupView({model: new User()}).el);
     },
 
-    portalcontainerView:function () {
-        $("#content").html(new PortalContainerView().el);
+    portalcontainerView:function (id) {
+        console.log(id);
+        if (!_.isUndefined(id) && !_.isEmpty(id)) {
+            $("#content").html(new PortalContainerView({ contact_id: id }).el);
+        } else {
+            $("#content").html(new PortalContainerView().el);
+        }
+        
     },
 
 /*
@@ -88,5 +95,5 @@ utils.loadTemplate([
     'AccountView'
 ], function() {
     app = new AppRouter();
-    Backbone.history.start();
+    Backbone.history.start({root: ""});
 });

@@ -22,6 +22,7 @@ $app->put('/wines/:id', 'updateWine');
 $app->delete('/wines/:id',	'deleteWine');*/
 
 $app->post('/user',	'addUser');
+$app->post('/contact', authorize(), 'getContact');
 $app->post('/user/login', 'login');
 $app->get('/checkLogin', 'checkLogin');
 $app->post('/logout', 'logout');
@@ -38,6 +39,15 @@ function addUser()
 	$request = Slim::getInstance()->request();
 	$tm = json_decode($request->getBody());
 	$app->addUser($tm);
+}
+
+/**
+* Get contact information based on the id 
+*/
+function getContact()
+{
+	$app = Application::getInstance();
+	$app->getContact();
 }
 
 /**

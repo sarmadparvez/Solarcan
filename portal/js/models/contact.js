@@ -1,5 +1,5 @@
 window.Contact = Backbone.Model.extend({
-    urlRoot:"../api/contact",
+    urlRoot:"api/contact",
     defaults:{
         "id" : null,
         "first_name":"",
@@ -12,6 +12,10 @@ window.Contact = Backbone.Model.extend({
         "billing_address_city":"",
         "billing_address_postalcode":"",
         "billing_address_state":"",
+        "primary_address_street":"",
+        "primary_address_city":"",
+        "primary_address_postalcode":"",
+        "primary_address_state":"",
         "email":"",
         "consentement":"",
         "date_de_consentement_datestamp":"",
