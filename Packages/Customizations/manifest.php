@@ -29,7 +29,7 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Solarcan Customization 1.0.0',
-  'published_date' => '2018-02-15 11:00:00',
+  'published_date' => '2018-03-22 14:14:00',
   'type' => 'module',
   'version' => '1.0.0',
   'remove_tables' => 'prompt',
@@ -157,6 +157,27 @@ $installdefs = array (
     array (
       'from' => '<basepath>/custom/data/acl/SugarACLFieldOverride.php',
       'to' => 'custom/data/acl/SugarACLFieldOverride.php',
+    ),
+    ///////////
+    array (
+      'from' => '<basepath>/custom/Extension/application/Ext/Platforms/voxco-integration.php',
+      'to' => 'custom/Extension/application/Ext/Platforms/voxco-integration.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/clients/base/api/BulkImportApi.php',
+      'to' => 'custom/clients/base/api/BulkImportApi.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/clients/base/api/CampaignListApi.php',
+      'to' => 'custom/clients/base/api/CampaignListApi.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/include/helpers/CampaignListHelper.php',
+      'to' => 'custom/include/helpers/CampaignListHelper.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/include/bulkimport/BulkImport.php',
+      'to' => 'custom/include/bulkimport/BulkImport.php',
     ),
   ),
   'language' => 

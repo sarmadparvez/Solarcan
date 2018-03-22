@@ -29,7 +29,7 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Basic_Fields_Dropdowns_Hooks',
-  'published_date' => '2018-01-31 09:42:45',
+  'published_date' => '2018-03-22 14:14:00',
   'type' => 'module',
   'version' => 1517391766,
   'remove_tables' => 'prompt',
@@ -2246,7 +2246,6 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/modules/Meetings/clients/base/views/record/record.php',
       'to' => 'custom/modules/Meetings/clients/base/views/record/record.php',
     ),
-    ////////
     386 => 
     array (
       'from' => '<basepath>/Extension/modules/Contacts/Ext/Vardefs/sugarfield_codecie_c.php',
@@ -2311,6 +2310,116 @@ $installdefs = array (
     array (
       'from' => '<basepath>/Extension/modules/Meetings/Ext/Vardefs/sugarfield_potential_sales.php',
       'to' => 'custom/Extension/modules/Meetings/Ext/Vardefs/sugarfield_potential_sales.php',
+    ),
+    399 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Campaigns/Ext/Language/fr_FR.Basic_Fields_Dropdowns_Hooks.lang.php',
+      'to' => 'custom/Extension/modules/Campaigns/Ext/Language/fr_FR.Basic_Fields_Dropdowns_Hooks.lang.php',
+    ),
+    400 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/indexes.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/indexes.php',
+    ),
+    401 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_HisCallNumber.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_HisCallNumber.php',
+    ),
+    402 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_HisPhone.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_HisPhone.php',
+    ),
+    403 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_HisRespondent.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_HisRespondent.php',
+    ),
+    404 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_HisResult.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_HisResult.php',
+    ),
+    405 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_ResActive.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_ResActive.php',
+    ),
+    406 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_ResModifiedBy.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_ResModifiedBy.php',
+    ),
+    407 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_ResProjectID.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_ResProjectID.php',
+    ),
+    408 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_dbName.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_dbName.php',
+    ),
+    409 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Calls/Ext/Vardefs/sugarfield_voxco_middleware_id.php',
+      'to' => 'custom/Extension/modules/Calls/Ext/Vardefs/sugarfield_voxco_middleware_id.php',
+    ),
+    410 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_date_modified_pronto.php',
+      'to' => 'custom/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_date_modified_pronto.php',
+    ),
+    411 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_voxco_db.php',
+      'to' => 'custom/Extension/modules/Campaigns/Ext/Vardefs/sugarfield_voxco_db.php',
+    ),
+    412 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Contacts/Ext/LogicHooks/ContactsHook.php',
+      'to' => 'custom/Extension/modules/Contacts/Ext/LogicHooks/ContactsHook.php',
+    ),
+    413 =>
+    array (
+      'from' => '<basepath>/Extension/modules/Campaigns/Ext/LogicHooks/CampaignHook.php',
+      'to' => 'custom/Extension/modules/Campaigns/Ext/LogicHooks/CampaignHook.php',
+    ),
+    414 => 
+    array (
+      'from' => '<basepath>/Extension/modules/Contacts/Ext/Vardefs/sugarfield_date_modified_pronto.php',
+      'to' => 'custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_date_modified_pronto.php',
+    ),
+    415 =>
+    array (
+      'from' => '<basepath>/Extension/modules/Contacts/Ext/Vardefs/sugarfield_region.php',
+      'to' => 'custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_region.php',
+    ),
+    416 =>
+    array (
+      'from' => '<basepath>/SugarModules/modules/Calls/clients/base/views/record/record.php',
+      'to' => 'custom/modules/Calls/clients/base/views/record/record.php',
+    ),
+    417 =>
+    array (
+      'from' => '<basepath>/SugarModules/modules/Campaigns/metadata/detailviewdefs.php',
+      'to' => 'custom/modules/Campaigns/metadata/detailviewdefs.php',
+    ),
+    418 =>
+    array (
+      'from' => '<basepath>/SugarModules/modules/Campaigns/metadata/editviewdefs.php',
+      'to' => 'custom/modules/Campaigns/metadata/editviewdefs.php',
+    ),
+    419 =>
+    array (
+      'from' => '<basepath>/SugarModules/modules/Campaigns/CampaignsHookImpl.php',
+      'to' => 'custom/modules/Campaigns/CampaignsHookImpl.php',
+    ),
+    420 =>
+    array (
+      'from' => '<basepath>/SugarModules/modules/Contacts/ContactsHookImpl.php',
+      'to' => 'custom/modules/Contacts/ContactsHookImpl.php',
     ),
   ),
   'roles' => 

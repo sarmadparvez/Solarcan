@@ -1,0 +1,3 @@
+<?php
+
+$platforms[] = 'voxco-integration';

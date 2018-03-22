@@ -245,9 +245,21 @@ array (
               ),
               9 => 
               array (
+                'name' => 'region',
+                'comment' => 'Region of the contact',
+                'label' => 'LBL_REGION',
+              ),
+              10 => 
+              array (
                 'name' => 'preferred_language',
                 'type' => 'language',
-                'span' => 12,
+                'span' => 6,
+              ),
+              11 => 
+              array (
+                'name' => 'codecie_c',
+                'label' => 'LBL_CODECIE_C',
+                'span' => 6,
               ),
             ),
           ),
@@ -412,6 +424,9 @@ array (
                     'name' => 'modified_by_name',
                   ),
                 ),
+              ),
+              9 => 
+              array (
               ),
             ),
           ),

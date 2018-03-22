@@ -58,4 +58,19 @@ trait UtHelper
 	{
 		return BeanFactory::retrieveBean($module, $id, $options, $deleted);
 	}
+
+    /**
+     * @codeCoverageIgnore
+     * Check if current user is Admin
+     * @throws SugarApiExceptionNotAuthorized
+     */
+    public function checkIfCurrentUserIsAdmin()
+    {
+        global $current_user;
+
+        if(!$current_user->isAdmin()) {
+            $GLOBALS['log']->error('BulkImport API requires an Admin user');
+            throw new SugarApiExceptionNotAuthorized('BulkImport API requires an Admin user');
+        }
+    }
 }

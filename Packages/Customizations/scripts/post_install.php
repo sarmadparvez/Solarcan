@@ -45,6 +45,13 @@ function post_install()
             ),
         )
     );
+    // add config for bulk import
+    $configuratorObj->config['search_engine']['force_async_index'] = true;
+    $configuratorObj->config['bulk_import_settings']['modules']['Calls']['sugar_key_field'] = 'voxco_middleware_id';
+    $configuratorObj->config['bulk_import_settings']['modules']['Calls']['external_key_field'] = 'ID';
+    $configuratorObj->config['bulk_import_settings']['modules']['Calls']['sql_query'] = 'select id from calls where voxco_middleware_id = ?';
+    $configuratorObj->config['bulk_import_settings']['modules']['Calls']['create_only'] = true; // set to true if records only needed to be created and not updated
+
     //Save the new setting
     $configuratorObj->saveConfig();
 
