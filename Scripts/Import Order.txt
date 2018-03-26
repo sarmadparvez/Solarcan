@@ -7,3 +7,4 @@
 5- Import team_memberships
 6- Import tm_telemarketers
 7- non_visibile_fields_role
+8- rt_classification.sql
