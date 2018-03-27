@@ -219,7 +219,6 @@ class Application
     */
     public function getContact()
     {
-        // self::$logger->info('REQUEST: '.print_r($_REQUEST, 1));
         try {
             $required_args = array(
                 'id'
@@ -229,7 +228,6 @@ class Application
             $oauth_token = empty($this->sugar_access_token) ?
                 $this->getSugarAuthToken() : $this->sugar_access_token;
             $url =  $this->getApiUrl().'/Contacts/'.$_REQUEST['id'];
-            self::$logger->info('url: '.$url);
             $client = self::getApiClient();
             $res = $client->get(
                 $url,
@@ -240,7 +238,6 @@ class Application
                     )
                 )
             );
-            self::$logger->info('Contact: '.print_r($res, 1));
             echo json_encode(array('result' => true, 'records' => $res));
         }
         catch (Exception $e) {

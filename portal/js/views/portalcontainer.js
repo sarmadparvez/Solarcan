@@ -1,19 +1,6 @@
 window.PortalContainerView = Backbone.View.extend({
     childViews: {}, //store child views objects in this
-    cal_events: [
-     /*   {
-            id: 999,
-            title: 'Test Event',
-            start: '2018-02-16T16:00:00',
-//            end: '2018-01-16T16:20:00'
-        },*/
-/*        {
-            id: 999,
-            title: 'Test Event',
-            start: '2018-02-16',
-            end: '2018-02-16'
-        }*/
-    ],
+    cal_events: [],
     timeslots: {
         'regular_case' : {
             'AM2' : 'T10:00:00',
@@ -35,24 +22,14 @@ window.PortalContainerView = Backbone.View.extend({
         "click #saveToSugar": "saveToSugar",
     },
 
-/*    events: {
-        "click #book-appointment" : "bookAppointment"
-    },*/
-
     api_call_sent: false, //attribute to lock multiple api calls
     contact_id: null,
 
     initialize: function (options) {
-        if (!window.sessionStorage.logged_in) {
-            utils.checkLogin();
-            return;
-        }
-        console.log(options);
         if (!_.isUndefined(options) &&
             !_.isEmpty(options.contact_id)) {
             this.contact_id = options.contact_id;
         }
-        console.log("Contact_id", this.contact_id);
         this.render();
         this.appendContactInfoView();
         this.appendAccountView();
@@ -62,7 +39,6 @@ window.PortalContainerView = Backbone.View.extend({
 
     render: function () {
         $(this.el).html(this.template());
-        console.log("Contact Passed: " + this.contact_id);
         return this;
     },
     
@@ -88,7 +64,6 @@ window.PortalContainerView = Backbone.View.extend({
                 "partenaire_info": $('#partenaire_info').val()
             },
             success: _.bind(function(response) {
-                console.log('in success');
                 if (response.result) {
                     alert('Info and Batiment Saved Successfully');
                 } else {
@@ -100,7 +75,6 @@ window.PortalContainerView = Backbone.View.extend({
                 alert(error.statusText);
             }, this),
             complete: _.bind(function(){
-                console.log('in complete function');
                 this.api_call_sent = false;
             }, this)
         });
@@ -123,7 +97,6 @@ window.PortalContainerView = Backbone.View.extend({
                         
                         $(this.el).find("#contact-info").html(contactView.el);
                         this.childViews.contactView = contactView;
-                        console.log('response.records ', response.records);
                         
                         for (var field in response.records) {
                             if (field == 'preferred_language') {
@@ -163,7 +136,9 @@ window.PortalContainerView = Backbone.View.extend({
                     }
                 }, this),
                 error: _.bind(function(error) {
-                    alert(error.statusText);
+                    if (error.status != 401) {
+                        alert(error.statusText);
+                    }
                 }, this)
             });
         } else {
@@ -206,7 +181,6 @@ window.PortalContainerView = Backbone.View.extend({
                 if (!this.validateContactPhone() || !this.validateAccountModel()) {
                     return false;
                 }
-                console.log('in event click');
                 var dialog = $( "#dialog-form" ).dialog({
                     autoOpen: false,
                     //height: 400,
@@ -276,7 +250,6 @@ window.PortalContainerView = Backbone.View.extend({
         this.api_call_sent = true;
         var contact_model = this.childViews.contactView.model,
             account_model = this.childViews.accountView.model;
-        console.log('in book appointment');
         $.ajax({
             method: "POST",
             url: "api/bookAppointment",
@@ -293,7 +266,6 @@ window.PortalContainerView = Backbone.View.extend({
                 "partenaire_info": $('#partenaire_info').val()
             },
             success: _.bind(function(response) {
-                console.log('in success');
                 if (response.result) {
                     alert('Appointment successfully booked');
                     $('#dialog-form').dialog("close");
@@ -307,7 +279,6 @@ window.PortalContainerView = Backbone.View.extend({
                 alert(error.statusText);
             }, this),
             complete: _.bind(function(){
-                console.log('in complete function');
                 this.api_call_sent = false;
             }, this)
         });

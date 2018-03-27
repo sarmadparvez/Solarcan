@@ -1,12 +1,6 @@
 window.LoginView = Backbone.View.extend({
 
     initialize: function () {
-        if (!window.sessionStorage.logged_in) {
-            utils.checkLogin();
-        } else {
-            window.location.replace("");
-            return;
-        }
         this.render();
         loginself = this;
     },

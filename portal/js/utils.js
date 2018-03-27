@@ -31,7 +31,6 @@ window.utils = {
             contentType: false
         })
         .done(function () {
-            console.log(file.name + " uploaded successfully");
             callbackSuccess();
         })
         .fail(function () {
@@ -49,11 +48,6 @@ window.utils = {
     },
 
     removeValidationErrors: function (model) {
-        /*for (var key in messages) {
-            if (messages.hasOwnProperty(key)) {
-                this.removeValidationError(key);
-            }
-        }*/
         for (var key in model.validators) {
             if(model.validators.hasOwnProperty(key)) {
                 this.removeValidationError(key);
@@ -86,25 +80,16 @@ window.utils = {
 
     checkLogin: function(route)
     {
-        console.log('in checkLogin in utils.js');
         $.ajax({
             method: "GET",
             url: "api/checkLogin",
             dataType: 'json',
             async: false,
             success: _.bind(function(response) {
-                console.log('in successssss');
                 if (response.result) {
                     window.sessionStorage.logged_in = true;
-                    if (route) {
-                        console.log('navigating to route');
-                        window.location.replace(route);
-                    } else {
-                        window.location.replace("");
-                    }
                 }
-            }, this)
+            },this)
         });
     }
-
 };
