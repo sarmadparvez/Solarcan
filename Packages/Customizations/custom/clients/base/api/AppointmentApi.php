@@ -361,12 +361,21 @@ class AppointmentApi extends SugarApi
             } else {
                 $language .= "'2')";
             }
-
-            $postalcode_bean = BeanFactory::newBean('rt_postal_codes')->retrieve_by_string_fields(
-                array('name' => $contact->primary_address_postalcode)
-            );
-            if (empty($postalcode_bean)) {
-                throw new SugarApiExceptionNotFound("Postal Code: $postalcode_bean->name not found in CRM");
+        // Start DEV-320 : QA Portail : Postal Code: Not found in CRM
+        // get first 3 characters of postalcode
+        $pcode = trim($contact->primary_address_postalcode);
+            if (strlen($contact->primary_address_postalcode) > 3) {
+            $pcode = substr($pcode, 0, 3);
+            }
+           // get postalcode id from crm
+            $s_query = $this->getSugarQuery();
+            $s_query->from(BeanFactory::newBean('rt_postal_codes'), array('team_security' => false));
+            $s_query->select(array('id'));
+            $s_query->where()->starts($s_query->getFromAlias().'.name', $pcode);
+            $pcode_id = $s_query->getOne();
+        // End DEV-320 : QA Portail : Postal Code: Not found in CRM
+            if (empty($pcode_id)) {
+                throw new SugarApiExceptionNotFound("Postal Code: $pcode not found in Postal Codes module in CRM");
             }
             $query = "  SELECT u.id
                         FROM users u
@@ -403,7 +412,7 @@ class AppointmentApi extends SugarApi
             $query .= " AND u.id IN (SELECT pcu.rt_postal_codes_usersusers_idb
                                      FROM rt_postal_codes_users_c pcu
                                      WHERE pcu.deleted = 0
-                                     AND pcu.rt_postal_codes_usersrt_postal_codes_ida = '$postalcode_bean->id')
+                                     AND pcu.rt_postal_codes_usersrt_postal_codes_ida = '$pcode_id')
                         AND u.id NOT IN (SELECT mt.assigned_user_id
                                          FROM meetings mt
                                          WHERE DATE(mt.date_start) = '$meeting_date'

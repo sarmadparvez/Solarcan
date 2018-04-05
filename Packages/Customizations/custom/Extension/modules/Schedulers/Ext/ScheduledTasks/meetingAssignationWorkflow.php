@@ -80,8 +80,21 @@ function meetingAssignationWorkflow()
     foreach($meetings_and_reps as $key => $timeslot) {
         if (isset($timeslot['waiting']) && isset($timeslot['reps'])) {
             foreach($timeslot['waiting'] as $m => $meeting) {
-                $postalcodeBean = BeanFactory::newBean('rt_postal_codes')->retrieve_by_string_fields(array('name' => $meeting['postalcode']));
-                if (!empty($postalcodeBean)) {
+        // Start DEV-320 : QA Portail : Postal Code: Not found in CRM
+        // get first 3 characters of postalcode
+        $pcode = trim($meeting['postalcode']);
+            if (strlen($meeting['postalcode']) > 3) {
+            $pcode = substr($pcode, 0, 3);
+            }
+        // get postalcode id from crm
+            $s_query = new SugarQuery();
+            $s_query->from(BeanFactory::newBean('rt_postal_codes'), array('team_security' => false));
+            $s_query->select(array('id'));
+            $s_query->where()->starts($s_query->getFromAlias().'.name', $pcode);
+            $pcode_id = $s_query->getOne();
+        // End DEV-320 : QA Portail : Postal Code: Not found in CRM
+                
+        if (!empty($pcode_id)) {
                     $assigned = false;
                     foreach($timeslot['reps'] as $r => $rep) {
                         // first match all critereas to make sure this sales rep is qualified
@@ -94,7 +107,7 @@ function meetingAssignationWorkflow()
                             $query = "  SELECT id
                                         FROM rt_postal_codes_users_c pcu
                                         WHERE pcu.rt_postal_codes_usersusers_idb = '".$rep['id']."'
-                                        AND pcu.rt_postal_codes_usersrt_postal_codes_ida = '".$postalcodeBean->id."'
+                                        AND pcu.rt_postal_codes_usersrt_postal_codes_ida = '".$pcode_id."'
                                         AND pcu.deleted = 0";
                             $result = $db->query($query, true, "Failed to check postal code from DB");
                             while($row = $db->fetchByAssoc($result)) {
