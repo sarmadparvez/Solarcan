@@ -1,27 +1,15 @@
 window.ContactInfoView = Backbone.View.extend({
     
     events:{
-        "change"        : "change",
-        "change input[type=checkbox]" : "checkboxChange"
-    },
-
-    checkboxChange: function(event)
-    {
-        console.log('checkbox changed');
-        eee = event;
+        "change"        : "change"
     },
 
     initialize: function () {
-        console.log('model values: ', this.model.get('first_name'));
         this.render();
-        ciself = this;
-     //   console.log('in contact info view');
     },
 
     render: function () {
-        console.log('in render of contact info view: ', this.model.toJSON());
         this.$el.html(this.template(this.model.toJSON()));
-        // console.log('el in contactinfo.js: ', this.el);
         return this;
     },
 
@@ -32,7 +20,7 @@ window.ContactInfoView = Backbone.View.extend({
         var change = {};
         if (target.type == 'checkbox') {
             if (target.checked == false) {
-                change[target.name] = "";
+                change[target.name] =  false;
             } else {
                 change[target.name] = target.checked;
             }

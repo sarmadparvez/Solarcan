@@ -71,7 +71,6 @@ class AppointmentApi extends SugarApi
                 'postalcode','preferred_language_1', 'preferred_language_2', 'codecie_c', 'categories'
             )
         );
-        //$GLOBALS['log']->fatal('getAvailableAppointments args: '.print_r($args,1));
         $postalcode = trim($args['postalcode']);
         if (strlen($args['postalcode']) > 3) {
             $postalcode = substr($postalcode, 0, 3);
@@ -138,7 +137,6 @@ class AppointmentApi extends SugarApi
             ->equals('m.deleted', 0);
         $s_query->groupBy('m.timeslot_name');
         $s_query->groupByRaw('DATE(m.timeslot_datetime)');
-        //$GLOBALS['log']->fatal('getAvailableAppointments sql: '.$s_query->compile());
         $result = $s_query->execute();
         return $result;
     }
@@ -152,12 +150,10 @@ class AppointmentApi extends SugarApi
      */
     public function bookAppointment(ServiceBase $api, array $args)
     {
-        //$GLOBALS['log']->fatal('in book appointment args: '.print_r($args,1));
         $this->requireArgs($args, array('meeting_id', 'contact_model', 'account_model', 'noagent'));
         if (!empty($args['contact_id'])) {
             //retrieve contact
             $contact = $this->retrieveBean('Contacts', $args['contact_id']);
-            //$GLOBALS['log']->fatal('contact last_name: '.$contact->last_name);
         } elseif (!empty($args['contact_model']['phone_home']) || !empty($args['contact_model']['phone_mobile']) ||
              !empty($args['contact_model']['phone_work']) || !empty($args['contact_model']['phone_other'])
         ) {
@@ -169,7 +165,6 @@ class AppointmentApi extends SugarApi
         }
 
         if (is_array($contact) && count($contact) > 0) {
-            $GLOBALS['log']->fatal('contact id: '.$contact[0]['id']);
             $contact = $this->retrieveBean('Contacts', $contact[0]['id']);
             if (count($contact) > 1) {
                 $GLOBALS['log']->fatal(
@@ -249,7 +244,6 @@ class AppointmentApi extends SugarApi
     */
     protected function updateContact($args, Contact $contact)
     {
-        // $GLOBALS['log']->fatal("CONTACT MODEL: ", $args['contact_model']);
         if (empty($args['contact_model'])) {
             return false;
         }
@@ -294,9 +288,12 @@ class AppointmentApi extends SugarApi
         if (!empty($contact_args['etat_de_proprietaire'])) {
             $contact->etat_de_proprietaire = $contact_args['etat_de_proprietaire'];
         }
-        if (!empty($contact_args['preferred_language_1'])) {
+        if (!empty($contact_args['preferred_language_1']) && $contact_args['preferred_language_1'] == 'true') {
             $contact->preferred_language = 'francais';
-        } elseif (!empty($contact_args['preferred_language_2'])) {
+        } else if (
+            !empty($contact_args['preferred_language_2']) &&
+            $contact_args['preferred_language_2'] == 'true'
+        ) {
             $contact->preferred_language = 'anglais';
         }
         $account_model = $args['account_model'];
@@ -305,6 +302,11 @@ class AppointmentApi extends SugarApi
         }
         if (!empty($account_model['etat_de_proprietaire'])) {
             $contact->etat_de_proprietaire = $account_model['etat_de_proprietaire'];
+        }
+        if (!empty($contact_args['consentement']) && $contact_args['consentement'] == 'true') {
+            $contact->consentement = true;
+        } else {
+            $contact->consentement = false;
         }
         if (isset($args['noagent'])) {
             if ($args['noagent'] == '1000') {
@@ -317,9 +319,6 @@ class AppointmentApi extends SugarApi
                 $contact->source_details = '';
             }
         }
-        //if (!empty($args['consentement'])) {
-        //    $contact->consentement = $args['consentement'];
-        //}
         $contact->save();
     }
 
@@ -329,7 +328,6 @@ class AppointmentApi extends SugarApi
     protected function updateMeeting($args, $meeting_id, SugarBean $contact)
     {
         $meeting = $this->retrieveBean('Meetings', $meeting_id);
-        //$GLOBALS['log']->fatal('meeting bean: '.print_r($meeting,1));
         if (empty($meeting)) {
             throw new SugarApiExceptionInvalidParameter('Meeting not found in SugarCRM');
         }
@@ -423,7 +421,6 @@ class AppointmentApi extends SugarApi
             $query .= " ORDER BY c.name ASC
                         LIMIT 1";
 
-            //$GLOBALS['log']->fatal($query);
             $result = $db->query($query, true, "Error finding users for specified Meeting");
             $row = $db->fetchByAssoc($result);
             if ($row) {
@@ -464,11 +461,8 @@ class AppointmentApi extends SugarApi
 
         $meeting->save();
         $link = 'contacts';
-        //$GLOBALS['log']->fatal('timeslot_datetime for meeting: '.$meeting->timeslot_datetime);
-        //$GLOBALS['log']->fatal('now for saved timezone: '.$now_date);
 
         if ($meeting->load_relationship($link)) {
-            //$GLOBALS['log']->fatal('relationship is loaded');
             $meeting->$link->add($contact->id);
         }
         //create/update account
@@ -519,13 +513,11 @@ class AppointmentApi extends SugarApi
             //relate account to contact
             $link = 'contacts';
             if ($account->load_relationship($link)) {
-                //$GLOBALS['log']->fatal('relationship is loaded');
                 $account->$link->add($contact->id);
             }
             //relate account to meeting
             $link = 'meetings';
             if ($account->load_relationship($link) && $meeting) {
-                //$GLOBALS['log']->fatal('relationship is loaded');
                 $account->$link->add($meeting->id);
             }
             if ($meeting) {
@@ -585,9 +577,7 @@ class AppointmentApi extends SugarApi
                 $contact_args['phone_other']
             )
         );
-        //$GLOBALS['log']->fatal('completec contact search query: '.$s_query->compile());
         $result = $s_query->execute();
-        //$GLOBALS['log']->fatal('result: '.print_r($result,1));
         return $result;
     }
 
@@ -627,7 +617,6 @@ class AppointmentApi extends SugarApi
         } elseif (count($sql_parts) == 1) {
             $sql = $sql_parts[0];
         }
-        //$GLOBALS['log']->fatal('phone sql : '.$sql);
         return $sql;
     }
 
@@ -654,7 +643,6 @@ class AppointmentApi extends SugarApi
         } elseif (count($sql_parts) == 1) {
             $sql = $sql_parts[0];
         }
-        //$GLOBALS['log']->fatal('categories sql : '.$sql);
         return $sql;
     }
 

@@ -423,7 +423,7 @@ class Application
                         'contact_model' => $_REQUEST['contact_model'],
                         'account_model' => $_REQUEST['account_model'],
                         'noagent' => $_SESSION['user']['noagent'],
-                        'postalcode' => $_REQUEST['contact_model']['billing_address_postalcode'],
+                        'postalcode' => $_REQUEST['postalcode'],
                         'partenaire_info' => isset($_REQUEST['partenaire_info']) ? $_REQUEST['partenaire_info'] : ''
                     )
                 ),

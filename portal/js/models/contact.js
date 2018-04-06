@@ -17,15 +17,10 @@ window.Contact = Backbone.Model.extend({
         "primary_address_postalcode":"",
         "primary_address_state":"",
         "email":"",
-        "consentement":"",
-        "date_de_consentement_datestamp":"",
-        "preferred_language_1":"",
-        "preferred_language_2":"",
+        "consentement": false,
+        "preferred_language_1": false,
+        "preferred_language_2": false,
         "codecie_c" : "Solarcan"
     }
 });
 
-/*window.WineCollection = Backbone.Collection.extend({
-    model:Wine,
-    url:"../api/wines"
-});*/

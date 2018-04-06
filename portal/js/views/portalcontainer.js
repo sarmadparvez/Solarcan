@@ -34,7 +34,6 @@ window.PortalContainerView = Backbone.View.extend({
         this.appendContactInfoView();
         this.appendAccountView();
         this.renderCalendar();
-        pcself = this;
     },
 
     render: function () {
@@ -61,7 +60,8 @@ window.PortalContainerView = Backbone.View.extend({
             data: {
                 "contact_model" : contact_model.toJSON(),
                 "account_model" : account_model.toJSON(),
-                "partenaire_info": $('#partenaire_info').val()
+                "partenaire_info": $('#partenaire_info').val(),
+                "postalcode" : contact_model.get('primary_address_postalcode')
             },
             success: _.bind(function(response) {
                 if (response.result) {
@@ -107,6 +107,8 @@ window.PortalContainerView = Backbone.View.extend({
                                     $('input[name=preferred_language_2]').prop('checked', true);
                                     this.childViews.contactView.model.set('preferred_language_2', true);
                                 }
+                            } else if(field == 'consentement' && response.records[field] == true) {
+                                $('input[name=consentement]').prop('checked', true);
                             } else if (field == 'email') {
                                 var emails = "";
                                 for (var e in response.records[field]) {
