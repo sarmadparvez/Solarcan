@@ -7,12 +7,10 @@ $dictionary['Contact']['fields']['source']['massupdate']=true;
 $dictionary['Contact']['fields']['source']['duplicate_merge']='enabled';
 $dictionary['Contact']['fields']['source']['merge_filter']='enabled';
 $dictionary['Contact']['fields']['source']['calculated']=false;
-$dictionary['Contact']['fields']['source']['required']=true;
+$dictionary['Contact']['fields']['source']['required']=false;
 $dictionary['Contact']['fields']['source']['len']=100;
 $dictionary['Contact']['fields']['source']['audited']=true;
 $dictionary['Contact']['fields']['source']['importable']='true';
 $dictionary['Contact']['fields']['source']['options']='source_dom';
 $dictionary['Contact']['fields']['source']['duplicate_merge_dom_value']='2';
 $dictionary['Contact']['fields']['source']['dependency']=false;
-
- ?>

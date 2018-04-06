@@ -8,7 +8,7 @@ $dictionary['Account']['fields']['nombre_garage_total']['massupdate']=false;
 $dictionary['Account']['fields']['nombre_garage_total']['duplicate_merge']='enabled';
 $dictionary['Account']['fields']['nombre_garage_total']['merge_filter']='enabled';
 $dictionary['Account']['fields']['nombre_garage_total']['calculated']=false;
-$dictionary['Account']['fields']['nombre_garage_total']['required']=true;
+$dictionary['Account']['fields']['nombre_garage_total']['required']=false;
 $dictionary['Account']['fields']['nombre_garage_total']['audited']=true;
 $dictionary['Account']['fields']['nombre_garage_total']['importable']='true';
 $dictionary['Account']['fields']['nombre_garage_total']['duplicate_merge_dom_value']='2';
@@ -17,5 +17,3 @@ $dictionary['Account']['fields']['nombre_garage_total']['full_text_search']=arra
   'boost' => '1',
   'searchable' => false,
 );
-
- ?>

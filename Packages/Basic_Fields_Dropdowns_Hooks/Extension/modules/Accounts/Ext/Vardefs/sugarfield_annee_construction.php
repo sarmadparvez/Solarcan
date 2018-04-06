@@ -8,7 +8,7 @@ $dictionary['Account']['fields']['annee_construction']['massupdate']=false;
 $dictionary['Account']['fields']['annee_construction']['duplicate_merge']='enabled';
 $dictionary['Account']['fields']['annee_construction']['merge_filter']='enabled';
 $dictionary['Account']['fields']['annee_construction']['calculated']=false;
-$dictionary['Account']['fields']['annee_construction']['required']=true;
+$dictionary['Account']['fields']['annee_construction']['required']= false;
 $dictionary['Account']['fields']['annee_construction']['audited']=true;
 $dictionary['Account']['fields']['annee_construction']['importable']='true';
 $dictionary['Account']['fields']['annee_construction']['duplicate_merge_dom_value']='2';
@@ -17,5 +17,3 @@ $dictionary['Account']['fields']['annee_construction']['full_text_search']=array
   'boost' => '1',
   'searchable' => false,
 );
-
- ?>

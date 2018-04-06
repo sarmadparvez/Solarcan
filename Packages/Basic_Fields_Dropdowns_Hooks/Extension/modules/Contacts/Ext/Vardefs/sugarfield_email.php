@@ -1,7 +1,7 @@
 <?php
  // created: 2018-01-24 12:47:01
 $dictionary['Contact']['fields']['email']['len']='100';
-$dictionary['Contact']['fields']['email']['required']=true;
+$dictionary['Contact']['fields']['email']['required']=false;
 $dictionary['Contact']['fields']['email']['audited']=false;
 $dictionary['Contact']['fields']['email']['massupdate']=true;
 $dictionary['Contact']['fields']['email']['duplicate_merge']='enabled';

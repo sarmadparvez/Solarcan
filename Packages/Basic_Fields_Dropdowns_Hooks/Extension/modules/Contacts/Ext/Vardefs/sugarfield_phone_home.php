@@ -13,6 +13,4 @@ $dictionary['Contact']['fields']['phone_home']['full_text_search']=array (
   'searchable' => true,
 );
 $dictionary['Contact']['fields']['phone_home']['calculated']=false;
-$dictionary['Contact']['fields']['phone_home']['required']=true;
-
- ?>
+$dictionary['Contact']['fields']['phone_home']['required']=false;
