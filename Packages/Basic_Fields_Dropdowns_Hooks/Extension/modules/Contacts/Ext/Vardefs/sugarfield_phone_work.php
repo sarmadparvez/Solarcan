@@ -1,6 +1,6 @@
 <?php
  // created: 2018-01-23 15:30:31
-$dictionary['Contact']['fields']['phone_work']['len']='100';
+$dictionary['Contact']['fields']['phone_work']['len']='10';
 $dictionary['Contact']['fields']['phone_work']['audited']=false;
 $dictionary['Contact']['fields']['phone_work']['massupdate']=false;
 $dictionary['Contact']['fields']['phone_work']['comments']='Work phone number of the contact';
@@ -13,5 +13,3 @@ $dictionary['Contact']['fields']['phone_work']['full_text_search']=array (
   'searchable' => true,
 );
 $dictionary['Contact']['fields']['phone_work']['calculated']=false;
-
- ?>

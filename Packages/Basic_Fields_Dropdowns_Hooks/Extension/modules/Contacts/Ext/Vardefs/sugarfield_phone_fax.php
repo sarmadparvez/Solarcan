@@ -1,6 +1,6 @@
 <?php
  // created: 2018-01-23 15:30:52
-$dictionary['Contact']['fields']['phone_fax']['len']='100';
+$dictionary['Contact']['fields']['phone_fax']['len']='10';
 $dictionary['Contact']['fields']['phone_fax']['audited']=false;
 $dictionary['Contact']['fields']['phone_fax']['massupdate']=false;
 $dictionary['Contact']['fields']['phone_fax']['comments']='Contact fax number';
@@ -13,5 +13,3 @@ $dictionary['Contact']['fields']['phone_fax']['full_text_search']=array (
   'searchable' => true,
 );
 $dictionary['Contact']['fields']['phone_fax']['calculated']=false;
-
- ?>

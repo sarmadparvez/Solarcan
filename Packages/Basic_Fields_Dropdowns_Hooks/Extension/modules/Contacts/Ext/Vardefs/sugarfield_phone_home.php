@@ -1,6 +1,6 @@
 <?php
  // created: 2018-01-24 12:46:23
-$dictionary['Contact']['fields']['phone_home']['len']='100';
+$dictionary['Contact']['fields']['phone_home']['len']='10';
 $dictionary['Contact']['fields']['phone_home']['audited']=false;
 $dictionary['Contact']['fields']['phone_home']['massupdate']=false;
 $dictionary['Contact']['fields']['phone_home']['comments']='Home phone number of the contact';
