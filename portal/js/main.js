@@ -15,8 +15,8 @@ var AppRouter = Backbone.Router.extend({
     routes: {
         ""                  : "portalcontainerView",
         "login" : "login",
-        "user/add" : "signup",
-        "contact/:id" : "portalcontainerView"
+        "contact/:id" : "portalcontainerView",
+        "notification" : "notificationView"
     },
 
     initialize: function () {
@@ -62,6 +62,11 @@ var AppRouter = Backbone.Router.extend({
         }
     },
 
+    notificationView: function()
+    {
+        $("#content").html(new NotificationView().el);
+    }
+
 });
 
 utils.loadTemplate([
@@ -69,9 +74,9 @@ utils.loadTemplate([
     'FooterView',
     'LoginView',
     'PortalContainerView',
-    'SignupView',
     'ContactInfoView',
-    'AccountView'
+    'AccountView',
+    'NotificationView'
 ], function() {
     app = new AppRouter();
     Backbone.history.start({root: ""});

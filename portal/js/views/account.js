@@ -6,12 +6,9 @@ window.AccountView = Backbone.View.extend({
 
     initialize: function () {
         this.render();
-        aself = this;
-     //   console.log('in contact info view');
     },
 
     render: function () {
-        console.log('in render of account view');
         $(this.el).html(this.template(this.model.toJSON()));
         return this;
     },

@@ -188,11 +188,11 @@ window.PortalContainerView = Backbone.View.extend({
                     //height: 400,
                     //width: 350,
                     modal: true
-            });
-            dialog.dialog( "open" );
-            //bind click event for book button
-            $( "#book-appointment").unbind( "click" );
-            $('#book-appointment').click(event, _.bind(this.bookAppointment, this));
+                });
+                dialog.dialog( "open" );
+                //bind click event for book button
+                $( "#book-appointment").unbind( "click" );
+                $('#book-appointment').click(event, _.bind(this.bookAppointment, this));
             }, this)
         });
     },
@@ -244,8 +244,6 @@ window.PortalContainerView = Backbone.View.extend({
 
     bookAppointment: function(event)
     {
-        eee = event;
-
         if (this.api_call_sent) {
             return false;
         }
@@ -269,9 +267,12 @@ window.PortalContainerView = Backbone.View.extend({
             },
             success: _.bind(function(response) {
                 if (response.result) {
-                    alert('Appointment successfully booked');
                     $('#dialog-form').dialog("close");
-                    this.getAvailableAppointments();
+                    alert('Appointment successfully booked');
+                    this.remove();
+                    $('#dialog-form').remove()
+                    app.navigate("notification", true);
+                    //this.getAvailableAppointments();
                 } else {
                     var error = JSON.parse(response.error.msg);
                     alert(error.error_message);
