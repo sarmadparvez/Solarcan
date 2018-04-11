@@ -464,10 +464,12 @@ class Application
     {
         foreach ($args as $arg) {
             if (!isset($request[$arg])){
-                throw new PortalApiExceptionInvalidParameter(
+                $app = Slim::getInstance();
+                $app->halt(422, "Missing Parameter $arg");
+                /*throw new PortalApiExceptionInvalidParameter(
                     "Missing Parameter $arg",
                     422
-                );
+                );*/
             }
         }
     }

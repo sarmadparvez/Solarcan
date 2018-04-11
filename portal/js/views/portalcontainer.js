@@ -48,8 +48,7 @@ window.PortalContainerView = Backbone.View.extend({
         
         if (!this.validateContactModel() ||
             !this.validateContactPhone() ||
-            !this.validateAccountModel() ||
-            !this.validateCategory()) {
+            !this.validateAccountModel()) {
             return;
         }
         
@@ -340,23 +339,11 @@ window.PortalContainerView = Backbone.View.extend({
         } else if (_.isEmpty(account_model.get('occupant_depuis'))) {
             alert('Please enter "Occupation depuis"');
             validate = false;
-        } else if (!this.validateCategory()){
-            validate = false;
         } else if (_.isEmpty(account_model.get('etat_de_proprietaire'))) {
             alert('Please select "Type de propritair"');
             validate = false;
         }
         return validate;
-        /*var check = this.model.validateAll();
-        if (check.isValid === false) {
-            utils.displayValidationErrors(check.messages);
-            this.validation_result = check
-            return false;
-        } else if (!_.isEmpty(this.validation_result)) {
-            utils.removeValidationErrors(this.model);
-            this.validation_result = null;
-        }
-        return true;*/
     },
 
     validateContactPhone : function()
