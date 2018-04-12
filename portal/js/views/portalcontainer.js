@@ -495,7 +495,7 @@ window.PortalContainerView = Backbone.View.extend({
         }
         if (!regex.test(phone_number)) 
         {
-            alert('Please input a valid 10 digit phone number !');
+            alert('Please input a valid 10 digit phone number. Phone number should only contain digits!');
             return false;
         }
         return true;
