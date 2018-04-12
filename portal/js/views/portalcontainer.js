@@ -20,6 +20,8 @@ window.PortalContainerView = Backbone.View.extend({
     
     events: {
         "click #saveToSugar": "saveToSugar",
+        "keyup #primary_address_postalcode" : "formatPostalCode",
+
     },
 
     api_call_sent: false, //attribute to lock multiple api calls
@@ -40,6 +42,21 @@ window.PortalContainerView = Backbone.View.extend({
         $(this.el).html(this.template());
         return this;
     },
+
+    formatPostalCode: function(evt)
+    {
+        var postalcode = evt.target.value;
+        var contact_model = this.childViews.contactView.model;
+        if (postalcode.length > 3) {
+            postalcode = postalcode.replace(/\W/gi, '').replace(/(.{3})/g, '$1 ');
+            if (postalcode.length > 7) {
+                postalcode = postalcode.replace(/\s+$/,"");
+            }
+            postalcode = postalcode.toUpperCase();
+            $('#primary_address_postalcode').val(postalcode);
+            contact_model.set('primary_address_postalcode', postalcode);
+        }
+    },
     
     saveToSugar: function() {
         this.api_call_sent = true;
@@ -47,6 +64,7 @@ window.PortalContainerView = Backbone.View.extend({
             account_model = this.childViews.accountView.model;
         
         if (!this.validateContactModel() ||
+            !this.validatePostalCode() ||
             !this.validateContactPhone() ||
             !this.validateAccountModel()) {
             return;
@@ -77,6 +95,23 @@ window.PortalContainerView = Backbone.View.extend({
                 this.api_call_sent = false;
             }, this)
         });
+    },
+
+    validatePostalCode: function()
+    {
+        var contact_model = this.childViews.contactView.model,
+            validate = true;
+        if (!_.isEmpty(contact_model))
+        {
+            var postalcode = contact_model.get('primary_address_postalcode'),
+                match = postalcode.match(/^[A-Z][0-9][A-Z] [0-9][A-Z][0-9]$/g);
+
+            if (_.isArray(match) && !_.isEmpty(match.pop())) {
+                return true;
+            }
+        }
+        alert("Please input a valid Postal code in the format H1H 1H1");
+        return false;
     },
 
     appendContactInfoView: function()
@@ -179,7 +214,7 @@ window.PortalContainerView = Backbone.View.extend({
                 }
             },
             eventClick:  _.bind(function(event, jsEvent, view) {
-                if (!this.validateContactPhone() || !this.validateAccountModel()) {
+                if (!this.validateContactPhone() || !this.validateAccountModel() || !this.validatePostalCode()) {
                     return false;
                 }
                 var dialog = $( "#dialog-form" ).dialog({
@@ -201,7 +236,7 @@ window.PortalContainerView = Backbone.View.extend({
     */
     getAvailableAppointments: function()
     {
-        if (!this.validateContactModel() || !this.validateCategory()) {
+        if (!this.validateContactModel() || !this.validateCategory() || !this.validatePostalCode()) {
             return;
         }
         var contact_model = this.childViews.contactView.model,

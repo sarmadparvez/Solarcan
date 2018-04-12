@@ -39,7 +39,7 @@
 			</div>
 			<div class="form-group">
 				<label for="postal-code">Code Postal <span style="color: red">*</span></label>
-				<input type="text" value = "<% primary_address_postalcode %>" class="form-control postal-code" id="primary_address_postalcode" name = "primary_address_postalcode" placeholder="H1H2H3">
+				<input type="text" maxlength="7" style="text-transform:uppercase" value = "<% primary_address_postalcode %>" class="form-control postal-code" id="primary_address_postalcode" name = "primary_address_postalcode" >
 			</div>
 			<div class="form-group">
 				<label for="primary_address_state">Province</label>
@@ -47,7 +47,7 @@
 			</div>
 			<div class="form-group">
 				<label for="courriel">Courriel</label>
-				<input type="text" name = "email" value = "<% email %>" class="form-control" id="courriel" placeholder="client@gmail.com">
+				<input type="text" name = "email" value = "<% email %>" class="form-control" id="courriel" >
 			</div>
 			<div class="form-group">
 				<label for="courriel">Consentement</label>
