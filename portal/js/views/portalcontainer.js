@@ -355,6 +355,9 @@ window.PortalContainerView = Backbone.View.extend({
             alert("Please input atleast one phone number for the Contact");
             return false;
         }
+        if (!this.validatePhoneNumber()) {
+            return false;
+        }
         return true;
     },
 
@@ -428,5 +431,38 @@ window.PortalContainerView = Backbone.View.extend({
             events.push(obj);
         }, this);
         this.cal_events = events;
+    },
+
+    /**
+    * Validate phone numbers
+    */
+    validatePhoneNumber: function()
+    {
+        var contact_model = this.childViews.contactView.model;
+        var phone_home = contact_model.get('phone_home');
+        var phone_mobile = contact_model.get('phone_mobile');
+        var phone_work = contact_model.get('phone_work');
+        var phone_other = contact_model.get('phone_other');
+        if (this.validateNumber(phone_home) ||
+            this.validateNumber(phone_mobile) ||
+            this.validateNumber(phone_work) ||
+            this.validateNumber(phone_other)) {
+            return true;
+        }
+        return false;
+    },
+
+    validateNumber: function(phone_number)
+    {
+        var regex = /^\d{10}$/ ;
+        if (!phone_number) {
+            return false;
+        }
+        if (!regex.test(phone_number)) 
+        {
+            alert('Please input a valid 10 digit phone number !');
+            return false;
+        }
+        return true;
     }
 });
