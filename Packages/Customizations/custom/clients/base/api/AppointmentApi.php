@@ -213,19 +213,13 @@ class AppointmentApi extends SugarApi
             if (!empty($contact_id) && !empty($contact_id[0]['id'])) {
                 $contact = BeanFactory::newBean('Contacts')->retrieve($contact_id[0]['id']);
             } else {
-                if (($args['noagent'] == '1000' || $args['noagent'] == '2000')) {
-                    // if reseller, then create account if firstname and lastname is provided
-                    if (empty($args['contact_model']['first_name']) && empty($args['contact_model']['last_name'])) {
-                        throw new SugarApiExceptionMissingParameter(
-                            'Please either provide Nom or Prenom to create Contact'
-                        );
-                    } else {
-                        $contact = BeanFactory::newBean('Contacts');
-                    }
-                } else {
-                    throw new SugarApiExceptionInvalidParameter(
-                        'Contact not found in CRM'
+                // if reseller, then create account if firstname and lastname is provided
+                if (empty($args['contact_model']['first_name']) && empty($args['contact_model']['last_name'])) {
+                    throw new SugarApiExceptionMissingParameter(
+                        'Please either provide Nom or Prenom to create Contact'
                     );
+                } else {
+                    $contact = BeanFactory::newBean('Contacts');
                 }
             }
         } else {
