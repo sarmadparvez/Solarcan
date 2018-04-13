@@ -227,7 +227,7 @@ class Application
             $this->requireArgs($_REQUEST, $required_args);
             $oauth_token = empty($this->sugar_access_token) ?
                 $this->getSugarAuthToken() : $this->sugar_access_token;
-            $url =  $this->getApiUrl().'/Contacts/'.$_REQUEST['id'];
+            $url =  $this->getApiUrl().'/getPortalContact/Contacts/'.$_REQUEST['id'];
             $client = self::getApiClient();
             $res = $client->get(
                 $url,

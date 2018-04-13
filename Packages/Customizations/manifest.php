@@ -179,6 +179,10 @@ $installdefs = array (
       'from' => '<basepath>/custom/include/bulkimport/BulkImport.php',
       'to' => 'custom/include/bulkimport/BulkImport.php',
     ),
+    array (
+      'from' => '<basepath>/custom/modules/Contacts/clients/base/api/ContactsPortalApi.php',
+      'to' => 'custom/modules/Contacts/clients/base/api/ContactsPortalApi.php',
+    ),
   ),
   'language' => 
   array (

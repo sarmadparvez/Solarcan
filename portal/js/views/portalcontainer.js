@@ -17,7 +17,18 @@ window.PortalContainerView = Backbone.View.extend({
             }
         }
     },
-    
+
+    account_fields: [
+        'annee_construction',
+        'nombre_portes_total',
+        'nombre_fenetres_total',
+        'nombre_garage_total',
+        'nombre_portes_achanger',
+        'nombre_fenetres_achanger',
+        'nombre_garage_achanger',
+        'occupant_depuis'
+    ],
+
     events: {
         "click #saveToSugar": "saveToSugar",
         "keyup #primary_address_postalcode" : "formatPostalCode",
@@ -155,8 +166,8 @@ window.PortalContainerView = Backbone.View.extend({
                                 $('input[name=' + field + ']').val(emails);
                             } else if ($('input[name=' + field + ']').length > 0) {
                                 $('input[name=' + field + ']').val(response.records[field]);
-                                if (field == 'occupant_depuis') {
-                                    this.childViews.accountView.model.set('occupant_depuis', response.records[field]);
+                                if (_.contains(this.account_fields, field)) {
+                                    this.childViews.accountView.model.set(field, response.records[field]);
                                 }
                             } else if ($('select[name=' + field + ']').length > 0) {
                                 $('select[name=' + field + ']').val(response.records[field]);
