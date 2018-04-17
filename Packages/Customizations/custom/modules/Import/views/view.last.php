@@ -26,40 +26,41 @@ class CustomImportViewLast extends ImportViewLast
      */
     public function display()
     {
-        /**
-         * Add Schedule job in Queue
-         */
-        global $current_user, $db;
-        // query to check if previously created job is already in queue
-        $previousJobQuery = "   SELECT status
-                                FROM job_queue
-                                WHERE name = 'DNC Workflow: Update Contacts'
-                                ORDER BY date_modified desc
-                                LIMIT 1";
-        $result           = $db->query($previousJobQuery, true,
-            "Error retrieving previous job status");
-        $row              = $db->fetchByAssoc($result);
-        $addNewJob        = TRUE;
-        if ($row) {
-            // if job is already in queue from previous import then do not add a new job
-            if ($row['status'] == 'queued') {
-                $addNewJob = FALSE;
+        if (isset($_REQUEST['import_module']) && $_REQUEST['import_module'] == 'dsm_dnc') {
+            /**
+             * Add Schedule job in Queue
+             */
+            global $current_user, $db;
+            // query to check if previously created job is already in queue
+            $previousJobQuery = "   SELECT status
+                                    FROM job_queue
+                                    WHERE name = 'DNC Workflow: Update Contacts'
+                                    ORDER BY date_modified desc
+                                    LIMIT 1";
+            $result           = $db->query($previousJobQuery, true,
+                "Error retrieving previous job status");
+            $row              = $db->fetchByAssoc($result);
+            $addNewJob        = TRUE;
+            if ($row) {
+                // if job is already in queue from previous import then do not add a new job
+                if ($row['status'] == 'queued') {
+                    $addNewJob = FALSE;
+                }
+            }
+
+            if ($addNewJob == TRUE) {
+                $job                   = new SchedulersJob();
+                $job->name             = "DNC Workflow: Update Contacts";
+                $job->target           = "class::ContactsDNCUpdate";
+                $job->assigned_user_id = $current_user->id;
+
+                $queue = new SugarJobQueue();
+                $queue->submitJob($job);
+                $GLOBALS['log']->debug("DNC Workflow: Update Contacts job queued");
+            } else {
+                $GLOBALS['log']->debug("DNC Workflow: Update Contacts job already queued");
             }
         }
-
-        if ($addNewJob == TRUE) {
-            $job                   = new SchedulersJob();
-            $job->name             = "DNC Workflow: Update Contacts";
-            $job->target           = "class::ContactsDNCUpdate";
-            $job->assigned_user_id = $current_user->id;
-
-            $queue = new SugarJobQueue();
-            $queue->submitJob($job);
-            $GLOBALS['log']->debug("DNC Workflow: Update Contacts job queued");
-        } else {
-            $GLOBALS['log']->debug("DNC Workflow: Update Contacts job already queued");
-        }
-
         parent::display();
     }
 }
