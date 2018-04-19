@@ -40,7 +40,7 @@ class CampaignListHelper
              WHEN c.statut_dnc = 'inactive' THEN 0 END
             ", 'ResActive'
         );
-        $s_query->select()->fieldRaw('c.region', 'RpsRegionI');
+        $s_query->select()->fieldRaw('c.strate', 'RpsRegionI');
         $s_query->select()->fieldRaw('c.first_name', 'first_name');
         $s_query->select()->fieldRaw('c.last_name', 'last_name');
         $s_query->select()->fieldRaw('c.phone_home', 'phone_home');
@@ -101,10 +101,7 @@ class CampaignListHelper
 		$s_query->offset($offset);
 
         $result = $s_query->execute();
-        $compiled = $s_query->compile();
-        //$GLOBALS['log']->fatal('query: '.$compiled->getSql());
-        //$GLOBALS['log']->fatal('params: '.print_r($compiled->getParameters(),1));
-        //$GLOBALS['log']->fatal('result: '.print_r($result,1));
+
         return $result;
 	}
 }

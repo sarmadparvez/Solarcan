@@ -253,13 +253,18 @@ array (
               array (
                 'name' => 'preferred_language',
                 'type' => 'language',
-                'span' => 6,
+                'span' => 12,
               ),
               11 => 
               array (
                 'name' => 'codecie_c',
                 'label' => 'LBL_CODECIE_C',
-                'span' => 6,
+              ),
+              12 => 
+              array (
+                'name' => 'region_strate_c',
+                'studio' => true,
+                'label' => 'LBL_REGION_STRATE',
               ),
             ),
           ),

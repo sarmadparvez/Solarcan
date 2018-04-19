@@ -2421,6 +2421,21 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/modules/Contacts/ContactsHookImpl.php',
       'to' => 'custom/modules/Contacts/ContactsHookImpl.php',
     ),
+    421 =>
+    array (
+      'from' => '<basepath>/Extension/modules/Accounts/Ext/Vardefs/accounts_postalcodes.php',
+      'to' => 'custom/Extension/modules/Accounts/Ext/Vardefs/accounts_postalcodes.php',
+    ),
+    422 =>
+    array (
+      'from' => '<basepath>/Extension/modules/Contacts/Ext/Vardefs/contacts_postalcodes.php',
+      'to' => 'custom/Extension/modules/Contacts/Ext/Vardefs/contacts_postalcodes.php',
+    ),
+    423 =>
+    array (
+      'from' => '<basepath>/Extension/modules/Contacts/Ext/Vardefs/sugarfield_strate.php',
+      'to' => 'custom/Extension/modules/Contacts/Ext/Vardefs/sugarfield_strate.php',
+    ),
   ),
   'roles' => 
   array (

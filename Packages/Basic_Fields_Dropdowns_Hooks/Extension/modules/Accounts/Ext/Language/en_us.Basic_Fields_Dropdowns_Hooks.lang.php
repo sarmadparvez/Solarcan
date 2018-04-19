@@ -39,3 +39,4 @@ $mod_strings['LBL_BILLING_ADDRESS_CITY'] = 'City:';
 $mod_strings['LBL_BILLING_ADDRESS_STATE'] = 'State:';
 $mod_strings['LBL_BILLING_ADDRESS_POSTALCODE'] = 'Postal Code:';
 $mod_strings['LBL_BILLING_ADDRESS_COUNTRY'] = 'Country:';
+$mod_strings['LBL_REGION_STRATE'] = 'Strate';

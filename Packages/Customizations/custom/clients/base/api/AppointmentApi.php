@@ -115,8 +115,12 @@ class AppointmentApi extends SugarApi
         )->on()->equals('pc_u.status', 'Active')
         ->in('pc_u.codelangue_rep', $lang_code)
         ->equals('pc_u.codecie_rep_c', $args['codecie_c'])
+        ->queryOr()
+        ->equals($s_query->getFromAlias().'.name', $args['postalcode'])
+        ->queryAnd()
         ->starts($s_query->getFromAlias().'.name', $postalcode)
-        ->addRaw($categories_where);
+        ->addRaw("LENGTH(name) = 3 ");
+        //->addRaw($categories_where);
 
         // join with meetings
         $s_query->joinTable(
@@ -135,6 +139,7 @@ class AppointmentApi extends SugarApi
             ->lt('m.date_start', $start_time_before)
             ->equals('m.status', 'disponible')
             ->equals('m.deleted', 0);
+        $s_query->where()->addRaw($categories_where);
         $s_query->groupBy('m.timeslot_name');
         $s_query->groupByRaw('DATE(m.timeslot_datetime)');
         $result = $s_query->execute();
@@ -174,17 +179,12 @@ class AppointmentApi extends SugarApi
         }
         
         if (empty($contact)) {
-            if ($args['noagent'] == '1000' || $args['noagent'] == '2000') {
-                // if reseller, then create account if firstname and lastname is provided
-                if (empty($args['contact_model']['first_name']) && empty($args['contact_model']['last_name'])) {
-                    throw new SugarApiExceptionMissingParameter(
-                        'Please either provide Nom or Prenom to create Contact'
-                    );
-                } else {
-                    $contact = BeanFactory::newBean('Contacts');
-                }
+            if (empty($args['contact_model']['first_name']) && empty($args['contact_model']['last_name'])) {
+                throw new SugarApiExceptionMissingParameter(
+                    'Please either provide Nom or Prenom to create Contact'
+                );
             } else {
-                throw new SugarApiExceptionInvalidParameter("Contact not found in CRM");
+                $contact = BeanFactory::newBean('Contacts');
             }
         }
         //populate contact fields and update it
@@ -355,7 +355,7 @@ class AppointmentApi extends SugarApi
             }
         // Start DEV-320 : QA Portail : Postal Code: Not found in CRM
         // get first 3 characters of postalcode
-        $pcode = trim($contact->primary_address_postalcode);
+            $pcode = trim($contact->primary_address_postalcode);
             if (strlen($contact->primary_address_postalcode) > 3) {
             $pcode = substr($pcode, 0, 3);
             }
@@ -363,7 +363,12 @@ class AppointmentApi extends SugarApi
             $s_query = $this->getSugarQuery();
             $s_query->from(BeanFactory::newBean('rt_postal_codes'), array('team_security' => false));
             $s_query->select(array('id'));
-            $s_query->where()->starts($s_query->getFromAlias().'.name', $pcode);
+            $s_query->where()->queryOr()
+                ->equals($s_query->getFromAlias().'.name', trim($contact->primary_address_postalcode))
+                ->queryAnd()->starts($s_query->getFromAlias().'.name', $pcode)
+                ->addRaw("LENGTH(".$s_query->getFromAlias().".name) = 3");
+            $s_query->orderByRaw("LENGTH(".$s_query->getFromAlias().".name)");
+            $compiled2 = $s_query->compile();
             $pcode_id = $s_query->getOne();
         // End DEV-320 : QA Portail : Postal Code: Not found in CRM
             if (empty($pcode_id)) {
@@ -414,7 +419,6 @@ class AppointmentApi extends SugarApi
                         ";
             $query .= " ORDER BY c.name ASC
                         LIMIT 1";
-
             $result = $db->query($query, true, "Error finding users for specified Meeting");
             $row = $db->fetchByAssoc($result);
             if ($row) {
@@ -503,6 +507,10 @@ class AppointmentApi extends SugarApi
             $account->nombre_fenetres_achanger = $account_args['nombre_fenetres_achanger'];
             $account->nombre_garage_total = $account_args['nombre_garage_total'];
             $account->nombre_garage_achanger = $account_args['nombre_garage_achanger'];
+
+            // DEV-305
+            $account->postalcode_id = $contact->postalcode_id;
+            // DEV-305
             $account->save();
             //relate account to contact
             $link = 'contacts';

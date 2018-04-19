@@ -253,6 +253,15 @@ array (
                 'name' => 'nombre_garage_achanger',
                 'label' => 'LBL_NOMBRE_GARAGE_ACHANGER',
               ),
+              8 => 
+              array (
+                'name' => 'region_strate_c',
+                'studio' => true,
+                'label' => 'LBL_REGION_STRATE',
+              ),
+              9 => 
+              array (
+              ),
             ),
           ),
           2 => 

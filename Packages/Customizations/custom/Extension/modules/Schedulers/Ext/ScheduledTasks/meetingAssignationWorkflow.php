@@ -3,7 +3,6 @@ array_push($job_strings, 'meetingAssignationWorkflow');
 
 function meetingAssignationWorkflow()
 {
-    $GLOBALS['log']->fatal("In meetingAssignationWorkflow");
     global $db;
 
     // get all meetings with 'waiting for assignation' status
@@ -73,9 +72,6 @@ function meetingAssignationWorkflow()
         }
     }
 
-
-    // $GLOBALS['log']->fatal("MEETINGS AND REPS: ", $meetings_and_reps);
-    // $GLOBALS['log']->fatal("STARTING ASSIGNATION");
     // for each timeslot check if the available reps match remaining criterias
     foreach($meetings_and_reps as $key => $timeslot) {
         if (isset($timeslot['waiting']) && isset($timeslot['reps'])) {
@@ -90,7 +86,11 @@ function meetingAssignationWorkflow()
             $s_query = new SugarQuery();
             $s_query->from(BeanFactory::newBean('rt_postal_codes'), array('team_security' => false));
             $s_query->select(array('id'));
-            $s_query->where()->starts($s_query->getFromAlias().'.name', $pcode);
+            $s_query->where()->queryOr()
+                ->equals($s_query->getFromAlias().'.name', trim($meeting['postalcode']))
+                ->queryAnd()->starts($s_query->getFromAlias().'.name', $pcode)
+                ->addRaw("LENGTH(".$s_query->getFromAlias().".name) = 3");
+            $s_query->orderByRaw("LENGTH(".$s_query->getFromAlias().".name)");
             $pcode_id = $s_query->getOne();
         // End DEV-320 : QA Portail : Postal Code: Not found in CRM
                 
@@ -132,8 +132,6 @@ function meetingAssignationWorkflow()
             }
         }
     }
-
-//    $GLOBALS['log']->fatal("MEETINGS AND REPS", $meetings_and_reps);
 
     return true;
 }
