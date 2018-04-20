@@ -29,6 +29,8 @@ window.PortalContainerView = Backbone.View.extend({
         'occupant_depuis'
     ],
 
+    boolean_fields : ['consentement', 'do_not_call'],
+
     events: {
         "click #saveToSugar": "saveToSugar",
         "keyup #primary_address_postalcode" : "formatPostalCode",
@@ -152,8 +154,8 @@ window.PortalContainerView = Backbone.View.extend({
                                     $('input[name=preferred_language_2]').prop('checked', true);
                                     this.childViews.contactView.model.set('preferred_language_2', true);
                                 }
-                            } else if(field == 'consentement' && response.records[field] == true) {
-                                $('input[name=consentement]').prop('checked', true);
+                            } else if(_.contains(this.boolean_fields, field) && response.records[field] == true) {
+                                $('input[name='+field+']').prop('checked', true);
                             } else if (field == 'email') {
                                 var emails = "";
                                 for (var e in response.records[field]) {

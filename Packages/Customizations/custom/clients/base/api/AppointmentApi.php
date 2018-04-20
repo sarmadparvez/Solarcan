@@ -302,6 +302,16 @@ class AppointmentApi extends SugarApi
         } else {
             $contact->consentement = false;
         }
+
+        if (!empty($contact_args['do_not_call']))
+        {
+            if ($contact_args['do_not_call'] == 'true') {
+                $contact->do_not_call = true;
+            } else if ($contact_args['do_not_call'] == 'false'){
+                $contact->do_not_call = false;
+            }
+        }
+
         if (isset($args['noagent'])) {
             if ($args['noagent'] == '1000') {
                 $contact->source = 'partenaire';

@@ -18,6 +18,7 @@ window.Contact = Backbone.Model.extend({
         "primary_address_state":"",
         "email":"",
         "consentement": false,
+        "do_not_call" : false,
         "preferred_language_1": false,
         "preferred_language_2": false,
         "codecie_c" : "Solarcan"
