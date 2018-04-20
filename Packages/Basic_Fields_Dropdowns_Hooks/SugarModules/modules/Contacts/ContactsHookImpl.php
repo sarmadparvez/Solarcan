@@ -37,6 +37,11 @@ class ContactsHookImpl
             $this->relatePostalCode($bean);
         }
         // End: DEV-305
+        // Start: DEV-315
+        if ($bean->lead_source == 'solarcan') {
+            $bean->source_details = $bean->lead_source;
+        }
+        // End
 
         //the record is being updated
         if ($arguments['isUpdate'] && !empty($bean->fetched_row['id'])) {
