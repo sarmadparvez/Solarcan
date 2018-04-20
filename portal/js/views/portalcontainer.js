@@ -222,7 +222,7 @@ window.PortalContainerView = Backbone.View.extend({
             events: this.cal_events,
             customButtons: {
                 myCustomButton: {
-                    text: 'available appointments',
+                    text: 'Rendez-vous disponibles',
                     click: _.bind(this.getAvailableAppointments, this)
                 }
             },
@@ -465,7 +465,7 @@ window.PortalContainerView = Backbone.View.extend({
         var events = [], i = 0;
         _.each(this.available_appointments, function(appointment) {
             var obj = {};
-            obj.title = appointment.timeslot + ' Availble: ' + appointment.available_count ;
+            obj.title = appointment.timeslot + ' Available: ' + appointment.available_count ;
             if (appointment.dayname == 'Saturday') {
                 obj.start = appointment.dateonly +
                 this.timeslots.special_case[appointment.dayname][appointment.timeslot];
