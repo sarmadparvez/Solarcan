@@ -104,4 +104,36 @@ class CampaignListHelper
 
         return $result;
 	}
+
+    /**
+     * Get a list of bean types created in the import
+     *
+     * @param string $module  module being imported into
+     */
+    public function getRegionalCodeFromLastImport($module)
+    {
+        global $current_user;
+
+        $db = DBManagerFactory::getInstance();
+
+        $query1 = sprintf(
+            'select regional_code from dsm_dnc dnc inner join '
+            .' (select bean_id from users_last_import where assigned_user_id = %s AND import_module = %s '
+            .'AND deleted = 0 limit 1) st on dnc.id = st.bean_id',
+            $db->quoted($current_user->id),
+            $db->quoted($module)
+        );
+
+        $result1 = $db->query($query1);
+        if (!$result1) {
+            return false;
+        }
+
+        $regional_code = '';
+        $row1 = $db->fetchByAssoc($result1);
+        if (!empty($row1)) {
+            $regional_code = $row1['regional_code'];
+        }
+        return $regional_code;
+    }
 }

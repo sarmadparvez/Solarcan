@@ -59,9 +59,9 @@ function post_install()
     global $db;
 
     $query = "DROP FUNCTION IF EXISTS digits;";
-    $result = $db->query($query, true, "ERROR: Could not drop function 'digits'");
+    $result = $db->query($query);
 
-    $query = "  CREATE DEFINER=root@localhost FUNCTION digits( str CHAR(32) ) RETURNS char(32) CHARSET latin1
+    $query = "  CREATE FUNCTION digits( str CHAR(32) ) RETURNS char(32) CHARSET latin1
                 BEGIN
                     DECLARE i, len SMALLINT DEFAULT 1;
                     DECLARE ret CHAR(32) DEFAULT '';
@@ -84,5 +84,41 @@ function post_install()
                     UNTIL i > len END REPEAT;
                     RETURN ret;
                 END;";
-    $result = $db->query($query, true, "ERROR: Could not create function 'digits'");
+    $result = $db->query($query);
+
+    createMySQLFunctions();
+}
+
+function createMySQLFunctions()
+{
+    $db = DBManagerFactory::getInstance();
+    $sql = "DROP FUNCTION IF EXISTS numberOfDigits;";
+    $db->query($sql);
+
+    $sql = "
+    CREATE FUNCTION `numberOfDigits`( str CHAR(32), num SMALLINT ) RETURNS char(32) CHARSET latin1
+    BEGIN
+        DECLARE i, len SMALLINT DEFAULT 1;
+        DECLARE ret CHAR(32) DEFAULT '';
+        DECLARE c CHAR(1);
+
+        IF str IS NULL
+        THEN
+            RETURN '';
+        END IF;
+
+        SET len = CHAR_LENGTH( str );
+        REPEAT
+            BEGIN
+                SET c = MID( str, i, 1 );
+                IF c BETWEEN '0' AND '9' THEN
+                    SET ret=CONCAT(ret,c);
+                END IF;
+                SET i = i + 1;
+            END;
+        UNTIL i > len OR CHAR_LENGTH(ret) = num END REPEAT;
+        RETURN ret;
+    END
+    ";
+    $db->query($sql);
 }

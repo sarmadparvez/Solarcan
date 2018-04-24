@@ -32,7 +32,7 @@ class CustomImportViewStep4 extends ImportViewStep4
      */
     public function display()
     {
-        global $mod_strings, $sugar_config;
+        global $mod_strings, $sugar_config, $app_strings;
 
         // Check to be sure we are getting an import file that is in the right place
         $uploadFile = $sugar_config['upload_dir']."/".basename($_REQUEST['tmp_file']);
@@ -66,21 +66,42 @@ class CustomImportViewStep4 extends ImportViewStep4
             $GLOBALS['log']->debug("CURRENT PART: $currentPart");
             if ($currentPart == 0) {
                 global $db;
-
+                // get regional code from CSV which is in first column.
+                $regional_code = $this->getValueForColumnNumber($importSource, 0);
+                if (empty($regional_code)) {
+                    $GLOBALS['log']->fatal("Regional code missing in uploaded DNC file");
+                    trigger_error($app_strings['ERR_INVALID_DNC_FILE'], E_USER_ERROR);
+                }
                 // first save current dsm_dnc
                 $dnc_backup = "DROP TABLE IF EXISTS dsm_dnc_old";
                 $db->query($dnc_backup, true, 'Failed to drop table dsm_dnc_old');
-                $dnc_backup = "CREATE TABLE dsm_dnc_old AS SELECT * FROM dsm_dnc";
+                $dnc_backup = "CREATE TABLE dsm_dnc_old AS SELECT * FROM dsm_dnc where regional_code = ".
+                    $db->quoted($regional_code);
                 $db->query($dnc_backup, true, 'Failed to Backup dsm_dnc table');
 
                 // truncate dsm_dnc table
-                $dnc_trucnate = 'TRUNCATE TABLE dsm_dnc';
-                $db->query($dnc_trucnate, true,
-                    'Failed to Truncate dsm_dnc table');
+                $dnc_delete = "DELETE FROM dsm_dnc WHERE regional_code = ".$db->quoted($regional_code);
+                $db->query($dnc_delete, true,
+                    'Failed to remove records from dsm_dnc table having regional_code: '.$regional_code);
             }
         }
 
         $importer = new Importer($importSource, $this->bean);
         $importer->import();
+    }
+
+    /**
+    * Get first value of specific column number
+    * @return String
+    */
+    protected function getValueForColumnNumber($importSource = NULL, $columnNumber)
+    {
+        if (empty($importSource)) {
+            return false;
+        }
+        foreach ($importSource as $row) {
+            return $row[$columnNumber];
+        }
+        return false;
     }
 }

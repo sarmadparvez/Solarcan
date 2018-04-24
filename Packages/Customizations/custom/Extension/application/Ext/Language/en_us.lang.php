@@ -13,3 +13,4 @@ $app_strings['LBL_PARAM_GARAGE'] = 'Amount parameter for Garage';
 $app_strings['ERR_INVALID_PARAM_DOORS'] = 'Please input valid parameter value for Doors';
 $app_strings['ERR_INVALID_PARAM_WINDOWS'] = 'Please input valid parameter value for Windows';
 $app_strings['ERR_INVALID_PARAM_GARAGE'] = 'Please input valid parameter value for Garage';
+$app_strings['ERR_INVALID_DNC_FILE'] = 'Regional code missing in uploaded DNC file';
