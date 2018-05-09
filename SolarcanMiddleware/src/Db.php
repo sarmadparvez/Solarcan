@@ -38,6 +38,7 @@ class Db
 			RpsRegionI,
 			RpsPhoneI,
 			modified,
+			action,
 			sugar_campaign_id
 		) values ";
 	
@@ -54,9 +55,10 @@ class Db
 		RpsRegionI,
 		RpsPhoneI,
 		modified,
+		action,
 		sugar_campaign_id
 	) VALUES(s.SugarCRMID, s.dbName, s.ResLang, s.ResActive, s.RpsRegionI,
-	s.RpsPhoneI,s.modified, s.sugar_campaign_id)
+	s.RpsPhoneI,s.modified,s.action, s.sugar_campaign_id)
 	WHEN MATCHED 
     THEN UPDATE SET 
 	t.SugarCRMID = s.SugarCRMID,
@@ -66,6 +68,7 @@ class Db
 	t.RpsRegionI = s.RpsRegionI,
 	t.RpsPhoneI = s.RpsPhoneI,
 	t.modified = s.modified,
+	t.action = CASE when s.action = 'add' THEN 'update' ELSE 'delete' END,
 	t.sugar_campaign_id = s.sugar_campaign_id; ";
     
     /**
@@ -84,9 +87,8 @@ class Db
     // Constructor
     private function __construct()
     {
-		// uncomment the below lines on production
-		// putenv('ODBCSYSINI=/etc');
-		// putenv('ODBCINI=/etc/odbc.ini');
+		putenv('ODBCSYSINI=/etc');
+		putenv('ODBCINI=/etc/odbc.ini');
         try {
         	global $app_config;
         	$this->_host = $app_config['db_config']['hostname'];
@@ -94,17 +96,16 @@ class Db
         	$this->_password = $app_config['db_config']['password'];
         	$this->_database = $app_config['db_config']['db_name'];
 			$this->_port = $app_config['db_config']['port'];
-			// comment the below line on production
-            $this->_connection  = new \PDO("sqlsrv:server=$this->_host;database=$this->_database", $this->_username, $this->_password);
+
+            //$this->_connection  = new \PDO("sqlsrv:server=$this->_host;database=$this->_database", $this->_username, $this->_password);
 			
 			$server = $this->_host;
 			if (!empty($this->_port)) {
 				$server.= ",$this->_port";
 			}
-			// uncomment the below line on production
-			/*$this->_connection = new PDO("odbc:Driver=ODBC Driver 17 for SQL Server; Server=$server; Database=$this->_database;",
+			$this->_connection = new PDO("odbc:Driver=ODBC Driver 17 for SQL Server; Server=$server; Database=$this->_database;",
 				$this->_username, $this->_password
-			);*/
+			);
 		} catch (PDOException $e) {
         	Application::getLogger()->error($e->getMessage());
         	die();	

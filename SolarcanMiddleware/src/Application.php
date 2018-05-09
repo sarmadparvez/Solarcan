@@ -334,28 +334,34 @@ class Application
 		$sep_delete = '';
 		foreach ($response['records'] as $record)
 		{
+			$action = 'insert';
 			if ( $record['campaign_deleted'] == '1' || $record['plc_deleted'] == '1' || 
 				 $record['plp_deleted'] == '1' || $record['contact_deleted']) {
+					 // set action value as delete
+					 $action = 'delete';					 
 					 //record is deleted in sugarcrm
-					/* $sql_delete .= $sep_delete . ' ( ';
+					 /* $sql_delete .= $sep_delete . ' ( ';
 					 $sql_delete .= 'SugarCRMID = ' . $this->db->quote($record['contact_id']);
 					 $sql_delete .= ' AND sugar_campaign_id = ' . $this->db->quote($record['campaign_id']) . ' )';
 					 
 					 $sep_delete = ' OR ';*/
 			} else {
+				// set action value as update
 				//record is added or updated
-				$sql_insert .= $sep . " ( ";
-				$sql_insert .= $this->quoted($record['contact_id']) . ', ';
-				$sql_insert .= $this->quoted($record['dbName']) . ', ';
-				$sql_insert .= $this->quoted($record['ResLang']) . ', ';
-				$sql_insert .= $this->quoted($record['ResActive']) . ', ';
-				$sql_insert .= $this->quoted($record['RpsRegionI']) . ', ';
-				$sql_insert .= $this->quoted($record['phone_home']) . ', ';
-				$sql_insert .= $this->quoted($record['modified']) . ', ';
-				$sql_insert .= $this->quoted($record['campaign_id']) . ') ';
-				
-				$sep = ',';
+				$action = 'add';
 			}
+			$sql_insert .= $sep . " ( ";
+			$sql_insert .= $this->quoted($record['contact_id']) . ', ';
+			$sql_insert .= $this->quoted($record['dbName']) . ', ';
+			$sql_insert .= $this->quoted($record['ResLang']) . ', ';
+			$sql_insert .= $this->quoted($record['ResActive']) . ', ';
+			$sql_insert .= $this->quoted($record['RpsRegionI']) . ', ';
+			$sql_insert .= $this->quoted($record['phone_home']) . ', ';
+			$sql_insert .= $this->quoted($record['modified']) . ', ';
+			$sql_insert .= $this->quoted($action) . ', ';
+			$sql_insert .= $this->quoted($record['campaign_id']) . ') ';
+			
+			$sep = ',';
 		}
 		
 		return array(
@@ -519,7 +525,7 @@ class Application
 	*/
 	private function checkScriptAlreadyRunning()
 	{
-		$lock_file = fopen('script.pid', 'c');
+		$lock_file = fopen(ROOT.'script.pid', 'c');
 		$got_lock = flock($lock_file, LOCK_EX | LOCK_NB, $wouldblock);
 		if ($lock_file === false || (!$got_lock && !$wouldblock)) {
 			throw new Exception(
