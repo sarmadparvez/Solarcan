@@ -6,3 +6,4 @@ Basic_Fields_Dropdowns_Hooks
 Customizations
 SqlScriptsExecution
 PostInstallScripts
+automate_target_list_contacts (Please create scheduler from job name "function::automateTargetListForContacts") with frequency once a day
