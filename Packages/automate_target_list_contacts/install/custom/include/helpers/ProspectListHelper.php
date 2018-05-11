@@ -158,7 +158,7 @@ class ProspectListHelper
               $i_rows = $db->getAffectedRowCount($insert_result);
               $this->processed_rows['inserted'] = $this->processed_rows['inserted'] + $i_rows;
           } elseif ($action == 'REMOVE') {
-              $update = 'Update prospect_lists_prospects set deleted = 1 where id in (select id from ('.$remove_query_select.') tmp)';              
+              $update = 'Update prospect_lists_prospects set deleted = 1,date_modified ='.$db->quoted($date).' where id in (select id from ('.$remove_query_select.') tmp)';              
               $update_result = $db->query($update);
               $u_rows = $db->getAffectedRowCount($update_result);
               $this->processed_rows['updated'] = $this->processed_rows['updated'] + $u_rows;
