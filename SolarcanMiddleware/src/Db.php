@@ -68,7 +68,10 @@ class Db
 	t.RpsRegionI = s.RpsRegionI,
 	t.RpsPhoneI = s.RpsPhoneI,
 	t.modified = s.modified,
-	t.action = CASE when s.action = 'add' THEN 'update' ELSE 'delete' END,
+	t.action = CASE 
+	WHEN s.action = 'add' AND t.action = 'delete' THEN 'add' 
+	WHEN s.action = 'add' AND t.action != 'delete' THEN 'update'
+	ELSE s.action END,
 	t.sugar_campaign_id = s.sugar_campaign_id; ";
     
     /**
