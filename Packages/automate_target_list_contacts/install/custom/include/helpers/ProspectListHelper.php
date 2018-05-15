@@ -147,7 +147,7 @@ class ProspectListHelper
           $remove_query_select = $this->getProspectListQuery($prospect_list_id, $report_id, $report_query, 'LEFT JOIN');                    
           // Query to add the contacts
           $add_query_select = $this->getProspectListQuery($prospect_list_id,$report_id, $report_query, 'RIGHT JOIN');
-          $date = TimeDate::getInstance()->asDbDate(TimeDate::getInstance()->getNow(true));
+          $date = TimeDate::getInstance()->asDb(TimeDate::getInstance()->getNow(true));
           if ($action == 'ADD_REMOVE') {
               $insert = 'Insert into prospect_lists_prospects (id,prospect_list_id,related_id,related_type,date_modified,deleted)'.$add_query_select;
               $update = 'Update prospect_lists_prospects set deleted = 1,date_modified ='.$db->quoted($date).' where id in (select id from ('.$remove_query_select.') tmp)';
@@ -211,7 +211,7 @@ class ProspectListHelper
           global $db;
           $column = 'plp.id, related_id';
           $condition = '1';
-          $date = TimeDate::getInstance()->asDbDate(TimeDate::getInstance()->getNow(true));
+          $date = TimeDate::getInstance()->asDb(TimeDate::getInstance()->getNow(true));
           if ($join_type == 'RIGHT JOIN') {
               $column = 'uuid(),'.$db->quoted($prospect_list_id).',sq.id, "Contacts", '.$db->quoted($date).', 0';
               $condition = 'plp.id is null';
