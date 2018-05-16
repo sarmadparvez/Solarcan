@@ -12,7 +12,7 @@ class Application
 	private $sugar_refresh_token; // refresh token for SugarCRM
 	private $sync_log_id; // id of the current sync log record in sync_logs table
 	private $lock_file_handle; // to check if script is already running or not 
-
+    private $deleted_records = array();
 	function __construct()
 	{
 		//instantiate logger object
@@ -311,8 +311,20 @@ class Application
 				$temp_table_insert_sql = DB::PUSH_TO_VOXCO_INSERT_SQL . $sql_data['sql_insert'];
 				// write to temp table
 				$this->db->query($temp_table_insert_sql);
+				if (!empty($this->deleted_records['contact_id']) && !empty($this->deleted_records['campaign_id'])) {
+					$this->db->query(
+						"DELETE 
+							FROM pushToVoxco_temp
+							WHERE sugar_campaign_id = (Select sugar_campaign_id from pushToVoxco where sugar_campaign_id in (".implode(',',array_values($this->deleted_records['campaign_id'])).")
+								AND SugarCRMID in (".implode(',',array_values($this->deleted_records['contact_id'])).")
+								AND action = 'delete')
+							AND SugarCRMID = (Select SugarCRMID from pushToVoxco where sugar_campaign_id in (".implode(',',array_values($this->deleted_records['campaign_id'])).")
+								AND SugarCRMID in (".implode(',',array_values($this->deleted_records['contact_id'])).")
+								AND action = 'delete')");
+				}
 				// upsert
 				$this->db->query(DB::PUSH_TO_VOXCO_UPSERT_SQL);
+				
 			} catch (PDOException $e){
 				self::$logger->error($e->getMessage());
 				self::$logger->error($e->getTraceAsString());
@@ -332,13 +344,16 @@ class Application
 		$sep = '';
 		$sql_delete = '';
 		$sep_delete = '';
+
 		foreach ($response['records'] as $record)
 		{
 			$action = 'insert';
 			if ( $record['campaign_deleted'] == '1' || $record['plc_deleted'] == '1' || 
 				 $record['plp_deleted'] == '1' || $record['contact_deleted']) {
 					 // set action value as delete
-					 $action = 'delete';					 
+					 $action = 'delete';
+					 $this->deleted_records['contact_id'][] = $this->quoted($record['contact_id']);
+					 $this->deleted_records['campaign_id'][] = $this->quoted($record['campaign_id']);
 					 //record is deleted in sugarcrm
 					 /* $sql_delete .= $sep_delete . ' ( ';
 					 $sql_delete .= 'SugarCRMID = ' . $this->db->quote($record['contact_id']);
