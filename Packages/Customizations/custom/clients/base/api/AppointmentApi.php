@@ -28,7 +28,7 @@ class AppointmentApi extends SugarApi
             'bookAppointment' => array(
                 'reqType' => 'POST',
                 'path' => array('<module>', 'bookAppointment'),
-                'pathVars' => array('module', 'bookAppointment'),
+                'pathVars' => array('module', ''),
                 'method' => 'bookAppointment',
                 'shortHelp' => 'Book appointment for contact',
             ),
@@ -189,7 +189,7 @@ class AppointmentApi extends SugarApi
         }
         //populate contact fields and update it
         $this->updateContact($args, $contact);
-        $this->updateMeeting($args, $args['meeting_id'], $contact);
+        $this->updateMeeting($args, $args['meeting_id'], $contact, $api);
         return true;
     }
 
@@ -329,12 +329,48 @@ class AppointmentApi extends SugarApi
     /**
     * Book meeting
     */
-    protected function updateMeeting($args, $meeting_id, SugarBean $contact)
+    protected function updateMeeting($args, $meeting_id, SugarBean $contact, $api)
     {
         $meeting = $this->retrieveBean('Meetings', $meeting_id);
         if (empty($meeting)) {
             throw new SugarApiExceptionInvalidParameter('Meeting not found in SugarCRM');
         }
+        /**
+         * JIRA DEV-593
+         * Added By SMQB 05/06/2018
+         */
+        if ( !empty($meeting->status) && $meeting->status != 'disponible') {
+            $appointment_args = array(
+                'postalcode' => $args['postalcode'],
+                'preferred_language_1' => $args['contact_model']['preferred_language_1'],
+                'preferred_language_2' => $args['contact_model']['preferred_language_2'],
+                'codecie_c' => $args['contact_model']['codecie_c'],
+                'categories' => $args['categories']
+            );
+            $appointments = $this->getAvailableAppointments($api, $appointment_args);
+            $meeting_found = false;
+            if(!empty($appointments)){
+                $meeting_date = date('Y-m-d',strtotime($meeting->timeslot_datetime));
+                $meeting_day = date('l',strtotime($meeting->timeslot_datetime));
+                foreach ($appointments as $appointment) {
+                    if(
+                        !$meeting_found &&
+                        $appointment['timeslot'] == $meeting->timeslot_name &&
+                        $appointment['dateonly'] == $meeting_date &&
+                        $appointment['dayname'] == $meeting_day
+                        ) {
+                            $meeting_found = true;
+                            $this->updateMeeting($args, $appointment['meeting_id'], $contact, $api);
+                            return true;
+                    }
+                }
+                
+            }
+            if(!$meeting_found){
+                throw new SugarApiExceptionInvalidParameter('Meeting Already Booked');
+            }
+        }
+        
         // check if the meeting is today. For today's meetings they should be assigned directly,
         // without waiting for scheduled job which will assign future (next days ) meetings at day end
         // meeting date in Y-m-d format e.g 2018-02-21

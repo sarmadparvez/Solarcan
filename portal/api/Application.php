@@ -355,6 +355,7 @@ class Application
                         'description' => $_REQUEST['description'],
                         'contact_model' => $_REQUEST['contact_model'],
                         'account_model' => $_REQUEST['account_model'],
+                        'categories' => $_REQUEST['categories'],
                         /*'annee_construction' => $_REQUEST['annee_construction'],
                         'occupant_depuis' => $_REQUEST['occupant_depuis'],
                         'billing_address_street' => $_REQUEST['billing_address_street'],

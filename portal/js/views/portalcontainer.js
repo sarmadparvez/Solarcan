@@ -297,6 +297,8 @@ window.PortalContainerView = Backbone.View.extend({
         this.api_call_sent = true;
         var contact_model = this.childViews.contactView.model,
             account_model = this.childViews.accountView.model;
+        //prepare categories
+        var categories = this.getCategories();
         $.ajax({
             method: "POST",
             url: "api/bookAppointment",
@@ -310,18 +312,21 @@ window.PortalContainerView = Backbone.View.extend({
                 "financement" : $('#financement').prop('checked'),
                 "contact_model" : contact_model.toJSON(),
                 "account_model" : account_model.toJSON(),
-                "partenaire_info": $('#partenaire_info').val()
+                "partenaire_info": $('#partenaire_info').val(),
+                "categories" : categories
             },
             success: _.bind(function(response) {
                 if (response.result) {
                     $('#dialog-form').dialog("close");
                     alert('Appointment successfully booked');
                     this.remove();
-                    $('#dialog-form').remove()
+                    $('#dialog-form').remove();
                     app.navigate("notification", true);
                     //this.getAvailableAppointments();
                 } else {
                     var error = JSON.parse(response.error.msg);
+                    $('#dialog-form').remove();
+                    this.getAvailableAppointments();
                     alert(error.error_message);
                 }
             }, this),
