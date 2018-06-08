@@ -349,7 +349,7 @@ class Application
 		{
 			$action = 'insert';
 			if ( $record['campaign_deleted'] == '1' || $record['plc_deleted'] == '1' || 
-				 $record['plp_deleted'] == '1' || $record['contact_deleted']) {
+				 $record['plp_deleted'] == '1' || $record['contact_deleted'] || $record['pli_deleted'] == '1' ) {
 					 // set action value as delete
 					 $action = 'delete';
 					 $this->deleted_records['contact_id'][] = $this->quoted($record['contact_id']);

@@ -49,6 +49,7 @@ class CampaignListHelper
         $s_query->select()->fieldRaw('c.deleted', 'contact_deleted');
         $s_query->select()->fieldRaw('plc.date_modified', 'plc__date_modified');
         $s_query->select()->fieldRaw('plp.date_modified', 'plp__date_modified');
+        $s_query->select()->fieldRaw('pli.deleted', 'pli_deleted');
         // greatest date modifed will be considered as date modified of the record
         $s_query->select()->fieldRaw("GREATEST(COALESCE(campaigns.date_modified_pronto, ''), plc.date_modified, plp.date_modified, COALESCE(c.date_modified_pronto, ''))"
             , 'modified');
@@ -63,7 +64,21 @@ class CampaignListHelper
         )->on()->equalsField('plc.campaign_id', $s_query->getFromAlias().'.id')
         ->equals($s_query->getFromAlias().'campaign_type', 'Telesales');
 
-
+        /**
+         * JIRA DEV-607
+         * Added By: SMQB
+         * Date: 07/06/18
+         */
+        
+	$s_query->joinTable(
+            'prospect_lists',
+            array(
+                'alias' => 'pli',
+                'joinType' => 'INNER',
+                'linkingTable' => true,
+            )
+        )->on()->equalsField('pli.id', 'plc.prospect_list_id');
+        
         $s_query->joinTable(
         	'prospect_lists_prospects',
         	array(
@@ -92,6 +107,7 @@ class CampaignListHelper
 		}
 
 		$s_query->groupBy('plc.campaign_id');
+		$s_query->groupBy('pli.id');
 		$s_query->groupBy('c.id');
 		$s_query->orderBy('plc.date_modified', 'ASC');
 		$s_query->orderBy('plp.date_modified', 'ASC');
