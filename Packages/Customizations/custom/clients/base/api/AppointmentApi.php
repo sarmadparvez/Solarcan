@@ -509,6 +509,11 @@ class AppointmentApi extends SugarApi
         if ($meeting->load_relationship($link)) {
             $meeting->$link->add($contact->id);
         }
+        // DEV-713
+        $link = 'meeting_telemarketer';
+        if ($meeting->load_relationship($link)) {
+            $meeting->$link->add($args['telemaketer_id']);
+        }
         //create/update account
 
         if (isset($args['noagent'])) {

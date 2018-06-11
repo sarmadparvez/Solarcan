@@ -313,7 +313,8 @@ window.PortalContainerView = Backbone.View.extend({
                 "contact_model" : contact_model.toJSON(),
                 "account_model" : account_model.toJSON(),
                 "partenaire_info": $('#partenaire_info').val(),
-                "categories" : categories
+                "categories" : categories,
+                "user_id" : window.sessionStorage.user_id
             },
             success: _.bind(function(response) {
                 if (response.result) {

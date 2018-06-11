@@ -36,6 +36,7 @@ window.LoginView = Backbone.View.extend({
             success: _.bind(function(response) {
                 if (response.result) {
                     window.sessionStorage.logged_in = true;
+                    window.sessionStorage.user_id = response.id;
                     app.navigate("", true);
                     $('#logout').show();
                 } else {
