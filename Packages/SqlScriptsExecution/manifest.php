@@ -11,10 +11,10 @@
  */
 
 $manifest = array (
-  'built_in_version' => '7.10.2.0',
+  'built_in_version' => '8.*',
   'acceptable_sugar_versions' => 
   array (
-    0 => '7.10.*',
+    0 => '8.*',
   ),
   'acceptable_sugar_flavors' => 
   array (
@@ -64,8 +64,8 @@ $installdefs = array (
           'to' => 'custom/install/scripts/sql/tm_telemarketers.txt',
         ),
         array (
-          'from' => '<basepath>/sql/non_visible_fields_role.txt',
-          'to' => 'custom/install/scripts/sql/non_visible_fields_role.txt',
+          'from' => '<basepath>/sql/users.txt',
+          'to' => 'custom/install/scripts/sql/users.txt',
         ),
         array (
           'from' => '<basepath>/sql/rt_classification.txt',
