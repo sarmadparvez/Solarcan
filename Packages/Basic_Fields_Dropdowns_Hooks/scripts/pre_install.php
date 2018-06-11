@@ -31,6 +31,7 @@ function pre_install()
                                 ALTER TABLE users ADD COLUMN secteur_rep VARCHAR(255) DEFAULT NULL;
                                 ALTER TABLE users ADD COLUMN telres_rep VARCHAR(255) DEFAULT NULL;
                                 ALTER TABLE users ADD COLUMN ville_rep VARCHAR(255) DEFAULT NULL;
+                                ALTER TABLE users add COLUMN can_sell text  NULL;
                             END
                     ;";
     $result = $db->query($query, true, "ERROR: Could not create procedure 'userColumns'");
