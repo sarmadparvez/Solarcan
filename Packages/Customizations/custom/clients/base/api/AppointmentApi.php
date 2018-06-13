@@ -139,15 +139,56 @@ class AppointmentApi extends SugarApi
             ->lt('m.date_start', $start_time_before)
             ->equals('m.status', 'disponible')
             ->equals('m.deleted', 0);
-        $s_query->where()->addRaw($categories_where);
+        /**
+         * $dailyLimitExeeded Added by SMQB
+         * DEV-339
+         */
+        $dailyLimitExeeded = $this->dailyLimitExeeded();
+        $dailyLimitWhere = !empty($dailyLimitExeeded) ? " AND DATE(m.timeslot_datetime)  NOT IN ($dailyLimitExeeded)" : '';    
+        $s_query->where()->addRaw($categories_where.$dailyLimitWhere);
         $s_query->groupBy('m.timeslot_name');
         $s_query->groupByRaw('DATE(m.timeslot_datetime)');
         $result = $s_query->execute();
         return $result;
     }
+    
+    /**
+     * Get classification of current user to get maximum appointment per day
+     * @global type $current_user
+     * @param type $date
+     * @return string
+     */
+    private function dailyLimitExeeded()
+    {
+        global $current_user;
+        $link = 'rt_classification_users';
+        $appointment_per_day = 0;
+        $responce = '';
+        
+        if ($current_user->load_relationship($link)) {
+            $classifications = $current_user->$link->getBeans();
+        }
+        foreach ($classifications as $classification) {
+            $appointment_per_day = $classification->appointment_per_day;
+        }
+
+        $s_query = $this->getSugarQuery();
+        $s_query->from(BeanFactory::newBean('Meetings'), array('team_security' => false));
+        $s_query->select()->fieldRaw('count(distinct id)', 'booked_meeting_count');
+        $s_query->select()->fieldRaw('DATE(timeslot_datetime)', 'date');
+        $s_query->groupByRaw('DATE(timeslot_datetime)');
+        $s_query->where()->addRaw(" meetings.status != 'disponible' and meetings.assigned_user_id = '$current_user->id'");
+        $s_query->havingRaw(" booked_meeting_count >= $appointment_per_day");
+        $result = $s_query->execute();
+        foreach ($result as $meeting) {
+           $responce.= "'" .$meeting['date'] . "',";
+        }
+
+        return rtrim($responce, ",");
+    }
 
     /**
-     * Book appointment for contact
+     * Book appointment for contact$result
      *
      * @param ServiceBase $api
      * @param array $args API arguments
