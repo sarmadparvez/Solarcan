@@ -375,6 +375,8 @@ class Application
 			$sql_insert .= $this->quoted($record['modified']) . ', ';
 			$sql_insert .= $this->quoted($action) . ', ';
 			$sql_insert .= $this->quoted($record['campaign_id']) . ') ';
+			$sql_insert .= $this->quoted($record['first_name']) . ') ';
+			$sql_insert .= $this->quoted($record['last_name']) . ') ';
 			
 			$sep = ',';
 		}

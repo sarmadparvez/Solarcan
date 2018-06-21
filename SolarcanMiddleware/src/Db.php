@@ -39,7 +39,9 @@ class Db
 			RpsPhoneI,
 			modified,
 			action,
-			sugar_campaign_id
+			sugar_campaign_id,
+                        RpsFirstNameI,
+                        RpsLastNameI
 		) values ";
 	
 	const PUSH_TO_VOXCO_UPSERT_SQL = "
