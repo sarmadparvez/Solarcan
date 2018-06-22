@@ -314,8 +314,8 @@ class AppointmentApi extends SugarApi
         if (!empty($contact_args['last_name'])) {
             $contact->last_name = $contact_args['last_name'];
         }
-        if (!empty($contact_args['email'])) {
-            $contact->email1 = $contact_args['email'];
+        if (!empty($contact_args['email1'])) {
+            $contact->email1 = $contact_args['email1'];
         }
         if (!empty($contact_args['codecie_c'])) {
             $contact->codecie_c = $contact_args['codecie_c'];
