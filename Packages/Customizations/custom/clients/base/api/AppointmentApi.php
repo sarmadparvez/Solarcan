@@ -691,19 +691,19 @@ class AppointmentApi extends SugarApi
 
         if (!empty($phone_home)) {
             $phone_home =  preg_replace('/[^0-9]/s', '', $phone_home);
-            $sql_parts[] = " digits(phone_home) = ".$db->quoted($phone_home);
+            $sql_parts[] = " phone_home = ".$db->quoted($phone_home);
         }
         if (!empty($phone_mobile)) {
             $phone_mobile =  preg_replace('/[^0-9]/s', '', $phone_mobile);
-            $sql_parts[] = " digits(phone_mobile) = ".$db->quoted($phone_mobile);
+            $sql_parts[] = " phone_mobile = ".$db->quoted($phone_mobile);
         }
         if (!empty($phone_work)) {
              $phone_work =  preg_replace('/[^0-9]/s', '', $phone_work);
-            $sql_parts[] = " digits(phone_work) = ".$db->quoted($phone_work);
+            $sql_parts[] = " phone_work = ".$db->quoted($phone_work);
         }
         if (!empty($phone_other)) {
             $phone_other =  preg_replace('/[^0-9]/s', '', $phone_other);
-            $sql_parts[] = " digits(phone_other) = ".$db->quoted($phone_other);
+            $sql_parts[] = " phone_other = ".$db->quoted($phone_other);
         }
 
         if (count($sql_parts) > 1) {
