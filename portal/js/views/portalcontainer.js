@@ -303,6 +303,7 @@ window.PortalContainerView = Backbone.View.extend({
        	    !window.sessionStorage.logged_in)
         ) {
             alert('Session expired. Please log in again.');
+            $('#dialog-form').remove();
             $("#logout").click();
             return false;
         }
