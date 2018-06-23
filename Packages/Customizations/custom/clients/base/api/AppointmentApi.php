@@ -114,7 +114,7 @@ class AppointmentApi extends SugarApi
             )
         )->on()->equals('pc_u.status', 'Active')
         ->in('pc_u.codelangue_rep', $lang_code)
-        ->equals('pc_u.codecie_rep_c', $args['codecie_c'])
+        ->contains('pc_u.codecie_rep_c', $args['codecie_c'])
         ->queryOr()
         ->equals($s_query->getFromAlias().'.name', $args['postalcode'])
         ->queryAnd()
@@ -470,7 +470,7 @@ class AppointmentApi extends SugarApi
                         AND m.deleted = 0
                         AND DATE(m.date_start) = '$meeting_date'
                         AND m.timeslot_name = '$meeting->timeslot_name'
-                        AND u.codecie_rep_c = '$contact->codecie_c'
+                        AND u.codecie_rep_c LIKE '%$contact->codecie_c%'
                         AND u.codelangue_rep IN $language
                         ";
             $account_model = $args['account_model'];
