@@ -294,19 +294,19 @@ window.PortalContainerView = Backbone.View.extend({
         if (this.api_call_sent) {
             return false;
         }
-		/**
-		 * START
-		 * DEV-798 : nothing happening when wanting to book a meeting
-		 */
-		if (_.isUndefined(window.sessionStorage.user_id) ||
-			_.isEmpty(window.sessionStorage.user_id ||
-			!window.sessionStorage.logged_in)
-		) {
-			alert('Session expired. Please log in again.');
-			$("#logout").click();
-			return false;
-		}
-		// END
+        /**
+         * START
+         * DEV-798 : nothing happening when wanting to book a meeting
+         */
+        if (_.isUndefined(window.sessionStorage.user_id) ||
+         	_.isEmpty(window.sessionStorage.user_id ||
+         	!window.sessionStorage.logged_in)
+        ) {
+        	alert('Session expired. Please log in again.');
+            $("#logout").click();
+            return false;
+        }
+        // END
         this.api_call_sent = true;
         var contact_model = this.childViews.contactView.model,
             account_model = this.childViews.accountView.model;
@@ -339,8 +339,8 @@ window.PortalContainerView = Backbone.View.extend({
                     //this.getAvailableAppointments();
                 } else {
                     /**
-					 * START
-					 * DEV-783 : Pop up for booking not popping up
+                     * START
+                     * DEV-783 : Pop up for booking not popping up
                      * DEV-798 : nothing happening when wanting to book a meeting
                      */
                     $('#dialog-form').dialog("close");
@@ -352,7 +352,7 @@ window.PortalContainerView = Backbone.View.extend({
                         var error = _.isEmpty(response.error.msg) ? 'Some error occured while booking' : response.error.msg;
                         alert(error);
                     }
-					// END
+                    // END
                 }
             }, this),
             error: _.bind(function(error) {
