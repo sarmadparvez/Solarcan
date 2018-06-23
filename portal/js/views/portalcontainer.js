@@ -299,10 +299,10 @@ window.PortalContainerView = Backbone.View.extend({
          * DEV-798 : nothing happening when wanting to book a meeting
          */
         if (_.isUndefined(window.sessionStorage.user_id) ||
-         	_.isEmpty(window.sessionStorage.user_id ||
-         	!window.sessionStorage.logged_in)
+            _.isEmpty(window.sessionStorage.user_id ||
+       	    !window.sessionStorage.logged_in)
         ) {
-        	alert('Session expired. Please log in again.');
+            alert('Session expired. Please log in again.');
             $("#logout").click();
             return false;
         }
