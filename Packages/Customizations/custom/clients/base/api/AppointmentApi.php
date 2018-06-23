@@ -767,6 +767,8 @@ class AppointmentApi extends SugarApi
         /**
          * Save the new setting
          * DEV-780 : Portal showing meeting within 2 or 4 hours ( config panel)
+         * Not using $config_obj->saveConfig(); because it clears cache which 
+         * makes metadata outdated does not let user to save settings again
          */
         $config_obj->handleOverride();
         return true;
