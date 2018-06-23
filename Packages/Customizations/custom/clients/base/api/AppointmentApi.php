@@ -764,8 +764,11 @@ class AppointmentApi extends SugarApi
             }
             $config_obj->config['appointment_config'][$key] = $value;
         }
-        //Save the new setting
-        $config_obj->saveConfig();
+        /**
+         * Save the new setting
+         * DEV-780 : Portal showing meeting within 2 or 4 hours ( config panel)
+         */
+        $config_obj->handleOverride();
         return true;
     }
 
