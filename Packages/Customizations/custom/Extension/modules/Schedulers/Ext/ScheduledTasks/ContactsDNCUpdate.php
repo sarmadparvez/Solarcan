@@ -38,8 +38,8 @@ class ContactsDNCUpdate implements RunnableSchedulerJob
     }
 
     /**
-    * Contacts which are on dnc list and currently activated in CRM should be deactivated.
-    */
+     * Contacts which are on dnc list and currently activated in CRM should be deactivated.
+     */
     protected function deactivateContacts($regional_code)
     {
         $db = DBManagerFactory::getInstance();
@@ -51,10 +51,10 @@ class ContactsDNCUpdate implements RunnableSchedulerJob
                 FROM dsm_dnc
                 INNER JOIN contacts c
                 ON (
-                CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = digits(c.phone_home)
-                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = digits(c.phone_mobile)
-                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = digits(c.phone_work)
-                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = digits(c.phone_other)
+                CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = c.phone_home
+                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = c.phone_mobile
+                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = c.phone_work
+                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = c.phone_other
                 )
                 AND dsm_dnc.regional_code = ".$db->quoted($regional_code)."
                 AND c.statut_dnc = 'active' 
@@ -74,8 +74,8 @@ class ContactsDNCUpdate implements RunnableSchedulerJob
     }
 
     /**
-    * Contacts which are no more on dnc list and currently deactivated in CRM should be activated.
-    */
+     * Contacts which are no more on dnc list and currently deactivated in CRM should be activated.
+     */
     protected function activateContacts($regional_code)
     {
         $db = DBManagerFactory::getInstance();
@@ -87,10 +87,10 @@ class ContactsDNCUpdate implements RunnableSchedulerJob
                 FROM contacts c
                 LEFT JOIN dsm_dnc
                 ON (
-                CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = digits(c.phone_home)
-                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = digits(c.phone_mobile)
-                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = digits(c.phone_work)
-                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = digits(c.phone_other)
+                CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = c.phone_home
+                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = c.phone_mobile
+                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = c.phone_work
+                OR CONCAT(dsm_dnc.regional_code, dsm_dnc.name) = c.phone_other
                 )
                 AND dsm_dnc.regional_code = ".$db->quoted($regional_code)."
                 WHERE dsm_dnc.id IS NULL AND c.statut_dnc = 'inactive'
@@ -111,10 +111,10 @@ class ContactsDNCUpdate implements RunnableSchedulerJob
         }
     }
     /**
-    * Generate DNC History record for contact
-    * @param array $db_data row fetched from database
-    * @param String $statut_dnc new status of the contact
-    */
+     * Generate DNC History record for contact
+     * @param array $db_data row fetched from database
+     * @param String $statut_dnc new status of the contact
+     */
     protected function updateDNCHistory($db_data = array(), $statut_dnc = '')
     {
         $td = TimeDate::getInstance();
@@ -139,7 +139,7 @@ class ContactsDNCUpdate implements RunnableSchedulerJob
         }
         $dnc_historic_insert = $sql.$sql_conditional. " ) VALUES " .$sql_values.$values_conditional . " ) ";
         $db->query(
-            $dnc_historic_insert, true , 
+            $dnc_historic_insert, true ,
             "Query to insert dsm_dnc_historic failed"
         );
     }
