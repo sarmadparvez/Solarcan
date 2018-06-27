@@ -73,6 +73,7 @@ function meetingAssignationWorkflow()
     }
 
     // for each timeslot check if the available reps match remaining criterias
+    $GLOBALS['log']->fatal('Meetings & Reps', $meetings_and_reps);
     foreach($meetings_and_reps as $key => $timeslot) {
         if (isset($timeslot['waiting']) && isset($timeslot['reps'])) {
             foreach($timeslot['waiting'] as $m => $meeting) {
@@ -98,7 +99,7 @@ function meetingAssignationWorkflow()
                     $assigned = false;
                     foreach($timeslot['reps'] as $r => $rep) {
                         // first match all critereas to make sure this sales rep is qualified
-                        if ($rep['codecie_rep_c'] == $meeting['codecie_c'] &&
+                        if (strpos($rep['codecie_rep_c'], $meeting['codecie_c']) !== false &&
                            ($rep['codelangue_rep'] == '3' || $rep['codelangue_rep'] == $meeting['preferred_language']) &&
                            (($meeting['door'] == 1) ? ($meeting['door'] == $rep['door']) : true) &&
                            (($meeting['window'] == 1) ? ($meeting['window'] == $rep['window']) : true) &&
