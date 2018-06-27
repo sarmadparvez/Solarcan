@@ -73,7 +73,6 @@ function meetingAssignationWorkflow()
     }
 
     // for each timeslot check if the available reps match remaining criterias
-    $GLOBALS['log']->fatal('Meetings & Reps', $meetings_and_reps);
     foreach($meetings_and_reps as $key => $timeslot) {
         if (isset($timeslot['waiting']) && isset($timeslot['reps'])) {
             foreach($timeslot['waiting'] as $m => $meeting) {
@@ -111,18 +110,22 @@ function meetingAssignationWorkflow()
                                         AND pcu.rt_postal_codes_usersrt_postal_codes_ida = '".$pcode_id."'
                                         AND pcu.deleted = 0";
                             $result = $db->query($query, true, "Failed to check postal code from DB");
-                            while($row = $db->fetchByAssoc($result)) {
+                            $row = $db->fetchByAssoc($result);
+                            if ($row) {
                                 // already checking for best classification sales_rep (sorted in $sales_rep_query)
                                 // inside this loop means this rep can go to the postal code
                                 // now just assign this sales rep the meeting and remove him from this timeslot array
-                                $meetingBean = BeanFactory::newBean('Meetings')->retrieve($meeting['id']);
-                                $meetingBean->status = 'assigne';
-                                $meetingBean->assigned_user_id = $rep['id'];
-                                $meetingBean->save();
-                                $GLOBALS['log']->fatal("Meeting $meetingBean->id is assinged to User ".$rep['id']." $r");
-                                unset($timeslot['reps'][$r]);
-                                $assigned = true;
-                                break;
+                                if (!reachedDailyLimit($rep['id'], explode(' ', $key)[0])) {
+                                    $meetingBean = BeanFactory::newBean('Meetings')->retrieve($meeting['id']);
+                                    $meetingBean->status = 'assigne';
+                                    $meetingBean->assigned_user_id = $rep['id'];
+                                    $meetingBean->save();
+                                    $GLOBALS['log']->fatal("Meeting $meetingBean->id is assinged to User ".$rep['id']." $r");
+                                    unset($timeslot['reps'][$r]);
+                                    $assigned = true;
+                                } else {
+                                    $GLOBALS['log']->fatal("Daily Limit reached for User => ".$rep['id']." $r");
+                                }
                             }
                             if ($assigned) break;
                         }
@@ -135,4 +138,29 @@ function meetingAssignationWorkflow()
     }
 
     return true;
+}
+
+/**
+ * Given a user id, return if daily limit reached or not
+ */
+function reachedDailyLimit($user_id, $dateToCheck)
+{
+    if (empty($user_id)) return true;
+    $query = "SELECT u.id, count(u.id) as assigned, c.appointment_per_day as maximum
+              FROM users u 
+              INNER JOIN meetings m ON u.id = m.assigned_user_id
+              INNER JOIN rt_classification_users_c cu on u.id = cu.rt_classification_usersusers_idb AND cu.deleted = 0
+              INNER JOIN rt_classification c on cu.rt_classification_usersrt_classification_ida = c.id AND c.deleted = 0
+              WHERE u.deleted = 0 AND m.deleted = 0
+              AND u.id = '$user_id'
+              AND DATE(m.date_start) = '$dateToCheck'
+              GROUP BY u.id
+              HAVING assigned >= maximum;";
+    $result = $GLOBALS['db']->query($query, true, 'Meeting Assignation WF::Failed to get daily limit');
+    $row = $GLOBALS['db']->fetchByAssoc($result);
+    if ($row && !empty($row['id'])) {
+        return true;
+    } else {
+        return false;
+    }
 }
