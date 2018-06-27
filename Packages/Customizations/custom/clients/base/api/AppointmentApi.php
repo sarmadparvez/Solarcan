@@ -139,13 +139,7 @@ class AppointmentApi extends SugarApi
             ->lt('m.date_start', $start_time_before)
             ->equals('m.status', 'disponible')
             ->equals('m.deleted', 0);
-        /**
-         * $dailyLimitExeeded Added by SMQB
-         * DEV-339
-         */
-        $dailyLimitExeeded = $this->dailyLimitExeeded();
-        $dailyLimitWhere = !empty($dailyLimitExeeded) ? " AND DATE(m.timeslot_datetime)  NOT IN ($dailyLimitExeeded)" : '';    
-        $s_query->where()->addRaw($categories_where.$dailyLimitWhere);
+        $s_query->where()->addRaw($categories_where);
         $s_query->groupBy('m.timeslot_name');
         $s_query->groupByRaw('DATE(m.timeslot_datetime)');
         $result = $s_query->execute();
@@ -206,7 +200,7 @@ class AppointmentApi extends SugarApi
             $contact = $this->searchContact($args);
         } else {
             throw new SugarApiExceptionInvalidParameter(
-                'Please either provide contact_id or one of the phone numbers'
+                'Please either provide contact id or one of the phone numbers'
             );
         }
 
@@ -461,11 +455,14 @@ class AppointmentApi extends SugarApi
             if (empty($pcode_id)) {
                 throw new SugarApiExceptionNotFound("Postal Code: $pcode not found in Postal Codes module in CRM");
             }
+            // following query will get sorted users by classification in ascending order
+            // if a user is not in any classification then they are at the end of the list
+            // returned in following order Classification: A, then B, then C, then D, then none
             $query = "  SELECT u.id
                         FROM users u
                         INNER JOIN meetings m ON u.id = m.created_by
-                        INNER JOIN rt_classification_users_c cu on u.id = cu.rt_classification_usersusers_idb AND cu.deleted = 0
-                        INNER JOIN rt_classification c on cu.rt_classification_usersrt_classification_ida = c.id AND c.deleted = 0
+                        LEFT JOIN rt_classification_users_c cu on u.id = cu.rt_classification_usersusers_idb AND cu.deleted = 0
+                        LEFT JOIN rt_classification c on cu.rt_classification_usersrt_classification_ida = c.id AND c.deleted = 0
                         WHERE u.deleted = 0
                         AND m.deleted = 0
                         AND DATE(m.date_start) = '$meeting_date'
@@ -504,13 +501,23 @@ class AppointmentApi extends SugarApi
                                          AND mt.assigned_user_id IS NOT NULL
                                          AND mt.deleted = 0)
                         ";
-            $query .= " ORDER BY c.name ASC
-                        LIMIT 1";
+            $query .= " ORDER BY c.name IS NULL, c.name ASC";
             $result = $db->query($query, true, "Error finding users for specified Meeting");
-            $row = $db->fetchByAssoc($result);
-            if ($row) {
-                $meeting->status = 'assigne';
-                $meeting->assigned_user_id = $row['id'];
+            $potential_assignees = array();
+            while($row = $db->fetchByAssoc($result)) {
+                $potential_assignees[] = $row['id'];
+            }
+            if (!empty($potential_assignees)) {
+                $GLOBALS['log']->debug('POTENTIAL ASSIGNEES', $potential_assignees);
+                // now discard users with daily limit reached
+                $filtered_assignees = $this->filterLimitExceeded($potential_assignees, $meeting_date);
+                if (!empty($filtered_assignees)) {
+                    $GLOBALS['log']->debug('FILTERED ASSIGNEES', $filtered_assignees);
+                    $meeting->status = 'assigne';
+                    $meeting->assigned_user_id = $filtered_assignees[0];
+                } else {
+                    throw new SugarApiExceptionNotFound('Sales Rep available but their daily limit has been reached');
+                }
             } else {
                 throw new SugarApiExceptionNotFound('No Sales Rep available for this Meeting');
             }
@@ -569,6 +576,28 @@ class AppointmentApi extends SugarApi
         $contact->statut_contact = 'prospect_avec_rv';
         $contact->save();
         $this->saveAccount($args, $contact, $meeting);
+    }
+    
+    /**
+     * Given an array of user ids, remove those which have daily limit exceeded
+     */
+    protected function filterLimitExceeded($users, $dateToCheck) {
+        $users_overlimit_query = "SELECT u.id, count(u.id) as assigned, c.appointment_per_day as maximum
+                            FROM users u 
+                            INNER JOIN meetings m ON u.id = m.assigned_user_id
+                            INNER JOIN rt_classification_users_c cu on u.id = cu.rt_classification_usersusers_idb AND cu.deleted = 0
+                            INNER JOIN rt_classification c on cu.rt_classification_usersrt_classification_ida = c.id AND c.deleted = 0
+                            WHERE u.deleted = 0 AND m.deleted = 0
+                            AND DATE(m.date_start) = '$dateToCheck'
+                            GROUP BY u.id
+                            HAVING assigned >= maximum;";
+        $result = $GLOBALS['db']->query($users_overlimit_query, true, 'Error finding users over limit');
+        $users_overlimit = array();
+        while($row = $GLOBALS['db']->fetchByAssoc($result)) {
+            $users_overlimit[] = $row['id'];
+        }
+        $available_for_assignation = array_diff($users, $users_overlimit);
+        return $available_for_assignation;
     }
 
     /**

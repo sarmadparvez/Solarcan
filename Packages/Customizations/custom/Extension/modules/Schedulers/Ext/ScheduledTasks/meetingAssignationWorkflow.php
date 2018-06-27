@@ -44,14 +44,14 @@ function meetingAssignationWorkflow()
                         u.qualified_doors_rep_c, u.qualified_windows_rep_c, u.qualified_garage_rep_c,
                         DATE(m.date_start) as date, m.timeslot_name as timeslot
                         FROM meetings m
-                        INNER JOIN rt_classification_users_c cu on m.created_by = cu.rt_classification_usersusers_idb AND cu.deleted =0
-                        INNER JOIN rt_classification c on cu.rt_classification_usersrt_classification_ida = c.id AND c.deleted =0
+                        LEFT JOIN rt_classification_users_c cu on m.created_by = cu.rt_classification_usersusers_idb AND cu.deleted =0
+                        LEFT JOIN rt_classification c on cu.rt_classification_usersrt_classification_ida = c.id AND c.deleted =0
                         INNER JOIN users u on u.id = m.created_by
                         WHERE (m.status = 'disponible' OR m.status = 'en_attente_dassignation')
                         AND m.deleted = 0
                         AND u.deleted = 0
                         AND DATE(m.date_start) > CURDATE()
-                        ORDER BY m.date_start ASC, c.name ASC";
+                        ORDER BY m.date_start ASC, c.name IS NULL, c.name ASC";
     $result = $db->query($sales_rep_query, true, "Could not fetch sales_reps from DB");
 
     while($row = $db->fetchByAssoc($result)) {
