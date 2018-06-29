@@ -94,10 +94,10 @@ class ContactsDNCUpdate implements RunnableSchedulerJob
                 )
                 AND dsm_dnc.regional_code = ".$db->quoted($regional_code)."
                 WHERE dsm_dnc.id IS NULL AND c.statut_dnc = 'inactive'
-                AND (numberOfDigits(c.phone_home, 3) = ".$db->quoted($regional_code). "
-                    OR numberOfDigits(c.phone_mobile, 3) = ".$db->quoted($regional_code). "
-                    OR numberOfDigits(c.phone_work, 3) = ".$db->quoted($regional_code). "
-                    OR numberOfDigits(c.phone_other, 3) = ".$db->quoted($regional_code). ");";
+                AND (LEFT(c.phone_home, 3) = ".$db->quoted($regional_code). "
+                    OR LEFT(c.phone_mobile, 3) = ".$db->quoted($regional_code). "
+                    OR LEFT(c.phone_work, 3) = ".$db->quoted($regional_code). "
+                    OR LEFT(c.phone_other, 3) = ".$db->quoted($regional_code). ");";
 
         $result = $db->query($sql, true,"Error retrieving matching contacts");
         while ($row = $db->fetchByAssoc($result)) {

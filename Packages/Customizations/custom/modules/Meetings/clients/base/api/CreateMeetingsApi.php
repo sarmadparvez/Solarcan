@@ -32,6 +32,7 @@ class CreateMeetingsApi extends SugarApi
     public function createMeetings($api, $args)
     {
         $this->requireArgs($args, array('newMeetings'));
+        global $current_user;
         foreach ($args['newMeetings'] as $newMeeting) {
 
             $meeting = BeanFactory::newBean($args['module']);
@@ -48,6 +49,10 @@ class CreateMeetingsApi extends SugarApi
             $meeting->timeslot_name = $newMeeting['timeslot_name'];
             $meeting->timeslot_datetime = $newMeeting['date_start'];
             $meeting->save();
+            /**
+             * DEV-809 : QA Portal Regression: Availability check by a representative
+             */
+            $meeting->set_accept_status($current_user, 'none');
         }
 
         return true;
