@@ -40,8 +40,8 @@ class Db
 			modified,
 			action,
 			sugar_campaign_id,
-                        RpsFirstNameI,
-                        RpsLastNameI
+			RpsFirstNameI,
+            RpsLastNameI
 		) values ";
 	
 	const PUSH_TO_VOXCO_UPSERT_SQL = "
@@ -58,9 +58,11 @@ class Db
 		RpsPhoneI,
 		modified,
 		action,
-		sugar_campaign_id
+		sugar_campaign_id,
+		RpsFirstNameI,
+		RpsLastNameI
 	) VALUES(s.SugarCRMID, s.dbName, s.ResLang, s.ResActive, s.RpsRegionI,
-	s.RpsPhoneI,s.modified,s.action, s.sugar_campaign_id)
+	s.RpsPhoneI,s.modified,s.action, s.sugar_campaign_id, s.RpsFirstNameI, s.RpsLastNameI)
 	WHEN MATCHED 
     THEN UPDATE SET 
 	t.SugarCRMID = s.SugarCRMID,
@@ -74,7 +76,9 @@ class Db
 	WHEN s.action = 'add' AND t.action = 'delete' THEN 'add' 
 	WHEN s.action = 'add' AND t.action != 'delete' THEN 'update'
 	ELSE s.action END,
-	t.sugar_campaign_id = s.sugar_campaign_id; ";
+	t.sugar_campaign_id = s.sugar_campaign_id,
+	t.RpsFirstNameI = s.RpsFirstNameI,
+	t.RpsLastNameI = s.RpsLastNameI; ";
     
     /**
     Function: getInstance

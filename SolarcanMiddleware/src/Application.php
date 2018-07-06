@@ -340,13 +340,14 @@ class Application
 	*/
 	private function prepareWriteQueryForCampaignList($response)
 	{
+		
 		$sql_insert = '';
 		$sep = '';
 		$sql_delete = '';
 		$sep_delete = '';
 
 		foreach ($response['records'] as $record)
-		{
+		{ self::$logger->error($record['campaign_deleted']);
 			$action = 'insert';
 			if ( $record['campaign_deleted'] == '1' || $record['plc_deleted'] == '1' || 
 				 $record['plp_deleted'] == '1' || $record['contact_deleted'] || $record['pli_deleted'] == '1' ) {
@@ -374,8 +375,8 @@ class Application
 			$sql_insert .= $this->quoted($record['phone_home']) . ', ';
 			$sql_insert .= $this->quoted($record['modified']) . ', ';
 			$sql_insert .= $this->quoted($action) . ', ';
-			$sql_insert .= $this->quoted($record['campaign_id']) . ') ';
-			$sql_insert .= $this->quoted($record['first_name']) . ') ';
+			$sql_insert .= $this->quoted($record['campaign_id']) . ', ';
+			$sql_insert .= $this->quoted($record['first_name']) . ', ';
 			$sql_insert .= $this->quoted($record['last_name']) . ') ';
 			
 			$sep = ',';
