@@ -28,16 +28,16 @@ $manifest = array (
   'description' => 'Customizations for Solarcan',
   'icon' => '',
   'is_uninstallable' => true,
-  'name' => 'Solarcan Customization 1.0.0',
-  'published_date' => '2018-06-11 14:14:00',
+  'name' => 'Solarcan Customization 1.0.1',
+  'published_date' => '2018-08-20 19:31:00',
   'type' => 'module',
-  'version' => '1.0.0',
+  'version' => '1.0.1',
   'remove_tables' => 'prompt',
 );
 
 
 $installdefs = array (
-  'id' => 'solarcan_customization_1.0.0',
+  'id' => 'solarcan_customization_1.0.1',
     'platforms' => array(
         array(
             'from' => '<basepath>/custom/Extension/application/Ext/Platforms/portal-integration.php',
