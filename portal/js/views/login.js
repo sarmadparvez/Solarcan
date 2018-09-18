@@ -28,7 +28,7 @@ window.LoginView = Backbone.View.extend({
         $.ajax({
             method: "POST",
             url: "api/user/login",
-            dataType: 'json',
+			dataType: 'json',
             data: {
                 noagent: encodeURIComponent(this.model.get('noagent')),
                 password: encodeURIComponent(this.model.get('password'))
@@ -36,11 +36,11 @@ window.LoginView = Backbone.View.extend({
             success: _.bind(function(response) {
                 if (response.result) {
                     window.sessionStorage.logged_in = true;
-                    window.sessionStorage.user_id = response.id;
+					window.sessionStorage.user_id = response.id;
                     app.navigate("", true);
                     $('#logout').show();
                 } else {
-                    alert(response.error.msg);
+                    alert(response.error.msg); 
                 }
             }, this),
             error: _.bind(function(error) {

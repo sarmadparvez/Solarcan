@@ -95,7 +95,7 @@ window.PortalContainerView = Backbone.View.extend({
             },
             success: _.bind(function(response) {
                 if (response.result) {
-                    alert('Info and Batiment Saved Successfully');
+                    alert('L\'information a été sauvegardée avec succès');
                 } else {
                     var error = JSON.parse(response.error.msg);
                     alert(error.error_message);
@@ -123,7 +123,7 @@ window.PortalContainerView = Backbone.View.extend({
                 return true;
             }
         }
-        alert("Please input a valid Postal code in the format H1H 1H1");
+        alert("Veuillez entrer un code postal valide dans le format suivant : H1H 1H1");
         return false;
     },
 
@@ -255,9 +255,9 @@ window.PortalContainerView = Backbone.View.extend({
         var contact_model = this.childViews.contactView.model,
             account_model = this.childViews.accountView.model;
         if (_.isEmpty(contact_model)) {
-            alert('Unable to get Contact Info. Please refresh the page and try again');
+            alert('Impossible d\'obtenir l\'information du Contact. Veuillez rafraîchir la page et essayer de nouveau');
         } else if (_.isEmpty(account_model)) {
-            alert('Unable to get Batiment Info. Please refresh the page and try again');
+            alert('Impossible d\'obtenir l\'information du Bâtiment. Veuillez rafraîchir la page et essayer de nouveau');
         }
         //prepare categories
         var categories = this.getCategories();
@@ -294,20 +294,20 @@ window.PortalContainerView = Backbone.View.extend({
         if (this.api_call_sent) {
             return false;
         }
-        /**
-         * START
-         * DEV-798 : nothing happening when wanting to book a meeting
-         */
-        if (_.isUndefined(window.sessionStorage.user_id) ||
-            _.isEmpty(window.sessionStorage.user_id ||
-       	    !window.sessionStorage.logged_in)
-        ) {
-            alert('Session expired. Please log in again.');
-            $('#dialog-form').remove();
-            $("#logout").click();
-            return false;
-        }
-        // END
+		/**
+		 * START
+		 * DEV-798 : nothing happening when wanting to book a meeting
+		 */
+		if (_.isUndefined(window.sessionStorage.user_id) ||
+			_.isEmpty(window.sessionStorage.user_id ||
+			!window.sessionStorage.logged_in)
+		) {
+			alert('La session est espirée. Veuillez vous authentifier à nouveau.');
+			$('#dialog-form').remove();
+			$("#logout").click();
+			return false;
+		}
+		// END
         this.api_call_sent = true;
         var contact_model = this.childViews.contactView.model,
             account_model = this.childViews.accountView.model;
@@ -333,15 +333,15 @@ window.PortalContainerView = Backbone.View.extend({
             success: _.bind(function(response) { 
                 if (response.result) {
                     $('#dialog-form').dialog("close");
-                    alert('Appointment successfully booked');
+                    alert('Rendez-vous complété avec succès');
                     this.remove();
                     $('#dialog-form').remove();
                     app.navigate("notification", true);
                     //this.getAvailableAppointments();
                 } else {
                     /**
-                     * START
-                     * DEV-783 : Pop up for booking not popping up
+					 * START
+					 * DEV-783 : Pop up for booking not popping up
                      * DEV-798 : nothing happening when wanting to book a meeting
                      */
                     $('#dialog-form').dialog("close");
@@ -350,10 +350,10 @@ window.PortalContainerView = Backbone.View.extend({
                         var error = JSON.parse(response.error.msg);
                         alert(error.error_message);
                     } catch(e) {
-                        var error = _.isEmpty(response.error.msg) ? 'Some error occured while booking' : response.error.msg;
+                        var error = _.isEmpty(response.error.msg) ? 'Une erreur est survenue lors de la sauvegarde du rendez-vous ' : response.error.msg;
                         alert(error);
                     }
-                    // END
+					// END
                 }
             }, this),
             error: _.bind(function(error) {
@@ -395,10 +395,10 @@ window.PortalContainerView = Backbone.View.extend({
     {
         var contact_model = this.childViews.contactView.model;
         if (_.isEmpty(contact_model.get('primary_address_postalcode'))) {
-            alert('Please enter Postal Code for Contact');
+            alert('Veuillez entrer un code postal');
             return false;
         } else if (!contact_model.get('preferred_language_1') && !contact_model.get('preferred_language_2')) {
-            alert('Please select at least one language');
+            alert('Veuillez sélectionner la langue');
             return false;
         }
         return true;
@@ -413,13 +413,13 @@ window.PortalContainerView = Backbone.View.extend({
             validate = true;
 
         if (_.isEmpty(account_model.get('annee_construction'))) {
-            alert('Please enter "Anne de construction"');
+            alert('Veuillez remplir le champ : "Année de construction"');
             validate = false;
         } else if (_.isEmpty(account_model.get('occupant_depuis'))) {
-            alert('Please enter "Occupation depuis"');
+            alert('Veuillez remplir le champ : "Occupation depuis"');
             validate = false;
         } else if (_.isEmpty(account_model.get('etat_de_proprietaire'))) {
-            alert('Please select "Type de propritair"');
+            alert('Veuillez remplir le champ : "Type de propritaire"');
             validate = false;
         }
         return validate;
@@ -431,7 +431,7 @@ window.PortalContainerView = Backbone.View.extend({
         if (!_.isEmpty(contact_model) && _.isEmpty(contact_model.get('phone_home'))
             && _.isEmpty(contact_model.get('phone_mobile')) && _.isEmpty(contact_model.get('phone_work'))
              && _.isEmpty(contact_model.get('phone_other'))) {
-            alert("Please input atleast one phone number for the Contact");
+            alert("– Veuillez entrer au moins un numéro de téléphone pour ce contact");
             return false;
         }
         if (!this.validatePhoneNumber()) {
@@ -451,7 +451,7 @@ window.PortalContainerView = Backbone.View.extend({
             nombre_portes_achanger = parseInt(account_model.get('nombre_portes_achanger')) || 0;
         
         if (nombre_fenetres_achanger < 1 && nombre_garage_achanger < 1 && nombre_portes_achanger < 1){
-            alert('Please select at least one from "Porte à changer", "Fenetre à changer" and "Garage à changer"');
+            alert('Veuillez remplir au moins l\'un des champs suivants : "Porte à changer", "Fenêtre à changer", "Garage à changer"');
             return false;
         }
         return true;
@@ -464,7 +464,7 @@ window.PortalContainerView = Backbone.View.extend({
     {
         // check if appointments found
         if (!(this.available_appointments.length > 0)) {
-            var msg = 'No available appointments found for Postal Code';
+            var msg = 'Aucune disponibilité n\'a été trouvée pour le code postal';
             if (!_.isEmpty(this.childViews.contactView) && !_.isEmpty(this.childViews.contactView.model)) {
                 msg += ' : ' + this.childViews.contactView.model.get('primary_address_postalcode');
                 this.cal_events = [];
@@ -539,7 +539,7 @@ window.PortalContainerView = Backbone.View.extend({
         }
         if (!regex.test(phone_number)) 
         {
-            alert('Please input a valid 10 digit phone number. Phone number should only contain digits!');
+            alert('Veuillez entrer un numéro de téléphone valide de 10 chiffres, sans trait-d\'union');
             return false;
         }
         return true;

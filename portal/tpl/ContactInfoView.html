@@ -11,7 +11,7 @@
 				<input type="text" name = "last_name" value = "<% last_name %>" class="form-control" id="pre">
 			</div>
 			<div class="form-group">
-				<label for="prenom">#Tel Maison</label>
+				<label for="prenom" style="color: red">#Tel Maison</label>
 				<input type="tel" maxlength="10" name = "phone_home" value = "<% phone_home %>" class="form-control" id="tel">
 			</div>
 			<div class="form-group">
@@ -38,7 +38,7 @@
 				<input type="text" name = "primary_address_city" value = "<% primary_address_city %>" class="form-control" id="ville">
 			</div>
 			<div class="form-group">
-				<label for="postal-code">Code Postal <span style="color: red">*</span></label>
+				<label for="postal-code" style="color: red">Code Postal <span style="color: red">*</span></label>
 				<input type="text" maxlength="7" style="text-transform:uppercase" value = "<% primary_address_postalcode %>" class="form-control postal-code" id="primary_address_postalcode" name = "primary_address_postalcode" >
 			</div>
 			<div class="form-group">
@@ -53,12 +53,12 @@
 				<label for="courriel">Consentement</label>
 				<input type="checkbox" id="Consentement" name = "consentement" value = "<% consentement %>">
 			</div>
-			<div class="form-group">
+			<div class="form-group" style="display: none;">
 				<label for="courriel">Ne plus appeler</label>
 				<input type="checkbox" id="do_not_call" name = "do_not_call" value = "<% do_not_call %>">
 			</div>
 			<div class="form-group">
-			<label for="Date">Langue <span style="color: red">*</span></label>
+			<label for="Date" style="color: red">Langue <span style="color: red">*</span></label>
 				<div class="form-check">
 					<label class="form-check-label">
 						<input type="checkbox" class="form-check-input" name ="preferred_language_1" id="preferred_language_1" value="1">
@@ -76,6 +76,7 @@
 				<label for="codecie_c">CodeCie</label>
 				<select class="form-control" name = "codecie_c" value = "<% codecie_c %>">
 					<option value="Solarcan">Solarcan</option>
+					<option value="rd_solarcan">Réno Dépot / Solarcan</option>
 					<option value="Autre">Autre</option>
 				</select>
 			</div>

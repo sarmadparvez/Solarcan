@@ -325,6 +325,7 @@ class Application
     */
     public function bookAppointment()
     {
+		self::$logger->info('_REQUEST: '.print_r($_REQUEST,1));
         try{
             self::$logger->debug('_REQUEST: '.print_r($_REQUEST,1));
             $required_args = array(
@@ -356,7 +357,7 @@ class Application
                         'contact_model' => $_REQUEST['contact_model'],
                         'account_model' => $_REQUEST['account_model'],
                         'categories' => $_REQUEST['categories'],
-                        'telemaketer_id' => $_REQUEST['user_id'],
+						'telemaketer_id' => $_REQUEST['user_id'],  
                         /*'annee_construction' => $_REQUEST['annee_construction'],
                         'occupant_depuis' => $_REQUEST['occupant_depuis'],
                         'billing_address_street' => $_REQUEST['billing_address_street'],

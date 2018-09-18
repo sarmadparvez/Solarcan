@@ -1,2 +1,0 @@
-[2018-03-07 11:34:01.044684] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1000&filter%5B1%5D%5Bpassword%5D=asdf
-[2018-03-07 12:35:48.997606] [info] url: http://localhost/Solarcan/rest/v11/tm_telemarketers?max_num=20&order_by=date_modified%3Adesc&filter%5B0%5D%5Bnoagent%5D=1000&filter%5B1%5D%5Bpassword%5D=asdf
