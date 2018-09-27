@@ -8,3 +8,11 @@ SqlScriptsExecution
 PostInstallScripts
 automate_target_list_contacts (Please create scheduler from job name "function::automateTargetListForContacts") with frequency once a day
 DEV-1040-1047
+Uninstall following packages
+DEV-1046
+API_Changes
+Then Install
+DEV-1040_1.0.2.zip
+After installation for sales rep role set waiting_for_assignation checkbox setting to 'None'
+
+
