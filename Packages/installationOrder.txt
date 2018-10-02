@@ -14,5 +14,6 @@ API_Changes
 Then Install
 DEV-1040_1.0.2.zip
 After installation for sales rep role set waiting_for_assignation checkbox setting to 'None'
+DEV-1040_v_1_0_3.zip
 
 
