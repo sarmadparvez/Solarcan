@@ -18,4 +18,5 @@ DEV-1040_v_1_0_3.zip
 DEV-1040_v_2_0_0.zip
 DEV-1202_v_1_0_0.zip
 DEV-1203_v_1_0_0.zip
+DEV-1206_v_1_0_0.zip
 
